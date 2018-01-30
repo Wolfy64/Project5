@@ -33,6 +33,20 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      * 
+     * @ORM\Column(type="string", length=25)
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     * 
+     * @ORM\Column(type="string", length=25)
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     * 
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
@@ -65,6 +79,11 @@ class User implements UserInterface, \Serializable
      */
     private $isActive;
 
+    /**
+     * @var boolean
+     */
+    private $termsOfUse;
+
     public function __construct()
     {
         $this->isActive = true;
@@ -83,6 +102,26 @@ class User implements UserInterface, \Serializable
     public function setUsername($username): void
     {
         $this->username = $username;
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName($firstName): void
+    {
+        $this->firstName = $firstName;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName($lastName): void
+    {
+        $this->lastName = $lastName;
     }
 
     public function getSalt(): void
@@ -153,6 +192,16 @@ class User implements UserInterface, \Serializable
     public function setIsActive($isActive): void
     {
         $this->isActive = $isActive;
+    }
+
+    public function getTermsOfUse()
+    {
+        return $this->termsOfUse;
+    }
+
+    public function setTermsOfUse(bool $termsOfUse): void
+    {
+        $this->termsOfUse = $termsOfUse;
     }
 
     public function eraseCredentials()

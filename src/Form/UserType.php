@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class UserType extends AbstractType
 {
@@ -17,12 +18,23 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email',         EmailType::class)
-            ->add('username',      TextType::class)
+            ->add('username',      TextType::class,[
+                'label' => 'Pseudo'
+                ])
+            ->add('firstName',     TextType::class,[
+                'label' => 'Prénom'
+                ])
+            ->add('lastName',      TextType::class,[
+                'label' => 'Nom'
+                ])
             ->add('plainPassword', RepeatedType::class, [
                 'type'           => PasswordType::class,
-                'first_options'  => array('label' => 'Password'),
-                'second_options' => array('label' => 'Repeat Password'),
-            ]);
+                'first_options'  => ['label' => 'Mot de passe'],
+                'second_options' => ['label' => 'Confirmer votre mot de passe']])
+            ->add('termsOfUse',    CheckboxType::class,[
+                'label'    => 'J\'accepte les conditions d\'utilisation',
+                'required' => true,
+                ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
