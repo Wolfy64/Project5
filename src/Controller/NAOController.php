@@ -89,16 +89,6 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/connexion", name="signIn") 
-     */
-    public function signIn(): Response
-    {
-        return $this->render('NAO/signIn.html.twig', [
-            'signIn' => 'Se connecter'
-        ]);
-    }
-
-    /**
      * @Route("/admin", name="admin") 
      */
     public function admin(): Response
