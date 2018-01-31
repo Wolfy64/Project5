@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Post
 {
     /**
+     * * @var int
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -17,36 +18,40 @@ class Post
     private $id;
 
     /**
+     * @var string
+     * 
      * @ORM\Column(type="string")
      */
     private $title;
 
     /**
+     * @var string
+     * 
      * @ORM\Column(type="text")
      */
     private $article;
 
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function getArticle()
+    public function getArticle(): string
     {
         return $this->article;
     }
 
-    public function setTitle($title)
+    public function setTitle($title): void
     {
         $this->title = $title;
     }
 
-    public function setArticle($article)
+    public function setArticle($article): void
     {
         $this->article = $article;
     }

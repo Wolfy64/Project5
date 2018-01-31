@@ -11,7 +11,7 @@ class NAOController extends AbstractController
     /**
      * @Route("/", name="homepage") 
      */
-    public function homepage()
+    public function homepage(): Response
     {
         return $this->render('NAO/homepage.html.twig',[
             'homepage' => 'Home Page'
@@ -19,9 +19,9 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/about", name="about") 
+     * @Route("/a-propos", name="about") 
      */
-    public function about()
+    public function about(): Response
     {
         return $this->render('NAO/about.html.twig', [
             'about' => 'A Propos'
@@ -29,9 +29,9 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/joinUs", name="joinUs") 
+     * @Route("/adherer", name="joinUs") 
      */
-    public function joinUs()
+    public function joinUs(): Response
     {
         return $this->render('NAO/joinUs.html.twig', [
             'joinUs' => 'Adhérer'
@@ -39,9 +39,9 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/observe", name="observe") 
+     * @Route("/observer", name="observe") 
      */
-    public function observe()
+    public function observe(): Response
     {
         return $this->render('NAO/observe.html.twig', [
             'observe' => 'Observer'
@@ -49,9 +49,9 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/map", name="map") 
+     * @Route("/carte", name="map") 
      */
-    public function map()
+    public function map(): Response
     {
         return $this->render('NAO/map.html.twig', [
             'map' => 'Carte'
@@ -61,7 +61,7 @@ class NAOController extends AbstractController
     /**
      * @Route("/blog", name="blog") 
      */
-    public function blog()
+    public function blog(): Response
     {
         return $this->render('NAO/blog.html.twig', [
             'blog' => 'Blog'
@@ -71,7 +71,7 @@ class NAOController extends AbstractController
     /**
      * @Route("/faq", name="faq") 
      */
-    public function faq()
+    public function faq(): Response
     {
         return $this->render('NAO/faq.html.twig', [
             'faq' => 'F.A.Q'
@@ -81,7 +81,7 @@ class NAOController extends AbstractController
     /**
      * @Route("/contact", name="contact") 
      */
-    public function contact()
+    public function contact(): Response
     {
         return $this->render('NAO/contact.html.twig', [
             'contact' => 'Contact'
@@ -89,9 +89,9 @@ class NAOController extends AbstractController
     }
 
     /**
-     * @Route("/signIn", name="signIn") 
+     * @Route("/admin", name="admin") 
      */
-    public function signIn()
+    public function admin(): Response
     {
         return $this->render('NAO/signIn.html.twig', [
             'signIn' => 'Se connecter'
