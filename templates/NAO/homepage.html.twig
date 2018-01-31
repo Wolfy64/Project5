@@ -1,36 +1,51 @@
-{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
 {% block body %}
-     {{ homepage }}
-        <ul>
-            <li>
-                <a href="/a-propos">A Propos</a>
-            </li>
-            <li>
-                <a href="/adherer">Adhérer</a>
-            </li>
-            <li>
-                <a href="/observer">Observer</a>
-            </li>
-            <li>
-                <a href="/carte">Carte</a>
-            </li>
-            <li>
-                <a href="/blog">Blog</a>
-            </li>
-            <li>
-                <a href="/faq">F.A.Q</a>
-            </li>
-            <li>
-                <a href="/contact">Contact</a>
-            </li>
-            <li>
-                <a href="/connexion">Se connecter</a>
-            </li>
-            <li>
-                <a href="/logout">Se déconnecter</a>
-            </li>
-            <li>
-                <a href="/admin">Admin</a>
-            </li>
-        </ul>
+    <div class="container">
+        <div class="banner">
+            <img class="logo" src="{{ asset('img/logoNAO.png') }}">
+        </div>
+        <div class="bloc1">A PROPOS</div>
+        <div class="bloc2">ADHERER</div>
+        <div class="bloc3">OBSERVER</div>
+        <div class="bloc4">CARTE</div>
+        <div class="bloc5">BLOG</div>
+        <div class="bloc6">FAQ</div>
+        <div class="bloc7">CONTACT</div>
+        <div class="bloc8">CONNEXION</div>
+    </div>
+    <ul>
+        <li>
+            <a href="/a-propos">A Propos</a>
+        </li>
+        <li>
+            <a href="/adherer">Adhérer</a>
+        </li>
+        <li>
+            <a href="/observer">Observer</a>
+        </li>
+        <li>
+            <a href="/carte">Carte</a>
+        </li>
+        <li>
+            <a href="/blog">Blog</a>
+        </li>
+        <li>
+            <a href="/faq">F.A.Q</a>
+        </li>
+        <li>
+            <a href="/contact">Contact</a>
+        </li>
+        <li>
+            <a href="/connexion">Se connecter</a>
+        </li>
+        <li>
+            <a href="/logout">Se déconnecter</a>
+        </li>
+        <li>
+            <a href="/admin">Admin</a>
+        </li>
+    </ul>
+
 {% endblock %}

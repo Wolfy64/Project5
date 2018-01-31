@@ -1,0 +1,71 @@
+body{
+    background-image: url("../img/background-image-HP.jpg");
+}
+.container{
+    display: grid;
+    grid-template-rows: [rows1-start] 15% [row1-end space1-start] 3% [space1-end rows2-start] 25% [rows2-end space2-start] 3% [space2-end rows3-start] 25% [rows3-end space3-start] 3% [space3-end rows4-start] 25% [rows4-end space-end] auto;
+    grid-template-columns: [columns1-space-start] 9.5% [columns-space-end bloc1-start] 25% [bloc1-end space1-columns-start] 3% [space1-columns-end bloc2-start] 25% [bloc2-end space2-columns-start] 3% [space2-columns-end bloc3-start] 25% [bloc3-end columns space-end] 9.5%;
+}
+
+.banner{
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    grid-column: bloc1-start / bloc3-end;
+    grid-row: row1-start / rows1-end;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.bloc1{
+    background-color: red;
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows2-start / rows2-end;
+
+
+}
+.bloc2{
+    background-color: green;
+    grid-column: bloc2-start / bloc2-end;
+    grid-row: rows2-start / rows2-end;
+}
+
+.bloc3{
+    background-color: blue;
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows2-start / rows2-end;
+}
+
+.bloc4{
+    background-color: yellow;
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows3-start / rows3-end;
+}
+
+.bloc5{
+    background-color: black;
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows3-start / rows3-end;
+}
+
+.bloc6{
+    background-color: purple;
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows4-start / rows4-end;
+}
+
+.bloc7{
+    background-color: grey;
+    grid-column: bloc2-start / bloc2-end;
+    grid-row: rows4-start / rows4-end;
+}
+
+.bloc8{
+    background-color: orange;
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows4-start / rows4-end;
+}

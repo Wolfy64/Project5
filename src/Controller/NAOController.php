@@ -5,9 +5,17 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 class NAOController extends AbstractController
 {
+    private $twig;
+
+    public function __construct(Environment $twig)
+    {
+        $this->Twig = $twig;
+    }
+
     /**
      * @Route("/", name="homepage") 
      */
