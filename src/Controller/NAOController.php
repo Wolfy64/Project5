@@ -6,12 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-<<<<<<< HEAD
 use Twig\Environment;
-=======
 use App\Entity\Observation;
 use App\Form\ObservationType;
->>>>>>> 79acfbd584850db6dbbb62128737c13fc7a028b9
+//>>>>>>> 79acfbd584850db6dbbb62128737c13fc7a028b9
 
 class NAOController extends AbstractController
 {

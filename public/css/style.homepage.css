@@ -7,7 +7,6 @@ body{
     grid-template-columns: [columns1-space-start] 9.5% [columns-space-end bloc1-start] 25% [bloc1-end space1-columns-start] 3% [space1-columns-end bloc2-start] 25% [bloc2-end space2-columns-start] 3% [space2-columns-end bloc3-start] 25% [bloc3-end];
 }
 .banner{
-    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     justify-content: center;
     grid-column: bloc1-start / bloc3-end;
@@ -17,9 +16,9 @@ body{
 }
 .container{
     display: grid;
-    grid-template-rows: [space1-start] 3% [space1-end rows2-start] 25% [rows2-end space2-start] 3% [space2-end rows3-start] 25% [rows3-end space3-start] 3% [space3-end rows4-start] 25% [rows4-end space-end] auto;
-    grid-template-columns: [columns1-space-start] 9.5% [columns-space-end bloc1-start] 25% [bloc1-end space1-columns-start] 3% [space1-columns-end bloc2-start] 25% [bloc2-end space2-columns-start] 3% [space2-columns-end bloc3-start] 25% [bloc3-end];
-    height: 700px;
+    grid-template-rows:[rows2-start] 33% [rows2-end space2-start] 1% [space2-end rows3-start] 33% [rows3-end space3-start] 1% [space3-end rows4-start] 33% [rows4-end space-end];
+    grid-template-columns: [bloc1-start] 33% [bloc1-end space1-columns-start] 0.5% [space1-columns-end bloc2-start] 33% [bloc2-end space2-columns-start] 0.5% [space2-columns-end bloc3-start] 33% [bloc3-end];
+    height: 600px;
 }
 .logo{
     width: 100px;
@@ -27,7 +26,8 @@ body{
 }
 
 .bloc1{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(133, 178, 102, 0.5);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows2-start / rows2-end;
     display: flex;
@@ -37,7 +37,8 @@ body{
     font-size: 150%;
 }
 .bloc2{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(205, 255, 172, 0.5);
     grid-column: bloc2-start / bloc2-end;
     grid-row: rows2-start / rows2-end;
     display: flex;
@@ -48,7 +49,8 @@ body{
 }
 
 .bloc3{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(221, 255, 197, 0.5);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows2-start / rows2-end;
     display: flex;
@@ -59,7 +61,8 @@ body{
 }
 
 .bloc4{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(251, 172, 255, 0.5);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows3-start / rows3-end;
     display: flex;
@@ -68,9 +71,22 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 150%;
 }
+.bloc-description{
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(255, 255, 255, 0.85);
+    grid-column: bloc2-start / bloc2-end;
+    grid-row: rows3-start / rows3-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 100%;
+}
 
 .bloc5{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(175, 85, 178, 0.5);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows3-start / rows3-end;
     display: flex;
@@ -81,7 +97,8 @@ body{
 }
 
 .bloc6{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(221, 255, 197, 0.5);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows4-start / rows4-end;
     display: flex;
@@ -92,7 +109,8 @@ body{
 }
 
 .bloc7{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(133, 178, 102, 0.7);
     grid-column: bloc2-start / bloc2-end;
     grid-row: rows4-start / rows4-end;
     display: flex;
@@ -103,7 +121,8 @@ body{
 }
 
 .bloc8{
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 3px 4px 5px black;
+    background-color: rgba(205, 255, 172, 0.5);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows4-start / rows4-end;
     display: flex;

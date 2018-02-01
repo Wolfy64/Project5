@@ -1,5 +1,8 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-reboot.css') }}">
 {% endblock %}
 {% block body %}
     <div class="header-container">
@@ -12,14 +15,57 @@
 
     <div class="container">
 
-        <div class="bloc1"><a href="/a-propos">A PROPOS</a></div>
-        <div class="bloc2"><a href="/adherer">ADHERER</a></div>
-        <div class="bloc3"><a href="/observer">OBSERVER</a></div>
-        <div class="bloc4"><a href="/connexion">CONNEXION</a></div>
-        <div class="bloc5"><a href="/carte">CARTE</a></div>
-        <div class="bloc6"><a href="/contact">CONTACT</a></div>
-        <div class="bloc7"><a href="/blog">BLOG</a></div>
-        <div class="bloc8"><a href="/faq">F.A.Q's</a></div>
+        <div class="bloc1">
+            <strong>
+                <a style="color: black" href="/a-propos">A PROPOS</a>
+            </strong>
+        </div>
+
+        <div class="bloc2">
+            <strong>
+                <a style="color: black"href="/adherer">ADHERER</a>
+            </strong>
+        </div>
+
+        <div class="bloc3">
+            <strong>
+                <a style="color: black"href="/observer">OBSERVER</a>
+            </strong>
+        </div>
+
+        <div class="bloc-description">
+            <p>Bonjour et Bienvenue sur notre site, Nous représentons une assiciation qui s'appelle Nos Amis les Oiseaux,<br>Bonne visite</p>
+        </div>
+
+        <div class="bloc4">
+            <strong>
+                <a style="color: black"href="/connexion">CONNEXION</a>
+            </strong>
+        </div>
+
+        <div class="bloc5">
+            <strong>
+                <a style="color: black"href="/carte">CARTE</a>
+            </strong>
+        </div>
+
+        <div class="bloc6">
+            <strong>
+                <a style="color: black"href="/contact">CONTACT</a>
+            </strong>
+        </div>
+
+        <div class="bloc7">
+            <strong>
+                <a style="color: black"href="/blog">BLOG</a>
+            </strong>
+        </div>
+
+        <div class="bloc8">
+            <strong>
+                <a style="color: black"href="/faq">F.A.Q's</a>
+            </strong>
+        </div>
     </div>
     <!--
     <ul>
