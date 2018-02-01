@@ -1,0 +1,114 @@
+body{
+    background-image: url("../img/background-image-HP.jpg");
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: [columns1-space-start] 9.5% [columns-space-end bloc1-start] 25% [bloc1-end space1-columns-start] 3% [space1-columns-end bloc2-start] 25% [bloc2-end space2-columns-start] 3% [space2-columns-end bloc3-start] 25% [bloc3-end];
+}
+.banner{
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    grid-column: bloc1-start / bloc3-end;
+
+
+
+}
+.container{
+    display: grid;
+    grid-template-rows: [space1-start] 3% [space1-end rows2-start] 25% [rows2-end space2-start] 3% [space2-end rows3-start] 25% [rows3-end space3-start] 3% [space3-end rows4-start] 25% [rows4-end space-end] auto;
+    grid-template-columns: [columns1-space-start] 9.5% [columns-space-end bloc1-start] 25% [bloc1-end space1-columns-start] 3% [space1-columns-end bloc2-start] 25% [bloc2-end space2-columns-start] 3% [space2-columns-end bloc3-start] 25% [bloc3-end];
+    height: 700px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.bloc1{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows2-start / rows2-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+.bloc2{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc2-start / bloc2-end;
+    grid-row: rows2-start / rows2-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc3{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows2-start / rows2-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc4{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows3-start / rows3-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc5{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows3-start / rows3-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc6{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc1-start / bloc1-end;
+    grid-row: rows4-start / rows4-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc7{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc2-start / bloc2-end;
+    grid-row: rows4-start / rows4-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.bloc8{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-column: bloc3-start / bloc3-end;
+    grid-row: rows4-start / rows4-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 150%;
+}
