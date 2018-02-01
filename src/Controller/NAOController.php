@@ -9,7 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 use App\Entity\Observation;
 use App\Form\ObservationType;
-//>>>>>>> 79acfbd584850db6dbbb62128737c13fc7a028b9
 
 class NAOController extends AbstractController
 {
@@ -72,6 +71,16 @@ class NAOController extends AbstractController
         return $this->render('NAO/observe.html.twig', [
             'form' => $form->createView(),
             'observe' => 'Observer'
+        ]);
+    }
+
+    /**
+     * @Route("/list-observations", name="listObservations") 
+     */
+    public function listObservations(Request $request): Response
+    {
+        return $this->render('NAO/listObservations.html.twig', [
+            'listObservations' => 'Liste des observations'
         ]);
     }
 

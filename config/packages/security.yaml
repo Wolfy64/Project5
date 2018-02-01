@@ -33,5 +33,9 @@ security:
         ROLE_PRO: ROLE_USER
 
     access_control:
-    # require ROLE_ADMIN for /admin*
-    - { path: ^/admin, roles: ROLE_ADMIN }
+    # require ROLE_ADMIN*
+    - { path: ^/admin,             roles: ROLE_ADMIN }
+    # require ROLE_USER*
+    - { path: ^/observer,          roles: ROLE_USER }
+    - { path: ^/carte,             roles: ROLE_USER }
+    - { path: ^/list-observations, roles: ROLE_USER }
