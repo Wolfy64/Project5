@@ -12,13 +12,6 @@ use App\Form\ObservationType;
 
 class NAOController extends AbstractController
 {
-    private $twig;
-
-    public function __construct(Environment $twig)
-    {
-        $this->Twig = $twig;
-    }
-
     /**
      * @Route("/", name="homepage") 
      */

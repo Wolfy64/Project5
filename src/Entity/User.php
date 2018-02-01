@@ -27,6 +27,9 @@ class User implements UserInterface, \Serializable
      * @var string
      * 
      * @ORM\Column(type="string", length=25, unique=true)
+     * 
+     * @Assert\NotBlank()
+     * @Assert\Email(checkMX=true)
      */
     private $username;
 
@@ -34,6 +37,10 @@ class User implements UserInterface, \Serializable
      * @var string
      * 
      * @ORM\Column(type="string", length=25)
+     * 
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     * @Assert\Length(min = 2, max = 25)
      */
     private $firstName;
 
@@ -41,13 +48,18 @@ class User implements UserInterface, \Serializable
      * @var string
      * 
      * @ORM\Column(type="string", length=25)
+     * 
+     * @Assert\NotBlank()
+     * @Assert\Type("string")
+     * @Assert\Length(min=2, max=25)
      */
     private $lastName;
 
     /**
      * @var string
      * 
-     * @Assert\Length(max=4096)
+     * @Assert\NotBlank()
+     * @Assert\Length(min=4,max=100)
      */
     private $plainPassword;
 
@@ -57,13 +69,6 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", length=64)
      */
     private $password;
-
-    /**
-     * @var string
-     * 
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    private $email;
 
     /**
      * @var array
@@ -81,6 +86,8 @@ class User implements UserInterface, \Serializable
 
     /**
      * @var boolean
+     * 
+     * @Assert\IsTrue()
      */
     private $termsOfUse;
 
@@ -146,19 +153,9 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
-    public function setPassword($password)
+    public function setPassword($password): void
     {
         $this->password = $password;
-    }
-
-    public function getEmail(): ? string
-    {
-        return $this->email;
-    }
-
-    public function setEmail($email): void
-    {
-        $this->email = $email;
     }
 
     public function getRoles(): array
