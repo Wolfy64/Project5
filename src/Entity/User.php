@@ -94,7 +94,7 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    public function getUsername()
+    public function getUsername(): ? string
     {
         return $this->username;
     }
@@ -104,7 +104,7 @@ class User implements UserInterface, \Serializable
         $this->username = $username;
     }
 
-    public function getFirstName()
+    public function getFirstName(): ? string
     {
         return $this->firstName;
     }
@@ -114,7 +114,7 @@ class User implements UserInterface, \Serializable
         $this->firstName = $firstName;
     }
 
-    public function getLastName()
+    public function getLastName(): ? string
     {
         return $this->lastName;
     }
@@ -131,7 +131,7 @@ class User implements UserInterface, \Serializable
         return;
     }
 
-    public function getPlainPassword()
+    public function getPlainPassword(): ? string
     {
         return $this->plainPassword;
     }
@@ -151,7 +151,7 @@ class User implements UserInterface, \Serializable
         $this->password = $password;
     }
 
-    public function getEmail()
+    public function getEmail(): ? string
     {
         return $this->email;
     }
@@ -194,7 +194,7 @@ class User implements UserInterface, \Serializable
         $this->isActive = $isActive;
     }
 
-    public function getTermsOfUse()
+    public function getTermsOfUse(): ? bool
     {
         return $this->termsOfUse;
     }
