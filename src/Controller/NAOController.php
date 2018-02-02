@@ -3,12 +3,13 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\BinaryFileResponse ;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Twig\Environment;
 use App\Entity\Observation;
 use App\Form\ObservationType;
+
 
 class NAOController extends AbstractController
 {
@@ -38,7 +39,7 @@ class NAOController extends AbstractController
     public function joinUs(): Response
     {
         return $this->render('NAO/joinUs.html.twig', [
-            'joinUs' => 'Adhérer'
+            'joinUs' => 'Adhérer',
         ]);
     }
 
@@ -125,5 +126,13 @@ class NAOController extends AbstractController
         return $this->render('NAO/signIn.html.twig', [
             'signIn' => 'Se connecter'
         ]);
+    }
+
+    /**
+     * @Route("/adhesionFile", name="adhesionFile") 
+     */
+    public function adhesionFile(): BinaryFileResponse
+    {
+        return $this->file('files/formulaire_adhésion.pdf');
     }
 }

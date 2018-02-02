@@ -53,7 +53,7 @@ class Aves
     private $nomVern;
 
     /**
-     * @var string
+     * @var integer
      * 
      * @ORM\Column(type="integer", length=1)
      */
@@ -69,7 +69,7 @@ class Aves
         return $this->ordre;
     }
 
-    public function setOrdre($ordre): void
+    public function setOrdre(string $ordre): void
     {
         $this->ordre;
     }
@@ -79,9 +79,9 @@ class Aves
         return $this->famille;
     }
 
-    public function setFamille($famille): void
+    public function setFamille(string $famille): void
     {
-        $this->ordre;
+        $this->famille;
     }
 
     public function getLbName(): string
@@ -89,7 +89,7 @@ class Aves
         return $this->lbName;
     }
 
-    public function setLbName($lbName): void
+    public function setLbName(string $lbName): void
     {
         $this->lbName;
     }
@@ -99,7 +99,7 @@ class Aves
         return $this->lbAuteur;
     }
 
-    public function setLbAuteur($lbAuteur): void
+    public function setLbAuteur(string $lbAuteur): void
     {
         $this->lbAuteur;
     }
@@ -109,7 +109,7 @@ class Aves
         return $this->nomVern;
     }
 
-    public function setNomVern($nomVern): void
+    public function setNomVern(string $nomVern): void
     {
         $this->nomVern;
     }
@@ -119,7 +119,7 @@ class Aves
         return $this->habitat;
     }
 
-    public function setHabitat($habitat): void
+    public function setHabitat(int $habitat): void
     {
         $this->habitat;
     }

@@ -189,7 +189,7 @@ class Observation
         return $this->imageSize;
     }
 
-    public function getImage()
+    public function getImage():? File
     {
         return $this->image;
     }

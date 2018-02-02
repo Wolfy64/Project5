@@ -46,12 +46,12 @@ class Post
         return $this->article;
     }
 
-    public function setTitle($title): void
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
 
-    public function setArticle($article): void
+    public function setArticle(string $article): void
     {
         $this->article = $article;
     }

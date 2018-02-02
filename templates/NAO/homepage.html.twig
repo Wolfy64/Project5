@@ -1,3 +1,5 @@
+{% extends "base.html.twig" %}
+{% block menu %}{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -17,19 +19,19 @@
 
         <div class="bloc1">
             <strong>
-                <a style="color: black" href="/a-propos">A PROPOS</a>
+                <a style="color: black" href="{{ path('about') }}">A PROPOS</a>
             </strong>
         </div>
 
         <div class="bloc2">
             <strong>
-                <a style="color: black"href="/adherer">ADHERER</a>
+                <a style="color: black"href="{{ path('joinUs') }}">ADHERER</a>
             </strong>
         </div>
 
         <div class="bloc3">
             <strong>
-                <a style="color: black"href="/observer">OBSERVER</a>
+                <a style="color: black"href="{{ path('observe') }}">OBSERVER</a>
             </strong>
         </div>
 
@@ -39,31 +41,31 @@
 
         <div class="bloc4">
             <strong>
-                <a style="color: black"href="/connexion">CONNEXION</a>
+                <a style="color: black"href="{{ path('login') }}">CONNEXION</a>
             </strong>
         </div>
 
         <div class="bloc5">
             <strong>
-                <a style="color: black"href="/carte">CARTE</a>
+                <a style="color: black"href="{{ path('map') }}">CARTE</a>
             </strong>
         </div>
 
         <div class="bloc6">
             <strong>
-                <a style="color: black"href="/contact">CONTACT</a>
+                <a style="color: black"href="{{ path('contact') }}">CONTACT</a>
             </strong>
         </div>
 
         <div class="bloc7">
             <strong>
-                <a style="color: black"href="/blog">BLOG</a>
+                <a style="color: black"href="{{ path('blog') }}">BLOG</a>
             </strong>
         </div>
 
         <div class="bloc8">
             <strong>
-                <a style="color: black"href="/faq">F.A.Q's</a>
+                <a style="color: black"href="{{ path('faq') }}">F.A.Q's</a>
             </strong>
         </div>
     </div>
