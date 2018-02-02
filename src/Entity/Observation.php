@@ -96,7 +96,7 @@ class Observation
 
     public function getSpecies(): ? string
     {
-        return $this->id;
+        return $this->species;
     }
 
     public function setSpecies($species): void
@@ -104,7 +104,7 @@ class Observation
         $this->species = $species;
     }
 
-    public function getDate(): ? Date
+    public function getDate()
     {
         return $this->date;
     }

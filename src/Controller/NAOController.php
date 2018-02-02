@@ -73,8 +73,19 @@ class NAOController extends AbstractController
      */
     public function listObservations(Request $request): Response
     {
+        $id = 5;
+        $observations = $this->getDoctrine()
+            ->getRepository(Observation::class)
+            ->findAll();
+        dump($observations);
+        if (!$observations) {
+            throw $this->createNotFoundException(
+                'No result'
+            );
+        }
         return $this->render('NAO/listObservations.html.twig', [
-            'listObservations' => 'Liste des observations'
+            'listObservations' => 'Liste des observations',
+            'observations' => $observations
         ]);
     }
 
