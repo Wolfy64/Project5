@@ -1,11 +1,11 @@
-{% extends "base.html.twig" %}
-{% block menu %}{% endblock %}
+
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/style.homepage.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-reboot.css') }}">
 {% endblock %}
+
 {% block body %}
     <div class="header-container">
         <div class="banner">
@@ -15,58 +15,28 @@
     </div>
 
 
+
     <div class="container">
 
-        <div class="bloc1">
-            <strong>
-                <a style="color: black" href="{{ path('about') }}">A PROPOS</a>
-            </strong>
-        </div>
+        <button class="bloc1" href="{{ path('about') }}">A PROPOS</button>
 
-        <div class="bloc2">
-            <strong>
-                <a style="color: black"href="{{ path('joinUs') }}">ADHERER</a>
-            </strong>
-        </div>
+        <button class="bloc2" href="{{ path('joinUs') }}">ADHERER</button>
 
-        <div class="bloc3">
-            <strong>
-                <a style="color: black"href="{{ path('observe') }}">OBSERVER</a>
-            </strong>
-        </div>
+        <button class="bloc3" href="{{ path('observe') }}">OBSERVER</button>
+
+        <button class="bloc4" href="{{ path('login') }}">CONNEXION</button>
 
         <div class="bloc-description">
-            <p>Bonjour et Bienvenue sur notre site, Nous représentons une assiciation qui s'appelle Nos Amis les Oiseaux,<br>Bonne visite</p>
+            <p>Bienvenue sur notre site</p>
         </div>
 
-        <div class="bloc4">
-            <strong>
-                <a style="color: black"href="{{ path('login') }}">CONNEXION</a>
-            </strong>
-        </div>
+        <button class="bloc5" href="{{ path('map') }}">CARTE</button>
 
-        <div class="bloc5">
-            <strong>
-                <a style="color: black"href="{{ path('map') }}">CARTE</a>
-            </strong>
-        </div>
+        <button class="bloc6" href="{{ path('contact') }}">CONTACT</button>
 
-        <div class="bloc6">
-            <strong>
-                <a style="color: black"href="{{ path('contact') }}">CONTACT</a>
-            </strong>
-        </div>
+        <button class="bloc7" href="{{ path('faq') }}">F.A.Q's</button>
 
-        <div class="bloc7">
-            <strong>
-                <a style="color: black"href="{{ path('blog') }}">BLOG</a>
-            </strong>
-        </div>
+        <button class="bloc8" href="{{ path('blog') }}">BLOG</button>
 
-        <div class="bloc8">
-            <strong>
-                <a style="color: black"href="{{ path('faq') }}">F.A.Q's</a>
-            </strong>
-        </div>
     </div>
 {% endblock %}

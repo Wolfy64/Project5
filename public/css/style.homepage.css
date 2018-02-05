@@ -1,5 +1,6 @@
 body{
     background-image: url("../img/background-image-HP.jpg");
+    background-position: center center;
 }
 
 .header-container{
@@ -18,7 +19,7 @@ body{
     display: grid;
     grid-template-rows:[rows2-start] 33% [rows2-end space2-start] 1% [space2-end rows3-start] 33% [rows3-end space3-start] 1% [space3-end rows4-start] 33% [rows4-end space-end];
     grid-template-columns: [bloc1-start] 33% [bloc1-end space1-columns-start] 0.5% [space1-columns-end bloc2-start] 33% [bloc2-end space2-columns-start] 0.5% [space2-columns-end bloc3-start] 33% [bloc3-end];
-    height: 600px;
+    height: 550px;
 }
 .logo{
     width: 100px;
@@ -26,50 +27,27 @@ body{
 }
 
 .bloc1{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(133, 178, 102, 0.5);
+    background-color: rgba(57, 94, 45, 0.45);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows2-start / rows2-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
+
 .bloc2{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(205, 255, 172, 0.5);
+    background-color: rgba(108, 115, 43, 0.45);
     grid-column: bloc2-start / bloc2-end;
     grid-row: rows2-start / rows2-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 
 .bloc3{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(221, 255, 197, 0.5);
+    background-color: rgba(205, 255, 172, 0.45);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows2-start / rows2-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 
 .bloc4{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(251, 172, 255, 0.5);
+    background-color: rgba(175, 85, 178, 0.45);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows3-start / rows3-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 .bloc-description{
     box-shadow: 3px 4px 5px black;
@@ -78,56 +56,129 @@ body{
     grid-row: rows3-start / rows3-end;
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
     align-items: center;
     text-align: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 100%;
+    padding: 10px;
 }
 
 .bloc5{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(175, 85, 178, 0.5);
+    background-color: rgba(121, 19, 126, 0.45);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows3-start / rows3-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 
 .bloc6{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(221, 255, 197, 0.5);
+    background-color: rgba(82, 163, 26, 0.45);
     grid-column: bloc1-start / bloc1-end;
     grid-row: rows4-start / rows4-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 
 .bloc7{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(133, 178, 102, 0.7);
+    background-color: rgba(25, 50, 9, 0.45);
     grid-column: bloc2-start / bloc2-end;
     grid-row: rows4-start / rows4-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
 
 .bloc8{
-    box-shadow: 3px 4px 5px black;
-    background-color: rgba(205, 255, 172, 0.5);
+    background-color: rgba(85, 192, 15, 0.45);
     grid-column: bloc3-start / bloc3-end;
     grid-row: rows4-start / rows4-end;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 150%;
 }
+
+button {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    outline: none;
+    transition: 0.2s;
+}
+
+button:hover{
+    box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+    color: white;
+    font-size: x-large;
+}
+
+button:active{
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.18);
+    transform: scale(0.98);
+}
+
+@media (max-width: 576px) {
+    .container{
+        display: grid;
+        grid-template-rows:[first] 1% [rows1-start] 19% [rows1-end space1-start] 1% [space1-end rows2-start] 19% [rows2-end space2-start] 1% [space2-end rows3-start] 19% [rows3-end space3-start] 1% [space3-end rows4-start] 19% [rows4-end space4-start] 1% [space4-end rows5-start] 19% [rows5-end];
+        grid-template-columns: [space1-columns-start] 5% [space1-columns-end bloc1-start ] 44% [bloc1-end space2-columns-start] 2% [space2-columns-end bloc2-start] 44% [bloc2-end space3-columns-start] 5% [end];
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    .bloc1{
+        background-color: rgba(57, 94, 45, 0.45);
+        grid-column: bloc1-start / bloc1-end;
+        grid-row: rows1-start / rows1-end;
+    }
+
+    .bloc2{
+        background-color: rgba(108, 115, 43, 0.45);
+        grid-column: bloc2-start / bloc2-end;
+        grid-row: rows1-start / rows1-end;
+    }
+
+    .bloc3{
+        background-color: rgba(205, 255, 172, 0.45);
+        grid-column: bloc1-start / bloc1-end;
+        grid-row: rows2-start / rows2-end;
+    }
+
+    .bloc4{
+        background-color: rgba(175, 85, 178, 0.45);
+        grid-column: bloc2-start / bloc2-end;
+        grid-row: rows2-start / rows2-end;
+    }
+    .bloc-description{
+        box-shadow: 3px 4px 5px black;
+        background-color: rgba(255, 255, 255, 0.85);
+        grid-column: bloc1-start / bloc2-end;
+        grid-row: rows5-start / rows5-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 100%;
+        padding: 10px;
+    }
+
+    .bloc5{
+        background-color: rgba(121, 19, 126, 0.45);
+        grid-column: bloc1-start / bloc1-end;
+        grid-row: rows3-start / rows3-end;
+    }
+
+    .bloc6{
+        background-color: rgba(82, 163, 26, 0.45);
+        grid-column: bloc2-start / bloc2-end;
+        grid-row: rows3-start / rows3-end;
+    }
+
+    .bloc7{
+        background-color: rgba(25, 50, 9, 0.45);
+        grid-column: bloc1-start / bloc1-end;
+        grid-row: rows4-start / rows4-end;
+    }
+
+    .bloc8{
+        background-color: rgba(85, 192, 15, 0.45);
+        grid-column: bloc2-start / bloc2-end;
+        grid-row: rows4-start / rows4-end;
+    }
+}
+
