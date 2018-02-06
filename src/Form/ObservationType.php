@@ -17,13 +17,32 @@ class ObservationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('species',   TextType::class)
-            ->add('date',      DateType::class)
-            ->add('town',      TextType::class)
-            ->add('gps',       IntegerType::class)
-            ->add('numbers',   IntegerType::class)
-            ->add('imageFile', FileType::class)
-            ->add('content',   TextareaType::class)
+            ->add('species',   TextType::class,[
+                'label' => 'Nom de l\'espèce'
+                ])
+            ->add('date',      DateType::class,[
+                'label' => 'Date de l\'observation',
+                'widget' => 'single_text',
+                ])
+            ->add('town',      TextType::class,[
+                'label' => 'Ville',
+                'attr' => ['class' => 'searchTextField']
+                ])
+            ->add('latitude',  IntegerType::class,[
+                'label' => 'Latitude'
+                ])
+            ->add('longitude', IntegerType::class,[
+                'label' => 'Longitude'
+                ])
+            ->add('numbers',   IntegerType::class,[
+                'label' => 'Nombre d\'oiseaux'
+                ])
+            ->add('imageFile', FileType::class,[
+                'label' => 'Télécharger la photo de l\'especes'
+                ])
+            ->add('content',   TextareaType::class,[
+                'label' => 'Autres informations'
+                ])
         ;
     }
 

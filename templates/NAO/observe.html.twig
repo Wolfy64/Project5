@@ -8,7 +8,14 @@
     {{ form_widget(form) }}
     <button type="submit">Soumettre l'observation</button>
     {{ form_end(form) }}
+    <button id="findMe">Trouvez moi</button>
+    
+    <div id="map"></div>
 
+    <script src="/nao/javascript/observe.js"></script>
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI
+        &callback=initMap&language=fr&libraries=places">
+    </script>
 
 {% endblock %}

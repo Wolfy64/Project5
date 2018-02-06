@@ -45,7 +45,14 @@ class Observation
      * 
      * @ORM\Column(type="string")
      */
-    private $gps;
+    private $latitude;
+
+    /**
+     * @var string
+     * 
+     * @ORM\Column(type="string")
+     */
+    private $longitude;
 
     /**
      * @var integer
@@ -124,14 +131,24 @@ class Observation
         $this->town = $town;
     }
 
-    public function getGps(): ? int
+    public function getLatitude(): ? int
     {
-        return $this->gps;
+        return $this->latitude;
     }
 
-    public function setGps($gps): void
+    public function setLatitude($latitude): void
     {
-        $this->gps = $gps;
+        $this->latitude = $latitude;
+    }
+
+    public function getLongitude(): ? int
+    {
+        return $this->longitude;
+    }
+
+    public function setLongitude($longitude): void
+    {
+        $this->longitude = $longitude;
     }
 
     public function getNumbers(): ? int
