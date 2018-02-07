@@ -1,13 +1,16 @@
 {% extends "base.html.twig" %} 
+
 {% block body %} 
 
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
+<h1>Connexion</h1>
+
 <form action="{{ path('login') }}" method="post">
     <label for="username">Email:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
     <label for="password">Mot de passe:</label>
     <input type="password" id="password" name="_password" /> 
@@ -20,10 +23,16 @@
     <button type="submit">Se connecter</button>
 </form>
 
-<ul>
-    <li>
-        <a href="{{ path('user_registration') }}">S'inscrire</a>
-    </li>
-</ul>
+<h1>Créer un compte</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.firstName) }}
+    {{ form_row(form.lastName) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+    {{ form_row(form.termsOfUse) }}
+    <button type="submit">Créer un compte</button>
+{{ form_end(form) }}
 
 {% endblock %}
