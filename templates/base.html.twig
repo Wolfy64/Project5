@@ -11,20 +11,82 @@
             <link rel="stylesheet" href="{{ asset('/css/bootstrap-reboot.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
             <link rel="script" href="{{ asset('/nao/javascript/observe.js') }}">
+            <link rel="stylesheet" href="{{ asset('/css/style.base.css') }}">
+        {% endblock %}
+
+        {% block javascripts %}
+            <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         {% endblock %}
     </head>
-    <header>
-       {% block Header %}
-           <div>
-               <img class="header-banner" src="{{ asset('img/header_bgd-image.jpg') }}">
-               <div>
-                   <img class="logo" src="{{ asset('img/logoNAO.png') }}">
-               </div>
-           </div>
 
-       {% endblock %}
-    </header>
+
+        <div class="container-header">
+            <header>
+                <div class="logo-header">
+                    <img class="logo" src="{{ asset('img/logoNAO.png') }}">
+                </div>
+
+
+            <div class="item-menu1">
+                <a href="{{ path('about') }}">
+                        <button><i class="fa fa-file-alt"></i><br>A PROPOS</button>
+                </a>
+            </div>
+
+            <div class="item-menu2">
+                <a href="{{ path('joinUs') }}">
+                    <button><i class="fas fa-pencil-alt"></i><br>ADHERER</button>
+                </a>
+            </div>
+
+            <div class="item-menu3">
+                <a href="{{ path('observe') }}">
+                    <button><i class="fas fa-eye"></i><br>OBSERVER</button>
+                </a>
+            </div>
+
+            <div class="item-menu4">
+                <a href="{{ path('map') }}">
+                    <button><i class="fas fa-map-marker-alt"></i><br>CARTE</button>
+                </a>
+            </div>
+
+            <div class="item-menu5">
+                <a href="{{ path('blog') }}">
+                    <button><i class="fas fa-comment-alt"></i><br>BLOG</button>
+                </a>
+            </div>
+
+            <div class="item-menu6">
+                <a href="{{ path('faq') }}">
+                    <button><i class="fas fa-question-circle"></i><br>F.A.Q's</button>
+                </a>
+            </div>
+
+            <div class="item-menu7">
+                <a href="{{ path('contact') }}">
+                    <button><i class="fas fa-envelope"></i><br>CONTACT</button>
+                </a>
+            </div>
+
+            <div class="item-menu8">
+                <a href="{{ path('login') }}">
+                    <button><i class="fas fa-user"></i><br>CONNEXION</button>
+                </a>
+            </div>
+
+            <div class="item-menu9">
+                <a href="">
+                    <button><i class="fas fa-search"></i><br>RECHERCHE</button>
+                </a>
+            </div>
+            </header>
+        </div>
+
+
     <body>
+
+
         {% block menu %}
             <ul>
                 <li>
@@ -39,7 +101,7 @@
             </ul>
         {% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
     <footer>
         {% block footer %}
