@@ -27,6 +27,7 @@ class ObservationType extends AbstractType
                 ])
             ->add('place',     TextType::class,[
                 'label' => 'Lieu',
+                'required' => false,
                 'attr' => ['class' => 'searchTextField']
                 ])
             ->add('latitude',  HiddenType::class)

@@ -57,11 +57,8 @@ class Observation
     /**
      * @var string
      * 
-     * @ORM\Column(type="string")
-     * 
-     * @Assert\NotBlank()
      * @Assert\Type("string")
-     * @Assert\Length(min = 2, max = 50)
+     * @Assert\Length(max = 50)
      */
     private $place;
 
