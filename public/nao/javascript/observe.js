@@ -25,7 +25,7 @@ function initMap() {
     infoWindow.setContent(infoWindowContent);
 
     // ##### Auto-complete input field (Ville) #####
-    var input = document.getElementById('observation_town');
+    var input = document.getElementById('observation_place');
     var autocomplete = new google.maps.places.Autocomplete(input);
 
     autocomplete.addListener('place_changed', function () {

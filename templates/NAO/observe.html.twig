@@ -2,18 +2,26 @@
 
 {% block body %} 
 
-    {{ observe }}
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button type="submit">Soumettre l'observation</button>
-    {{ form_end(form) }}
-    <button id="findMe">Trouvez moi</button>
+<h1>{{ observe }}</h1>
     
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.species) }}
+        {{ form_row(form.date) }}
+        {{ form_row(form.place) }}
+        <button id="findMe">Trouvez moi</button>
+        {{ form_row(form.latitude) }}
+        {{ form_row(form.longitude) }}
+        {{ form_row(form.numbers) }}
+        {{ form_row(form.imageFile) }}
+        {{ form_row(form.content) }}
+        <button type="submit">Soumettre l'observation</button>
+    {{ form_end(form) }}
+
     <div id="map"></div>
 
     <script src="/nao/javascript/observe.js"></script>
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI
         &callback=initMap&language=fr&libraries=places">
     </script>
