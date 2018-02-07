@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class RegistrationController extends AbstractController
@@ -15,7 +16,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/inscription", name="user_registration")
      */
-    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder): Mixed
+    public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         // 1) build the form
         $user = new User();

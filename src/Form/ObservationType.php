@@ -9,8 +9,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ObservationType extends AbstractType
 {
@@ -24,24 +25,24 @@ class ObservationType extends AbstractType
                 'label' => 'Date de l\'observation',
                 'widget' => 'single_text',
                 ])
-            ->add('town',      TextType::class,[
-                'label' => 'Ville',
+            ->add('place',     TextType::class,[
+                'label' => 'Lieu',
+                'required' => false,
                 'attr' => ['class' => 'searchTextField']
                 ])
-            ->add('latitude',  IntegerType::class,[
-                'label' => 'Latitude'
-                ])
-            ->add('longitude', IntegerType::class,[
-                'label' => 'Longitude'
-                ])
-            ->add('numbers',   IntegerType::class,[
-                'label' => 'Nombre d\'oiseaux'
+            ->add('latitude',  HiddenType::class)
+            ->add('longitude', HiddenType::class)
+            ->add('numbers',   ChoiceType::class,[
+                'label' => 'Nombre d\'oiseaux',
+                'choices' => Observation::NUMBERS_OF_BIRDS,
                 ])
             ->add('imageFile', FileType::class,[
-                'label' => 'Télécharger la photo de l\'especes'
+                'label' => 'Télécharger la photo de l\'especes',
+                'required' => false
                 ])
             ->add('content',   TextareaType::class,[
-                'label' => 'Autres informations'
+                'label' => 'Autres informations',
+                'required' => false
                 ])
         ;
     }

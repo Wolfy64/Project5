@@ -6,16 +6,19 @@
             {% block title %}Welcome!{% endblock %}
         </title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
-            <link rel="stylesheet" href="{{ asset('/css/bootstrap-grid.css') }}">
-            <link rel="stylesheet" href="{{ asset('/css/bootstrap-reboot.css') }}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/style.homepage.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/style.homepage.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
-            <link rel="script" href="{{ asset('/nao/javascript/observe.js') }}">
+            <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}" />
             <link rel="stylesheet" href="{{ asset('/css/style.base.css') }}">
         {% endblock %}
 
         {% block javascripts %}
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+            <link rel="script"     href="{{ asset('/nao/javascript/observe.js') }}">
         {% endblock %}
     </head>
 
@@ -105,7 +108,7 @@
     </body>
     <footer>
         {% block footer %}
-
+            <script src="{{ asset('awesomplete/awesomplete.js') }}" async></script>
         {% endblock %}
     </footer>
 </html>
