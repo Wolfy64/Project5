@@ -16,61 +16,56 @@
 
     <div class="container">
 
-        <button class="bloc1" href="{{ path('about') }}">A PROPOS</button>
+        <div class="bloc1">
+            <a href="{{ path('about') }}">
+                <button>A PROPOS</button>
+            </a>
+        </div>
 
-        <button class="bloc2" href="{{ path('joinUs') }}">ADHERER</button>
+        <div class="bloc2">
+            <a href="{{ path('joinUs') }}">
+                <button>ADHERER</button>
+            </a>
+        </div>
 
-        <button class="bloc3" href="{{ path('observe') }}">OBSERVER</button>
+        <div class="bloc3">
+            <a href="{{ path('observe') }}">
+                <button>OBSERVER</button>
+            </a>
+        </div>
 
-        <button class="bloc4" href="{{ path('login') }}">CONNEXION</button>
+        <div class="bloc4">
+            <a href="{{ path('login') }}">
+                <button>CONNEXION</button>
+            </a>
+        </div>
 
         <div class="bloc-description">
             <p>Bienvenue sur notre site</p>
         </div>
 
-        <button class="bloc5" href="{{ path('map') }}">CARTE</button>
+        <div class="bloc5">
+            <a href="{{ path('map') }}">
+                <button>CARTE</button>
+            </a>
+        </div>
 
-        <button class="bloc6" href="{{ path('contact') }}">CONTACT</button>
+        <div class="bloc6">
+            <a href="{{ path('contact') }}">
+                <button>CONTACT</button>
+            </a>
+        </div>
 
-        <button class="bloc7" href="{{ path('faq') }}">F.A.Q's</button>
+        <div class="bloc7">
+            <a href="{{ path('faq') }}">
+                <button>F.A.Q's</button>
+            </a>
+        </div>
 
-        <button class="bloc8" href="{{ path('blog') }}">BLOG</button>
-
+        <div class="bloc8">
+            <a href="{{ path('blog') }}">
+                <button>BLOG</button>
+            </a>
+        </div>
     </div>
 {% endblock %}
-
-{# <a href="{{ path('about') }}">
-    <button class="bloc1">A PROPOS</button>
-</a>
-
-<a href="{{ path('joinUs') }}">
-    <button class="bloc2">ADHERER</button>
-</a>
-
-<a href="{{ path('observe') }}">
-    <button class="bloc3">OBSERVER</button>
-</a>
-
-<a href="{{ path('login') }}">
-    <button class="bloc4">CONNEXION</button>
-</a>
-
-<div class="bloc-description">
-    <p>Bienvenue sur notre site</p>
-</div>
-
-<a href="{{ path('map') }}">
-    <button class="bloc5">CARTE</button>
-</a>
-
-<a href="{{ path('contact') }}">
-    <button class="bloc6">CONTACT</button>
-</a>
-
-<a href="{{ path('faq') }}">
-    <button class="bloc7">F.A.Q's</button>
-</a>
-
-<a href="{{ path('blog') }}">
-    <button class="bloc8">BLOG</button>
-</a> #}
