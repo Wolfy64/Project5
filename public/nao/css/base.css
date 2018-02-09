@@ -1,0 +1,148 @@
+/**Header*/
+
+#header-logo{
+    display: flex;
+    justify-content: center;
+}
+img.logo{
+    display: flex;
+    height: 125px;
+    width: 125px;
+}
+#header-container{
+    margin-top: 10px;
+}
+.menu{
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    border: solid white 5px;
+}
+button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding-top: 10%;
+    outline: none;
+    transition: 0.2s;
+}
+
+button:hover{
+    box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.18);
+    transform: scale(1.01);
+    color: white;
+    font-size: medium;
+}
+
+button:active {
+    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.18);
+    transform: scale(0.98);
+}
+
+#item-menu1{
+    background-color: rgba(158, 25, 164, 0.65);
+}
+
+#item-menu2{
+    background-color: rgba(180, 108, 182, 0.65);
+}
+
+#item-menu3{
+    background-color: rgba(109, 45, 96, 0.65);
+}
+
+#item-menu4{
+    background-color: rgba(155, 53, 160, 0.65);
+}
+
+#item-menu5{
+    background-color: rgba(85, 192, 15, 0.65);
+}
+
+#item-menu6{
+    background-color: rgba(59, 90, 56, 0.65);
+}
+
+#item-menu7{
+    background-color: rgba(82, 163, 26, 0.65);
+}
+
+#item-menu8{
+    background-color: rgba(181, 188, 62, 0.65);
+}
+
+#item-menu9{
+    background-color: rgba(55, 56, 48, 0.65);
+}
+
+/**Footer*/
+.background-footer{
+    background-color: #6e9454;
+}
+
+
+#copyright{
+    display: flex;
+    justify-content: center;
+}
+
+#menu1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-liens{
+    color: white;
+}
+
+img.musee{
+    height: 100px;
+    width: 200px;
+}
+p.titre-footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20pt;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+#partenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#reseau-sociaux{
+    display: flex;
+    justify-content: center;
+}
+.reseau{
+    padding: 20px 20px 0px 20px;
+}
+#newsletter-form{
+    border-left: transparent 50px;
+    border-right: transparent 50px;
+}
+#newsletter-button{
+    background-color: #4d4d4f;
+    border: solid white 2px;
+}
+
+a:hover{
+    color: #542B56;
+}
+
+#newsletter-button:hover{
+    background-color: #542B56;
+    border: solid white 2px;
+}
