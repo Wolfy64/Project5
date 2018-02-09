@@ -1,0 +1,50 @@
+<footer>
+    <div class="container-fluid" id="footer-container">
+        <div class="row background-footer">
+            <div class="col-md-2" id="menu1">
+                <a href="{{ path('about') }}" class="footer-liens">A propos</a>
+                <a class="footer-liens" href="{{ asset('blog') }}">Blog</a>
+                <a class="footer-liens" href="{{ path('faq') }}">F.A.Q.</a>
+            </div>
+            <div class="col-md-2" id="menu2">
+                <a class="footer-liens" href="#">Plan du site</a>
+                <a class="footer-liens" href="{{ asset('contact') }}">Contact</a>
+            </div>
+            <div class="col-md-3" id="partenaire">
+                <p class="titre-footer">Partenaire</p>
+                <img class="musee" src="{{ asset('/img/LogoMNHN.png') }}">
+            </div>
+            <div class="col-md-3">
+                <p class="titre-footer">Restez Connecté</p>
+                <div class="row">
+                    <div class="col-md-12" id="reseau-sociaux">
+                        <img class="facebook reseau" src="{{ asset('/img/FB.png') }}">
+                        <img class="youtube reseau" src="{{ asset('/img/ytube.png') }}">
+                        <img class="instagram reseau" src="{{ asset('/img/insta.png') }}">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <p class="titre-footer">Restez informé</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="newsletter-form" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="newsletter-button">S'inscrire à la newsletter</button>
+                </form>
+            </div>
+        </div>
+        <div class="row background-footer">
+            <div class="col-md-12">
+                Coockie
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="copyright">
+                <p>Copyright 2018 - Nos amis les oiseaux - propulsé par Caméléon -
+                    <a href="#">Mentions Légales</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
