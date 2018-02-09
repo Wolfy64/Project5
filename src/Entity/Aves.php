@@ -2,60 +2,40 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * @ORM\Entity(repositoryClass="App\Repository\AvesRepository")
- */
 class Aves
 {
     /**
-     * * @var int
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @var int
      */
     private $id;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
      */
     private $ordre;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
      */
     private $famille;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(name="lb_name", type="string", length=60)
      */
     private $lbName;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(name="lb_auteur", type="string", length=60)
      */
     private $lbAuteur;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(name="nom_vern", type="string", length=120)
      */
     private $nomVern;
 
     /**
      * @var integer
-     * 
-     * @ORM\Column(type="integer", length=1)
      */
     private $habitat;
 

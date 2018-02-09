@@ -1,0 +1,33 @@
+App\Entity\Aves:
+    type: entity
+    table: nao_aves
+    repositoryClass: App\Repository\AvesRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        ordre:
+            name: ordre
+            type: string
+            length: 25
+        famille:
+            name: famille
+            type: string
+            length: 25
+        lbName:
+            name: lb_name
+            type: string
+            length: 60
+        lbAuteur:
+            name: lb_autheur
+            type: string
+            length: 60
+        nomVern:
+            name: nom_vern
+            type: string
+            lenght: 120
+        habitat:
+            name: habitat
+            type: integer
+            lenght: 1

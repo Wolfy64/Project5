@@ -2,32 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Projet-5.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/style.base.css" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/doctrine/Aves.orm.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/doctrine/Observation.orm.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/doctrine/Post.orm.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/AboutController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/AdhesionFileController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/BlogController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/ContactController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/FaqController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/HomePageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/JoinUsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/ListObservationsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/MapController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Security/LoginController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Security/SignupController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180209191033.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/NAO/homePage.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Security/signup.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/observations/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/observations/piaf.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Controller/NAOController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180201020632.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180201225443.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206231813.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206234654.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206235413.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206235513.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206235620.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180206235749.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180207000631.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Migrations/Version20180207001849.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Aves.php" afterPath="$PROJECT_DIR$/src/Entity/Aves.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Observation.php" afterPath="$PROJECT_DIR$/src/Entity/Observation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Post.php" afterPath="$PROJECT_DIR$/src/Entity/Post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/ObservationType.php" afterPath="$PROJECT_DIR$/src/Form/ObservationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/UserType.php" afterPath="$PROJECT_DIR$/src/Form/UserType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/about.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/about.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/blog.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/blog.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/contact.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/contact.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/faq.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/faq.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/homepage.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/joinUs.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/joinUs.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/listObservations.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/listObservations.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/map.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/map.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/observe.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/observe.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Security/login.html.twig" afterPath="$PROJECT_DIR$/templates/Security/login.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,8 +92,20 @@
             <state relative-caret-position="168">
               <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="68" />
               <folding>
-                <marker date="1518171318127" expanded="true" signature="1:69" ph="{% block stylesheets ...%}" />
-                <marker date="1518171318127" expanded="true" signature="246:282" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1:69" ph="{% block stylesheets ...%}" />
+                <marker date="1518210399746" expanded="true" signature="119:1630" ph="{% block body ...%}" />
+                <marker date="1518210399746" expanded="true" signature="246:282" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="846:932" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="857:917" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="972:1031" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1060:1172" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1101:1157" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1201:1319" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1246:1304" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1348:1462" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1389:1447" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1491:1603" ph="..." />
+                <marker date="1518210399746" expanded="true" signature="1533:1588" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,8 +124,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="416">
+              <caret line="154" column="16" lean-forward="false" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#button#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#button#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -98,6 +139,16 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-126">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,12 +195,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git status" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;ajout du responsive de la homepage&quot;" />
-      <command text="git push" />
-      <command text="git pull" />
-      <command text="php bin/console server:run" />
       <command text="git pull" />
       <command text="php bin/console server:run" />
       <command text="git pull" />
@@ -168,6 +213,12 @@
       <command text="php bin/consle server:run" />
       <command text="php bin/consolle server:run" />
       <command text="php bin/console server:run" />
+      <command text="git pull" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;ajout du header et footer version xl&quot;" />
+      <command text="git pull" />
+      <command text="git push" />
       <command text="git pull" />
     </commandsHistory>
   </component>
@@ -198,8 +249,8 @@
         <option value="$PROJECT_DIR$/public/css/base.css" />
         <option value="$PROJECT_DIR$/templates/NAO/about.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/style.base.css" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/base.css" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
       </list>
     </option>
   </component>
@@ -411,6 +462,20 @@
               <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="NAO" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -492,12 +557,12 @@
       <workItem from="1517910551622" duration="15619000" />
       <workItem from="1518002478783" duration="15458000" />
       <workItem from="1518089390562" duration="13426000" />
-      <workItem from="1518169685811" duration="26070000" />
+      <workItem from="1518169685811" duration="26939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123874000" />
+    <option name="totallyTimeSpent" value="124743000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,7 +581,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3245033" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32392776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32339954" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -545,7 +610,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/twbs/bootstrap/scss/_variables.scss" />
     <entry file="file://$PROJECT_DIR$/src/Entity/Aves.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
@@ -561,13 +625,6 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -615,9 +672,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1342">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#34#99#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -648,22 +703,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1517910708072" expanded="true" signature="563:952" ph="CREATE TABLE... observation" />
-            <marker date="1517910708072" expanded="true" signature="979:1058" ph="ALTER TABLE aves... " />
-            <marker date="1517910708072" expanded="true" signature="1085:1164" ph="ALTER TABLE post... " />
-            <marker date="1517910708072" expanded="true" signature="1191:1275" ph="ALTER TABLE app_users... " />
-            <marker date="1517910708072" expanded="true" signature="1765:1787" ph="DROP TABLE o... " />
-            <marker date="1517910708072" expanded="true" signature="1814:1858" ph="ALTER TABLE app_users... " />
-            <marker date="1517910708072" expanded="true" signature="2029:2067" ph="ALTER TABLE app_users... " />
-            <marker date="1517910708072" expanded="true" signature="2094:2141" ph="ALTER TABLE app_users... " />
-            <marker date="1517910708072" expanded="true" signature="2168:2207" ph="ALTER TABLE aves... " />
-            <marker date="1517910708072" expanded="true" signature="2234:2267" ph="ALTER TABLE aves... " />
-            <marker date="1517910708072" expanded="true" signature="2294:2336" ph="ALTER TABLE aves... " />
-            <marker date="1517910708072" expanded="true" signature="2363:2402" ph="ALTER TABLE post... " />
-            <marker date="1517910708072" expanded="true" signature="2429:2462" ph="ALTER TABLE post... " />
-            <marker date="1517910708072" expanded="true" signature="2489:2531" ph="ALTER TABLE post... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,11 +711,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#65#112#0#PHP" expanded="false" />
-            <marker date="1517910708077" expanded="true" signature="635:667" ph="ALTER TABLE app_users... " />
-            <marker date="1517910708077" expanded="true" signature="976:1052" ph="ALTER TABLE app_users... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,8 +854,20 @@
         <state relative-caret-position="168">
           <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="68" />
           <folding>
-            <marker date="1518171318127" expanded="true" signature="1:69" ph="{% block stylesheets ...%}" />
-            <marker date="1518171318127" expanded="true" signature="246:282" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1:69" ph="{% block stylesheets ...%}" />
+            <marker date="1518210399746" expanded="true" signature="119:1630" ph="{% block body ...%}" />
+            <marker date="1518210399746" expanded="true" signature="246:282" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="846:932" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="857:917" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="972:1031" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1060:1172" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1101:1157" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1201:1319" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1246:1304" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1348:1462" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1389:1447" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1491:1603" ph="..." />
+            <marker date="1518210399746" expanded="true" signature="1533:1588" ph="..." />
           </folding>
         </state>
       </provider>
@@ -840,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/NAO/about.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/nao/css/style.base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -864,10 +904,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Security/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/NAO/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="67" lean-forward="false" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="416">
+          <caret line="154" column="16" lean-forward="false" selection-start-line="154" selection-start-column="16" selection-end-line="154" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#i#0;n#button#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

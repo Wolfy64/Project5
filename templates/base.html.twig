@@ -24,7 +24,6 @@
         {% endblock %}
     </head>
 
-
     <body>
         <div class="container-fluid">
 
@@ -46,7 +45,7 @@
                                         </a>
                                     </div>
                                     <div class="col-md-1 menu" id="item-menu2">
-                                        <a href="{{ path('joinUs') }}">
+                                        <a href="{{ path('join_us') }}">
                                             <button><i class="fas fa-pencil-alt fa-3x" style="color: white"></i><br><br>ADHERER</button>
                                         </a>
                                     </div>
@@ -77,7 +76,7 @@
                                     </div>
                                     <div class="col-md-1 menu"></div>
                                     <div class="col-md-1 menu" id="item-menu8">
-                                        <a href="{{ path('login') }}">
+                                        <a href="#">
                                             <button><i class="fas fa-user fa-3x" style="color: white"></i><br><br>CONNEXION</button>
                                         </a>
                                     </div>
@@ -102,6 +101,7 @@
 
                 </div>
             </div>
+
             {% endblock %}
 
             <footer>
@@ -148,10 +148,29 @@
                         <p>Copyright 2018 - Nos amis les oiseaux - propulsé par Caméléon - <a href="#">Mentions Légales</a></p>
                     </div>
                 </div>
-            </div>
 
             {% endblock %}
+
+            </div>
+
             </footer>
+
+
+
+        <!--{% block menu %}
+            <ul>
+                <li>
+                    <a href="{{ path('home_page') }}">Page d'acceuil</a>
+                </li>
+                <li>
+                    <a href="{{ path('security_logout') }}">Se déconnecter</a>
+                </li>
+                <li>
+                    <a href="{{ path('admin') }}">Admin</a>
+                </li>
+            </ul>
+        {% endblock %}
+    -->
         </div>
     </body>
 </html>

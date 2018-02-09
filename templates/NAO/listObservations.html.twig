@@ -1,17 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block body %} 
-    {{ listObservations }} 
+    <h1>Liste des observations</h1>
 
     <ul>
         {% for observation in observations %}
-            {# <li> Nom espece: {{ observation.id }} </li> #}
             <li> Nom espece: {{ observation.species }} </li>
             <li> Observé le: {{ observation.date|date("m/d/Y") }} </li>
-            <li>Ville {{ observation.town }} </li>
-            <li> Coordonnés GPS{{ observation.gps }} </li>
+            <li> Coordonnés GPS {{ observation.latitude|trim(0) }} / {{ (observation.longitude) }}</li>
             <li> Comentaire: {{ observation.content }} </li>
-            <li><img src="/images/observations/{{ observation.imageName }}" alt=""></li>
+            <li><img src="/img/observations/{{ observation.imageName }}" alt=""></li>
         {% endfor %}
     </ul>
     

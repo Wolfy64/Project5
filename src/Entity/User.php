@@ -2,92 +2,54 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * @ORM\Table(name="app_users")
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- */
 class User implements UserInterface, \Serializable
 {
     const ROLE_USER = ['ROLE_USER'];
 
     /**
      * @var int
-     * 
-     * @ORM\Column(type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25, unique=true)
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Email(checkMX=true)
      */
     private $username;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("string")
-     * @Assert\Length(min = 2, max = 25)
      */
     private $firstName;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("string")
-     * @Assert\Length(min=2, max=25)
      */
     private $lastName;
 
     /**
      * @var string
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Length(min=4,max=100)
      */
     private $plainPassword;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=64)
      */
     private $password;
 
     /**
      * @var array
-     * 
-     * @ORM\Column(type="simple_array")
      */
     private $roles = [];
 
     /**
      * @var boolean
-     * 
-     * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
 
     /**
      * @var boolean
-     * 
-     * @Assert\IsTrue()
      */
     private $termsOfUse;
 
