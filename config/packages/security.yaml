@@ -16,12 +16,12 @@ security:
         main:
             anonymous: ~
             form_login:
-                login_path: login
-                check_path: login
+                login_path: security_login
+                check_path: security_login
                 csrf_token_generator: security.csrf.token_manager
             logout:
                 path: security_logout
-                target: homepage
+                target: home_page
             provider: our_db_provider
             remember_me:
                 secret:   '%kernel.secret%'

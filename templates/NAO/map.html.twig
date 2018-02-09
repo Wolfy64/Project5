@@ -2,11 +2,38 @@
 
 {% block body %} 
 
-    {{ map }}
+    <h1>Localiser les observations d'oiseaux enregistreés en France</h1>
+
+    <div>
+        <h2>Recherche un oiseau</h2>
+        <form action="{{ path('map') }}" method="get">
+            <label for="espece">Recherche un oiseau</label>
+            <input type="search" name="nomVern" id="espece">
+            <button type="submit">Lancer la recherche</button>
+        </form>
+
+        <h3>Espèces</h3>
+        <h3>Département</h3>
+
+    </div>
+
+    <div>
+        <h2>Résultats</h2>
+        {% if result is defined %}
+            <ul>
+                <li>{{ result.id }}</li>
+                <li>{{ result.ordre }}</li>
+                <li>{{ result.famille }}</li>
+                <li>{{ result.lbName }}</li>
+                <li>{{ result.lbAuteur }}</li>
+                <li>{{ result.habitat }}</li>
+            </ul>
+        {% endif %}
+    </div>
 
     <ul>
         <li>
-            <a href="{{ path('listObservations') }}">Liste des observations</a>
+            <a href="{{ path('list_observations') }}">Liste des observations</a>
         </li>
     </ul>
 

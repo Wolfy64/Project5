@@ -100,7 +100,7 @@ class Observation
      * 
      * @Assert\Image(
      *     maxSize = "3M",
-     *     mimeTypes = {"application/jpeg", "application/jpg", "application/png"},
+     *     mimeTypes = {"image/jpeg", "image/jpg", "image/png"},
      *     minWidth = 200,
      *     maxWidth = 400,
      *     minHeight = 200,
