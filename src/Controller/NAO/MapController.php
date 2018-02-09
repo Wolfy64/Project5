@@ -10,15 +10,15 @@ class MapController extends AbstractController
 {
     public function index() : Response
     {
-        $observations = $this->getDoctrine()
-            ->getRepository(Observation::class)
-            ->findAll();
+        // $observations = $this->getDoctrine()
+        //     ->getRepository(Observation::class)
+        //     ->findAll();
 
-        if (!$observations) {
-            throw $this->createNotFoundException(
-                'No result'
-            );
-        }
+        // if (!$observations) {
+        //     throw $this->createNotFoundException(
+        //         'No result'
+        //     );
+        // }
 
         return $this->render('NAO/map.html.twig');
     }

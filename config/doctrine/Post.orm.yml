@@ -1,0 +1,16 @@
+App\Entity\Post:
+    type: entity
+    table: nao_post
+    repositoryClass: App\Repository\PostRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            name: title
+            type: string
+        article:
+            name: article
+            type: text
+        

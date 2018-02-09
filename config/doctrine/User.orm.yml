@@ -1,0 +1,35 @@
+App\Entity\User:
+    type: entity
+    table: nao_user
+    repositoryClass: App\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        username:
+            name: username
+            type: string
+            length: 25
+            unique: true
+        firstName:
+            name: firstName
+            type: string
+            length: 25
+        lastName:
+            name: lastName
+            type: string
+            length: 25
+        plainPassword:
+            name: plainPassword
+            type: string
+        password:
+            name: password
+            type: string
+            lenght: 64
+        roles:
+            name: roles
+            type: simple_array
+        isActive:
+            name: isActive
+            type: boolean

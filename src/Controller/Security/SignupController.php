@@ -3,6 +3,7 @@
 namespace App\Controller\Security;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\UserType;
@@ -10,7 +11,7 @@ use App\Entity\User;
 
 class SignupController extends AbstractController
 {
-    public function index(Request $request) : Response
+    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder) : Response
     {
         // 1) build the form
         $user = new User();
@@ -35,7 +36,7 @@ class SignupController extends AbstractController
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('home_page');
         }
 
         return $this->render('Security/signup.html.twig', [

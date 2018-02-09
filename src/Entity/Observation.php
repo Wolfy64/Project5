@@ -2,15 +2,8 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\ObservationRepository")
- * @Vich\Uploadable
- */
 class Observation
 {
     const NUMBERS_OF_BIRDS = [
@@ -27,116 +20,62 @@ class Observation
     ];
 
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @var int
      */
     private $id;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string")
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("string")
-     * @Assert\Length(min = 2, max = 50)
      */
     private $species;
 
     /**
      * @var date
-     * 
-     * @ORM\Column(type="date")
-     * 
-     * @Assert\Date()
-     * @Assert\LessThanOrEqual("today")
      */
     private $date;
 
     /**
      * @var string
-     * 
-     * @Assert\Type("string")
-     * @Assert\Length(max = 50)
      */
     private $place;
 
     /**
      * @var float
-     * 
-     * @ORM\Column(type="float")
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("numeric")
      */
     private $latitude;
 
     /**
      * @var float
-     * 
-     * @ORM\Column(type="float")
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("numeric")
      */
     private $longitude;
 
     /**
      * @var integer
-     * 
-     * @ORM\Column(type="integer")
-     * 
-     * @Assert\NotBlank()
-     * @Assert\Type("integer")
-     * @Assert\Range(min = 1,max = 10)
      */
     private $numbers;
 
     /**
      * @var File
-     * 
-     * @Vich\UploadableField(mapping="observations_image", fileNameProperty="imageName", size="imageSize")
-     * 
-     * @Assert\Image(
-     *     maxSize = "3M",
-     *     mimeTypes = {"image/jpeg", "image/jpg", "image/png"},
-     *     minWidth = 200,
-     *     maxWidth = 400,
-     *     minHeight = 200,
-     *     maxHeight = 400
-     * )
      */
     private $imageFile;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=255, nullable=true)
      */    
     private $imageName;
 
     /**
      * @var integer
-     * 
-     * @ORM\Column(type="integer", nullable=true)
      */
     private $imageSize;
 
     /**
      * @var \DateTime
-     * 
-     * @ORM\Column(type="datetime", nullable=true)
      */
     private $updatedAt;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string",nullable=true)
-     * 
-     * @Assert\Type("string")
-     * @Assert\Length(max = 500)
      */
     private $content;
 
