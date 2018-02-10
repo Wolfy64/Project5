@@ -26,8 +26,7 @@
         "symfony/web-link": "^4.0",
         "symfony/web-server-bundle": "^4.0",
         "symfony/webpack-encore-pack": "*",
-        "symfony/yaml": "^4.0",
-        "vich/uploader-bundle": "^1.8"
+        "symfony/yaml": "^4.0"
     },
     "require-dev": {
         "symfony/browser-kit": "^4.0",

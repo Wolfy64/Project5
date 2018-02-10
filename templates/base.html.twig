@@ -8,20 +8,19 @@
 
         {% block stylesheets %}
             <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
-            <link rel="stylesheet" href="{{ asset('/stylesheet/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css')}}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+            <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/base.css') }}">
         {% endblock %}
 
         {% block javascripts %}
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-            <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
-            <script src="{{ asset('awesomplete/awesomplete.js') }}" async></script>
-            <script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
-            <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script> 
+            <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>  
         {% endblock %}
 
     </head>
@@ -40,20 +39,6 @@
             
             {% block footer %}
                 {% include "_footer.html.twig" %}
-            {% endblock %}
-            
-            {% block menu %}
-                <ul>
-                    <li>
-                        <a href="{{ path('home_page') }}">Page d'acceuil</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('security_logout') }}">Se déconnecter</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('admin') }}">Admin</a>
-                    </li>
-                </ul>
             {% endblock %}
         </div>
     </body>
