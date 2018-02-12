@@ -1,7 +1,63 @@
 {% extends "base.html.twig" %}
 
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/apropos/apropos-xl.css') }}">
+{% endblock %}
+
+
 {% block body %} 
 
-    <h1>A Propos</h1>
+    <div class="container-fluid">
+        <div class="row body-apropos">
+            <div class="col-md-4">
+                <img class="img-apropos" src="{{ asset('/img/img-a-propos.jpg') }}">
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-1 titre-bar2" id="titre-bar"></div>
+                            <div class="col-md-5 titre-bar3" id="titre-bar"><h1>A PROPOS</h1></div>
+                            <div class="col-md-6"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 apropos-texte">
+                        <p>Restabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam,
+                            eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur.
+                            quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum
+                            profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi
+                            febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum
+                            existimabat, anxia cogitatione, quid moliretur haerebat.
+                        </p>
+                        <p>Verum ad istam omnem orationem brevis est
+                            defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore,
+                            deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam deditšnihil dicam hoc
+                            loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse
+                            deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M.
+                            Crassi castissima domo, cum artibus honestissimis erudiretur
+                        </p>
+                        <p>.Inter haec Orfitus praefecti potestate
+                            regebat urbem aeternam ultra modum delatae dignitatis sese efferens insolenter, vir quidem
+                            prudens et forensium negotiorum oppido gnarus, sed splendore liberalium doctrinarum minus quam
+                            nobilem decuerat institutus, quo administrante seditiones sunt concitatae graves ob inopiam vini:
+                            huius avidis usibus vulgus intentum ad motus asperos excitatur et crebros.
+                        </p>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
 
 {% endblock %}

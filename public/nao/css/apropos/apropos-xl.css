@@ -1,0 +1,41 @@
+/** Header Barre */
+
+#item-barre1{
+    background-color: rgba(158, 25, 164, 0.65);
+}
+
+/** Body */
+
+.body-apropos{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.apropos-texte{
+    padding-top: 15px;
+    padding-right: 100px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+#titre-bar{
+    background-color: rgba(158, 25, 164, 0.65);
+}
+
+.titre-bar2{
+    border-right: solid white 10px;
+    margin-left: 15px;
+}
+
+.titre-bar3{
+    padding-top: 8px;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}

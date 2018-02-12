@@ -13,6 +13,8 @@
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
             <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/base.css') }}">
         {% endblock %}
@@ -20,7 +22,9 @@
         {% block javascripts %}
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
             <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
-            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>  
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
+            <script src="{{ asset('/nao/javascript/header.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
         {% endblock %}
 
     </head>
@@ -31,12 +35,9 @@
                 {% include "_header.html.twig" %}
             {% endblock %}
 
-            <!-- <div class="row" style="background-color: #66afe9"> -->
-                <!-- <div class="col-md-12" style="height: 590px"> -->
             {% block body %}{% endblock %}
-                <!-- </div> -->
-            <!-- </div> -->
-            
+
+
             {% block footer %}
                 {% include "_footer.html.twig" %}
             {% endblock %}
