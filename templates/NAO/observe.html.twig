@@ -19,16 +19,15 @@
     
     {{ form_start(form) }}
         {{ form_errors(form) }}
-
-        {{ form_row(form.species) }}
-        {{ form_row(form.date) }}
-        {{ form_row(form.place) }}
+        {{ form_row(form.species, {'label': 'Nom de l\'espèce'}) }}
+        {{ form_row(form.date, {'label': 'Date de l\'observation'}) }}
+        {{ form_row(form.place, {'label': 'Lieu','attr': {'class': 'searchTextField'}}) }}
         <button id="findMe" type="button">Trouvez moi</button>
+        {{ form_row(form.numbers, {'label': 'Nombre d\'oiseaux'}) }}
+        {{ form_row(form.imageFile, {'label': 'Télécharger la photo de l\'especes'}) }}
+        {{ form_row(form.content, {'label': 'Autres informations'}) }}
         {{ form_row(form.latitude) }}
         {{ form_row(form.longitude) }}
-        {{ form_row(form.numbers) }}
-        {{ form_row(form.imageFile) }}
-        {{ form_row(form.content) }}
         <button type="submit">Soumettre l'observation</button>
     {{ form_end(form) }}
 

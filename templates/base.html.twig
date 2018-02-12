@@ -15,6 +15,8 @@
             <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
             <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base.css') }}">
         {% endblock %}
 
         {% block javascripts %}
@@ -22,6 +24,7 @@
             <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
             <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
             <script src="{{ asset('/nao/javascript/header.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
         {% endblock %}
 
     </head>
@@ -33,6 +36,7 @@
             {% endblock %}
 
             {% block body %}{% endblock %}
+
 
             {% block footer %}
                 {% include "_footer.html.twig" %}

@@ -32,13 +32,11 @@ class ObservationType extends AbstractType
                 'constraints' => new Length([
                     'min' => 2,
                     'max' => 50
-                    ]),
-                'label' => 'Nom de l\'espèce'
+                    ])
                 ])
             ->add('date',      DateType::class,[
                 'constraints' => new Date(),
                 'constraints' => new LessThanOrEqual('today'),
-                'label' => 'Date de l\'observation',
                 'widget' => 'single_text',
                 ])
             ->add('place',     TextType::class,[
@@ -48,9 +46,7 @@ class ObservationType extends AbstractType
                 'constraints' => new Length([
                     'max' => 50
                     ]),
-                'label' => 'Lieu',
-                'required' => false,
-                'attr' => ['class' => 'searchTextField']
+                'required' => false
                 ])
             ->add('latitude',  HiddenType::class,[
                 'constraints' => new NotBlank(),
@@ -73,11 +69,9 @@ class ObservationType extends AbstractType
                     'min' => 1,
                     'max' => 10
                     ]),
-                'label' => 'Nombre d\'oiseaux',
                 'choices' => Observation::NUMBERS_OF_BIRDS,
                 ])
             ->add('imageFile', FileType::class,[
-                'label' => 'Télécharger la photo de l\'especes',
                 'required' => false
                 ])
             ->add('content',   TextareaType::class,[
@@ -85,7 +79,6 @@ class ObservationType extends AbstractType
                 'constraints' => new Length([
                     'max' => 500
                     ]),
-                'label' => 'Autres informations',
                 'required' => false
                 ]);
     }

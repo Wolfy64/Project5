@@ -25,8 +25,7 @@ class UserType extends AbstractType
                 'constraints' => new NotBlank(),
                 'constraints' => new Email([
                     'checkMX' => true
-                    ]),
-                'label' => 'Email'
+                    ])
                 ])
             ->add('firstName',     TextType::class,[
                 'constraints' => new NotBlank(),
@@ -35,32 +34,28 @@ class UserType extends AbstractType
                 'constraints' => new Length([
                     'min' => 2,
                     'max' => 25
-                    ]),
-                'label' => 'Prénom'
+                    ])
                 ])
             ->add('lastName',      TextType::class,[
                 'constraints' => new NotBlank(),
                 'constraints' => new Type([
                     'type' => 'string'
-                ]),
+                    ]),
                 'constraints' => new Length([
                     'min' => 2,
                     'max' => 25
-                ]),
-                'label' => 'Nom'
+                    ])
                 ])
             ->add('plainPassword', RepeatedType::class, [
                 'constraints' => new NotBlank(),
                 'constraints' => new Length([
                     'min' => 4,
                     'max' => 100
-                ]),
-                'type'           => PasswordType::class,
-                'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Confirmer votre mot de passe']])
+                    ]),
+                'type'        => PasswordType::class
+                ])
             ->add('termsOfUse',    CheckboxType::class,[
-                'label'    => 'J\'accepte les conditions d\'utilisation',
-                'required' => true,
+                'required' => true
                 ]);
     }
 
