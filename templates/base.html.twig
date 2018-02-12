@@ -5,172 +5,38 @@
         <title>
             {% block title %}Welcome!{% endblock %}
         </title>
+
         {% block stylesheets %}
             <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
-            <link rel="stylesheet" href="{{ asset('/stylesheet/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css')}}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
             <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/observe.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base.css') }}">
+            <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
         {% endblock %}
 
         {% block javascripts %}
             <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-            <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
-            <script src="{{ asset('awesomplete/awesomplete.js') }}" async></script>
-            <script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
-            <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
+            <script src="{{ asset('/nao/javascript/header.js') }}"></script>
         {% endblock %}
+
     </head>
 
     <body>
         <div class="container-fluid">
-
-            {% block Header %}
-
-            <header>
-                <div class="container-fluid" id="header-container">
-                    <div class="row">
-                        <div class="col-md-2" id="header-logo">
-                            <img class="logo" src="{{ asset('/img/logoNAO.png') }}">
-                        </div>
-                        <div class="col-md-10">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-1 menu"></div>
-                                    <div class="col-md-1 menu" id="item-menu1">
-                                        <a href="{{ path('about') }}">
-                                            <button><i class="fa fa-file-alt fa-3x" style="color: white"></i><br><br>A PROPOS</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu2">
-                                        <a href="{{ path('join_us') }}">
-                                            <button><i class="fas fa-pencil-alt fa-3x" style="color: white"></i><br><br>ADHERER</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu3">
-                                        <a href="{{ path('observe') }}">
-                                            <button><i class="fas fa-eye fa-3x" style="color: white"></i><br><br>OBSERVER</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu4">
-                                        <a href="{{ path('map') }}">
-                                            <button><i class="fas fa-map-marker-alt fa-3x" style="color: white"></i><br><br>CARTE</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu5">
-                                        <a href="{{ path('blog') }}">
-                                            <button><i class="fas fa-comment-alt fa-3x" style="color: white"></i><br><br>BLOG</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu6">
-                                        <a href="{{ path('faq') }}">
-                                            <button><i class="fas fa-question-circle fa-3x" style="color: white"></i><br><br>F.A.Q's</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu7">
-                                        <a href="{{ path('contact') }}">
-                                            <button><i class="fas fa-envelope fa-3x" style="color: white"></i><br><br>CONTACT</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu"></div>
-                                    <div class="col-md-1 menu" id="item-menu8">
-                                        <a href="#">
-                                            <button><i class="fas fa-user fa-3x" style="color: white"></i><br><br>CONNEXION</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu" id="item-menu9">
-                                        <a href="">
-                                            <button><i class="fas fa-search fa-3x" style="color: white"></i><br><br>RECHERCHE</button>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-1 menu"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
+            {% block header %}
+                {% include "_header.html.twig" %}
             {% endblock %}
 
-            {% block Body %}
-            <div class="row" style="background-color: #66afe9">
-                <div class="col-md-12" style="height: 590px">
-
-                </div>
-            </div>
-
-            {% endblock %}
-
-            <footer>
+            {% block body %}{% endblock %}
 
             {% block footer %}
-
-            <div class="container-fluid" id="footer-container">
-                <div class="row background-footer">
-                    <div class="col-md-2" id="menu1">
-                        <a href="{{ path('about') }}" class="footer-liens">A propos</a><a class="footer-liens" href="{{ asset('blog') }}">Blog</a><a class="footer-liens" href="{{ path('faq') }}">F.A.Q.</a>
-                    </div>
-                    <div class="col-md-2" id="menu2">
-                        <a class="footer-liens" href="#">Plan du site</a><a class="footer-liens" href="{{ asset('contact') }}">Contact</a>
-                    </div>
-                    <div class="col-md-3" id="partenaire">
-                        <p class="titre-footer">Partenaire</p>
-                        <img class="musee" src="{{ asset('/img/LogoMNHN.png') }}">
-                    </div>
-                    <div class="col-md-3">
-                        <p class="titre-footer">Restez Connecté</p>
-                        <div class="row">
-                            <div class="col-md-12" id="reseau-sociaux">
-                                <img class="facebook reseau" src="{{ asset('/img/FB.png') }}"><img class="youtube reseau" src="{{ asset('/img/ytube.png') }}"><img class="instagram reseau" src="{{ asset('/img/insta.png') }}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <p class="titre-footer">Restez informé</p>
-                        <form>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="newsletter-form" aria-describedby="emailHelp" placeholder="Enter email">
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="newsletter-button">S'inscrire à la newsletter</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="row background-footer">
-                    <div class="col-md-12">
-                        Coockie
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12" id="copyright">
-                        <p>Copyright 2018 - Nos amis les oiseaux - propulsé par Caméléon - <a href="#">Mentions Légales</a></p>
-                    </div>
-                </div>
-
+                {% include "_footer.html.twig" %}
             {% endblock %}
-
-            </div>
-
-            </footer>
-
-
-
-        <!--{% block menu %}
-            <ul>
-                <li>
-                    <a href="{{ path('home_page') }}">Page d'acceuil</a>
-                </li>
-                <li>
-                    <a href="{{ path('security_logout') }}">Se déconnecter</a>
-                </li>
-                <li>
-                    <a href="{{ path('admin') }}">Admin</a>
-                </li>
-            </ul>
-        {% endblock %}
-    -->
         </div>
     </body>
 </html>

@@ -1,4 +1,17 @@
-{% extends "base.html.twig" %} 
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/observe-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe-xl.css') }}">
+{% endblock %}
 
 {% block body %} 
 
@@ -21,9 +34,12 @@
 
     <div id="map"></div>
 
-    <script src="/nao/javascript/observe.js"></script>
+    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI
         &callback=initMap&language=fr&libraries=places">
     </script>
 
 {% endblock %}
+
