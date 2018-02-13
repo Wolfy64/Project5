@@ -13,31 +13,18 @@ App\Entity\Observation:
         date:
             name: date
             type: date
-        place:
-            name: place
-            type: string
         latitude:
             name: latitude
-            type: float
+            type: string
         longitude:
             name: longitude
-            type: float
+            type: string
         numbers:
             name: numbers
             type: integer
-        imageName:
-            name: imageName
+        image:
+            name: image
             type: string
-            lenght: 255
-            nullable: true
-        imageSize:
-            name: imageSize
-            type: integer
-            nullable: false
-        updatedAt:
-            name: updatedAt
-            type: datetime
-            nullable: true
         content:
             name: content
             type: string
