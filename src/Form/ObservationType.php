@@ -67,12 +67,12 @@ class ObservationType extends AbstractType
                 'constraints' => new File([
                     'maxSize' => '2M',
                     'binaryFormat' => false,
-                    'mimeTypes' => ['image.jpeg', 'image.jpg']
+                    'mimeTypes' => ['image/jpeg', 'image/jpg']
                 ])])
             ->add('content',   TextareaType::class,[
                 'required' => false,
                 'constraints' => [
-                    new NotBlank(),
+
                     new Length(['max' => 500])
                 ]]);
     }

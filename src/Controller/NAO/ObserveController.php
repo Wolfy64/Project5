@@ -29,6 +29,8 @@ class ObserveController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($observation);
             $em->flush();
+
+            $this->addFlash('notice','Votre observation est en attente de validation par un de nos naturalistes');
         }
 
         return $this->render('NAO/observe.html.twig', [
