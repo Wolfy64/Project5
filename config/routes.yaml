@@ -10,6 +10,10 @@ join_us:
     path: /adherer
     controller: App\Controller\NAO\JoinUsController::index
 
+join_us_show_file:
+    path: /formulaire-adhesion
+    controller: App\Controller\NAO\JoinUsController::showFiles
+
 observe:
     path: /observer
     controller: App\Controller\NAO\ObserveController::index
@@ -33,10 +37,6 @@ faq:
 contact:
     path: /contact
     controller: App\Controller\NAO\ContactController::index
-
-adhesion_file:
-    path: /adhesionFile
-    controller: App\Controller\NAO\AdhesionFileController::index
 
 security_login:
     path: /connexion
