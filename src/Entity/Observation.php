@@ -100,7 +100,7 @@ class Observation
         $this->place = $place;
     }
 
-    public function getLatitude(): ? int
+    public function getLatitude(): ? string
     {
         return $this->latitude;
     }
@@ -110,7 +110,7 @@ class Observation
         $this->latitude = $latitude;
     }
 
-    public function getLongitude(): ? int
+    public function getLongitude(): ? string
     {
         return $this->longitude;
     }

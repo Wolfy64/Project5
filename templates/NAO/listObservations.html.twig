@@ -9,7 +9,7 @@
             <li> Observé le: {{ observation.date|date("m/d/Y") }} </li>
             <li> Coordonnés GPS {{ observation.latitude }} / {{ (observation.longitude) }}</li>
             <li> Comentaire: {{ observation.content }} </li>
-            <li><img src="/img/observations/{{ observation.imageName }}" alt=""></li>
+            <li><img src="/img/observations/{{ observation.image }}" alt=""></li>
         {% endfor %}
     </ul>
     

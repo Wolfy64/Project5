@@ -521,7 +521,6 @@ return _;
 }());
 
 // ##### My Autocomplete #####
-var input = document.getElementById("observation_species");
 new Awesomplete(input, {
 	list: [
 		"Accenteur alpin",
