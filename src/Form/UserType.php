@@ -22,38 +22,28 @@ class UserType extends AbstractType
     {
         $builder
             ->add('username',      EmailType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Email([
-                    'checkMX' => true
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Email(['checkMX' => true])
+                ]])
             ->add('firstName',     TextType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'string']),
-                'constraints' => new Length([
-                    'min' => 2,
-                    'max' => 25
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'string']),
+                    new Length(['min' => 2,'max' => 25])
+                ]])
             ->add('lastName',      TextType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'string'
-                    ]),
-                'constraints' => new Length([
-                    'min' => 2,
-                    'max' => 25
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'string']),
+                    new Length(['min' => 2,'max' => 25])
+                ]])
             ->add('plainPassword', RepeatedType::class, [
-                'constraints' => new NotBlank(),
-                'constraints' => new Length([
-                    'min' => 4,
-                    'max' => 100
-                    ]),
-                'type'        => PasswordType::class
-                ])
+                'type' => PasswordType::class,
+                'constraints' => [
+                    new NotBlank(),
+                    new Length(['min' => 4,'max' => 100])
+                ]])
             ->add('termsOfUse',    CheckboxType::class,[
                 'required' => true
                 ]);

@@ -11,16 +11,16 @@ class ListObservationsController extends AbstractController
 {
     public function index(Request $request) : Response
     {
-        // $observations = $this->getDoctrine()
-        //     ->getRepository(Observation::class)
-        //     ->findAll();
+        $observations = $this->getDoctrine()
+            ->getRepository(Observation::class)
+            ->findAll();
 
-        // if (!$observations) {
-        //     throw $this->createNotFoundException(
-        //         'No result'
-        //     );
-        // }
-
+        if (!$observations) {
+            throw $this->createNotFoundException(
+                'No result'
+            );
+        }
+        dump($observations);
         return $this->render('NAO/listObservations.html.twig', [
             'observations' => $observations
             ]);

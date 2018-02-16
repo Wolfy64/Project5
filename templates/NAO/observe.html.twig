@@ -25,7 +25,7 @@
         {{ form_row(form.place, {'label': 'Lieu','attr': {'class': 'searchTextField'}}) }}
         <button id="findMe" type="button">Trouvez moi</button>
         {{ form_row(form.numbers, {'label': 'Nombre d\'oiseaux'}) }}
-        {{ form_row(form.imageFile, {'label': 'Télécharger la photo de l\'especes'}) }}
+        {{ form_row(form.image, {'label': 'Télécharger la photo de l\'especes'}) }}
         {{ form_row(form.content, {'label': 'Autres informations'}) }}
         {{ form_row(form.latitude) }}
         {{ form_row(form.longitude) }}
@@ -34,6 +34,9 @@
 
     <div id="map"></div>
 
+    <script>
+        var input = document.getElementById("observation_species");
+    </script>
     <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
     <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
 

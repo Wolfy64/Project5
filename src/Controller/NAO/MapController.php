@@ -4,22 +4,41 @@ namespace App\Controller\NAO;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+use App\Form\MapType;
 use App\Entity\Observation;
 
 class MapController extends AbstractController
 {
-    public function index() : Response
+    public function index(Request $request) : Response
     {
-        // $observations = $this->getDoctrine()
-        //     ->getRepository(Observation::class)
-        //     ->findAll();
+        $observation = new Observation();
 
-        // if (!$observations) {
-        //     throw $this->createNotFoundException(
-        //         'No result'
-        //     );
-        // }
+        $form = $this->createForm(MapType::class, $observation);
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->get('species')->getData();
 
-        return $this->render('NAO/map.html.twig');
+            $observation = $this->getDoctrine()
+                ->getRepository(Observation::class)
+                ->findBy(['species' => $data]
+            );
+
+            if (!$observation) {
+                throw $this->createNotFoundException(
+                    'Pas de résultas'
+                );
+            }
+
+            return $this->render('NAO/map.html.twig', [
+                'form' => $form->createView(),
+                'observation' => $observation
+            ]);
+        }
+
+        return $this->render('NAO/map.html.twig',[
+            'form' => $form->createView ()
+        ]);
     }
 }

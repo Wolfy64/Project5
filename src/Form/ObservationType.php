@@ -18,6 +18,7 @@ use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\LessThanOrEqual;
 use Symfony\Component\Validator\Constraints\Range;
+use Symfony\Component\Validator\Constraints\File;
 
 class ObservationType extends AbstractType
 {
@@ -25,62 +26,54 @@ class ObservationType extends AbstractType
     {
         $builder
             ->add('species',   TextType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'string'
-                    ]),
-                'constraints' => new Length([
-                    'min' => 2,
-                    'max' => 50
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'string']),
+                    new Length(['min' => 2,'max' => 50])
+                ]])
             ->add('date',      DateType::class,[
-                'constraints' => new Date(),
-                'constraints' => new LessThanOrEqual('today'),
                 'widget' => 'single_text',
-                ])
+                'constraints' => [
+                    new Date(),
+                    new LessThanOrEqual('today')
+                ]])
             ->add('place',     TextType::class,[
-                'constraints' => new Type([
-                    'type' => 'string'
-                    ]),
-                'constraints' => new Length([
-                    'max' => 50
-                    ]),
-                'required' => false
-                ])
+                'required' => false,
+                'constraints' => [
+                    new Type(['type' => 'string']),
+                    new Length(['max' => 50]),
+                ]])
             ->add('latitude',  HiddenType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'numeric'
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(['message' => 'Vous devez sélectionner un lieu sur la carte']),
+                    new Type(['type' => 'string'])
+                ]])
             ->add('longitude', HiddenType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'numeric'
-                    ])
-                ])
+                'constraints' => [
+                    new NotBlank(['message' => 'Vous devez sélectionner un lieu sur la carte']),
+                    new Type(['type' => 'string'])
+                ]])
             ->add('numbers',   ChoiceType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Type([
-                    'type' => 'integer'
-                    ]),
-                'constraints' => new Range([
-                    'min' => 1,
-                    'max' => 10
-                    ]),
                 'choices' => Observation::NUMBERS_OF_BIRDS,
-                ])
-            ->add('imageFile', FileType::class,[
-                'required' => false
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'integer']),
+                    new Range(['min' => 1,'max' => 10])
+                ]])
+            ->add('image',     FileType::class,[
+                'required' => false,
+                'empty_data' => null,
+                'constraints' => new File([
+                    'maxSize' => '2M',
+                    'binaryFormat' => false,
+                    'mimeTypes' => ['image/jpeg', 'image/jpg']
+                ])])
             ->add('content',   TextareaType::class,[
-                'constraints' => new NotBlank(),
-                'constraints' => new Length([
-                    'max' => 500
-                    ]),
-                'required' => false
-                ]);
+                'required' => false,
+                'constraints' => [
+
+                    new Length(['max' => 500])
+                ]]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -17,7 +17,8 @@ class Observation
             '8' => 8,
             '9' => 9,
             '10+' => 10
-    ];
+            ];
+
 
     /**
      * @var int
@@ -40,12 +41,12 @@ class Observation
     private $place;
 
     /**
-     * @var float
+     * @var string
      */
     private $latitude;
 
     /**
-     * @var float
+     * @var string
      */
     private $longitude;
 
@@ -55,24 +56,9 @@ class Observation
     private $numbers;
 
     /**
-     * @var File
-     */
-    private $imageFile;
-
-    /**
      * @var string
-     */    
-    private $imageName;
-
-    /**
-     * @var integer
      */
-    private $imageSize;
-
-    /**
-     * @var \DateTime
-     */
-    private $updatedAt;
+    private $image;
 
     /**
      * @var string
@@ -114,7 +100,7 @@ class Observation
         $this->place = $place;
     }
 
-    public function getLatitude(): ? int
+    public function getLatitude(): ? string
     {
         return $this->latitude;
     }
@@ -124,7 +110,7 @@ class Observation
         $this->latitude = $latitude;
     }
 
-    public function getLongitude(): ? int
+    public function getLongitude(): ? string
     {
         return $this->longitude;
     }
@@ -139,9 +125,9 @@ class Observation
         return $this->numbers;
     }
 
-    public function getImageFile() : ? File
+    public function getImage() : ? string
     {
-        return $this->imageFile;
+        return $this->image;
     }
 
     /**
@@ -153,50 +139,16 @@ class Observation
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
      */
-    public function setImageFile(? File $image = null) : void
+    public function setImage($image)
     {
-        $this->imageFile = $image;
+        $this->image = $image;
 
-        if (null !== $image) {
-            // It is required that at least one field changes if you are using doctrine
-            // otherwise the event listeners won't be called and the file is lost
-            $this->updatedAt = new \DateTimeImmutable();
-        }
+        return $this;
     }
 
     public function setNumbers($numbers): void
     {
         $this->numbers = $numbers;
-    }
-
-    public function getImageName(): ? string
-    {
-        return $this->imageName;
-    }
-
-    public function setImageName(? string $imageName): void
-    {
-        $this->imageName = $imageName;
-    }
-
-    public function setImageSize(? int $imageSize): void
-    {
-        $this->imageSize = $imageSize;
-    }
-
-    public function getImageSize(): ? int
-    {
-        return $this->imageSize;
-    }
-
-    public function getImage():? File
-    {
-        return $this->image;
-    }
-
-    public function setImage($image): void
-    {
-        $this->image = $image;
     }
 
     public function getContent(): ? string
