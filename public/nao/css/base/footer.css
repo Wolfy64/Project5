@@ -1,0 +1,80 @@
+img.musee{
+    height: 100px;
+    width: 200px;
+}
+
+h2.titre-footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+a:hover{
+    color: #542B56;
+}
+
+.background-footer{
+    background-color: #6e9454;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.footer-liens{
+    color: white;
+}
+
+.reseau{
+    border-top: solid transparent 5px;
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+}
+
+#menu1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#partenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#reseau-sociaux{
+    display: flex;
+    justify-content: space-between;
+}
+
+#newsletter-form{
+    background-color: white;
+    color: black;
+}
+
+#newsletter{
+    padding-right: 7%;
+    padding-left: 7%;
+}
+#newsletter-button{
+    color: #ddffc5;
+    background-color: #4d4d4f;
+    border: solid white 2px;
+    padding: 0 0 0 0;
+}
+
+#newsletter-button:hover{
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #542B56;
+    border: solid white 2px;
+}
