@@ -1,0 +1,64 @@
+/** Header Barre */
+
+#item-barre1{
+    background-color: rgba(215, 95, 227, 0.65);
+}
+
+
+/** Body */
+ img.img-apropos{
+     border-right: solid white 15px;
+     border-left: solid white 15px;
+     max-height: 100%;
+     max-width: 100%;
+ }
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.body-apropos{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.apropos-texte{
+    padding-top: 15px;
+    padding-right: 100px;
+}
+
+.titre-bar2{
+    border-right: solid white 10px;
+    border-left: solid white 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    width: 20px;
+}
+
+.titre-bar3{
+    display: flex;
+    padding-top: 8px;
+}
+
+.titre-bar4{
+    display: none;
+}
+
+#apropos-icone{
+    color: white;
+}
+
+#titre-bar{
+    background-color: rgba(215, 95, 227, 0.65);
+}
+
+
+

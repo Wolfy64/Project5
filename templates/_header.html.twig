@@ -1,111 +1,168 @@
 <header>
-    <div class="container-fluid" id="header-container">
-        <div class="row">
-            <div class="col-md-2" id="header-logo">
+        <div class="row menu-pc" id="header-container">
+            <div class="col-2" id="header-logo">
                 <img class="logo" src="{{ asset('/img/logoNAO.png') }}">
             </div>
-            <div class="col-md-10">
-                <div class="container-fluid">
+            <div class="col-xl-10 col-lg-10">
                     <div class="row">
-                        <div class="col-md-1 menu"></div>
-                        <div class="col-md-1 menu" id="item-menu1">
+                        <div class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 menu" id="item-menu1">
                             <a href="{{ path('about') }}">
-                                <button id="bouton1">
-                                    <i class="fa fa-file-alt fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>A PROPOS
+                                <button class="bouton-menu" id="bouton1">
+                                    <i class="fa fa-file-alt fa-2x" id="header-icone"></i>
+                                    <h2>A PROPOS</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre1"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu2">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu2">
                             <a href="{{ path('join_us') }}">
-                                <button id="bouton2">
-                                    <i class="fas fa-pencil-alt fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>ADHERER
+                                <button class="bouton-menu" id="bouton2">
+                                    <i class="fas fa-pencil-alt fa-2x" id="header-icone"></i>
+                                    <h2>ADHERER</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre2"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu3">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu3">
                             <a href="{{ path('observe') }}">
-                                <button id="bouton3">
-                                    <i class="fas fa-eye fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>OBSERVER
+                                <button class="bouton-menu" id="bouton3">
+                                    <i class="fas fa-eye fa-2x" id="header-icone"></i>
+                                    <h2>OBSERVER</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre3"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu4">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu4">
                             <a href="{{ path('map') }}">
-                                <button id="bouton4">
-                                    <i class="fas fa-map-marker-alt fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>CARTE
+                                <button class="bouton-menu" id="bouton4">
+                                    <i class="fas fa-map-marker-alt fa-2x" id="header-icone"></i>
+                                    <h2>CARTE</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre4"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu5">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu5">
                             <a href="{{ path('blog') }}">
-                                <button id="bouton5">
-                                    <i class="fas fa-comment-alt fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>BLOG
+                                <button class="bouton-menu" id="bouton5">
+                                    <i class="fas fa-comment-alt fa-2x" id="header-icone"></i>
+                                    <h2>BLOG</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre5"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu6">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu6">
                             <a href="{{ path('faq') }}">
-                                <button id="bouton6">
-                                    <i class="fas fa-question-circle fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>F.A.Q's
+                                <button class="bouton-menu" id="bouton6">
+                                    <i class="fas fa-question-circle fa-2x" id="header-icone"></i>
+                                    <h2>F.A.Q's</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre6"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu7">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu7">
                             <a href="{{ path('contact') }}">
-                                <button id="bouton7">
-                                    <i class="fas fa-envelope fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>CONTACT
+                                <button class="bouton-menu" id="bouton7">
+                                    <i class="fas fa-envelope fa-2x" id="header-icone"></i>
+                                    <h2>CONTACT</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre7"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu"></div>
-                        <div class="col-md-1 menu" id="item-menu8">
+                        <div class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 menu-space menu" id="item-menu8">
                             <a href="{{ path('security_login') }}">
-                                <button id="bouton8">
-                                    <i class="fas fa-user fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>CONNEXION
+                                <button class="bouton-menu" id="bouton8">
+                                    <i class="fas fa-user fa-2x" id="header-icone"></i>
+                                    <h2>CONNEXION</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre8"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu" id="item-menu9">
+                        <div class="col-xl-1 col-lg-1 menu" id="item-menu9">
                             <a href="">
-                                <button id="bouton9">
-                                    <i class="fas fa-search fa-3x" style="color: white"></i>
-                                    <br>
-                                    <br>RECHERCHE
+                                <button class="bouton-menu" id="bouton9">
+                                    <i class="fas fa-search fa-2x" id="header-icone"></i>
+                                    <h2>RECHERCHE</h2>
                                 </button>
                             </a>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre9"></div>
+                            </div>
                         </div>
-                        <div class="col-md-1 menu"></div>
+                        <div class="col-xl-1 col-lg-1" role="navigation"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-1 offset-1 menu-barre" id="item-barre1"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre2"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre3"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre4"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre5"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre6"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre7"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre8"></div>
-                        <div class="col-md-1 menu-barre" id="item-barre9"></div>
                     </div>
+        </div>
+
+    <div class="row">
+        <div class="col-4" id="logo-mobile">
+            <img class="logo" src="{{ asset('/img/logoNAO.png') }}">
+        </div>
+
+            <div class="col-2"></div>
+
+        <div class="col-6" id="menu-mobile">
+            <nav class="navbar-expand-lg navbar-light bg-light-green">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item liens-mobile" id="liens-mobile1">
+                            <i class="fas fa-user fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('security_login') }}">CONNEXION</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile2">
+                            <i class="fa fa-file-alt fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('about') }}">A PROPOS</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile3">
+                            <i class="fas fa-pencil-alt fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('join_us') }}">ADHERER</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile4">
+                            <i class="fas fa-eye fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('observe') }}">OBSERVER</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile5">
+                            <i class="fas fa-map-marker-alt fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('map') }}">CARTE</a>
+
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile5">
+                            <i class="fas fa-comment-alt fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('blog') }}">BLOG</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile6">
+                            <i class="fas fa-question-circle fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('faq') }}">F.A.Q's</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile7">
+                            <i class="fas fa-envelope fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('contact') }}">CONTACT</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
+                    </form>
                 </div>
-            </div>
+            </nav>
         </div>
     </div>
 </header>

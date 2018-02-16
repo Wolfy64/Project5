@@ -1,39 +1,45 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
     <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-xl.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-xl.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/apropos/apropos-xl.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/apropos/apropos.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/apropos/apropos-mobile.css') }}">
 {% endblock %}
 
 
 {% block body %} 
 
-    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 titre-bar4" id="titre-bar"><h1>A PROPOS</h1></div>
+        </div>
+
+
         <div class="row body-apropos">
-            <div class="col-md-4">
-                <img class="img-apropos" src="{{ asset('/img/img-a-propos.jpg') }}">
+            <div class="col-lg-4 col-md-12 col-xs-12" id="image-apropos">
+                <img class=" col-12 img-apropos" src="{{ asset('/img/img-a-propos.jpg') }}">
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8" id="apropos-content">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-1 titre-bar2" id="titre-bar"></div>
-                            <div class="col-md-5 titre-bar3" id="titre-bar"><h1>A PROPOS</h1></div>
-                            <div class="col-md-6"></div>
+                    <div class="col-lg-12">
+                        <div class="row" id="title-bar">
+                            <div class="col-lg-1 col-md-0 col-xs-0 titre-bar2" id="titre-bar">
+                            </div>
+                            <div class="col-lg-3 col-md-0 col-xs-0 titre-bar3" id="titre-bar"><h1>A PROPOS</h1></div>
+                            <div class="col-lg-8 col-md-0 col-xs-0"></div>
                         </div>
                     </div>
-                    <div class="col-md-8"></div>
-                </div>
+                    </div>
                 <div class="row">
-                    <div class="col-md-12 apropos-texte">
+                    <div class="col-12 apropos-texte">
                         <p>Restabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam,
                             eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur.
                             quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum
@@ -56,8 +62,7 @@
                         </p>
                     </div>
                 </div>
-              </div>
+            </div>
         </div>
-    </div>
 
 {% endblock %}

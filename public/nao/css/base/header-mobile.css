@@ -1,0 +1,52 @@
+@media (max-width: 960px) {
+    img.logo{
+        display: flex;
+        height: 70px;
+        width: 70px;
+    }
+
+    button.navbar-toggler{
+        background-color: white;
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu-pc{
+        display: none;
+    }
+
+    #menu-mobile{
+        display: inline;
+        background-color: white;
+    }
+
+    .navbar{
+        padding-top: 3px;
+    }
+
+    .nav-link{
+        color: white;
+        font-size: 12px;
+        margin-left: 5%;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    #logo-mobile{
+        display: inline;
+        padding-top: 3px;
+    }
+
+    .liens-mobile{
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    nav{
+        padding-left: 0;
+        padding-right: 0;
+        background-color: white;
+    }
+}

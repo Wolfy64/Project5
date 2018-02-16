@@ -1,5 +1,18 @@
 {% extends "base.html.twig" %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+{% endblock %}
+
 {% block body %} 
     <h1>Liste des observations</h1>
 
