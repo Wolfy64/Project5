@@ -20,7 +20,7 @@ class ListObservationsController extends AbstractController
                 'No result'
             );
         }
-        dump($observations);
+        // dump($observations);
         return $this->render('NAO/listObservations.html.twig', [
             'observations' => $observations
             ]);
