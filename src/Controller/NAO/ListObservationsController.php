@@ -14,7 +14,7 @@ class ListObservationsController extends AbstractController
         $observations = $this->getDoctrine()
             ->getRepository(Observation::class)
             ->findAll();
-
+ 
         if (!$observations) {
             throw $this->createNotFoundException(
                 'No result'
