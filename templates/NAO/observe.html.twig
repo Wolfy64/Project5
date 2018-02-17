@@ -1,7 +1,48 @@
-{% extends "base.html.twig" %} 
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe.css') }}">
+{% endblock %}
 
 {% block body %} 
 
-    {{ observe }}
+    <h1>Observer</h1>
+    
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.species, {'label': 'Nom de l\'espèce'}) }}
+        {{ form_row(form.date, {'label': 'Date de l\'observation'}) }}
+        {{ form_row(form.place, {'label': 'Lieu','attr': {'class': 'searchTextField'}}) }}
+        <button id="findMe" type="button">Trouvez moi</button>
+        {{ form_row(form.numbers, {'label': 'Nombre d\'oiseaux'}) }}
+        {{ form_row(form.image, {'label': 'Télécharger la photo de l\'especes'}) }}
+        {{ form_row(form.content, {'label': 'Autres informations'}) }}
+        {{ form_row(form.latitude) }}
+        {{ form_row(form.longitude) }}
+        <button type="submit">Soumettre l'observation</button>
+    {{ form_end(form) }}
+
+    <div id="map"></div>
+
+    <script>
+        var input = document.getElementById("observation_species");
+    </script>
+    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI
+        &callback=initMap&language=fr&libraries=places">
+    </script>
 
 {% endblock %}
+

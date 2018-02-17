@@ -11,38 +11,50 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Type;
+use Symfony\Component\Validator\Constraints\Length;
 
 class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email',         EmailType::class)
-            ->add('username',      TextType::class,[
-                'label' => 'Pseudo'
-                ])
+            ->add('username',      EmailType::class,[
+                'constraints' => [
+                    new NotBlank(),
+                    new Email(['checkMX' => true])
+                ]])
             ->add('firstName',     TextType::class,[
-                'label' => 'Prénom'
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'string']),
+                    new Length(['min' => 2,'max' => 25])
+                ]])
             ->add('lastName',      TextType::class,[
-                'label' => 'Nom'
-                ])
+                'constraints' => [
+                    new NotBlank(),
+                    new Type(['type' => 'string']),
+                    new Length(['min' => 2,'max' => 25])
+                ]])
             ->add('plainPassword', RepeatedType::class, [
-                'type'           => PasswordType::class,
-                'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Confirmer votre mot de passe']])
+                'type' => PasswordType::class,
+                'constraints' => [
+                    new NotBlank(),
+                    new Length(['min' => 4,'max' => 100])
+                ]])
             ->add('termsOfUse',    CheckboxType::class,[
-                'label'    => 'J\'accepte les conditions d\'utilisation',
-                'required' => true,
+                'required' => true
                 ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => User::class,
             'csrf_protection' => true,
             'csrf_field_name' => '_token',
-        ));
+            ]);
     }
 }

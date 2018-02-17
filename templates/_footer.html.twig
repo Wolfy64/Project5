@@ -1,0 +1,48 @@
+<footer>
+    <div class="row background-footer">
+        <div class="col-xl-2 col-lg-2" id="menu1">
+            <a href="{{ path('about') }}" class="footer-liens">A propos</a>
+            <a class="footer-liens" href="{{ asset('blog') }}">Blog</a>
+            <a class="footer-liens" href="{{ path('faq') }}">F.A.Q.</a>
+        </div>
+        <div class="col-xl-2 col-lg-2" id="menu2">
+            <a class="footer-liens" href="#">Plan du site</a>
+            <a class="footer-liens" href="{{ asset('contact') }}">Contact</a>
+        </div>
+        <div class="col-xl-3 col-lg-3" id="partenaire">
+            <h2 class="titre-footer">Partenaire</h2>
+            <img class="musee" src="{{ asset('/img/LogoMNHN.png') }}">
+        </div>
+        <div class="col-xl-2 col-lg-2" id="social-icone">
+            <h2 class="titre-footer">Restez Connecté</h2>
+            <div class="row">
+                <div class="col-12" id="reseau-sociaux">
+                    <a href="facebook.com"><img class="facebook reseau" src="{{ asset('/img/FB.png') }}" onmouseover="this.src='{{ asset('/img/FB_hover.png') }}'" onmouseout="this.src='{{ asset('/img/FB.png') }}'"></a>
+                    <a href="youtube.com"><img class="youtube reseau" src="{{ asset('/img/ytube.png') }}" onmouseover="this.src='{{ asset('/img/ytube_hover.png') }}'" onmouseout="this.src='{{ asset('/img/ytube.png') }}'"></a>
+                    <a href="instagram.com"><img class="instagram reseau" src="{{ asset('/img/insta.png') }}" onmouseover="this.src='{{ asset('/img/insta_hover.png') }}'" onmouseout="this.src='{{ asset('/img/insta.png') }}'"></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3" id="newsletter-formulaire">
+            <h2 class="titre-footer">Restez informé</h2>
+            <form>
+                <div class="form-group" id="newsletter">
+                    <input type="email" class="form-control" id="newsletter-form" aria-describedby="emailHelp" placeholder="Entrez votre email">
+                </div>
+                <button type="submit" class="bouton-menu" id="newsletter-button">S'inscrire à la newsletter</button>
+            </form>
+        </div>
+    </div>
+    <div class="row background-footer">
+        <div class="col-12">
+            Coockie
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="copyright">
+            <p>Copyright 2018 - Nos amis les oiseaux - propulsé par Caméléon -
+                <a href="#">Mentions Légales</a>
+            </p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,32 @@
+App\Entity\Observation:
+    type: entity
+    table: nao_observation
+    repositoryClass: App\Repository\ObservationRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        species:
+            name: species
+            type: string
+        date:
+            name: date
+            type: date
+        latitude:
+            name: latitude
+            type: string
+        longitude:
+            name: longitude
+            type: string
+        numbers:
+            name: numbers
+            type: integer
+        image:
+            name: image
+            type: string
+        content:
+            name: content
+            type: string
+            nullable: true
+

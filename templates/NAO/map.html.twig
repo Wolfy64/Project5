@@ -1,7 +1,70 @@
-{% extends "base.html.twig" %} 
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/map/map.css') }}">
+{% endblock %}
 
 {% block body %} 
 
-    {{ map }}
+    <h1>Localiser les observations d'oiseaux enregistreés en France</h1>
 
+    <div>
+        <h2>Recherche un oiseau</h2>
+
+        <h3>Espèces</h3>
+
+        {{ form_start(form) }}
+            {{ form_errors(form) }}
+            {{ form_row(form.species,{'label': 'Sélectionner une espèce'}) }}
+            <button type="submit">Lancer la recherche</button>
+        {{ form_end(form) }}
+
+        <h3>Département</h3>
+    </div>
+
+    {% if observation is defined %} 
+        <div>
+            <h2>Résultats</h2>
+        
+            <h3>Votres recherche:</h3>
+
+            <ul>
+                <li>{{ observation.0.species }}</li>
+                <li>Département " A faire plus tard"</li>
+            </ul>
+
+            <p>Il y a {{ observation|length }} 
+                {% if observation|length < 1 %} résultat {% else %} résultats 
+                {% endif %} 
+            </p>
+
+            <p>Affiche une belle image</p>
+
+            <a href="#">Voir les résultats</a>
+        
+        </div>
+    {% else %} 
+        <p>Affiche une belle image</p>
+    {% endif %}
+
+    <ul>
+        <li>
+            <a href="{{ path('list_observations') }}">Liste des observations</a>
+        </li>
+    </ul>
+
+        <script>
+            var input = document.getElementById("map_species");
+        </script>
+    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
 {% endblock %}

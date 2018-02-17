@@ -1,3 +1,51 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home_page:
+    path: /
+    controller: App\Controller\NAO\HomePageController::index
+
+about:
+    path: /apropos
+    controller: App\Controller\NAO\AboutController::index
+
+join_us:
+    path: /adherer
+    controller: App\Controller\NAO\JoinUsController::index
+
+join_us_show_file:
+    path: /formulaire-adhesion
+    controller: App\Controller\NAO\JoinUsController::showFiles
+
+observe:
+    path: /observer
+    controller: App\Controller\NAO\ObserveController::index
+
+list_observations:
+    path: /list-des-observations
+    controller: App\Controller\NAO\ListObservationsController::index
+
+map:
+    path: /carte
+    controller: App\Controller\NAO\MapController::index
+
+blog:
+    path: /blog
+    controller: App\Controller\NAO\BlogController::index
+
+faq:
+    path: /faq
+    controller: App\Controller\NAO\FaqController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\NAO\ContactController::index
+
+security_login:
+    path: /connexion
+    controller: App\Controller\Security\LoginController::index
+
+security_signup:
+    path: /inscription
+    controller: App\Controller\Security\SignupController::index
+
+security_logout:
+    path: /deconnexion
+    controller: App\Controller\Security\LoginController::logout

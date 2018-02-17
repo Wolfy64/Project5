@@ -2,16 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>
+            {% block title %}Welcome!{% endblock %}
+        </title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+            <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+            <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+        {% endblock %}
+
+        {% block javascripts %}
+            <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+            <script src="{{ asset('/bootstrap/js/mdb.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/popper.min.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/jquery-3.2.1.min.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
+            <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script>
+        {% endblock %}
     </head>
+
     <body>
-        <ul>
-            <li>
-                <a href="/">Page d'acceuil</a>
-            </li>
-        </ul>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container-fluid">
+            {% block header %}
+                {% include "_header.html.twig" %}
+            {% endblock %}
+
+            {% block body %}{% endblock %}
+
+            {% block footer %}
+                {% include "_footer.html.twig" %}
+            {% endblock %}
+        </div>
     </body>
 </html>

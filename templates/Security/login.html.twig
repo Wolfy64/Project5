@@ -1,13 +1,30 @@
-{% extends "base.html.twig" %} 
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/login/login.css') }}">
+{% endblock %}
+
 {% block body %} 
 
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<form action="{{ path('login') }}" method="post">
+<h1>Connexion</h1>
+
+<form action="{{ path('security_login') }}" method="post">
     <label for="username">Email:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
     <label for="password">Mot de passe:</label>
     <input type="password" id="password" name="_password" /> 
@@ -20,10 +37,10 @@
     <button type="submit">Se connecter</button>
 </form>
 
-<ul>
-    <li>
-        <a href="/inscription">S'inscrire</a>
-    </li>
-</ul>
+<a href="{{ path('security_signup') }}">Créer un compte</a>
+<p>Liens provisoire</p>
+<a href="{{ path('home_page') }}">Page d'acceuil</a>
+<a href="{{ path('security_logout') }}">Se déconnecter</a>
+<a href="{{ path('admin') }}">Admin</a>
 
 {% endblock %}

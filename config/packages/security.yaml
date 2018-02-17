@@ -16,12 +16,12 @@ security:
         main:
             anonymous: ~
             form_login:
-                login_path: login
-                check_path: login
+                login_path: security_login
+                check_path: security_login
                 csrf_token_generator: security.csrf.token_manager
             logout:
                 path: security_logout
-                target: homepage
+                target: home_page
             provider: our_db_provider
             remember_me:
                 secret:   '%kernel.secret%'
@@ -33,5 +33,9 @@ security:
         ROLE_PRO: ROLE_USER
 
     access_control:
-    # require ROLE_ADMIN for /admin*
-    - { path: ^/admin, roles: ROLE_ADMIN }
+    # require ROLE_ADMIN*
+    - { path: ^/admin,             roles: ROLE_ADMIN }
+    # require ROLE_USER*
+    - { path: ^/observer,          roles: ROLE_USER }
+    - { path: ^/carte,             roles: ROLE_USER }
+    - { path: ^/list-observations, roles: ROLE_USER }

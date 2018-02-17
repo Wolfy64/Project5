@@ -2,80 +2,49 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * @ORM\Table(name="app_users")
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- */
 class User implements UserInterface, \Serializable
 {
     const ROLE_USER = ['ROLE_USER'];
 
     /**
      * @var int
-     * 
-     * @ORM\Column(type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
      */
     private $firstName;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=25)
      */
     private $lastName;
 
     /**
      * @var string
-     * 
-     * @Assert\Length(max=4096)
      */
     private $plainPassword;
 
     /**
      * @var string
-     * 
-     * @ORM\Column(type="string", length=64)
      */
     private $password;
 
     /**
-     * @var string
-     * 
-     * @ORM\Column(type="string", length=60, unique=true)
-     */
-    private $email;
-
-    /**
      * @var array
-     * 
-     * @ORM\Column(type="simple_array")
      */
     private $roles = [];
 
     /**
      * @var boolean
-     * 
-     * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
 
@@ -94,7 +63,7 @@ class User implements UserInterface, \Serializable
         return $this->id;
     }
 
-    public function getUsername()
+    public function getUsername(): ? string
     {
         return $this->username;
     }
@@ -104,7 +73,7 @@ class User implements UserInterface, \Serializable
         $this->username = $username;
     }
 
-    public function getFirstName()
+    public function getFirstName(): ? string
     {
         return $this->firstName;
     }
@@ -114,7 +83,7 @@ class User implements UserInterface, \Serializable
         $this->firstName = $firstName;
     }
 
-    public function getLastName()
+    public function getLastName(): ? string
     {
         return $this->lastName;
     }
@@ -131,7 +100,7 @@ class User implements UserInterface, \Serializable
         return;
     }
 
-    public function getPlainPassword()
+    public function getPlainPassword(): ? string
     {
         return $this->plainPassword;
     }
@@ -146,19 +115,9 @@ class User implements UserInterface, \Serializable
         return $this->password;
     }
 
-    public function setPassword($password)
+    public function setPassword($password): void
     {
         $this->password = $password;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setEmail($email): void
-    {
-        $this->email = $email;
     }
 
     public function getRoles(): array
@@ -194,7 +153,7 @@ class User implements UserInterface, \Serializable
         $this->isActive = $isActive;
     }
 
-    public function getTermsOfUse()
+    public function getTermsOfUse(): ? bool
     {
         return $this->termsOfUse;
     }
