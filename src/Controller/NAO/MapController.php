@@ -39,4 +39,9 @@ class MapController extends AbstractController
             'form' => $form->createView ()
         ]);
     }
+
+    public function showList()
+    {
+        return $this->render('NAO/mapShowList.html.twig');
+    }
 }
