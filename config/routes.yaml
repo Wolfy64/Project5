@@ -26,6 +26,10 @@ map:
     path: /carte
     controller: App\Controller\NAO\MapController::index
 
+map_show_list:
+    path: /carte-liste
+    controller: App\Controller\NAO\MapController::showList
+
 blog:
     path: /blog
     controller: App\Controller\NAO\BlogController::index

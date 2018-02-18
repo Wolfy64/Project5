@@ -25,20 +25,23 @@ class MapController extends AbstractController
                 ->findBy(['species' => $data]
             );
 
-            if (!$observation) {
-                throw $this->createNotFoundException(
-                    'Pas de résultas'
-                );
+            if ($observation) {
+                return $this->render('NAO/map.html.twig', [
+                    'form' => $form->createView(),
+                    'observation' => $observation
+                ]);
             }
-
-            return $this->render('NAO/map.html.twig', [
-                'form' => $form->createView(),
-                'observation' => $observation
-            ]);
+            
+            $this->addFlash('notice', 'Nous n\'avons pas trouvé de resultats pour votre recherche');
         }
 
         return $this->render('NAO/map.html.twig',[
             'form' => $form->createView ()
         ]);
+    }
+
+    public function showList()
+    {
+        return $this->render('NAO/mapShowList.html.twig');
     }
 }
