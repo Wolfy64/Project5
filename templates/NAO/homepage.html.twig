@@ -1,73 +1,43 @@
-{% extends "base.html.twig" %}
-
-{% block header %}{% endblock header %}
-
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('/nao/css/style.homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/homepage/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/homepage/homepage-mobile.css') }}">
 {% endblock %}
 
 {% block body %}
-    <div class="header-container">
-        <div class="banner">
-            <img class="logo" src="{{ asset('/img/logoNAO.png') }}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12" id="logo-nao">
+                <img src="{{ asset('/img/logoNAO.png') }}">
+            </div>
         </div>
-        <br>
-    </div>
-
-    <div class="container">
-
-        <div class="bloc1">
-            <a href="{{ path('about') }}">
-                <button>A PROPOS</button>
-            </a>
+        <div class="row" id="space">
+            <div class="col-lg-12"></div>
         </div>
-
-        <div class="bloc2">
-            <a href="{{ path('join_us') }}">
-                <button>ADHERER</button>
-            </a>
-        </div>
-
-        <div class="bloc3">
-            <a href="{{ path('observe') }}">
-                <button>OBSERVER</button>
-            </a>
-        </div>
-
-        <div class="bloc4">
-            <a href="{{ path('security_login') }}">
-                <button>CONNEXION</button>
-            </a>
-        </div>
-
-        <div class="bloc-description">
-            <p>Bienvenue sur notre site</p>
-        </div>
-
-        <div class="bloc5">
-            <a href="{{ path('map') }}">
-                <button>CARTE</button>
-            </a>
-        </div>
-
-        <div class="bloc6">
-            <a href="{{ path('contact') }}">
-                <button>CONTACT</button>
-            </a>
-        </div>
-
-        <div class="bloc7">
-            <a href="{{ path('faq') }}">
-                <button>F.A.Q's</button>
-            </a>
-        </div>
-
-        <div class="bloc8">
-            <a href="{{ path('blog') }}">
-                <button>BLOG</button>
-            </a>
+        <div class="content-block">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Passionnée d'ornithologie ?</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Localisez facilement en france vos espèces préférées.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" id="button">
+                    <a href="{{ path('about') }}">
+                        <button type="button" class="btn btn-light">
+                            J'Y VOLE !
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
-
-{% block footer %}{% endblock footer %}

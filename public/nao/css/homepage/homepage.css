@@ -1,0 +1,46 @@
+body {
+    background-image: url("../../../img/background-image-HP.jpg");
+    background-repeat: no-repeat;
+}
+
+img{
+    height: 165px;
+    width: 165px;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+h3{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+h1, h3{
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+}
+
+#button{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.content-block{
+    margin-left: 60%;
+}
+
+
+#space{
+    height: 350px;
+}
