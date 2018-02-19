@@ -31,7 +31,7 @@
 
         {{ form_start(form) }}
             {{ form_errors(form) }}
-            {{ form_row(form.commonName,{'label': 'Sélectionner une espèce'}) }}
+            {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
             <button type="submit">Lancer la recherche</button>
         {{ form_end(form) }}
 
@@ -70,7 +70,7 @@
     </ul>
 
         <script>
-            var input = document.getElementById("map_species");
+            var input = document.getElementById("map_commonName");
         </script>
     <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
 {% endblock %}

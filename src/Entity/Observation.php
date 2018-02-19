@@ -96,7 +96,7 @@ class Observation
         $this->commonName = $commonName;
     }
 
-    public function getDate() : ? date
+    public function getDate() : ? \DateTime
     {
         return $this->date;
     }
