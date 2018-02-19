@@ -20,7 +20,7 @@
     
     {{ form_start(form) }}
         {{ form_errors(form) }}
-        {{ form_row(form.species, {'label': 'Nom de l\'espèce'}) }}
+        {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
         {{ form_row(form.date, {'label': 'Date de l\'observation'}) }}
         {{ form_row(form.place, {'label': 'Lieu','attr': {'class': 'searchTextField'}}) }}
         <button id="findMe" type="button">Trouvez moi</button>

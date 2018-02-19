@@ -53,11 +53,6 @@ class User implements UserInterface, \Serializable
      */
     private $termsOfUse;
 
-    public function __construct()
-    {
-        $this->isActive = true;
-    }
-
     public function getId(): int
     {
         return $this->id;

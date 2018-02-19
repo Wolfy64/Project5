@@ -2,7 +2,8 @@
 
 namespace App\Entity;
 
-use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 class Observation
 {
@@ -28,7 +29,7 @@ class Observation
     /**
      * @var string
      */
-    private $species;
+    private $commonName;
 
     /**
      * @var date
@@ -65,57 +66,72 @@ class Observation
      */
     private $content;
 
-    public function getId(): int
+    /**
+     * @var bool
+     */
+    private $isValid;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $aveses;
+
+    public function __construct()
+    {
+        $this->aveses = new ArrayCollection();
+    }
+
+    public function getId() : int
     {
         return $this->id;
     }
 
-    public function getSpecies(): ? string
+    public function getCommonName() : ? string
     {
-        return $this->species;
+        return $this->commonName;
     }
 
-    public function setSpecies($species): void
+    public function setCommonName($commonName) : void
     {
-        $this->species = $species;
+        $this->commonName = $commonName;
     }
 
-    public function getDate()
+    public function getDate() : ? date
     {
         return $this->date;
     }
 
-    public function setDate($date): void
+    public function setDate($date) : void
     {
         $this->date = $date;
     }
 
-    public function getPlace(): ? string
+    public function getPlace() : ? string
     {
         return $this->place;
     }
 
-    public function setPlace($place): void
+    public function setPlace($place) : void
     {
         $this->place = $place;
     }
 
-    public function getLatitude(): ? string
+    public function getLatitude() : ? string
     {
         return $this->latitude;
     }
 
-    public function setLatitude($latitude): void
+    public function setLatitude($latitude) : void
     {
         $this->latitude = $latitude;
     }
 
-    public function getLongitude(): ? string
+    public function getLongitude() : ? string
     {
         return $this->longitude;
     }
 
-    public function setLongitude($longitude): void
+    public function setLongitude($longitude) : void
     {
         $this->longitude = $longitude;
     }
@@ -146,18 +162,38 @@ class Observation
         return $this;
     }
 
-    public function setNumbers($numbers): void
+    public function setNumbers($numbers) : void
     {
         $this->numbers = $numbers;
     }
 
-    public function getContent(): ? string
+    public function getContent() : ? string
     {
         return $this->content;
     }
 
-    public function setContent($content): void
+    public function setContent($content) : void
     {
         $this->content = $content;
+    }
+
+    public function getIsValid() : bool
+    {
+        return $this->isValid;
+    }
+
+    public function setIsValid($isValid) : void
+    {
+        $this->isValid = $isValid;
+    }
+
+    public function getAveses() : Array
+    {
+        return $this->aveses;
+    }
+
+    public function setAveses($aveses) : void
+    {
+        $this->aveses = $aveses;
     }
 }

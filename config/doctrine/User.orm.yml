@@ -13,16 +13,13 @@ App\Entity\User:
             length: 25
             unique: true
         firstName:
-            name: firstName
+            name: first_name
             type: string
             length: 25
         lastName:
-            name: lastName
+            name: last_name
             type: string
             length: 25
-        plainPassword:
-            name: plainPassword
-            type: string
         password:
             name: password
             type: string
@@ -31,5 +28,5 @@ App\Entity\User:
             name: roles
             type: simple_array
         isActive:
-            name: isActive
+            name: is_active
             type: boolean
