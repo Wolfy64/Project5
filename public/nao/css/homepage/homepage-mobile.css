@@ -1,0 +1,56 @@
+@media (max-width: 1210px){
+    h1{
+        color: white;
+        font-size: 30px;
+    }
+
+    h3{
+        color: white;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+    #button{
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 970px) {
+    body {
+        background-image: url("../../../img/background-image-HP.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .content-block{
+        margin-left: 0;
+        margin-top: 50%;
+    }
+
+    #space{
+        display: none;
+    }
+
+    #logo-nao{
+        display: flex;
+        justify-content: center;
+    }
+
+    #button{
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

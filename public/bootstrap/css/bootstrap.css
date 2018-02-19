@@ -2459,7 +2459,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -2706,15 +2706,16 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #212529;
+  color: rgba(119, 37, 127, 1);
   background-color: #f8f9fa;
   border-color: #f8f9fa;
+  font-size: 30px;
 }
 
 .btn-light:hover {
-  color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
+  color: white;
+  background-color: rgba(119, 37, 127, 1);
+  font-size: 30px;
 }
 
 .btn-light:focus, .btn-light.focus {
@@ -2724,14 +2725,12 @@ fieldset:disabled a.btn {
 .btn-light.disabled, .btn-light:disabled {
   color: #212529;
   background-color: #f8f9fa;
-  border-color: #f8f9fa;
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
   color: #212529;
   background-color: #dae0e5;
-  border-color: #d3d9df;
 }
 
 .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
