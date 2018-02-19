@@ -2,29 +2,35 @@ App\Entity\Aves:
     type: entity
     table: nao_aves
     repositoryClass: App\Repository\AvesRepository
+    manyToMany:
+        observations:
+            targetEntity: App\Entity\Observation
+            mappedBy: aveses
+            joinColumn:
+                nullable: true
     id:
         id:
             type: integer
             generator: { strategy: AUTO }
     fields:
-        ordre:
-            name: ordre
+        order:
+            name: order
             type: string
             length: 25
-        famille:
-            name: famille
+        family:
+            name: family
             type: string
             length: 25
-        lbName:
-            name: lb_name
+        scientificName:
+            name: scientific_name
             type: string
             length: 60
-        lbAuteur:
-            name: lb_autheur
+        author:
+            name: author
             type: string
             length: 60
-        nomVern:
-            name: nom_vern
+        commonName:
+            name: common_name
             type: string
             lenght: 120
         habitat:

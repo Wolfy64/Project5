@@ -4,6 +4,7 @@ namespace App\Controller\Security;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\UserType;
@@ -22,13 +23,14 @@ class SignupController extends AbstractController
             $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
             
             $user->setPassword($password);
+            $user->setIsActive(true);
             $user->setRoles(User::ROLE_USER);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('home_page');
+            return $this->redirectToRoute('security_login');
         }
 
         return $this->render('Security/signup.html.twig', [

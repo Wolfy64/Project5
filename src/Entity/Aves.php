@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 class Aves
 {
     /**
@@ -12,86 +15,96 @@ class Aves
     /**
      * @var string
      */
-    private $ordre;
+    private $order;
 
     /**
      * @var string
      */
-    private $famille;
+    private $family;
 
     /**
      * @var string
      */
-    private $lbName;
+    private $scientificName;
 
     /**
      * @var string
      */
-    private $lbAuteur;
+    private $author;
 
     /**
      * @var string
      */
-    private $nomVern;
+    private $commonName;
 
     /**
      * @var integer
      */
     private $habitat;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $observations;
+
+    public function __construct()
+    {
+        $this->observations = new ArrayCollection();
+    }
+
     public function getId() : ? int
     {
         return $this->id;
     }
 
-    public function getOrdre() : ? string
+    public function getOrder() : ? string
     {
-        return $this->ordre;
+        return $this->order;
     }
 
-    public function setOrdre(string $ordre) : void
+    public function setOrder(string $order) : void
     {
-        $this->ordre;
+        $this->order;
     }
 
-    public function getFamille() : ? string
+    public function getFamily() : ? string
     {
-        return $this->famille;
+        return $this->family;
     }
 
-    public function setFamille(string $famille) : void
+    public function setFamily(string $family) : void
     {
-        $this->famille;
+        $this->family;
     }
 
-    public function getLbName() : ? string
+    public function getScientificName() : ? string
     {
-        return $this->lbName;
+        return $this->scientificName;
     }
 
-    public function setLbName(string $lbName) : void
+    public function setScientificName(string $scientificName) : void
     {
-        $this->lbName;
+        $this->scientificName;
     }
 
-    public function getLbAuteur() : ? string
+    public function getAuthor() : ? string
     {
-        return $this->lbAuteur;
+        return $this->author;
     }
 
-    public function setLbAuteur(string $lbAuteur) : void
+    public function setAuthor(string $author) : void
     {
-        $this->lbAuteur;
+        $this->author;
     }
 
-    public function getNomVern() : ? string
+    public function getCommonName() : ? string
     {
-        return $this->nomVern;
+        return $this->commonName;
     }
 
-    public function setNomVern(string $nomVern) : void
+    public function setCommonName(string $commonName) : void
     {
-        $this->nomVern;
+        $this->commonName;
     }
 
     public function getHabitat() : ? int
@@ -99,8 +112,18 @@ class Aves
         return $this->habitat;
     }
 
-    public function setHabitat(int $habitat): void
+    public function setHabitat(int $habitat) : void
     {
         $this->habitat;
+    }
+
+    public function getObservations() : ArrayCollection
+    {
+        return $this->observations;
+    }
+
+    public function setObservations($observations) : void
+    {
+        $this->observations;
     }
 }

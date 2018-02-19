@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/NAO/homePage.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/homepage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/HomePageController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/HomePageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/observations/522c8b4092df2b4c7098ac148130f588.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180218185048.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180218192621.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20180218233643.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/doctrine/Aves.orm.yml" afterPath="$PROJECT_DIR$/config/doctrine/Aves.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/doctrine/Observation.orm.yml" afterPath="$PROJECT_DIR$/config/doctrine/Observation.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/doctrine/User.orm.yml" afterPath="$PROJECT_DIR$/config/doctrine/User.orm.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Security/SignupController.php" afterPath="$PROJECT_DIR$/src/Controller/Security/SignupController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Aves.php" afterPath="$PROJECT_DIR$/src/Entity/Aves.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Observation.php" afterPath="$PROJECT_DIR$/src/Entity/Observation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/MapType.php" afterPath="$PROJECT_DIR$/src/Form/MapType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/ObservationType.php" afterPath="$PROJECT_DIR$/src/Form/ObservationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/homepage.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/observe.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/observe.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,17 +50,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/NAO/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="336">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomePageController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomePageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/NAO/HomePageController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
@@ -163,11 +179,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git status" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;homepage 2.0&quot;" />
-      <command text="git pull" />
-      <command text="git push" />
       <command text="git pull" />
       <command text="git status" />
       <command text="git add ." />
@@ -187,6 +198,11 @@
       <command text="git status" />
       <command text="git add ." />
       <command text="git commit -m &quot;homepage 2.0&quot;" />
+      <command text="git pull" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;homepage 2.0&quot;" />
+      <command text="git push" />
       <command text="git pull" />
     </commandsHistory>
   </component>
@@ -370,11 +386,11 @@
       <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="591" />
-    <option name="y" value="-21" />
-    <option name="width" value="1480" />
-    <option name="height" value="995" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1210" />
+    <option name="y" value="-12" />
+    <option name="width" value="1184" />
+    <option name="height" value="796" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -456,12 +472,12 @@
       <workItem from="1518603033085" duration="34962000" />
       <workItem from="1518775161566" duration="9847000" />
       <workItem from="1519034973704" duration="1428000" />
-      <workItem from="1519036423281" duration="16465000" />
+      <workItem from="1519036423281" duration="16581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252076000" />
+    <option name="totallyTimeSpent" value="252192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,14 +489,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-1929" y="-9" width="1938" height="1058" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.50911164" order="0" side_tool="true" content_ui="tabs" x="772" y="48" width="376" height="933" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3245033" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30182233" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38063064" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.50911164" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -776,18 +792,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/NAO/homepage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/NAO/HomePageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/NAO/homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
         </state>
       </provider>

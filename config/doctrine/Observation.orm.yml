@@ -2,13 +2,19 @@ App\Entity\Observation:
     type: entity
     table: nao_observation
     repositoryClass: App\Repository\ObservationRepository
+    manyToMany:
+        aveses:
+            targetEntity: App\Entity\Aves
+            inversedBy: observations
+            joinColumn:
+                nullable: true
     id:
         id:
             type: integer
             generator: { strategy: AUTO }
     fields:
-        species:
-            name: species
+        commonName:
+            name: common_name
             type: string
         date:
             name: date

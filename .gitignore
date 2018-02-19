@@ -22,4 +22,7 @@
 ###< symfony/web-server-bundle ###
 
 ###> php-storm ###
-.idea/
+/.idea/
+
+###> php-storm ###
+/_NOTES/
