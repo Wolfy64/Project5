@@ -18,11 +18,11 @@ class MapController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->get('species')->getData();
+            $data = $form->get('commonName')->getData();
 
             $observation = $this->getDoctrine()
                 ->getRepository(Observation::class)
-                ->findBy(['species' => $data]
+                ->findBy(['commonName' => $data]
             );
 
             if ($observation) {
