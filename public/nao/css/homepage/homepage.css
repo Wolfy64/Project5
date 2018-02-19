@@ -11,11 +11,15 @@ img{
 h1{
     color: white;
     font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
 }
 
 h3{
     color: white;
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
     text-transform: uppercase;
 }
 
