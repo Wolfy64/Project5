@@ -4,6 +4,10 @@
 
     <h1>Validation</h1>
 
+    {% if observations is empty %}
+        <p> Pas d'observation à valider</p>
+     {% endif %}
+
     {% for observation in observations %}
         <table class="table">
             <tbody>
@@ -18,9 +22,12 @@
                     <td>Comentaire: {{ observation.content }} </td>
                     <td>{{ observation.isValid }}</td>
                 </tr>
+
                 <tr>
                     <td>
-                        <a href="#"><button class="btn btn-success">Valider</button></a>
+                        <a href="{{ path('naturalist_valid_obs', {'id': observation.id }) }}">
+                            <button type="submit" class="btn btn-success">Valider</button>
+                        </a>
                     </td>
                     <td>
                         <a href="#"><button class="btn btn-secondary">Modifier</button></a>

@@ -46,8 +46,15 @@ naturalist_validations:
     path: /naturaliste/validations
     controller: App\Controller\Naturalist\ValidationsController::index
 
+naturalist_valid_obs:
+    path: /naturaliste/validations/valid/{id}
+    controller: App\Controller\Naturalist\ValidationsController::isValid
+    requirements:
+        page: '\d+'
+
 naturalist_articles:
-    path: /naturaliste/articles
+    path: /naturaliste/validations
+    
     controller: App\Controller\Naturalist\ArticlesController::index
 
 security_login:

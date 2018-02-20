@@ -80,7 +80,7 @@ class Observation
         $this->aveses = new ArrayCollection();
     }
 
-    public function getId() : int
+    public function getId() : ? int
     {
         return $this->id;
     }
@@ -176,7 +176,7 @@ class Observation
         $this->content = $content;
     }
 
-    public function getIsValid() : bool
+    public function getIsValid() : ?  bool
     {
         return $this->isValid;
     }
@@ -186,7 +186,7 @@ class Observation
         $this->isValid = $isValid;
     }
 
-    public function getAveses() : Array
+    public function getAveses() : ? Array
     {
         return $this->aveses;
     }
