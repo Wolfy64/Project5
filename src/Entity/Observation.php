@@ -18,8 +18,7 @@ class Observation
             '8' => 8,
             '9' => 9,
             '10+' => 10
-            ];
-
+    ];
 
     /**
      * @var int

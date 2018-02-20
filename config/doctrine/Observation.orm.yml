@@ -31,7 +31,6 @@ App\Entity\Observation:
         image:
             name: image
             type: string
-            nullable: true
         content:
             name: content
             type: string
