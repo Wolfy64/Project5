@@ -18,7 +18,7 @@
 
     <ul>
         {% for observation in observations %}
-            <li> Nom espece: {{ observation.species }} </li>
+            <li> Nom espece: {{ observation.commonName }} </li>
             <li> Observé le: {{ observation.date|date("m/d/Y") }} </li>
             <li> Coordonnés GPS {{ observation.latitude }} / {{ (observation.longitude) }}</li>
             <li> Comentaire: {{ observation.content }} </li>

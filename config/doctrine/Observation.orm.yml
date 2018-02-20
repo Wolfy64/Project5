@@ -35,4 +35,7 @@ App\Entity\Observation:
             name: content
             type: string
             nullable: true
+        isValid:
+            name: is_valid
+            type: boolean
 

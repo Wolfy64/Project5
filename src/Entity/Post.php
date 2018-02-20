@@ -19,27 +19,27 @@ class Post
      */
     private $article;
 
-    public function getId(): int
+    public function getId() : ? int
     {
         return $this->id;
     }
 
-    public function getTitle(): string
+    public function getTitle() : ? string
     {
         return $this->title;
     }
 
-    public function getArticle(): string
+    public function getArticle() : ? string
     {
         return $this->article;
     }
 
-    public function setTitle(string $title): void
+    public function setTitle(string $title) : void
     {
         $this->title = $title;
     }
 
-    public function setArticle(string $article): void
+    public function setArticle(string $article) : void
     {
         $this->article = $article;
     }
