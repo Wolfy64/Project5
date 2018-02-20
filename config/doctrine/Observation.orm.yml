@@ -31,8 +31,12 @@ App\Entity\Observation:
         image:
             name: image
             type: string
+            nullable: true
         content:
             name: content
             type: string
             nullable: true
+        isValid:
+            name: is_valid
+            type: boolean
 
