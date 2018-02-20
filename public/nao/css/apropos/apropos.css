@@ -7,10 +7,9 @@
 
 /** Body */
  img.img-apropos{
-     border-right: solid white 15px;
-     border-left: solid white 15px;
-     max-height: 100%;
-     max-width: 100%;
+     border-radius: 3px;
+     margin-right: 15px;
+     margin-left: 15px;
  }
 
 h1{
@@ -55,6 +54,11 @@ p{
 
 #titre-bar{
     background-color: rgba(215, 95, 227, 0.65);
+}
+
+#image-apropos{
+    height: 100%;
+    width: 100%;
 }
 
 
