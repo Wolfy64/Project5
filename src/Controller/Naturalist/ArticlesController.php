@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ArticlesController extends AbstractController
 {
-    public function index()
+    public function index() : Response
     {
         return $this->render('Naturalist/articles.html.twig');
     }

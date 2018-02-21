@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/contact/contact-mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/observations/2aa470ae9fe2402769d957eba4586492.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/observations/5f5aca5c8fc8954b85483f71f8b07092.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/observations/e4f5c46c6a88b910f4ea46c1af00126d.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Service/MapService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Service/ObservationService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/apropos/apropos-mobile.css" afterPath="$PROJECT_DIR$/public/nao/css/apropos/apropos-mobile.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/apropos/apropos.css" afterPath="$PROJECT_DIR$/public/nao/css/apropos/apropos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/contact/contact.css" afterPath="$PROJECT_DIR$/public/nao/css/contact/contact.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/faq/faq-mobile.css" afterPath="$PROJECT_DIR$/public/nao/css/faq/faq-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/faq/faq.css" afterPath="$PROJECT_DIR$/public/nao/css/faq/faq.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/ListObservationsController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/ListObservationsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/MapController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/MapController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Naturalist/ArticlesController.php" afterPath="$PROJECT_DIR$/src/Controller/Naturalist/ArticlesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Naturalist/ValidationsController.php" afterPath="$PROJECT_DIR$/src/Controller/Naturalist/ValidationsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/about.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/about.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/contact.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/contact.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/faq.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/faq.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/listObservations.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/listObservations.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/observe.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/observe.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Naturalist/validations.html.twig" afterPath="$PROJECT_DIR$/templates/Naturalist/validations.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,6 +59,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="about.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/NAO/about.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="faq.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/nao/css/faq/faq.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/nao/css/contact/contact.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
@@ -154,10 +170,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git commit -m &quot;homepage 2.0&quot;" />
-      <command text="git push" />
-      <command text="git pull" />
-      <command text="git push" />
       <command text="git pull" />
       <command text="git status" />
       <command text="git add ." />
@@ -179,6 +191,10 @@
       <command text="git push" />
       <command text="git pull" />
       <command text="php bin/console server:run" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;ajout de la page contact front&quot;" />
+      <command text="git pull" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -236,8 +252,6 @@
         <option value="$PROJECT_DIR$/templates/NAO/homepage.html.twig" />
         <option value="$PROJECT_DIR$/templates/_footer.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/base/footer-mobile.css" />
-        <option value="$PROJECT_DIR$/public/nao/css/apropos/apropos.css" />
-        <option value="$PROJECT_DIR$/templates/NAO/about.html.twig" />
         <option value="$PROJECT_DIR$/templates/NAO/faq.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/faq/faq.css" />
         <option value="$PROJECT_DIR$/public/nao/css/apropos/apropos-mobile.css" />
@@ -246,6 +260,8 @@
         <option value="$PROJECT_DIR$/templates/NAO/contact.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/contact/contact-mobile.css" />
         <option value="$PROJECT_DIR$/public/nao/css/contact/contact.css" />
+        <option value="$PROJECT_DIR$/public/nao/css/apropos/apropos.css" />
+        <option value="$PROJECT_DIR$/templates/NAO/about.html.twig" />
       </list>
     </option>
   </component>
@@ -556,12 +572,12 @@
       <workItem from="1519036423281" duration="26165000" />
       <workItem from="1519118718741" duration="6649000" />
       <workItem from="1519136556578" duration="8722000" />
-      <workItem from="1519213246465" duration="13741000" />
+      <workItem from="1519213246465" duration="13856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293531000" />
+    <option name="totallyTimeSpent" value="293646000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,12 +590,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21965629" sideWeight="0.50911164" order="0" side_tool="true" content_ui="tabs" x="772" y="48" width="376" height="933" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32346243" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40091115" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40091115" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.50911164" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -588,13 +605,25 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20408164" sideWeight="0.50911164" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32346243" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40091115" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.50911164" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25349087" sideWeight="0.50911164" order="0" side_tool="true" content_ui="tabs" x="772" y="48" width="376" height="933" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.4908884" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20408164" sideWeight="0.50911164" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -815,22 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/nao/css/apropos/apropos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/NAO/about.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/nao/css/apropos/apropos-mobile.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -859,14 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/NAO/faq.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -901,6 +906,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/nao/css/apropos/apropos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/NAO/faq.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/NAO/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>

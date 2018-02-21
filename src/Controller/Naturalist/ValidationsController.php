@@ -5,39 +5,29 @@ namespace App\Controller\Naturalist;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Entity\Observation;
-
+use App\Service\ObservationService;
 
 class ValidationsController extends AbstractController
 {
-    public function index(Request $request)
+    public function index(Request $request, ObservationService $observation) : Response
     {
-        $observations = $this->getDoctrine()
-            ->getRepository(Observation::class)
-            ->findBy(['isValid' => false]);
+        $observations = $observation->showListNotValid();
 
         return $this->render('Naturalist/validations.html.twig',[
             'observations' => $observations
         ]);
     }
 
-    public function isValid($id)
+    public function isValid($id, ObservationService $observation) : Response
     {
-        $observation = $this->getDoctrine()
-            ->getRepository(Observation::class)
-            ->find($id)
-        ;
+        $isValid = $observation->isValid($id);
 
-        if (!$observation){
-            // flash message
+        if (!$isValid){
+            $this->addFlash('notice', 'Cette observation n\'existe pas');
             return $this->redirectToRoute('naturalist_validations');
         }
 
-        $observation->setIsValid(true);
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($observation);
-        $em->flush();
+        $this->addFlash('notice', 'L\'observation à était validé');
 
         return $this->redirectToRoute('naturalist_validations');
     }

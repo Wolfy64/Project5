@@ -40,6 +40,15 @@ p{
     font-weight: bold;
 }
 
+.titre-bar2{
+    border-right: solid white 10px;
+    border-left: solid white 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    width: 20px;
+}
+
 .space-bar {
     border-right: solid 20px rgba(215, 95, 227, 0.65);
 }
