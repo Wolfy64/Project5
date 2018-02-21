@@ -46,5 +46,9 @@ class ObservationService
 
         return $form;
     }
-}
 
+    public function showList()
+    {
+        return $this->em->getRepository(Observation::class)->findBy(['isValid' => true]);
+    }
+}

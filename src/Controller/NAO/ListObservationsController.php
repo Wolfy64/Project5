@@ -5,20 +5,16 @@ namespace App\Controller\NAO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use App\Entity\Observation;
+use App\Service\ObservationService;
 
 class ListObservationsController extends AbstractController
 {
-    public function index(Request $request) : Response
+    public function index(Request $request, ObservationService $observation) : Response
     {
-        $observations = $this->getDoctrine()
-            ->getRepository(Observation::class)
-            ->findAll();
- 
+        $observations = $observation->showList();
+
         if (!$observations) {
-            throw $this->createNotFoundException(
-                'No result'
-            );
+            $this->addFlash('notice', 'Il n\'y a aucune pour observation pour le moment');
         }
 
         return $this->render('NAO/listObservations.html.twig', [
