@@ -33,6 +33,10 @@ p{
     padding-right: 100px;
 }
 
+.chasseur{
+    font-weight: bold;
+}
+
 .titre-bar2{
     border-right: solid white 10px;
     border-left: solid white 15px;
