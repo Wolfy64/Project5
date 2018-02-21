@@ -1,0 +1,42 @@
+@media (max-width: 960px) {
+    /** Mobile Menu */
+    #liens-mobile7 {
+        background-color: #542B56;
+    }
+
+    /** Mobile Body */
+
+
+    .titre-bar-mobile{
+        display: flex;
+        justify-content: center;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #envoyer{
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact-content{
+        display: flex;
+        margin: 1% 2% 5% 2%;
+    }
+
+    #contact-content > #infos-contact{
+        order: 2;
+    }
+
+    #contact-content > #map-contact{
+        order: 3;
+    }
+
+    #contact-content > #formulaire-contact{
+        order: 1;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

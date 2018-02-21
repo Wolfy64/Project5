@@ -12,10 +12,89 @@
     <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
     <link rel="stylesheet" href="{{ asset('/nao/css/contact/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/contact/contact-mobile.css') }}">
 {% endblock %}
 
-{% block body %} 
+{% block body %}
 
-    <h1>Contact</h1>
+    <div class="row">
+        <div class="col-12 titre-bar-mobile" id="titre-bar"><h1>CONTACT</h1></div>
+    </div>
+
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 titre-bar7" id="titre-bar">
+            <h1>CONTACT</h1>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
+    </div>
+
+    <div class="row" id="contact-content">
+        <div class="col-xl-3 col-lg-3" id="infos-contact">
+            <i class="fas fa-address-card fa-3x" id="contact-icone"></i>
+            <div class="row">
+                <div class="col-12">
+                    <p class="asso">Association NAO | Nos amis les oiseaux</p>
+                    <p>42, rue du Merle Hurleur</p>
+                    <p>45210 - PIGEON SUR LOIRE</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <i class="fas fa-phone-square fa-2x" id="contact-icone"></i>
+                    <div class="row">
+                        <div class="col-12">
+                            05 21 53 58 97
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <i class="fas fa-envelope fa-2x" id="contact-icone"></i>
+                    <div class="row">
+                        <div class="col-12">
+                            contact@nao.fr
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4" id="map-contact" style="background-color: #00ca6d">
+
+        </div>
+        <div class="col-xl-4 col-lg-4" id="formulaire-contact">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Prénom*</label>
+                        <input type="text" class="form-control" placeholder="Prénom">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Nom*</label>
+                        <input type="text" class="form-control" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email*</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Objet*</label>
+                        <input type="text" class="form-control" placeholder="Objet">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Message*</label>
+                    <textarea  class="form-control" placeholder="Message"></textarea>
+                </div>
+                <p>* obligatoire</p>
+                <div class="row">
+                    <div class="col-12" id="envoyer">
+                        <button type="submit" class="bouton">Envoyer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 {% endblock %}

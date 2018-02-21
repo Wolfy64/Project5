@@ -8,11 +8,11 @@
 
     /** Mobile Body */
 
-    #title-bar{
+    #title{
         display: none;
     }
 
-    .titre-bar4{
+    .titre-bar-mobile{
         display: flex;
         justify-content: center;
     }

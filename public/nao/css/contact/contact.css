@@ -3,3 +3,84 @@
 #item-barre7{
     background-color: rgba(69, 100, 49, 0.65);
 }
+
+/** Body */
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+form{
+    padding: 1%;
+}
+
+.bouton{
+    background-color: rgb(70, 100, 50);
+    color: #FFFFFF;
+    max-height: 70px;
+    max-width: 150px;
+}
+
+.bouton:hover{
+    background-color: #FFFFFF;
+    border: solid black 1px;
+    color: #999999;
+}
+
+
+.space-bar {
+    border-right: solid 20px rgb(70, 100, 50);
+}
+
+.titre-bar7{
+    border-left: solid 10px white;
+}
+
+.titre-bar-mobile{
+    display: none;
+}
+
+.asso{
+    font-weight: bold;
+}
+
+#contact-icone{
+    color: rgb(70, 100, 50);
+    margin-top: 3px;
+}
+
+#titre-bar{
+    background-color: rgb(70, 100, 50);
+}
+
+.contact{
+    margin-top: 1%;
+}
+
+#title{
+    margin-top: 2%;
+}
+
+#contact-content{
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+#formulaire-contact{
+    border: solid black 1px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#envoyer{
+    display: flex;
+    justify-content: flex-end;
+}
