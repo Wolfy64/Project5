@@ -31,32 +31,33 @@
 
         {{ form_start(form) }}
             {{ form_errors(form) }}
-            {{ form_row(form.commonName,{'label': 'Sélectionner une espèce'}) }}
+            {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
             <button type="submit">Lancer la recherche</button>
         {{ form_end(form) }}
 
         <h3>Département</h3>
     </div>
 
-    {% if observation is defined %} 
+    {% if observations is defined %} 
         <div>
             <h2>Résultats</h2>
         
             <h3>Votres recherche:</h3>
 
             <ul>
-                <li>{{ observation.0.species }}</li>
+                <li>{{ observations.0.commonName }}</li>
                 <li>Département " A faire plus tard"</li>
             </ul>
 
-            <p>Il y a {{ observation|length }} 
-                {% if observation|length < 1 %} résultat {% else %} résultats 
-                {% endif %} 
+            <p>Il y a {{ observations|length }} 
+                {% if observations|length > 1 %} résultats {% else %} résultat{% endif %} 
             </p>
 
             <p>Affiche une belle image</p>
 
-            <a href="{{ path('map_show_list') }}">Voir les résultats</a>
+            <a href="{{ path('map_show_list') }}">
+                Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
+            </a>
         
         </div>
     {% else %} 
@@ -70,7 +71,7 @@
     </ul>
 
         <script>
-            var input = document.getElementById("map_species");
+            var input = document.getElementById("map_commonName");
         </script>
     <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
 {% endblock %}

@@ -23,15 +23,16 @@ a:hover{
 
 .footer-liens{
     color: white;
+    margin-top: 8px;
 }
 
-.reseau{
-    border-top: solid transparent 5px;
+.youtube{
+    display: flex;
+    align-items: center;
 }
 
 #copyright{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 #menu1{
@@ -46,14 +47,20 @@ a:hover{
     align-items: center;
 }
 
-#partenaire{
+#musee-partenaire{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
+
+#logo-musee{
+    display: flex;
+    justify-content: center;
+}
+
 #reseau-sociaux{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-top: 5px;
 }
 
 #newsletter-form{
@@ -64,6 +71,7 @@ a:hover{
 #newsletter{
     padding-right: 7%;
     padding-left: 7%;
+    padding-top: 5px;
 }
 #newsletter-button{
     color: #ddffc5;

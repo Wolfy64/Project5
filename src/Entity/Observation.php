@@ -18,8 +18,7 @@ class Observation
             '8' => 8,
             '9' => 9,
             '10+' => 10
-            ];
-
+    ];
 
     /**
      * @var int
@@ -81,7 +80,7 @@ class Observation
         $this->aveses = new ArrayCollection();
     }
 
-    public function getId() : int
+    public function getId() : ? int
     {
         return $this->id;
     }
@@ -96,7 +95,7 @@ class Observation
         $this->commonName = $commonName;
     }
 
-    public function getDate() : ? date
+    public function getDate() : ? \DateTime
     {
         return $this->date;
     }
@@ -177,7 +176,7 @@ class Observation
         $this->content = $content;
     }
 
-    public function getIsValid() : bool
+    public function getIsValid() : ?  bool
     {
         return $this->isValid;
     }
@@ -187,7 +186,7 @@ class Observation
         $this->isValid = $isValid;
     }
 
-    public function getAveses() : Array
+    public function getAveses() : ? Array
     {
         return $this->aveses;
     }

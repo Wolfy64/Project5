@@ -1,0 +1,31 @@
+@media (max-width: 960px){
+    /** Mobile Menu */
+
+    #liens-mobile6{
+        background-color: #542B56;
+    }
+
+    /** Mobile Body */
+
+    #title-bar{
+        display: none;
+    }
+    .titre-bar4{
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .card-body{
+        font-size: 12px;
+    }
+
+    #faq-content{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

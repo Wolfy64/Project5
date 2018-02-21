@@ -6,7 +6,7 @@
 
     <div>
         <p>Une belle image</p>
-        <h2>Fiche détaillée</h2>
+        <p>Fiche détaillée</p>
 
         <p>Moineau domestique (Fringuilla domestica)</p>
         <p>Ordre: Passeriforme</p>
@@ -14,39 +14,23 @@
         <p>Autheur: (Bonaparte, 1828)</p>
     </div>
 
-    <button>Retour à la page recherche</button>
+    <a href="{{ path('map') }}">
+        <button>Retour à la page recherche</button>
+    </a>
 
     <div>
-        <h2>Il y a X observation</h2>
+        <p>Il y à {{ observations|length }} {% if observations|length > 1 %} observations {% else %} observation{% endif %}</p>
 
-        <ul>
-            <li>Image</li>
-            <li>Lieu: Dijons</li>
-            <li>Observé le: 04/11/17</li>
-            <li>Coordonnés GPS: 46.387 N, 63.987 E</li>
-            <li>Observateur: John Snow</li>
-        </ul>
-        <ul>
-            <li>Image</li>
-            <li>Lieu: Dijons</li>
-            <li>Observé le: 04/11/17</li>
-            <li>Coordonnés GPS: 46.387 N, 63.987 E</li>
-            <li>Observateur: John Snow</li>
-        </ul>
-        <ul>
-            <li>Image</li>
-            <li>Lieu: Dijons</li>
-            <li>Observé le: 04/11/17</li>
-            <li>Coordonnés GPS: 46.387 N, 63.987 E</li>
-            <li>Observateur: John Snow</li>
-        </ul>
-        <ul>
-            <li>Image</li>
-            <li>Lieu: Dijons</li>
-            <li>Observé le: 04/11/17</li>
-            <li>Coordonnés GPS: 46.387 N, 63.987 E</li>
-            <li>Observateur: John Snow</li>
-        </ul>
+        {% for observation in observations %}
+            <ul>
+                <li><img src="/img/observations/{{ observation.image }}" alt=""></li>
+                <li>{{ observation.date|date("d/m/Y") }}</li>
+                <li>{{ observation.latitude }}</li>
+                <li>{{ observation.longitude }}</li>
+                <li>{{ observation.content }}</li>
+            </ul>
+        {% endfor %}
+        
     </div>
 
 {% endblock %}

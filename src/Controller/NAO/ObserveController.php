@@ -18,10 +18,11 @@ class ObserveController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $observation = $form->getData();
             $observation->setIsValid(false);
+            $observation->setImage('no_image.png');
+
             $file = $form['image']->getData();
-           
+
             if ($file){
                 $fileName = $fileUploader->upload($file);
                 $observation->setImage($fileName);
