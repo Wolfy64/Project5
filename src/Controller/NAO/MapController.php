@@ -6,38 +6,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use App\Service\MapService;
 use App\Form\MapType;
 use App\Entity\Observation;
 
 class MapController extends AbstractController
 {
-    public function index(Request $request, SessionInterface $session) : Response
+    public function index(Request $request, SessionInterface $session, MapService $map ) : Response
     {
-        $observation = new Observation();
+        $form = $map->form($request);
 
-        $form = $this->createForm(MapType::class, $observation);
-        $form->handleRequest($request);
-        
         if ($form->isSubmitted() && $form->isValid()) {
-            $commonName = $form->get('commonName')->getData();
-
-            $observations = $this->getDoctrine()
-                ->getRepository(Observation::class)
-                ->findBy([
-                    'commonName' => $commonName,
-                    'isValid' => true,
-                    ])
-            ;
-
-            if ($observations) {
-                $session->set('observations', $observations);
-                return $this->render('NAO/map.html.twig', [
-                    'form' => $form->createView(),
-                    'observations' => $observations
-                ]);
-            }
             
-            $this->addFlash('notice', 'Nous n\'avons pas trouvé de resultats pour votre recherche');
+            $commonName = $form->get('commonName')->getData();
+            $observations = $map->findBy($commonName);
+
+            if (!$observations){
+                $this->addFlash('notice', 'Nous n\'avons pas trouvé de resultats pour votre recherche');
+                return $this->redirectToRoute('map');
+            }
+
+            return $this->render('NAO/map.html.twig', [
+                'form' => $form->createView(),
+                'observations' => $observations
+            ]);
         }
 
         return $this->render('NAO/map.html.twig',[
