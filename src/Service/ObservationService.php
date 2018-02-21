@@ -51,4 +51,25 @@ class ObservationService
     {
         return $this->em->getRepository(Observation::class)->findBy(['isValid' => true]);
     }
+
+    public function showListNotValid()
+    {
+        return $this->em->getRepository(Observation::class)->findBy(['isValid' => false]);
+    }
+
+    public function isValid($id)
+    {
+        $observation = $this->em->getRepository(Observation::class)->find($id);
+
+        if (!$observation){
+            return false;
+        }
+
+        $observation->setIsValid(true);
+
+        $this->em->persist($observation);
+        $this->em->flush();
+
+        return true;
+    }
 }

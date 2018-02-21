@@ -4,6 +4,12 @@
 
     <h1>Validation</h1>
 
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     {% if observations is empty %}
         <p> Pas d'observation à valider</p>
      {% endif %}

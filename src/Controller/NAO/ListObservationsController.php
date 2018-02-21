@@ -14,7 +14,7 @@ class ListObservationsController extends AbstractController
         $observations = $observation->showList();
 
         if (!$observations) {
-            $this->addFlash('notice', 'Il n\'y a aucune pour observation pour le moment');
+            
         }
 
         return $this->render('NAO/listObservations.html.twig', [
