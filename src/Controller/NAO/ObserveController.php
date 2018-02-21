@@ -5,34 +5,17 @@ namespace App\Controller\NAO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use App\Entity\Observation;
-use App\Form\ObservationType;
-use App\Service\FileUploader;
+use App\Service\ObservationService;
 
 class ObserveController extends AbstractController
 {
-    public function index(Request $request, FileUploader $fileUploader) : Response
+    public function index(Request $request, ObservationService $observation) : Response
     {
-        $observation = new Observation();
-        $form = $this->createForm(ObservationType::class, $observation);
-        $form->handleRequest($request);
+        $form = $observation->form($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $observation->setIsValid(false);
-            $observation->setImage('no_image.png');
-
-            $file = $form['image']->getData();
-
-            if ($file){
-                $fileName = $fileUploader->upload($file);
-                $observation->setImage($fileName);
-            }
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($observation);
-            $em->flush();
-
-            $this->addFlash('notice','Votre observation est en attente de validation par un de nos naturalistes');
+            $this->addFlash('notice', 'Votre observation est en attente de validation par un de nos naturalistes');
+            return $this->redirectToRoute('observe');
         }
 
         return $this->render('NAO/observe.html.twig', [

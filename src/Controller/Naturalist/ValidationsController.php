@@ -10,7 +10,7 @@ use App\Entity\Observation;
 
 class ValidationsController extends AbstractController
 {
-    public function index(Request $request)
+    public function index(Request $request) : Response
     {
         $observations = $this->getDoctrine()
             ->getRepository(Observation::class)
@@ -21,7 +21,7 @@ class ValidationsController extends AbstractController
         ]);
     }
 
-    public function isValid($id)
+    public function isValid($id) : Response
     {
         $observation = $this->getDoctrine()
             ->getRepository(Observation::class)

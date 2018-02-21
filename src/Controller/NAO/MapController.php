@@ -45,7 +45,7 @@ class MapController extends AbstractController
         ]);
     }
 
-    public function showList(SessionInterface $session)
+    public function showList(SessionInterface $session) : Response
     {
         return $this->render('NAO/mapShowList.html.twig',['observations' => $session->get('observations')]);
     }
