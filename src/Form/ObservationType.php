@@ -25,7 +25,7 @@ class ObservationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('commonName',   TextType::class,[
+            ->add('commonName',TextType::class,[
                 'constraints' => [
                     new NotBlank(),
                     new Type(['type' => 'string']),

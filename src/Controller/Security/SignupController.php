@@ -3,33 +3,17 @@
 namespace App\Controller\Security;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use App\Form\UserType;
-use App\Entity\User;
+use App\Service\UserService;
 
 class SignupController extends AbstractController
 {
-    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder) : Response
+    public function index(Request $request, UserService $user) : Response
     {
-        $user = new User();
-
-        $form = $this->createForm(UserType::class, $user, ['action' => '/inscription']);
-        $form->handleRequest($request);
+        $form = $user->form($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
-            
-            $user->setPassword($password);
-            $user->setIsActive(true);
-            $user->setRoles(User::ROLE_USER);
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();
-
             return $this->redirectToRoute('security_login');
         }
 
