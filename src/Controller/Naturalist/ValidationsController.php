@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Service\ObservationService;
+use App\Service\AvesService;
 
 class ValidationsController extends AbstractController
 {
@@ -16,16 +17,22 @@ class ValidationsController extends AbstractController
         ]);
     }
 
-    public function isValid($id, ObservationService $observation) : Response
+    public function isValid($id, ObservationService $observation, AvesService $aves) : Response
     {
-        $obsToValid = $observation->find($id);
+        $obsToValid = $observation->find($id);//
         $message = ObservationService::NOT_FOUND;
 
-        if ($obsToValid){
-            $observation->doValid($obsToValid);
-            $message = 'L\'observation à était validé';
+        if ($obsToValid) {
+            $message = 'Attention le nom de l\'oiseau doit correspondre à la base de donnée Aves';
+
+            $addAves = $aves->addAves($obsToValid);
+
+            if (count($addAves->getAveses())) {
+                $message = 'L\'observation à était validé';
+                $observation->doValid($obsToValid);
+            }
         }
-        
+
         $this->addFlash('notice', $message);
         
         return $this->redirectToRoute('naturalist_validations');
@@ -55,6 +62,7 @@ class ValidationsController extends AbstractController
             $form = $observation->modifyForm($obsToModify, $request);
 
             if ($form->isSubmitted() && $form->isValid()) {
+                $observation->persist($obsToModify);
                 $this->addFlash('notice', 'L\'observation à était modifié et validé');
 
                 return $this->redirectToRoute('naturalist_validations');

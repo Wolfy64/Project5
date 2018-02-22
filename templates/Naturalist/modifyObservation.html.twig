@@ -3,6 +3,8 @@
 {% block body %} 
     <h1>Modifier une observation</h1>
 
+    <img src="/img/observations/{{ observation.image }}" alt="">
+
     {{ form_start(form) }}
         {{ form_errors(form) }}
         {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
