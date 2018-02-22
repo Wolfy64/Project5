@@ -7,7 +7,7 @@
 /** Body */
 
 h1{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-size: 25px;
     color: white;
     margin: 0 0 0 0;
@@ -49,7 +49,7 @@ form{
 }
 
 .asso{
-    font-weight: bold;
+    font-family: 'Roboto-Bold', sans-serif;
 }
 
 #contact-icone{
@@ -82,5 +82,6 @@ form{
 
 #envoyer{
     display: flex;
+    font-family: 'Roboto-Regular', sans-serif;
     justify-content: flex-end;
 }

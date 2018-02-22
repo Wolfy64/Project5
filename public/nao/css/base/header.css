@@ -4,10 +4,9 @@ img.logo{
      width: 125px;
  }
 
-h2{
+h2.lien-header{
     color: white;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     width: 100%;
     font-size: 65%;
     margin-top: 8px;
@@ -21,8 +20,7 @@ button.bouton-menu{
     border-radius: 3px;
     color: black;
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto-Bold', sans-serif;
     padding-top: 10%;
     outline: none;
     transition: 0.2s;
