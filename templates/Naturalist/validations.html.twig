@@ -18,30 +18,31 @@
         <table class="table">
             <tbody>
                 <tr>
-                    <td>
-                        <img src="/img/observations/{{ observation.image }}" alt="" width="50px">
-                    </td>
-                    <td>Nom commun: {{ observation.commonName }} </td>
-                    <td>Observé le: {{ observation.date|date("m/d/Y") }} </td>
-                    <td>latitude: {{ observation.latitude }} </td>
-                    <td>latitude: {{ (observation.longitude) }} </td>
-                    <td>Comentaire: {{ observation.content }} </td>
+                    <th>Photo</th>
+                    <th>Nom Commun</th>
+                    <th>Observé le</th>
+                    <th>Autres informations</th>
+                </tr>
+                <tr>
+                    <td><img src="/img/observations/{{ observation.image }}" alt="" width="50px"></td>
+                    <td>{{ observation.commonName }}</td>
+                    <td>{{ observation.date|date("m/d/Y") }}</td>
+                    <td>{{ observation.content }}</td>
                     <td>{{ observation.isValid }}</td>
                 </tr>
-
                 <tr>
                     <td>
                         <a href="{{ path('naturalist_valid_obs', {'id': observation.id }) }}">
-                            <button type="submit" class="btn btn-success">Valider</button>
+                            <button class="btn btn-success">Valider</button>
                         </a>
                     </td>
                     <td>
-                        <a href="">
+                        <a href="{{ path('naturalist_modify_obs', {'id': observation.id }) }}">
                             <button class="btn btn-secondary">Modifier</button>
                         </a>
                     </td>
                     <td>
-                        <a href="{{ path('naturalist_delete_obs', {'id': observation.id }) }}">
+                        <a href="{{ path('naturalist_remove_obs', {'id': observation.id }) }}">
                             <button class="btn btn-danger">Supprimer</button>
                         </a>
                     </td>

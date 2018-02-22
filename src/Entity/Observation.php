@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Observation
 {
@@ -154,11 +155,11 @@ class Observation
      *
      * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
      */
-    public function setImage($image)
+    public function setImage($image) : void
     {
         $this->image = $image;
 
-        return $this;
+        // return $this;
     }
 
     public function setNumbers($numbers) : void

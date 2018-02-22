@@ -11,14 +11,8 @@ class ListObservationsController extends AbstractController
 {
     public function index(Request $request, ObservationService $observation) : Response
     {
-        $observations = $observation->showList();
-
-        if (!$observations) {
-            
-        }
-
         return $this->render('NAO/listObservations.html.twig', [
-            'observations' => $observations
-            ]);
+            'observations' => $observation->isPublished(true)
+        ]);
     }
 }

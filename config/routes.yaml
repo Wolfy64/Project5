@@ -52,9 +52,15 @@ naturalist_valid_obs:
     requirements:
         page: '\d+'
 
-naturalist_delete_obs:
+naturalist_remove_obs:
     path: /naturaliste/validations/supprimer/{id}
-    controller: App\Controller\Naturalist\ValidationsController::delete
+    controller: App\Controller\Naturalist\ValidationsController::remove
+    requirements:
+        page: '\d+'
+
+naturalist_modify_obs:
+    path: /naturaliste/validations/modifier/{id}
+    controller: App\Controller\Naturalist\ValidationsController::modify
     requirements:
         page: '\d+'
 

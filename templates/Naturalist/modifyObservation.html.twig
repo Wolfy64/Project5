@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %} 
+    <h1>Modifier une observation</h1>
+
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
+        {{ form_row(form.content, {'label': 'Autres informations'}) }}
+        <button type="submit" class="btn btn-success">Valider l'observation</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('naturalist_remove_obs', {'id': observation.id }) }}">
+        <button class="btn btn-danger">Suprimer l'observation</button>
+    </a>
+    <a href="{{ path('naturalist_validations') }}">
+        <button class="btn btn-secondary">Retour</button>
+    </a>
+{% endblock %}

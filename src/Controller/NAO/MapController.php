@@ -6,34 +6,27 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use App\Service\MapService;
-use App\Form\MapType;
-use App\Entity\Observation;
+use App\Service\ObservationService;
 
 class MapController extends AbstractController
 {
-    public function index(Request $request, SessionInterface $session, MapService $map ) : Response
+    public function index(Request $request, SessionInterface $session, ObservationService $observation ) : Response
     {
-        $form = $map->form($request);
+        $form = $observation->mapForm($request);
+
+        $observations = $observation->findByCommonName($form->get('commonName')->getData());
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
-            $commonName = $form->get('commonName')->getData();
-            $observations = $map->findBy($commonName);
+            $session->set('observations', $observations);
 
             if (!$observations){
-                $this->addFlash('notice', 'Nous n\'avons pas trouvé de resultats pour votre recherche');
-                return $this->redirectToRoute('map');
+                $this->addFlash('notice', 'Aucun résultat pour la recherche: ' . $form['commonName']->getData());
             }
-
-            return $this->render('NAO/map.html.twig', [
-                'form' => $form->createView(),
-                'observations' => $observations
-            ]);
         }
 
         return $this->render('NAO/map.html.twig',[
-            'form' => $form->createView ()
+            'observations' => $observations,
+            'form'         => $form->createView ()
         ]);
     }
 

@@ -3,13 +3,18 @@
 namespace App\Service;
 
 use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\Form\Form;
 use Doctrine\ORM\EntityManagerInterface;
-use App\Entity\Observation;
+use App\Form\Naturalist\ModifyObservationType;
+use App\Form\MapType;
 use App\Form\ObservationType;
 use App\Service\FileUploader;
+use App\Entity\Observation;
 
 class ObservationService
 {
+    const NOT_FOUND = 'Cette observation n\'existe pas';
+
     private $em;
     private $form;
     private $fileUploader;
@@ -21,7 +26,7 @@ class ObservationService
         $this->em = $em;
     }
 
-    public function form($request)
+    public function ObserveForm($request) : Form
     {
         $observation = new Observation();
 
@@ -40,50 +45,68 @@ class ObservationService
                 $observation->setImage($fileName);
             }
 
-            $this->em->persist($observation);
-            $this->em->flush();
+            $this->persist($observation);
         }
 
         return $form;
     }
 
-    public function showList()
+    public function mapForm($request) : Form
     {
-        return $this->em->getRepository(Observation::class)->findBy(['isValid' => true]);
+        $observation = new Observation();
+
+        $form = $this->form->create(MapType::class, $observation);
+        $form->handleRequest($request);
+
+        return $form;
     }
 
-    public function showListNotValid()
+    public function modifyForm($observation, $request) : Form
     {
-        return $this->em->getRepository(Observation::class)->findBy(['isValid' => false]);
-    }
+        $form = $this->form->create(ModifyObservationType::class, $observation);
+        $form->handleRequest($request);
 
-    public function isValid($id)
-    {
-        $observation = $this->em->getRepository(Observation::class)->find($id);
-
-        if (!$observation){
-            return false;
+        if ($form->isSubmitted() && $form->isValid()) {
+            $observation->setIsValid(true);
+            $this->persist($observation);
         }
 
+        return $form;
+    }
+
+    public function find($id) :?  Observation
+    {
+        return $this->em->getRepository(Observation::class)->find($id);
+    }
+
+    public function findByCommonName($commonName) : array
+    {
+        return $this->em->getRepository(Observation::class)->findBy([
+            'commonName' => $commonName,
+            'isValid' => true,
+        ]);
+    }
+
+    public function isPublished($bool) : array
+    {
+        return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
+    }
+
+    public function doValid($observation) : void
+    {
         $observation->setIsValid(true);
-
-        $this->em->persist($observation);
-        $this->em->flush();
-
-        return true;
+        $this->persist($observation);
     }
 
-    public function delete($id)
+    public function doRemove($observation) : void
     {
-        $observation = $this->em->getRepository(Observation::class)->find($id);
-
-        if (!$observation) {
-            return false;
-        }
-
         $this->em->remove($observation);
         $this->em->flush();
+    }
 
-        return true;  
+    public function persist($observation) : void
+    {
+        $this->em->persist($observation);
+        $this->em->flush();
     }
 }
