@@ -31,4 +31,18 @@ class ValidationsController extends AbstractController
 
         return $this->redirectToRoute('naturalist_validations');
     }
+
+    public function delete($id, ObservationService $observation) : Response
+    {
+        $delete = $observation->delete($id);
+
+        if (!$delete) {
+            $this->addFlash('notice', 'Cette observation n\'existe pas');
+            return $this->redirectToRoute('naturalist_validations');
+        }
+
+        $this->addFlash('notice', 'L\'observation à était supprimé');
+
+        return $this->redirectToRoute('naturalist_validations');
+    }
 }

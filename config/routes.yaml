@@ -47,13 +47,19 @@ naturalist_validations:
     controller: App\Controller\Naturalist\ValidationsController::index
 
 naturalist_valid_obs:
-    path: /naturaliste/validations/valid/{id}
+    path: /naturaliste/validations/valider/{id}
     controller: App\Controller\Naturalist\ValidationsController::isValid
     requirements:
         page: '\d+'
 
+naturalist_delete_obs:
+    path: /naturaliste/validations/supprimer/{id}
+    controller: App\Controller\Naturalist\ValidationsController::delete
+    requirements:
+        page: '\d+'
+
 naturalist_articles:
-    path: /naturaliste/validations
+    path: /naturaliste/blog
     
     controller: App\Controller\Naturalist\ArticlesController::index
 

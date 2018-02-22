@@ -72,4 +72,18 @@ class ObservationService
 
         return true;
     }
+
+    public function delete($id)
+    {
+        $observation = $this->em->getRepository(Observation::class)->find($id);
+
+        if (!$observation) {
+            return false;
+        }
+
+        $this->em->remove($observation);
+        $this->em->flush();
+
+        return true;  
+    }
 }
