@@ -1,16 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
-    <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
-    <link rel="stylesheet" href="{{ asset('/awesomplete/awesomplete.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+{% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/faq/faq.css') }}">
     <link rel="stylesheet" href="{{ asset('/nao/css/faq/faq-mobile.css') }}">
 {% endblock %}
@@ -27,7 +17,6 @@
                 <h1>FOIRE AUX QUESTIONS</h1>
             </div>
             <div class="col-xl-8 col-lg-8 col-md-0 col-xs-0"></div>
-        </div>
     </div>
 
     <div class="row">
@@ -39,7 +28,7 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Comment s'inscrire sur le site ?
-                                <i class="fas fa-arrow-circle-down fa-2x"></i>
+                                <i class="fas fa-arrow-circle-down fa-2x" id="fleche"></i>
                             </button>
                         </h5>
 
