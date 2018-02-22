@@ -4,7 +4,7 @@ img.musee{
 }
 
 h2.titre-footer{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-size: 18px;
     display: flex;
     color: white;
@@ -32,6 +32,7 @@ a:hover{
 }
 
 #copyright{
+    font-family: 'Roboto-Medium', sans-serif;
     text-align: center;
 }
 
@@ -45,6 +46,10 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#menu1, #menu2{
+    font-family: 'Roboto-Medium', sans-serif;
 }
 
 #musee-partenaire{
@@ -77,6 +82,7 @@ a:hover{
     color: #ddffc5;
     background-color: #4d4d4f;
     border: solid white 2px;
+    font-family: 'Roboto-Regular', sans-serif;
     padding: 0 0 0 0;
 }
 
