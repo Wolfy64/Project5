@@ -38,4 +38,12 @@
 
     }
 
+    #newsletter{
+        margin: 0;
+    }
+
+    #newsletter-form{
+        margin-bottom: 5%;
+    }
+
 }

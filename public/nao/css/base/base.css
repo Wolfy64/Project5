@@ -1,0 +1,54 @@
+/** PC */
+
+h1{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 23px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 13px;
+}
+
+img{
+    border-radius: 3px;
+}
+
+button:hover{
+    box-shadow: 1px 1px 4px black;
+}
+
+form{
+    padding: 1%;
+}
+
+.titre-bar-pc{
+    border-left: solid 10px white;
+    padding: 0;
+}
+
+
+.titre-bar-mobile{
+    display: none;
+}
+
+#title{
+    margin-top: 2%;
+}
+
+/**Mobile */
+
+@media (max-width: 960px){
+
+    #title{
+        display: none;
+    }
+
+    .titre-bar-mobile{
+        display: flex;
+        justify-content: center;
+    }
+}

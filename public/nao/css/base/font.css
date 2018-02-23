@@ -1,24 +1,18 @@
 @font-face {
-    font-family: 'Roboto-Black';
-    src: url('../../../font/Roboto-Black.ttf');
-
-}
-
-@font-face {
     font-family: 'Roboto-Bold';
-    src: url('../../../font/Roboto-Bold.ttf');
+    src: url('../../../bootstrap/MDB Free/font/roboto/Roboto-Bold.woff2') format("woff2");
 
 }
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('../../../font/Roboto-Light.ttf');
+    src: url('../../../bootstrap/MDB Free/font/roboto/Roboto-Light.woff2') format("woff2");
 }
 @font-face {
     font-family: 'Roboto-Medium';
-    src: url('../../../font/Roboto-Medium.ttf');;
+    src: url('../../../bootstrap/MDB Free/font/roboto/Roboto-Medium.woff2') format("woff2");
 }
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('../../../font/Roboto-Regular.ttf');;
+    src: url('../../../bootstrap/MDB Free/font/roboto/Roboto-Regular.woff2') format("woff2");
 }
 

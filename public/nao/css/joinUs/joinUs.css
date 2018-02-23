@@ -3,3 +3,39 @@
 #item-barre2{
     background-color: rgba(187, 59, 200, 0.65);
 }
+
+/** Body */
+
+#joinUs-content{
+    margin: 2%;
+}
+
+.space-bar {
+    border-right: solid 20px rgb(187, 59, 200);
+}
+
+button.pdf-form-button{
+    background-color: rgb(187, 59, 200);
+    border: solid rgb(187, 59, 200) 2px;
+    color: #FFFFFF;
+}
+
+button.pdf-form-button:hover{
+    background-color: #FFFFFF;
+    border: solid rgb(187, 59, 200) 2px;
+    color: rgb(187, 59, 200);
+}
+
+#titre-bar{
+    background-color: rgb(187, 59, 200);
+}
+
+#adherer-text{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#pdf-button{
+    display: flex;
+    justify-content: center;
+}

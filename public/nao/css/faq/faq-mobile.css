@@ -7,14 +7,6 @@
 
     /** Mobile Body */
 
-    #title{
-        display: none;
-    }
-    .titre-bar-mobile{
-        display: flex;
-        justify-content: center;
-    }
-
     .btn{
         font-size: 16px;
         text-align: left;

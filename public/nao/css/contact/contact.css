@@ -6,20 +6,17 @@
 
 /** Body */
 
-h1{
+p.asso{
     font-family: 'Roboto-Bold', sans-serif;
-    font-size: 25px;
-    color: white;
-    margin: 0 0 0 0;
-    text-align: center;
-}
-
-p{
     margin-bottom: 0;
 }
 
-form{
-    padding: 1%;
+p.coordonnees{
+    margin-bottom: 0;
+}
+
+.space-bar {
+    border-right: solid 20px rgb(70, 100, 50);
 }
 
 .bouton{
@@ -35,23 +32,6 @@ form{
     color: #999999;
 }
 
-
-.space-bar {
-    border-right: solid 20px rgb(70, 100, 50);
-}
-
-.titre-bar7{
-    border-left: solid 10px white;
-}
-
-.titre-bar-mobile{
-    display: none;
-}
-
-.asso{
-    font-family: 'Roboto-Bold', sans-serif;
-}
-
 #contact-icone{
     color: rgb(70, 100, 50);
     margin-top: 3px;
@@ -63,10 +43,6 @@ form{
 
 .contact{
     margin-top: 1%;
-}
-
-#title{
-    margin-top: 2%;
 }
 
 #contact-content{

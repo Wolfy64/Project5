@@ -6,16 +6,6 @@
 
     /** Mobile Body */
 
-
-    .titre-bar-mobile{
-        display: flex;
-        justify-content: center;
-    }
-
-    #title {
-        display: none;
-    }
-
     #envoyer{
         display: flex;
         justify-content: center;

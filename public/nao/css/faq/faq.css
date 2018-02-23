@@ -6,14 +6,6 @@
 
 /** Body */
 
-h1{
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 25px;
-    color: white;
-    margin: 0 0 0 0;
-    text-align: center;
-}
-
 .btn{
     display: flex;
     justify-content: space-between;
@@ -23,17 +15,7 @@ h1{
 }
 
 .space-bar {
-    border-right: solid 20px rgba(88, 122, 66, 0.65);
-}
-
-.titre-bar6{
-    border-left: solid 10px white;
-    padding: 0 0 0 0;
-}
-
-
-.titre-bar-mobile{
-    display: none;
+    border-right: solid 20px rgb(88, 122, 66);
 }
 
 .card{
@@ -53,17 +35,24 @@ h1{
     text-align: center;
 }
 
-button:hover > #fleche{
-    transform: rotate(180deg);
+.rotate {
+    transform:rotate(180deg);
+    /* Firefox */
+    -moz-transform:rotate(180deg);
+    /* Safari and Chrome */
+    -webkit-transform:rotate(180deg);
+    /* Opera */
+    -o-transform:rotate(180deg);
+    /* IE9 */
+    -ms-transform:rotate(180deg);
+    /* IE6,IE7 */
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476);
+    /* IE8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)";
 }
-
 
 #titre-bar{
-    background-color: rgba(88, 122, 66, 0.65);
-}
-
-#title{
-    margin-top: 2%;
+    background-color: rgb(88, 122, 66);
 }
 
 #faq-content{

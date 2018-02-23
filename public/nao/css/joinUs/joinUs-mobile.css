@@ -1,0 +1,28 @@
+@media (max-width: 960px){
+    /** Mobile Menu */
+
+    #liens-mobile3{
+        background-color: #542B56;
+    }
+
+    /** Mobile Body */
+
+    img{
+        width: 100%;
+    }
+
+    #joinUs-content{
+        display: flex;
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+    #joinUs-content > #img-adherer{
+        order: 1;
+        padding: 0;
+    }
+
+    #joinUs-content > #order-joinUs{
+        order: 2;
+    }
+
+}

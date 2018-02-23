@@ -2,13 +2,58 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/joinUs/joinUs.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/joinUs/joinUs-mobile.css') }}">
 {% endblock %}
 
-{% block body %} 
+{% block body %}
 
-    <h1>Adhérer</h1>
+    <div class="row">
+        <div class="col-12 titre-bar-mobile" id="titre-bar"><h1>ADHERER A L'ASSOCIATION</h1></div>
+    </div>
 
-    <a href="{{ path('join_us_show_file') }}">
-        <button type="button">Télécharger le formulaire d'adhésion</button>
-    </a>
+        <div class="row" id="joinUs-content">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-xs-12" id="order-joinUs">
+                <div class="row" id="title">
+                    <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+                        <h1>ADHERER A L'ASSOCIATION</h1>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-0 col-xs-0"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="adherer-text">
+                        <p>
+                            Restabat ut Caesar post haec properaret accitus et abstergendae causa suspicionis sororem suam,
+                            eius uxorem, Constantius ad se tandem desideratam venire multis fictisque blanditiis hortabatur.
+                            quae licet ambigeret metuens saepe cruentum, spe tamen quod eum lenire poterit ut germanum
+                            profecta, cum Bithyniam introisset, in statione quae Caenos Gallicanos appellatur, absumpta est vi
+                            febrium repentina. cuius post obitum maritus contemplans cecidisse fiduciam qua se fultum
+                            existimabat, anxia cogitatione, quid moliretur haerebat.
+                        </p>
+                        <p>
+                            Verum ad istam omnem orationem brevis est
+                            defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore,
+                            deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam deditšnihil dicam hoc
+                            loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse
+                            deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M.
+                            Crassi castissima domo, cum artibus honestissimis erudiretur.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" id="pdf-button">
+                        <a href="{{ path('join_us_show_file') }}">
+                            <button type="button" class="pdf-form-button">
+                                <i class="fas fa-arrow-alt-circle-down fa-1x"></i>
+                                Télécharger le formulaire d'adhésion
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12" id="img-adherer">
+                <img src="{{ asset('/img/img-adhesion.jpg') }}">
+            </div>
+        </div>
+
 {% endblock %}

@@ -8,29 +8,13 @@
 
     /** Mobile Body */
 
-    #title{
-        display: none;
-    }
-
-    .titre-bar-mobile{
-        display: flex;
-        justify-content: center;
-    }
-
     .apropos-texte{
         padding: 15px 5px 5px 5px;
+        margin-left: 0;
     }
 
-    #image-apropos{
-        padding: 0 0 0 0;
-    }
-
-    h1{
-        margin: 0 0 0 0;
-    }
     img.img-apropos{
-        max-height: 100%;
-        width: 100%;
-        padding: 0 0 0 0;
+        padding: 0;
+        margin: 0;
     }
 }

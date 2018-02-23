@@ -44,6 +44,12 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
+    input::placeholder{
+        color: white;
+        opacity: 1;
+    }
+
     nav{
         padding-left: 0;
         padding-right: 0;

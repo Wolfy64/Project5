@@ -9,6 +9,7 @@ h2.titre-footer{
     display: flex;
     color: white;
     justify-content: center;
+    margin-top: 8px;
 }
 
 a:hover{
