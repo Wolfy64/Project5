@@ -122,8 +122,8 @@ class Aves
         return $this->observations;
     }
 
-    public function setObservations($observations) : void
+    public function setObservations($observation) : void
     {
-        $this->observations;
+        $this->observations[] = $observation;
     }
 }

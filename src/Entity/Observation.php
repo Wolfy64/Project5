@@ -158,8 +158,6 @@ class Observation
     public function setImage($image) : void
     {
         $this->image = $image;
-
-        // return $this;
     }
 
     public function setNumbers($numbers) : void
@@ -187,13 +185,13 @@ class Observation
         $this->isValid = $isValid;
     }
 
-    public function getAveses() : ? Array
+    public function getAveses()
     {
         return $this->aveses;
     }
 
-    public function setAveses($aveses) : void
+    public function addAveses($aves) : void
     {
-        $this->aveses = $aveses;
+        $this->aveses[] = $aves;
     }
 }

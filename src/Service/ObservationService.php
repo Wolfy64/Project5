@@ -21,9 +21,9 @@ class ObservationService
 
     public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader)
     {
-        $this->fileUploader = $fileUploader;
-        $this->form = $form;
         $this->em = $em;
+        $this->form = $form;
+        $this->fileUploader = $fileUploader;
     }
 
     public function ObserveForm($request) : Form
@@ -66,15 +66,10 @@ class ObservationService
         $form = $this->form->create(ModifyObservationType::class, $observation);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $observation->setIsValid(true);
-            $this->persist($observation);
-        }
-
         return $form;
     }
 
-    public function find($id) :?  Observation
+    public function find($id) : ?  Observation
     {
         return $this->em->getRepository(Observation::class)->find($id);
     }

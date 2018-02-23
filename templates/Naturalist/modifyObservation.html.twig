@@ -3,11 +3,13 @@
 {% block body %} 
     <h1>Modifier une observation</h1>
 
+    <img src="/img/observations/{{ observation.image }}" alt="">
+
     {{ form_start(form) }}
         {{ form_errors(form) }}
         {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
         {{ form_row(form.content, {'label': 'Autres informations'}) }}
-        <button type="submit" class="btn btn-success">Valider l'observation</button>
+        <button type="submit" class="btn btn-success">Modifier l'observation</button>
     {{ form_end(form) }}
 
     <a href="{{ path('naturalist_remove_obs', {'id': observation.id }) }}">
@@ -16,4 +18,11 @@
     <a href="{{ path('naturalist_validations') }}">
         <button class="btn btn-secondary">Retour</button>
     </a>
+
+    <script>
+        var input = document.getElementById("modify_observation_commonName");
+    </script>
+    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
 {% endblock %}
+
