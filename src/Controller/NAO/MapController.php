@@ -7,11 +7,17 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\ObservationService;
+use App\Entity\Observation;
 
 class MapController extends AbstractController
 {
     public function index(Request $request, SessionInterface $session, ObservationService $observation ) : Response
     {
+        $id = 6;
+
+        $repository = $this->getDoctrine()->getRepository(Observation::class)->find($id);
+        // dump($repository);
+        // die;
         $form = $observation->mapForm($request);
 
         $observations = $observation->findByCommonName($form->get('commonName')->getData());

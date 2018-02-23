@@ -18,9 +18,9 @@ class AvesService
     public function addAves($observation) : Observation
     {
         $aveses = $this->findBy($observation->getCommonName());
-        
+
         foreach ($aveses as $aves) {
-            $observation->setAveses($aveses);
+            $observation->addAveses($aves);
         }
 
         return $observation;

@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Service\ObservationService;
 use App\Service\AvesService;
+use App\Entity\Observation;
 
 class ValidationsController extends AbstractController
 {
@@ -34,7 +35,9 @@ class ValidationsController extends AbstractController
         }
 
         $this->addFlash('notice', $message);
-        
+        $repository = $this->getDoctrine()->getRepository(Observation::class)->find($obsToValid->getId());
+        dump($repository);
+        // die;
         return $this->redirectToRoute('naturalist_validations');
     }
 
