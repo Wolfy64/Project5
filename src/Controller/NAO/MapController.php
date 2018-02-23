@@ -13,10 +13,11 @@ class MapController extends AbstractController
 {
     public function index(Request $request, SessionInterface $session, ObservationService $observation ) : Response
     {
-        $id = 6;
+        // $id = 6;
 
-        $repository = $this->getDoctrine()->getRepository(Observation::class)->find($id);
-        // dump($repository);
+        // $repository = $this->getDoctrine()->getRepository(Observation::class)->find($id);
+        // dump($repository->getAveses());
+
         // die;
         $form = $observation->mapForm($request);
 
