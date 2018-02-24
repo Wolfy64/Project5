@@ -4,6 +4,16 @@
     background-color: rgba(88, 122, 66, 0.65);
 }
 
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(88, 122, 66);
+}
+
+.space-bar {
+    border-right: solid 20px rgb(88, 122, 66);
+}
+
 /** Body */
 
 .btn{
@@ -12,10 +22,6 @@
     width: 100%;
     font-family: 'Roboto-Bold', sans-serif;
     font-size: 25px;
-}
-
-.space-bar {
-    border-right: solid 20px rgb(88, 122, 66);
 }
 
 .card{
@@ -49,10 +55,6 @@
     filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476);
     /* IE8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)";
-}
-
-#titre-bar{
-    background-color: rgb(88, 122, 66);
 }
 
 #faq-content{

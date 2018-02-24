@@ -11,8 +11,8 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-    <div class="row">
-        <div class="col-12 titre-bar-mobile" id="titre-bar"><h1>CONNEXION</h1></div>
+    <div class="row" id="titre-bar-mobile">
+        <div class="col-12"><h1>CONNEXION</h1></div>
     </div>
 
     <div class="row" id="title">
@@ -28,7 +28,7 @@
         <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="titre-connexion">CONNEXION</h2>
+                    <h2 class="titre-connexion">SE CONNECTER</h2>
                 </div>
             </div>
             <div class="col-12">
@@ -53,6 +53,11 @@
                     <div class="form-group" id="se-connecter">
                         <button id="boutton-connexion" type="submit">Se connecter</button>
                     </div>
+                    <div class="form-group" id="se-connecter">
+                        <a id="creer-un-compte" href="{{ path('security_signup') }}">
+                        S'inscrire
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
@@ -62,10 +67,8 @@
 
 
 
-
-
-<a href="{{ path('security_signup') }}">Créer un compte</a>
 <p>Liens provisoire</p>
+    <a href="{{ path('security_signup') }}">S'inscrire</a>
 <a href="{{ path('home_page') }}">Page d'acceuil</a>
 <a href="{{ path('security_logout') }}">Se déconnecter</a>
 <a href="{{ path('naturalist_validations') }}">Mes Validations</a>

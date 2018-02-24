@@ -4,6 +4,15 @@
     background-color: rgba(215, 95, 227, 0.65);
 }
 
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(215, 95, 227);
+}
+
+.space-bar {
+    border-right: solid 20px rgb(215, 95, 227);
+}
 
 /** Body */
 
@@ -26,14 +35,6 @@ img.img-apropos{
 
 .chasseur{
     font-weight: bold;
-}
-
-.space-bar {
-    border-right: solid 20px rgb(215, 95, 227);
-}
-
-#titre-bar{
-    background-color: rgb(215, 95, 227);
 }
 
 #image-apropos{

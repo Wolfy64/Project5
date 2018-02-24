@@ -4,12 +4,79 @@
     background-color: rgba(148, 47, 158, 0.65);
 }
 
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(148, 47, 158);
+}
+
+.space-bar {
+    border-right: solid 20px rgb(148, 47, 158);
+}
+
+/** Body */
+
+form.connexion{
+    background-color: rgba(0, 0, 0, 0.05);
+    border: black solid 1px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 5%;
+}
+
+button#soumettre{
+    background-color: rgb(148, 47, 158);
+    color: #FFFFFF;
+    padding: 5px;
+}
+button:hover#soumettre{
+    background-color: white;
+    border: solid 1px rgb(148, 47, 158);
+    color: rgb(148, 47, 158);
+    padding: 5px;
+}
+
+#soumettre-bouton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#form-map{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#trouvez-moi{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+button#findMe, button:hover#findMe{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: gray;
+    padding-left: 0;
+}
+
+#lieu{
+    padding-right: 0;
+}
+
+#obervation_numbers{
+    margin-left: 10px;
+}
+
+
 /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
 
 #map {
-    height: 40%;
-    width: 40%;
+    height: 100%;
+    width: 100%;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -22,7 +89,6 @@ body {
 }
 
 #description {
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
 }
@@ -41,7 +107,6 @@ body {
 
 #observation_town {
     background-color: #fff;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
     margin-left: 12px;

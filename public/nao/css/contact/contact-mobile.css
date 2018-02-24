@@ -4,6 +4,12 @@
         background-color: #542B56;
     }
 
+    /** Titre-mobile */
+
+    #titre-bar-mobile{
+        background-color: rgb(70, 100, 50);
+    }
+
     /** Mobile Body */
 
     #envoyer{

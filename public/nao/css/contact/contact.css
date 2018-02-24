@@ -4,6 +4,16 @@
     background-color: rgba(69, 100, 49, 0.65);
 }
 
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(70, 100, 50);
+}
+
+.space-bar {
+    border-right: solid 20px rgb(70, 100, 50);
+}
+
 /** Body */
 
 p.asso{
@@ -15,9 +25,7 @@ p.coordonnees{
     margin-bottom: 0;
 }
 
-.space-bar {
-    border-right: solid 20px rgb(70, 100, 50);
-}
+
 
 .bouton{
     background-color: rgb(70, 100, 50);
@@ -35,10 +43,6 @@ p.coordonnees{
 #contact-icone{
     color: rgb(70, 100, 50);
     margin-top: 3px;
-}
-
-#titre-bar{
-    background-color: rgb(70, 100, 50);
 }
 
 .contact{
