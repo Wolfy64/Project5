@@ -47,6 +47,8 @@ class Aves
      */
     private $observations;
 
+    // private $observation;
+
     public function __construct()
     {
         $this->observations = new ArrayCollection();
@@ -122,7 +124,7 @@ class Aves
         return $this->observations;
     }
 
-    public function setObservations($observation) : void
+    public function addObservation($observation) : void
     {
         $this->observations[] = $observation;
     }

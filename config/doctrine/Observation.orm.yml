@@ -6,12 +6,6 @@ App\Entity\Observation:
         aveses:
             targetEntity: App\Entity\Aves
             inversedBy: observations
-            fetch: EXTRA_LAZY
-            joinColumn:
-                name: aveses
-                # nullable: true
-                # aveses:
-                    # referencedColumnName: id
     id:
         id:
             type: integer

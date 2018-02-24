@@ -190,8 +190,13 @@ class Observation
         return $this->aveses;
     }
 
-    public function addAveses($aves) : void
+    public function addAves(Aves $aves) : void
     {
         $this->aveses[] = $aves;
+    }
+
+    public function removeAves(Aves $aves) : void
+    {
+        $this->aveses->removeElement($aves);
     }
 }

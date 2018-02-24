@@ -13,16 +13,20 @@ class MapController extends AbstractController
 {
     public function index(Request $request, SessionInterface $session, ObservationService $observation ) : Response
     {
-        // $id = 6;
+        // ### TEST ###
 
-        // $repository = $this->getDoctrine()->getRepository(Observation::class)->find($id);
-        // dump($repository->getAveses());
+        // $id = 6;
+        // $obsRepo = $this->getDoctrine()->getRepository(Observation::class)->find($id);
+        // dump($obsRepo);
 
         // die;
+        // ### END TEST ###
         $form = $observation->mapForm($request);
 
         $observations = $observation->findByCommonName($form->get('commonName')->getData());
-
+        // $testId = $observations[0]->getId();
+        $obsRepo = $this->getDoctrine()->getRepository(Observation::class)->find($observations[0]->getId());
+        dump($obsRepo->getAveses());
         if ($form->isSubmitted() && $form->isValid()) {
             $session->set('observations', $observations);
 

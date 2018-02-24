@@ -6,8 +6,6 @@ App\Entity\Aves:
         observations:
             targetEntity: App\Entity\Observation
             mappedBy: aveses
-            joinColumn:
-                nullable: true
     id:
         id:
             type: integer

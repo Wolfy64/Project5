@@ -35,9 +35,12 @@ class ValidationsController extends AbstractController
         }
 
         $this->addFlash('notice', $message);
-        // $observation = $this->getDoctrine()->getRepository(Observation::class)->find($obsToValid->getId());
-        // dump($observation->getAveses());
-        // die;
+        // ### TEST ###
+        // $obsRepo = $this->getDoctrine()->getRepository(Observation::class)->find($obsToValid->getId());
+        // $obsRepo = $this->getDoctrine()->getRepository(Observation::class)->find(6);
+        // dump($obsToValid);
+        // die; 
+        // ### END TEST ###
         return $this->redirectToRoute('naturalist_validations');
     }
 
