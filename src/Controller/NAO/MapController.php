@@ -21,7 +21,7 @@ class MapController extends AbstractController
         // die;
         $form = $observation->mapForm($request);
 
-        $observations = $observation->findByCommonName($form->get('commonName')->getData());
+        //$observations = $observation->findByCommonName($form->get('commonName')->getData());
 
         if ($form->isSubmitted() && $form->isValid()) {
             $session->set('observations', $observations);

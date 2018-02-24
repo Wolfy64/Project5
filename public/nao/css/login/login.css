@@ -1,5 +1,50 @@
 /** Header Barre */
 
-#item-barre8{
-    background-color: rgba(118, 120, 108, 0.65);
+.titre-bar-pc{
+    background-color: rgb(118, 120, 108);
+}
+
+/** Body */
+
+.space-bar {
+    border-right: solid 20px rgb(118, 120, 108);
+}
+
+form.connexion{
+    background-color: rgba(0, 0, 0, 0.05);
+    border: black solid 1px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 11px;
+    margin-bottom: 5%;
+    padding: 5%;
+}
+
+button#boutton-connexion{
+    background-color: rgb(118, 120, 108);
+    color: #FFFFFF;
+    padding: 5px;
+}
+button:hover#boutton-connexion{
+    background-color: #FFFFFF;
+    border: solid 1px rgb(118, 120, 108);
+    color: rgb(118, 120, 108);
+    padding: 5px;
+}
+
+.titre-connexion{
+    color: rgb(77,77,79);
+    text-align: center;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 25px;
+}
+
+.mdp-oublier{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1%;
+}
+
+#se-connecter{
+    display: flex;
+    justify-content: center;
 }

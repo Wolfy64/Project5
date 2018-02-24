@@ -1,19 +1,74 @@
 {% extends "base.html.twig" %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ asset('/nao/css/signup/signup.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/login/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/login/login-mobile.css') }}">
 {% endblock %}
 
-{% block body %} 
-    <h1>Créer un compte</h1>
+{% block body %}
 
-    {{ form_start(form) }}
-        {{ form_row(form.username, {'label': 'Email'}) }}
-        {{ form_row(form.firstName, {'label': 'Prénom'}) }}
-        {{ form_row(form.lastName, {'label': 'Nom'}) }}
-        {{ form_row(form.plainPassword.first, {'label': 'Mot de passe'}) }}
-        {{ form_row(form.plainPassword.second, {'label': 'Confirmer votre mot de passe'}) }}
-        {{ form_row(form.termsOfUse, {'label': 'J\'accepte les conditions d\'utilisation'}) }}
-        <button type="submit">Créer un compte</button>
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-12 titre-bar-mobile" id="titre-bar"><h1>CONNEXION</h1></div>
+    </div>
+
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>CONNEXION</h1>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 ool-md-0 col-xs-0"></div>
+        <div class="col-xl-4 col-lg-4 ool-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="titre-connexion">CRÉER UN COMPTE</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <form class="connexion" method="post">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+                                {{ form_row(form.firstName, {'label': 'Prénom'}) }}
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+                                {{ form_row(form.lastName, {'label': 'Nom'}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+                                {{ form_row(form.username, {'label': 'Email'}) }}
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+                                {{ form_row(form.plainPassword.first, {'label': 'Mot de passe'}) }}
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+                                {{ form_row(form.plainPassword.second, {'label': 'Confirmer votre mot de passe'}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.termsOfUse, {'label': 'J\'accepte les conditions d\'utilisation'}) }}
+                    </div>
+                    <div class="form-group" id="se-connecter">
+                        <button id="boutton-connexion" type="submit">Créer un compte</button>
+                    </div>
+                    {{ form_end(form) }}
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 ool-md-0 col-xs-0"></div>
+    </div>
+
 {% endblock %}
