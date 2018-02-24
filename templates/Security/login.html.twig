@@ -2,6 +2,7 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/login/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/login/login-mobile.css') }}">
 {% endblock %}
 
 {% block body %} 
@@ -10,22 +11,58 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<h1>Connexion</h1>
+    <div class="row">
+        <div class="col-12 titre-bar-mobile" id="titre-bar"><h1>CONNEXION</h1></div>
+    </div>
 
-<form action="{{ path('security_login') }}" method="post">
-    <label for="username">Email:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>CONNEXION</h1>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
+    </div>
 
-    <label for="password">Mot de passe:</label>
-    <input type="password" id="password" name="_password" /> 
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-0 col-xs-0"></div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="titre-connexion">CONNEXION</h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <form class="connexion" action="{{ path('security_login') }}" method="post">
+                    <div class="form-group">
+                        <label for="username">Email</label>
+                        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
-    <input type="checkbox" id="remember_me" name="_remember_me" checked />
-    <label for="remember_me">Se souvenir de moi</label>
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="_password"/>
 
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-    
-    <button type="submit">Se connecter</button>
-</form>
+                        <a class="mdp-oublier">Mot de passe oublié ?</a>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="remember_me" name="_remember_me" />
+                        <label for="remember_me">Se souvenir de moi</label>
+
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                    </div>
+
+                    <div class="form-group" id="se-connecter">
+                        <button id="boutton-connexion" type="submit">Se connecter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-0 col-xs-0"></div>
+    </div>
+
+
+
+
+
 
 <a href="{{ path('security_signup') }}">Créer un compte</a>
 <p>Liens provisoire</p>
