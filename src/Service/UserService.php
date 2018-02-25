@@ -21,7 +21,7 @@ class UserService
         $this->passwordEncoder = $passwordEncoder;
     }
 
-    public function form($request)
+    public function form($request) : Form
     {
         $user = new User();
 

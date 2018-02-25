@@ -53,69 +53,69 @@ class User implements UserInterface, \Serializable
      */
     private $termsOfUse;
 
-    public function getId(): int
+    public function getId() : ? int
     {
         return $this->id;
     }
 
-    public function getUsername(): ? string
+    public function getUsername() : ? string
     {
         return $this->username;
     }
 
-    public function setUsername($username): void
+    public function setUsername(string $username) : void
     {
         $this->username = $username;
     }
 
-    public function getFirstName(): ? string
+    public function getFirstName() : ? string
     {
         return $this->firstName;
     }
 
-    public function setFirstName($firstName): void
+    public function setFirstName(string $firstName) : void
     {
         $this->firstName = $firstName;
     }
 
-    public function getLastName(): ? string
+    public function getLastName() : ? string
     {
         return $this->lastName;
     }
 
-    public function setLastName($lastName): void
+    public function setLastName(string $lastName) : void
     {
         $this->lastName = $lastName;
     }
 
-    public function getSalt(): void
+    public function getSalt() : void
     {
         // you *may* need a real salt depending on your encoder
         // see section on salt below
         return;
     }
 
-    public function getPlainPassword(): ? string
+    public function getPlainPassword() : ? string
     {
         return $this->plainPassword;
     }
 
-    public function setPlainPassword($password): void
+    public function setPlainPassword(string $password) : void
     {
         $this->plainPassword = $password;
     }
 
-    public function getPassword(): string
+    public function getPassword() : string
     {
         return $this->password;
     }
 
-    public function setPassword($password): void
+    public function setPassword(string $password) : void
     {
         $this->password = $password;
     }
 
-    public function getRoles(): array
+    public function getRoles() : array
     {
         $roles = $this->roles;
 
@@ -124,26 +124,19 @@ class User implements UserInterface, \Serializable
             $roles[] = 'ROLE_USER';
         }
         return array_unique($roles);
-        // $roles[] = $this->roles;
-
-        // if (empty($roles)){
-        //     $roles[] = self::ROLE_USER;
-        // }
-
-        // return $roles;
     }
 
-    public function setRoles(array $roles): void
+    public function setRoles(array $roles) : void
     {
         $this->roles = $roles;
     }
 
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
 
-    public function setIsActive($isActive): void
+    public function setIsActive(bool $isActive) : void
     {
         $this->isActive = $isActive;
     }

@@ -15,7 +15,7 @@ class AvesService
         $this->em = $em;
     }
 
-    public function addAves($observation) : Observation
+    public function addAves(Observation $observation) : Observation
     {
         $aveses = $this->findBy($observation->getCommonName());
 
@@ -26,7 +26,7 @@ class AvesService
         return $observation;
     }
 
-    public function findBy($commonName) : ? array
+    public function findBy(string $commonName) : ? array
     {
         return $this->em->getRepository(Aves::class)->findBy(['commonName' => $commonName]);
     }

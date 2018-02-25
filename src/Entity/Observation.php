@@ -91,7 +91,7 @@ class Observation
         return $this->commonName;
     }
 
-    public function setCommonName($commonName) : void
+    public function setCommonName(string $commonName) : void
     {
         $this->commonName = $commonName;
     }
@@ -101,7 +101,7 @@ class Observation
         return $this->date;
     }
 
-    public function setDate($date) : void
+    public function setDate(\DateTime $date) : void
     {
         $this->date = $date;
     }
@@ -111,7 +111,7 @@ class Observation
         return $this->place;
     }
 
-    public function setPlace($place) : void
+    public function setPlace(string $place) : void
     {
         $this->place = $place;
     }
@@ -121,7 +121,7 @@ class Observation
         return $this->latitude;
     }
 
-    public function setLatitude($latitude) : void
+    public function setLatitude(string $latitude) : void
     {
         $this->latitude = $latitude;
     }
@@ -131,7 +131,7 @@ class Observation
         return $this->longitude;
     }
 
-    public function setLongitude($longitude) : void
+    public function setLongitude(string $longitude) : void
     {
         $this->longitude = $longitude;
     }
@@ -160,7 +160,7 @@ class Observation
         $this->image = $image;
     }
 
-    public function setNumbers($numbers) : void
+    public function setNumbers(int $numbers) : void
     {
         $this->numbers = $numbers;
     }
@@ -170,7 +170,7 @@ class Observation
         return $this->content;
     }
 
-    public function setContent($content) : void
+    public function setContent(string $content) : void
     {
         $this->content = $content;
     }
@@ -180,7 +180,7 @@ class Observation
         return $this->isValid;
     }
 
-    public function setIsValid($isValid) : void
+    public function setIsValid(bool $isValid) : void
     {
         $this->isValid = $isValid;
     }

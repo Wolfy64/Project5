@@ -36,7 +36,7 @@ class ObservationService
         $this->fileUploader = $fileUploader;
     }
 
-    public function ObserveForm($request) : Form
+    public function observeForm($request) : Form
     {
         $observation = new Observation();
 
@@ -54,7 +54,7 @@ class ObservationService
                 $fileName = $this->fileUploader->upload($file);
                 $observation->setImage($fileName);
             }
-
+            
             $this->persist($observation);
         }
 
@@ -71,7 +71,7 @@ class ObservationService
         return $form;
     }
 
-    public function modifyForm($observation, $request) : Form
+    public function modifyForm(Observation $observation, $request) : Form
     {
         $form = $this->form->create(ModifyObservationType::class, $observation);
         $form->handleRequest($request);
@@ -79,12 +79,12 @@ class ObservationService
         return $form;
     }
 
-    public function find($id) : ?  Observation
+    public function find(int $id) : ?  Observation
     {
         return $this->em->getRepository(Observation::class)->find($id);
     }
 
-    public function findByCommonName($commonName) : array
+    public function findByCommonName(string $commonName) : array
     {
         return $this->em->getRepository(Observation::class)->findBy([
             'commonName' => $commonName,
@@ -92,24 +92,24 @@ class ObservationService
         ]);
     }
 
-    public function isPublished($bool) : array
+    public function isPublished(bool $bool) : array
     {
         return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
     }
 
-    public function doValid($observation) : void
+    public function doValid(Observation $observation) : void
     {
         $observation->setIsValid(true);
         $this->persist($observation);
     }
 
-    public function doRemove($observation) : void
+    public function doRemove(Observation $observation) : void
     {
         $this->em->remove($observation);
         $this->em->flush();
     }
 
-    public function persist($observation) : void
+    public function persist(Observation $observation) : void
     {
         $this->em->persist($observation);
         $this->em->flush();

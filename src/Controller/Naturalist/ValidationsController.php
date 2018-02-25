@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Service\ObservationService;
 use App\Service\AvesService;
-use App\Entity\Observation;
 
 class ValidationsController extends AbstractController
 {

@@ -11,7 +11,7 @@ class ObserveController extends AbstractController
 {
     public function index(Request $request, ObservationService $observation) : Response
     {
-        $form = $observation->ObserveForm($request);
+        $form = $observation->observeForm($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->addFlash('notice', 'Votre observation est en attente de validation par un de nos naturalistes');
