@@ -6,6 +6,7 @@ App\Entity\Observation:
         aveses:
             targetEntity: App\Entity\Aves
             inversedBy: observations
+            fetch: EAGER
     id:
         id:
             type: integer

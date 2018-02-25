@@ -20,7 +20,7 @@ class AvesService
         $aveses = $this->findBy($observation->getCommonName());
 
         foreach ($aveses as $aves) {
-            $observation->addAveses($aves);
+            $observation->addAves($aves);
         }
 
         return $observation;

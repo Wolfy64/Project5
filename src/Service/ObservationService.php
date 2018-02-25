@@ -14,6 +14,16 @@ use App\Entity\Observation;
 class ObservationService
 {
     const NOT_FOUND = 'Cette observation n\'existe pas';
+    const HABITAT = [
+        1 => 'Marin',
+        2 => 'Eau douce',
+        3 => 'Terrestre',
+        4 => 'Marin & Eau douce',
+        5 => 'Marin & Terrestre',
+        6 => 'Eau saumâtre',
+        7 => 'Continental (terrestre et/ou eau douce)',
+        8 => 'Continental (terrestre et/ou eau douce)'
+    ];
 
     private $em;
     private $form;
@@ -103,5 +113,69 @@ class ObservationService
     {
         $this->em->persist($observation);
         $this->em->flush();
+    }
+
+    public function birdInfos(array $observations) : array
+    {
+        $birdInfos = [];
+
+        $scientificNames = [];
+        $authors = [];
+
+        $aveses = $observations[0]->getAveses();
+
+        // Define $habitat
+        switch ($aveses[0]->getHabitat()) {
+            case '1':
+                $habitat = self::HABITAT[1];
+                break;
+            case '2':
+                $habitat = self::HABITAT[2];
+                break;
+            case '3':
+                $habitat = self::HABITAT[3];
+                break;
+            case '4':
+                $habitat = self::HABITAT[4];
+                break;
+            case '5':
+                $habitat = self::HABITAT[5];
+                break;
+            case '6':
+                $habitat = self::HABITAT[6];
+                break;
+            case '7':
+                $habitat = self::HABITAT[7];
+                break;
+            case '8':
+                $habitat = self::HABITAT[8];
+                break;
+            
+            default:
+                $habitat = 'Non déterminé';
+                break;
+        }
+
+        // Fill up $scientificNames[] & $authors[]
+        foreach ($aveses as $aves) {
+            $scientificNames[] = $aves->getScientificName();
+            
+            // Remove brackets
+            $author = str_replace(['(', ')'], '', $aves->getAuthor());
+
+            // Avoid duplicate author
+            if (!in_array($author, $authors)) {
+                $authors[] = $author;
+            }
+        }
+
+        $birdInfos['order'] = $aveses[0]->getOrder();
+        $birdInfos['family'] = $aveses[0]->getFamily();
+        $birdInfos['commonName'] = $aveses[0]->getCommonName();
+        $birdInfos['habitat'] = $habitat;
+        $birdInfos['scientificNames'] = $scientificNames;
+        $birdInfos['author'] = $authors;
+
+        return $birdInfos;
     }
 }
