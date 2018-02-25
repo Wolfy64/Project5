@@ -25,29 +25,28 @@ form{
     padding: 1%;
 }
 
+
+#title{
+    margin-top: 2%;
+}
+
+/** Bar */
+
 .titre-bar-pc{
     border-left: solid 10px white;
     padding: 0;
 }
 
 
-.titre-bar-mobile{
-    display: none;
-}
-
-#title{
-    margin-top: 2%;
-}
-
 /**Mobile */
 
 @media (max-width: 960px){
 
-    #title{
+    .titre-bar-pc{
         display: none;
     }
 
-    .titre-bar-mobile{
+    #titre-bar-mobile{
         display: flex;
         justify-content: center;
     }

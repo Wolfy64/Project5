@@ -4,4 +4,16 @@
     #liens-mobile1{
         background-color: #542B56;
     }
+
+    /** Titre-mobile */
+
+    #titre-bar-mobile{
+        background-color: rgb(118, 120, 108);
+    }
+
+    /** Body */
+
+    h2.titre-connexion{
+        font-size: 15px;
+    }
 }
