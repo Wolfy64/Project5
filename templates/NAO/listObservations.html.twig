@@ -13,11 +13,12 @@
             {{ message }}
         </div>
     {% endfor %}
-    
+
     <ul>
         {% for observation in observations %}
             <li> Nom espece: {{ observation.commonName }} </li>
             <li> Observé le: {{ observation.date|date("m/d/Y") }} </li>
+            <li> Observateur: {{ observation.user.firstName }} {{ observation.user.lastName }} </li>
             <li> Coordonnés GPS {{ observation.latitude }} / {{ (observation.longitude) }}</li>
             <li> Comentaire: {{ observation.content }} </li>
             <li><img src="/img/observations/{{ observation.image }}" alt=""></li>

@@ -7,17 +7,21 @@
     <div>
         <img src="/img/observations/{{ observations[0].image }}" alt="" width="100px">
         <h2>Fiche détaillée</h2>
-        <p>Nom commun: {{ birdInfos.commonName }}</p>
-        <p>Nom scientifique: {{ birdInfos.scientificNames|join(', ') }}</p>
+        <p>Règne: Animalia</p>
+        <p>Embranchement: Chordata</p>
+        <p>Clade: Ornithurae</p>
+        <p>Classe: Aves</p>
         <p>Ordre: {{ birdInfos.order }}</p>
         <p>Habitat: {{ birdInfos.habitat }}</p>
+        <p>Nom scientifique: {{ birdInfos.scientificNames|join(', ') }}</p>
+        <p>Nom commun: {{ birdInfos.commonName }}</p>
         <p>Autheur: {{ birdInfos.author|join(', ') }}</p>
     </div>
 
     <a href="{{ path('map') }}">
         <button>Retour à la page recherche</button>
     </a>
-
+    {{ dump(observations) }}
     <div>
         <h2>Il y à {{ observations|length }} {% if observations|length > 1 %} observations {% else %} observation{% endif %}</h2>
 
@@ -27,7 +31,7 @@
                     <img src="/img/observations/{{ observation.image }}" alt="" width="100px">
                 </li>
                 <li>Observé le {{ observation.date|date("d/m/Y") }}</li>
-                <li>Observateur: </li>
+                <li>Observateur: {{ observation.user.firstName }} {{ observation.user.lastName }}</li>
                 <li>Coordonnées GPS:</li>
                 <li>Latitude: {{ observation.latitude}}</li>
                 <li>Longitude: {{ observation.longitude }}</li>

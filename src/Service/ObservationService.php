@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Form\Form;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\Naturalist\ModifyObservationType;
@@ -29,11 +30,12 @@ class ObservationService
     private $form;
     private $fileUploader;
 
-    public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader)
+    public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader, TokenStorageInterface $token)
     {
         $this->em = $em;
         $this->form = $form;
         $this->fileUploader = $fileUploader;
+        $this->token = $token;
     }
 
     public function observeForm($request) : Form
@@ -45,6 +47,9 @@ class ObservationService
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $user = $this->token->getToken()->getUser();
+
+            $observation->setUser($user);
             $observation->setIsValid(false);
             $observation->setImage('no_image.png');
 

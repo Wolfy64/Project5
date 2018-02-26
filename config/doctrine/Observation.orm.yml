@@ -7,6 +7,11 @@ App\Entity\Observation:
             targetEntity: App\Entity\Aves
             inversedBy: observations
             fetch: EAGER
+    manyToOne:
+        user:
+            targetEntity: App\Entity\User
+            joinColumn:
+                nullable: false
     id:
         id:
             type: integer

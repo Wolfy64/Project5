@@ -35,7 +35,7 @@ class MapController extends AbstractController
     {
         return $this->render('NAO/mapShowList.html.twig',[
             'observations' => $session->get('observations'),
-            'birdInfos'    => $observation->birdInfos($session->get('observations')),
+            'birdInfos'    => $observation->birdInfos($session->get('observations'))
         ]);
     }
 }

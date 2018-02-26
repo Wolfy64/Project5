@@ -76,6 +76,11 @@ class Observation
      */
     private $aveses;
 
+    /**
+     * @var User
+     */
+    private $user;
+
     public function __construct()
     {
         $this->aveses = new ArrayCollection();
@@ -198,5 +203,15 @@ class Observation
     public function removeAves(Aves $aves) : void
     {
         $this->aveses->removeElement($aves);
+    }
+
+    public function getUser() : ? User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user) : void
+    {
+        $this->user = $user;
     }
 }

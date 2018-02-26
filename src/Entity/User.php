@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class User implements UserInterface, \Serializable
 {
@@ -52,6 +53,16 @@ class User implements UserInterface, \Serializable
      * @var boolean
      */
     private $termsOfUse;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $observations;
+
+    public function __construct()
+    {
+        $this->observations = new ArrayCollection();
+    }
 
     public function getId() : ? int
     {
@@ -149,6 +160,11 @@ class User implements UserInterface, \Serializable
     public function setTermsOfUse(bool $termsOfUse): void
     {
         $this->termsOfUse = $termsOfUse;
+    }
+
+    public function getObservations() : ArrayCollection
+    {
+        return $this->observations;
     }
 
     public function eraseCredentials()

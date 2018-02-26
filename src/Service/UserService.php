@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use Symfony\Component\Form\FormFactoryInterface;
+use Symfony\Component\Form\Form;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User;
