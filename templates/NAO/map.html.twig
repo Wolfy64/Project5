@@ -2,11 +2,11 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/map/map.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/map/map-mobile.css') }}">
 {% endblock %}
 
 {% block body %} 
 
-    <h1>Localiser les observations d'oiseaux enregistrés en France</h1>
 
     {% for message in app.flashes('notice') %}
         <div class="flash-notice">
@@ -14,50 +14,103 @@
         </div>
     {% endfor %}
 
-    <div>
-        <h2>Recherche un oiseau</h2>
 
-        <h3>Espèces</h3>
-
-        {{ form_start(form) }}
-            {{ form_errors(form) }}
-            {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
-            <button type="submit">Lancer la recherche</button>
-        {{ form_end(form) }}
-
-        <h3>Département</h3>
+    <div class="row" id="titre-bar-mobile">
+        <div class="col-12"><h1>LOCALISER LES OBSERVATIONS D'OISEAUX ENREGISTRÉES EN FRANCE</h1></div>
     </div>
 
-    {% if observations is defined and observations is not empty %} 
-        <div>
-            <h2>Résultats</h2>
-        
-            <h3>Votres recherche:</h3>
-
-            <ul>
-                <li>{{ observations.0.commonName }}</li>
-                <li>Département " A faire plus tard"</li>
-            </ul>
-
-            <p>Il y a {{ observations|length }} 
-                {% if observations|length > 1 %} résultats {% else %} résultat{% endif %} 
-            </p>
-
-            <a href="{{ path('map_show_list') }}">
-                Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
-            </a>
-        
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>LOCALISER LES OBSERVATIONS D'OISEAUX ENREGISTRÉES EN FRANCE</h1>
         </div>
-    {% else %} 
-        <p>Affiche une belle image</p>
-        <img src="{{ asset('/img/observations/no_image.png') }}" alt="">
-    {% endif %}
+        <div class="col-xl-6 col-lg-6 col-md-0 col-xs-0"></div>
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('list_observations') }}">Liste des observations</a>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12">
+            {{ form_start(form,{'attr': {'class': 'connexion'}}) }}
+            {{ form_errors(form) }}
+            <h2>Recherche un oiseau</h2>
+
+            <div class="form-group">
+                <h3>Espèces</h3>
+            </div>
+            <div class="form-group">
+                <h3>Département</h3>
+                {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
+            </div>
+            <div class="form-group" id="soumettre-bouton">
+                <button id="soumettre" type="submit">Lancer la recherche</button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12">
+            <div class="connexion">
+                <h2>Résultats</h2>
+                <div class="row">
+                    <div class="col-12">
+                        {% if observations is defined and observations is not empty %}
+
+                            <h3>Votres recherche:</h3>
+
+                            <ul>
+                                <li>{{ observations.0.commonName }}</li>
+                                <li>Département " A faire plus tard"</li>
+                            </ul>
+
+                            <p>Il y a {{ observations|length }}
+                                {% if observations|length > 1 %} résultats {% else %} résultat{% endif %}
+                            </p>
+
+                            <a href="{{ path('map_show_list') }}">
+                                Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
+                            </a>
+
+                        {% else %}
+                            <p>Affiche une belle image</p>
+                            <img src="{{ asset('/img/moineau_domestique_rufer.jpg') }}" alt="" id="belle-image">
+                        {% endif %}
+                        <div class="form-group" id="soumettre-bouton">
+                            <a href="{{ path('list_observations') }}">
+                                <button id="soumettre" type="submit">
+                                    Liste des observations
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
+            <div class="connexion" style="height: 85%"></div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 align-self-end">
+            <div class="connexion">
+               <div class="row">
+                   <div class="col-12" id="img-observations">
+                       <img src="{{ asset('/img/icon-geoloc.png') }}">
+                   </div>
+               </div>
+                <div class="row">
+                    <div class="col-12" id="boutton-observation">
+                        <a href="#">
+                            <button id="soumettre" type="submit">
+                                Voir les 15 dernières observations
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
         <script>
             var input = document.getElementById("map_commonName");

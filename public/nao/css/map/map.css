@@ -3,3 +3,74 @@
 #item-barre4{
     background-color: rgba(119, 37, 127, 0.65);
 }
+
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(119, 37, 127);
+}
+
+.space-bar {
+    border-right: solid 20px  rgb(119, 37, 127);
+}
+
+/** Body */
+
+h2{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 12px;
+}
+
+
+#title{
+    margin-top: 0;
+}
+
+.connexion{
+    background-color: rgba(0, 0, 0, 0.05);
+    border: black solid 1px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 5%;
+}
+
+button#soumettre{
+    background-color: rgb(148, 47, 158);
+    color: #FFFFFF;
+    padding: 5px;
+}
+button:hover#soumettre{
+    background-color: white;
+    border: solid 1px rgb(148, 47, 158);
+    color: rgb(148, 47, 158);
+    padding: 5px;
+}
+
+#soumettre-bouton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#img-observations{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 10px 10px 10px;
+}
+
+#belle-image{
+    max-width: 100%;
+}
+
+#boutton-observation{
+   display: flex;
+    justify-content: center;
+}

@@ -65,3 +65,8 @@ p.coordonnees{
     font-family: 'Roboto-Regular', sans-serif;
     justify-content: flex-end;
 }
+
+#map {
+    height: 100%;
+    width: 100%;
+}
