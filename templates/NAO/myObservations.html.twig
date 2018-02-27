@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    
+    <h2>Mes Observations</h2>
+
+        {% if obsValid is empty %}
+        <p> Pas d'observation</p>
+        {% endif %} 
+
+        {% for observation in obsValid %}
+        <table class="table">
+            <tbody>
+                <th>Observation(s) validé(s)</th>
+                <tr>
+                    <th>Photo</th>
+                    <th>Nom Commun</th>
+                    <th>Observé le</th>
+                    <th>Autres informations</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/img/observations/{{ observation.image }}" alt="" width="50px">
+                    </td>
+                    <td>{{ observation.commonName }}</td>
+                    <td>{{ observation.date|date("m/d/Y") }}</td>
+                    <td>{{ observation.content }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% endfor %}
+
+        {% for observation in obsNotValid %}
+        <table class="table">
+            <tbody>
+                <th>Observation(s) en attente de validation</th>
+                <tr>
+                    <th>Photo</th>
+                    <th>Nom Commun</th>
+                    <th>Observé le</th>
+                    <th>Autres informations</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/img/observations/{{ observation.image }}" alt="" width="50px">
+                    </td>
+                    <td>{{ observation.commonName }}</td>
+                    <td>{{ observation.date|date("m/d/Y") }}</td>
+                    <td>{{ observation.content }}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% endfor %}
+
+{% endblock body %}

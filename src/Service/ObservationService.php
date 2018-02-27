@@ -183,4 +183,12 @@ class ObservationService
 
         return $birdInfos;
     }
+
+    public function findByUser(bool $isValid) : array
+    {
+        return $this->em->getRepository(Observation::class)->findBy([
+            'user' => $this->token->getToken()->getUser()->getId(),
+            'isValid' => $isValid,
+        ]);
+    }
 }

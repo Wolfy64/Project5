@@ -42,6 +42,10 @@ contact:
     path: /contact
     controller: App\Controller\NAO\ContactController::index
 
+my_observations:
+    path: /mes-observations
+    controller: App\Controller\NAO\MyObservationsController::index
+
 naturalist_validations:
     path: /naturaliste/validations
     controller: App\Controller\Naturalist\ValidationsController::index
@@ -66,7 +70,6 @@ naturalist_modify_obs:
 
 naturalist_articles:
     path: /naturaliste/blog
-    
     controller: App\Controller\Naturalist\ArticlesController::index
 
 security_login:
