@@ -20,26 +20,41 @@ class UserService
         $this->form = $form;
         $this->em = $em;
         $this->passwordEncoder = $passwordEncoder;
+        $this->user = new User();
     }
 
     public function form($request) : Form
     {
-        $user = new User();
-
+        $user = $this->user;
         $form = $this->form->create(UserType::class, $user, ['action' => '/inscription']);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword());
-
-            $user->setPassword($password);
-            $user->setIsActive(true);
-            $user->setRoles(User::ROLE_USER);
-
-            $this->em->persist($user);
-            $this->em->flush();
-        }
-
         return $form;
+    }
+
+    public function isTaken($form)
+    {
+        $username = $form->getData()->getUsername();
+        return count($this->findBy($username));
+    }
+
+    public function findBy($username)
+    {
+        return $this->em->getRepository(User::class)->findBy([
+            'username' => $username,
+        ]);
+    }
+
+    public function persist()
+    {
+        $user = $this->user;
+        $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword());
+
+        $user->setPassword($password);
+        $user->setIsActive(true);
+        $user->setRoles(User::ROLE_USER);
+
+        $this->em->persist($user);
+        $this->em->flush();
     }
 }

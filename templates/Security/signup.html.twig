@@ -7,6 +7,12 @@
 
 {% block body %}
 
+     {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <div class="row">
         <div class="col-12 titre-bar-mobile"><h1>CONNEXION</h1></div>
     </div>

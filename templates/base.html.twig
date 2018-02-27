@@ -37,15 +37,19 @@
 
     <body>
         <div class="container-fluid">
-            {% block header %}
-                {% include "_header.html.twig" %}
-            {% endblock %}
+
+            {% include "_header.html.twig" %}
+            
+            {% block messageFlash %} 
+                {% for message in app.flashes('notice') %}
+                    <div class="flash-notice">{{ message }}</div>
+                {% endfor %} 
+            {% endblock messageFlash %}
 
             {% block body %}{% endblock %}
 
-            {% block footer %}
-                {% include "_footer.html.twig" %}
-            {% endblock %}
+            {% include "_footer.html.twig" %}
+
         </div>
     </body>
 </html>
