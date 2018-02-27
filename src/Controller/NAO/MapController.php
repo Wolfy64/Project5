@@ -16,8 +16,8 @@ class MapController extends AbstractController
         
         if ($form->isSubmitted() && $form->isValid()) {
             $observations = $observation->findByCommonName($form->get('commonName')->getData());
-            $session->set('observations', $observations);
-
+            // $session->set('observations', $observations);
+            
             if (!$observations){
                 $this->addFlash('notice', 'Aucun résultat pour la recherche: ' . $form['commonName']->getData());
             }
@@ -31,10 +31,13 @@ class MapController extends AbstractController
         return $this->render('NAO/map.html.twig',['form'=> $form->createView ()]);
     }
 
-    public function showList(ObservationService $observation, SessionInterface $session) : Response
+    public function showList(ObservationService $observation, SessionInterface $session, $commonName) : Response
     {
+        $observations = $observation->findByCommonName($commonName);
+
         return $this->render('NAO/mapShowList.html.twig',[
-            'observations' => $session->get('observations'),
+            // 'observations' => $session->get('observations'),
+            'observations' => $observations,
             'birdInfos'    => $observation->birdInfos($session->get('observations'))
         ]);
     }

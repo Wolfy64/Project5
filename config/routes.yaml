@@ -27,7 +27,7 @@ map:
     controller: App\Controller\NAO\MapController::index
 
 map_show_list:
-    path: /carte-liste
+    path: /carte-liste/{commonName}
     controller: App\Controller\NAO\MapController::showList
 
 blog:
