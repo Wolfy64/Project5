@@ -1,0 +1,14 @@
+App\Entity\Newsletter:
+    type: entity
+    table: nao_newsletter
+    repositoryClass: App\Repository\NewsletterRepository
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        email:
+            name: email
+            type: string
+            length: 50
+            unique: true

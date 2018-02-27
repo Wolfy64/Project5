@@ -3,10 +3,11 @@
 namespace App\Form;
 
 use App\Entity\Contact;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Type;
@@ -23,25 +24,25 @@ class ContactType extends AbstractType
                     new Type(['type' => 'string']),
                     new Length(['min' => 2, 'max' => 25])
                 ]])
-            ->add('lastName', TextType::class,[
+            ->add('lastName',  TextType::class,[
                 'constraints' => [
                     new NotBlank (),
                     new Type(['type' => 'string']),
                     new Length(['min' => 2, 'max' => 25])
                 ]])                
-            ->add('email', TextType::class,[
+            ->add('email',     TextType::class,[
                 'constraints' => [
                     new NotBlank (),
                     new Type(['type' => 'string']),
                     new Email(['checkMX' => true])
                 ]])                
-            ->add('object', TextType::class,[
+            ->add('object',    TextType::class,[
                 'constraints' => [
                     new NotBlank (),
                     new Type(['type' => 'string']),
                     new Length(['min' => 2, 'max' => 25])
                 ]])                
-            ->add('message', TextType::class,[
+            ->add('message',   TextareaType::class,[
                 'constraints' => [
                     new NotBlank (),
                     new Type(['type' => 'string']),

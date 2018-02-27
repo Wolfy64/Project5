@@ -25,27 +25,26 @@ class UserService
 
     public function form($request) : Form
     {
-        $user = $this->user;
-        $form = $this->form->create(UserType::class, $user, ['action' => '/inscription']);
+        $form = $this->form->create(UserType::class, $this->user, ['action' => '/inscription']);
         $form->handleRequest($request);
 
         return $form;
     }
 
-    public function isTaken($form)
+    public function isTaken(Form $form) : int
     {
         $username = $form->getData()->getUsername();
         return count($this->findBy($username));
     }
 
-    public function findBy($username)
+    public function findBy(string $username) : array
     {
         return $this->em->getRepository(User::class)->findBy([
             'username' => $username,
         ]);
     }
 
-    public function persist()
+    public function persist() : void
     {
         $user = $this->user;
         $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword());

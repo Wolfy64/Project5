@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\Form;
 use App\Entity\Contact;
@@ -16,7 +17,8 @@ class ContactService
     {
         $this->form = $form;
     }
-    public function contactForm($request) : Form
+
+    public function contactForm(Request $request) : Form
     {
         $contact = new Contact();
 

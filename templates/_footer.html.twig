@@ -8,7 +8,7 @@
         <div class="col-xl-2 col-lg-2" id="menu2">
             <a class="footer-liens" href="#">Plan du site</a>
             <a class="footer-liens" href="{{ asset('contact') }}">Contact</a>
-            <a class="footer-liens" href="#">Administration</a>
+            <a class="footer-liens" href="{{ path('admin') }}">Administration</a>
         </div>
         <div class="col-xl-3 col-lg-3" id="musee-partenaire">
             <h2 class="titre-footer">Partenaire</h2>
@@ -31,17 +31,16 @@
         <div class="col-xl-1 col-lg-1"></div>
         <div class="col-xl-2 col-lg-2" id="newsletter-formulaire">
             <h2 class="titre-footer">Restez informé</h2>
-            <form class="newsletter-form">
-                <div class="form-group" id="newsletter">
-                    <input type="email" class="form-control" id="newsletter-form" aria-describedby="emailHelp" placeholder="Entrez votre email">
-                </div>
-                <button type="submit" class="bouton-menu" id="newsletter-button">S'inscrire à la newsletter</button>
-            </form>
+            {{ render(controller( 'App\\Controller\\Footer\\FooterController::newsletter')) }}
         </div>
     </div>
     <div class="row background-footer">
         <div class="col-12">
             Coockie
+            <p>Liens provisoire</p>
+            <a href="{{ path('security_logout') }}">Se déconnecter</a>
+            <a href="{{ path('naturalist_validations') }}">Mes Validations</a>
+            <a href="{{ path('naturalist_articles') }}">Mes Articles</a>
         </div>
     </div>
     <div class="row">

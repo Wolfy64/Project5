@@ -16,7 +16,7 @@ class SignupController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             if($user->isTaken($form)){
-                $this->addFlash('notice', 'Cette email est deja utilisé veuillez saisir une nouvelle adresse email');
+                $this->addFlash('notice', 'Cette email est déjà utilisé veuillez saisir une nouvelle adresse email');
                 return $this->redirectToRoute('security_signup');
             }
             

@@ -80,3 +80,7 @@ security_signup:
 security_logout:
     path: /deconnexion
     controller: App\Controller\Security\LoginController::logout
+
+newsletter:
+    path: /newsletter
+    controller: App\Controller\Footer\FooterController::newsletter
