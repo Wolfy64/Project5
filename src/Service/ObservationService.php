@@ -25,10 +25,15 @@ class ObservationService
         7 => 'Continental (terrestre et/ou eau douce)',
         8 => 'Continental (terrestre et/ou eau douce)'
     ];
+    const ROLES = [
+        'ROLE_ADMIN',
+        'ROLE_NATURALIST'
+    ];
 
     private $em;
     private $form;
     private $fileUploader;
+    private $observation;
 
     public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader, TokenStorageInterface $token)
     {
@@ -36,11 +41,12 @@ class ObservationService
         $this->form = $form;
         $this->fileUploader = $fileUploader;
         $this->token = $token;
+        $this->observation = new Observation();
     }
 
     public function observeForm($request) : Form
     {
-        $observation = new Observation();
+        $observation = $this->observation;
 
         $form = $this->form->create(ObservationType::class, $observation);
         $form->handleRequest($request);
@@ -52,6 +58,9 @@ class ObservationService
             $observation->setUser($user);
             $observation->setIsValid(false);
             $observation->setImage('no_image.png');
+           
+            // If True setIsValid(true)
+            $this->isNaturalist(); 
 
             $file = $form['image']->getData();
 
@@ -64,6 +73,19 @@ class ObservationService
         }
 
         return $form;
+    }
+
+    public function isNaturalist() : bool
+    {
+        $userRoles = $this->token->getToken()->getUser()->getRoles()[0];
+
+        // If Role = Admin or Naturalist obsersation is valid;
+        if (in_array($userRoles, self::ROLES)) {
+            $this->observation->setIsValid(true);
+            return true;
+        }
+
+        return false;
     }
 
     public function mapForm($request) : Form
