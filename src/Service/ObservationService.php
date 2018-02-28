@@ -2,8 +2,8 @@
 
 namespace App\Service;
 
-use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Form\Form;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\Naturalist\ModifyObservationType;

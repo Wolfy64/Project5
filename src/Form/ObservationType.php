@@ -71,7 +71,6 @@ class ObservationType extends AbstractType
             ->add('content',   TextareaType::class,[
                 'required' => false,
                 'constraints' => [
-
                     new Length(['max' => 500])
                 ]]);
     }

@@ -7,10 +7,18 @@ App\Entity\Post:
             type: integer
             generator: { strategy: AUTO }
     fields:
+        image:
+            name: image
+            type: string
         title:
             name: title
             type: string
         article:
             name: article
             type: text
+        author:
+            name: author
+        date:
+            name: date
+            type: date
         

@@ -1,5 +1,34 @@
 {% extends "base.html.twig" %}
 
 {% block body %} 
-    <h1>Articles</h1>
+    <h2>Articles</h2>
+
+    {% if posts is empty %}
+        <p> Pas d'article</p>
+    {% endif %} 
+
+    <a href="{{ path('naturalist_articles_new') }}">
+        <button class="btn-primary">Rédiger un article</button>
+    </a>
+    
+    <table class="table">
+        <tbody>
+            {% for post in posts %}
+                    <tr>
+                        <td>
+                            <img src="/img/blog/{{ post.image }}" alt="" width="50px">
+                        </td>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.author }}</td>
+                        <td>{{ post.date|date("m/d/Y") }}</td>
+                        <td><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button>Modifier</button></a></td>
+                        <td><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button>Supprimer</button></a></td>
+                        
+                </a>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
 {% endblock %}
+

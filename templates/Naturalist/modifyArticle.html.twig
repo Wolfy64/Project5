@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %} 
+    <h1>Modifier un article</h1>
+
+    <img src="/img/blog/{{ post.image }}" alt="">
+
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.title, {'label': 'Titre'}) }}
+        {{ form_row(form.article, {'label': 'Article'}) }}
+        {{ form_row(form.author, {'label': 'Auteur'}) }}
+        <button type="submit" class="btn btn-success">Modifier l'article</button>
+    {{ form_end(form) }}
+
+    <a href="{{ path('naturalist_articles_remove', {'id': post.id }) }}">
+        <button class="btn btn-danger">Suprimer l'article</button>
+    </a>
+    <a href="{{ path('naturalist_articles') }}">
+        <button class="btn btn-secondary">Retour</button>
+    </a>
+
+{% endblock %}

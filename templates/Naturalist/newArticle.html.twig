@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %} 
+
+{% block body %}
+
+<h2>Nouvel article</h2>
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.image,{'label': 'Image'}) }}
+    {{ form_row(form.title,{'label': 'Titre'}) }}
+    {{ form_row(form.article,{'label': 'Article'}) }}
+    {{ form_row(form.author,{'label': 'Auteur'}) }}
+    <button id="soumettre" type="submit">
+        Soumettre l'article
+    </button>
+{{ form_end(form) }}
+
+{% endblock %}

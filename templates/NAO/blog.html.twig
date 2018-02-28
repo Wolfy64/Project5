@@ -8,4 +8,20 @@
 
     <h1>Blog</h1>
 
+{% if posts is empty %}
+<p> Pas d'article</p>
+{% endif %}
+
+<a href="{{ path('naturalist_articles_new') }}">
+    <button class="btn-primary">Rédiger un article</button>
+</a>
+        {% for post in posts %}
+            <ul>
+                <li><img src="/img/blog/{{ post.image }}" alt="" width="300px"></li>
+                <li>{{ post.title }}</li>
+                <li>{{ post.author }}</li>
+                <li>{{ post.date|date("m/d/Y") }}</li>
+                <li>{{ post.article }}</li>
+            </ul>
+        {% endfor %}
 {% endblock %}

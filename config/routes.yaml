@@ -69,8 +69,24 @@ naturalist_modify_obs:
         page: '\d+'
 
 naturalist_articles:
-    path: /naturaliste/blog
+    path: /naturaliste/articles
     controller: App\Controller\Naturalist\ArticlesController::index
+
+naturalist_articles_new:
+    path: /naturaliste/articles/nouvel-article
+    controller: App\Controller\Naturalist\ArticlesController::new
+
+naturalist_articles_remove:
+    path: /naturaliste/articles/supprimer/{id}
+    controller: App\Controller\Naturalist\ArticlesController::remove
+    requirements:
+        page: '\d+'
+
+naturalist_articles_modify:
+    path: /naturaliste/articles/modifier/{id}
+    controller: App\Controller\Naturalist\ArticlesController::modify
+    requirements:
+        page: '\d+'
 
 security_login:
     path: /connexion
