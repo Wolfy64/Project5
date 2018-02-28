@@ -26,16 +26,16 @@ h1, h3{
     text-align: center;
 }
 
+.content-block{
+    margin-left: 60%;
+}
+
 #button{
     display: flex;
     font-family: 'Roboto-Bold', sans-serif;
     font-size: 30px;
     justify-content: center;
     margin-top: 20px;
-}
-
-.content-block{
-    margin-left: 60%;
 }
 
 

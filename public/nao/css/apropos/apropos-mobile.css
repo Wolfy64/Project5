@@ -14,13 +14,13 @@
 
     /** Mobile Body */
 
-    .apropos-texte{
-        padding: 15px 5px 5px 5px;
-        margin-left: 0;
-    }
-
     img.img-apropos{
         padding: 0;
         margin: 0;
+    }
+
+    .apropos-texte{
+        padding: 15px 5px 5px 5px;
+        margin-left: 0;
     }
 }

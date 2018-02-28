@@ -38,6 +38,14 @@ button:hover#soumettre{
     padding: 5px;
 }
 
+button#findMe, button:hover#findMe{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: gray;
+    padding-left: 0;
+}
+
 #soumettre-bouton{
     display: flex;
     justify-content: flex-end;
@@ -54,14 +62,6 @@ button:hover#soumettre{
     padding-left: 0;
 }
 
-button#findMe, button:hover#findMe{
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-    color: gray;
-    padding-left: 0;
-}
-
 #lieu{
     padding-right: 0;
 }
@@ -73,6 +73,13 @@ button#findMe, button:hover#findMe{
 
 /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 #map {
     height: 100%;
@@ -80,13 +87,6 @@ button#findMe, button:hover#findMe{
 }
 
 /* Optional: Makes the sample page fill the window. */
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 #description {
     font-size: 15px;
