@@ -12,9 +12,6 @@
 <p> Pas d'article</p>
 {% endif %}
 
-<a href="{{ path('naturalist_articles_new') }}">
-    <button class="btn-primary">Rédiger un article</button>
-</a>
         {% for post in posts %}
             <ul>
                 <li><img src="/img/blog/{{ post.image }}" alt="" width="300px"></li>
