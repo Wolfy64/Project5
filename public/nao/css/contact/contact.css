@@ -39,15 +39,15 @@ p.coordonnees{
     border: solid black 1px;
     color: #999999;
 }
+.contact{
+    margin-top: 1%;
+}
 
 #contact-icone{
     color: rgb(70, 100, 50);
     margin-top: 3px;
 }
 
-.contact{
-    margin-top: 1%;
-}
 
 #contact-content{
     margin-left: 5%;

@@ -11,6 +11,17 @@
         width: 100%;
     }
 
+    input::placeholder{
+        color: white;
+        opacity: 1;
+    }
+
+    nav{
+        padding-left: 0;
+        padding-right: 0;
+        background-color: white;
+    }
+
     .menu-pc{
         display: none;
     }
@@ -43,16 +54,5 @@
         padding-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
-    }
-
-    input::placeholder{
-        color: white;
-        opacity: 1;
-    }
-
-    nav{
-        padding-left: 0;
-        padding-right: 0;
-        background-color: white;
     }
 }

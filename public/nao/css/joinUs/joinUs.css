@@ -16,10 +16,6 @@
 
 /** Body */
 
-#joinUs-content{
-    margin: 2%;
-}
-
 button.pdf-form-button{
     background-color: rgb(187, 59, 200);
     border: solid rgb(187, 59, 200) 2px;
@@ -30,6 +26,10 @@ button.pdf-form-button:hover{
     background-color: #FFFFFF;
     border: solid rgb(187, 59, 200) 2px;
     color: rgb(187, 59, 200);
+}
+
+#joinUs-content{
+    margin: 2%;
 }
 
 #adherer-text{

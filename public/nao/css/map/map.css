@@ -27,9 +27,16 @@ h3{
     font-size: 12px;
 }
 
-
-#title{
-    margin-top: 0;
+button#soumettre{
+    background-color: rgb(148, 47, 158);
+    color: #FFFFFF;
+    padding: 5px;
+}
+button:hover#soumettre{
+    background-color: white;
+    border: solid 1px rgb(148, 47, 158);
+    color: rgb(148, 47, 158);
+    padding: 5px;
 }
 
 .connexion{
@@ -42,17 +49,10 @@ h3{
     padding: 5%;
 }
 
-button#soumettre{
-    background-color: rgb(148, 47, 158);
-    color: #FFFFFF;
-    padding: 5px;
+#title{
+    margin-top: 0;
 }
-button:hover#soumettre{
-    background-color: white;
-    border: solid 1px rgb(148, 47, 158);
-    color: rgb(148, 47, 158);
-    padding: 5px;
-}
+
 
 #soumettre-bouton{
     display: flex;
