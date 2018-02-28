@@ -32,12 +32,12 @@ security:
         ROLE_NATURALIST: [ROLE_NATURALIST, ROLE_USER]
         ROLE_USER: ROLE_USER
 
-    access_control:
+   # access_control:
         # require ROLE_ADMIN*
-        - { path: ^/admin,             roles: ROLE_ADMIN }
+    #    - { path: ^/admin,             roles: ROLE_ADMIN }
         # require ROLE_NATURALIST*
-        - { path: ^/naturaliste,       roles: ROLE_NATURALIST }
+     #   - { path: ^/naturaliste,       roles: ROLE_NATURALIST }
         # require ROLE_USER*
-        - { path: ^/observer,          roles: ROLE_USER }
-        - { path: ^/carte,             roles: ROLE_USER }
-        - { path: ^/list-observations, roles: ROLE_USER }
+      #  - { path: ^/observer,          roles: ROLE_USER }
+       # - { path: ^/carte,             roles: ROLE_USER }
+       # - { path: ^/list-observations, roles: ROLE_USER }
