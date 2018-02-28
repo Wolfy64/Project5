@@ -13,7 +13,7 @@ class MyObservationsController extends AbstractController
         $obsValid = $observation->findByUser(true);
         $obsNotValid = $observation->findByUser(false);
 
-        return $this->render('NAO/myObservations.html.twig',[
+        return $this->render('NAO/my_observations.html.twig',[
             'obsValid' => $obsValid,
             'obsNotValid' => $obsNotValid,
         ]);

@@ -68,7 +68,7 @@ class ValidationsController extends AbstractController
                 return $this->redirectToRoute('naturalist_validations');
             }
 
-            return $this->render('Naturalist/modifyObservation.html.twig', [
+            return $this->render('Naturalist/modify_observation.html.twig', [
                 'observation' => $obsToModify,
                 'form' => $form->createView()
             ]);

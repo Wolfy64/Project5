@@ -25,7 +25,7 @@ class ArticlesController extends AbstractController
             return $this->redirectToRoute('naturalist_articles');
         }
 
-        return $this->render('Naturalist/newArticle.html.twig',[
+        return $this->render('Naturalist/new_article.html.twig',[
             'form' => $form->createView()
         ]);
     }
@@ -60,7 +60,7 @@ class ArticlesController extends AbstractController
                 return $this->redirectToRoute('naturalist_articles');
             }
 
-            return $this->render('Naturalist/modifyArticle.html.twig', [
+            return $this->render('Naturalist/modify_article.html.twig', [
                 'post' => $postToModify,
                 'form' => $form->createView()
             ]);

@@ -35,7 +35,7 @@ class MapController extends AbstractController
     {
         $observations = $observation->findByCommonName($commonName);
 
-        return $this->render('NAO/mapShowList.html.twig',[
+        return $this->render('NAO/map_show_list.html.twig',[
             // 'observations' => $session->get('observations'),
             'observations' => $observations,
             'birdInfos'    => $observation->birdInfos($session->get('observations'))

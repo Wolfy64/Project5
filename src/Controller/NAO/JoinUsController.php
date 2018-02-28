@@ -10,7 +10,7 @@ class JoinUsController extends AbstractController
 {
     public function index() : Response
     {
-        return $this->render('NAO/joinUs.html.twig');
+        return $this->render('NAO/join_us.html.twig');
     }
 
     public function showFiles() : BinaryFileResponse

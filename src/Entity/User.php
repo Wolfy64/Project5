@@ -178,6 +178,7 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
+            $this->firstName
         ));
     }
 
@@ -188,6 +189,7 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
+            $this->firstName
         ) = unserialize($serialized);
     }
 }

@@ -9,6 +9,6 @@ class HomePageController extends AbstractController
 {
     public function index() : Response
     {
-        return $this->render('NAO/homePage.html.twig');
+        return $this->render('NAO/homepage.html.twig');
     }
 }
