@@ -11,7 +11,7 @@ use App\Form\UserType;
 
 class SignupController extends AbstractController
 {
-    public function index(Request $request, UserService $userService, \Swift_Mailer $mailer) : Response
+    public function index(Request $request, UserService $userService) : Response
     {
         $user = new user();
 

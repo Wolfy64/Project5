@@ -2,8 +2,6 @@
 
 namespace App\Service;
 
-// use Symfony\Component\Form\FormFactoryInterface;
-// use Symfony\Component\Form\Form;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Twig\Environment;
@@ -67,7 +65,7 @@ class UserService
         $this->persist($user);
     }
 
-    public function doMail($data)
+    public function doMail($data) : void
     {
         $message = (new \Swift_Message('Bienvenu à Nos Amis les Oiseaux !'))
             ->setFrom('contact@nao.dewulfdavid.com')

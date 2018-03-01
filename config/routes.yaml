@@ -1,4 +1,4 @@
-home_page:
+homepage:
     path: /
     controller: App\Controller\NAO\HomePageController::index
 
