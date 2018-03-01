@@ -8,14 +8,11 @@ use App\Service\ObservationService;
 
 class MyObservationsController extends AbstractController
 {
-    public function index(ObservationService $observation) : Response
+    public function index(ObservationService $obsService) : Response
     {
-        $obsValid = $observation->findByUser(true);
-        $obsNotValid = $observation->findByUser(false);
-
         return $this->render('NAO/my_observations.html.twig',[
-            'obsValid' => $obsValid,
-            'obsNotValid' => $obsNotValid,
+            'obsNotValid' => $obsService->findByUser(false),
+            'obsValid'    => $obsService->findByUser(true)
         ]);
     }
 }

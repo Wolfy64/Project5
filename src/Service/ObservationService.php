@@ -11,6 +11,7 @@ use App\Form\MapType;
 use App\Form\ObservationType;
 use App\Service\FileUploader;
 use App\Entity\Observation;
+use App\Entity\Aves;
 
 class ObservationService
 {
@@ -33,7 +34,11 @@ class ObservationService
     const FLASH_MESSAGE = [
         1 => 'Votre observation est enregistré',
         2 => 'Votre observation est en attente de validation par un de nos naturalistes',
-        3 => 'Aucun résultat pour la recherche: '
+        3 => 'Aucun résultat pour la recherche: ',
+        4 => 'Attention le nom de l\'oiseau doit correspondre à la base de donnée Aves',
+        5 => 'L\'observation à était validé',
+        6 => 'L\'observation à était supprimé',
+        7 => 'L\'observation à était modifié'
     ];
 
     private $em;
@@ -87,27 +92,15 @@ class ObservationService
         }
     }
 
-    // public function mapForm($request) : Form
-    // {
-    //     $observation = new Observation();
-
-    //     $form = $this->form->create(MapType::class, $observation);
-    //     $form->handleRequest($request);
-
-    //     return $form;
-    // }
-
-    public function modifyForm(Observation $observation, $request) : Form
+    public function find(int $id) : ? Observation
     {
-        $form = $this->form->create(ModifyObservationType::class, $observation);
-        $form->handleRequest($request);
+        $result = $this->em->getRepository(Observation::class)->find($id);
 
-        return $form;
-    }
-
-    public function find(int $id) : ?  Observation
-    {
-        return $this->em->getRepository(Observation::class)->find($id);
+        if (!$result){
+            $this->message = self::NOT_FOUND;
+        }
+        
+        return $result;
     }
 
     public function findByCommonName(string $commonName) : array
@@ -124,6 +117,25 @@ class ObservationService
         return $result;
     }
 
+    public function findByUser(bool $isValid) : array
+    {
+        return $this->em->getRepository(Observation::class)->findBy([
+            'user' => $this->token->getToken()->getUser()->getId(),
+            'isValid' => $isValid,
+        ]);
+    }
+
+    public function findBy(string $commonName) : ? array
+    {
+        $result = $this->em->getRepository(Aves::class)->findBy(['commonName' => $commonName]);
+
+        if (!$result) {
+            $this->message = self::FLASH_MESSAGE[4];
+        }
+
+        return $result;
+    }
+
     public function isPublished(bool $bool) : array
     {
         return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
@@ -131,14 +143,33 @@ class ObservationService
 
     public function doValid(Observation $observation) : void
     {
-        $observation->setIsValid(true);
+        $this->addAves($observation);
         $this->persist($observation);
     }
 
     public function doRemove(Observation $observation) : void
     {
+        $this->message = self::FLASH_MESSAGE[6];
         $this->em->remove($observation);
         $this->em->flush();
+    }
+
+    public function addAves(Observation $observation) : Observation
+    {
+        $aveses = $this->findBy($observation->getCommonName());
+
+        foreach ($aveses as $aves) {
+            $observation->addAves($aves);
+        }
+
+        $nbAveses = count($observation->getAveses());
+
+        if ($nbAveses) {
+            $this->message = self::FLASH_MESSAGE[5];
+            $observation->setIsValid(true);
+        }
+
+        return $observation;
     }
 
     public function persist(Observation $observation) : void
@@ -209,13 +240,5 @@ class ObservationService
         $birdInfos['author'] = $authors;
 
         return $birdInfos;
-    }
-
-    public function findByUser(bool $isValid) : array
-    {
-        return $this->em->getRepository(Observation::class)->findBy([
-            'user' => $this->token->getToken()->getUser()->getId(),
-            'isValid' => $isValid,
-        ]);
     }
 }

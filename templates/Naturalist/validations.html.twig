@@ -32,17 +32,17 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="{{ path('naturalist_valid_obs', {'id': observation.id }) }}">
+                        <a href="{{ path('naturalist_obs_valid', {'id': observation.id }) }}">
                             <button class="btn btn-success">Valider</button>
                         </a>
                     </td>
                     <td>
-                        <a href="{{ path('naturalist_modify_obs', {'id': observation.id }) }}">
+                        <a href="{{ path('naturalist_obs_modify', {'id': observation.id }) }}">
                             <button class="btn btn-secondary">Modifier</button>
                         </a>
                     </td>
                     <td>
-                        <a href="{{ path('naturalist_remove_obs', {'id': observation.id }) }}">
+                        <a href="{{ path('naturalist_obs_remove', {'id': observation.id }) }}">
                             <button class="btn btn-danger">Supprimer</button>
                         </a>
                     </td>
