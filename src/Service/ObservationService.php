@@ -30,10 +30,16 @@ class ObservationService
         'ROLE_NATURALIST'
     ];
 
+    const FLASH_MESSAGE = [
+        1 => 'Votre observation est enregistré',
+        2 => 'Votre observation est en attente de validation par un de nos naturalistes',
+    ];
+
     private $em;
     private $form;
     private $fileUploader;
     private $observation;
+    private $message;
 
     public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader, TokenStorageInterface $token)
     {
@@ -44,48 +50,40 @@ class ObservationService
         $this->observation = new Observation();
     }
 
-    public function observeForm($request) : Form
+    public function getMessage() : string
     {
-        $observation = $this->observation;
-
-        $form = $this->form->create(ObservationType::class, $observation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $user = $this->token->getToken()->getUser();
-
-            $observation->setUser($user);
-            $observation->setIsValid(false);
-            $observation->setImage('no_image.png');
-           
-            // If True setIsValid(true)
-            $this->isNaturalist(); 
-
-            $file = $form['image']->getData();
-
-            if ($file){
-                $fileName = $this->fileUploader->upload($file);
-                $observation->setImage($fileName);
-            }
-            
-            $this->persist($observation);
-        }
-
-        return $form;
+        return $this->message;
     }
 
-    public function isNaturalist() : bool
+    public function handle(Observation $observation) : Observation
     {
-        $userRoles = $this->token->getToken()->getUser()->getRoles()[0];
+        $user = $this->token->getToken()->getUser();
 
-        // If Role = Admin or Naturalist obsersation is valid;
+        $observation->setUser($user);
+        $observation->setIsValid(false);
+        $observation->setImage('no_image.png');
+
+        $this->message = self::FLASH_MESSAGE[2];
+        $this->isNaturalist($user->getRoles()[0]);
+        
+        return $observation;
+    }
+
+    public function hasImage($image, $observation)
+    {
+        $imageName = $this->fileUploader->upload($image);
+        $observation->setImage($imageName);
+    }
+
+    /**
+     * If Role = Admin or Naturalist obsersation is valid;
+     */
+    public function isNaturalist($userRoles) : void
+    {
         if (in_array($userRoles, self::ROLES)) {
             $this->observation->setIsValid(true);
-            return true;
+            $this->message = self::FLASH_MESSAGE[1];
         }
-
-        return false;
     }
 
     public function mapForm($request) : Form
