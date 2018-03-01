@@ -44,8 +44,8 @@ button.bouton-menu:active {
 }
 
 .menu-barre{
-    border-left: solid white 15px;
-    border-right: solid white 15px;
+    border-left: solid white 20px;
+    border-right: solid white 20px;
     border-top: solid white 5px;
     height: 20px;
     padding: 0 0 0 0;
@@ -103,6 +103,27 @@ button.bouton-menu:active {
 
 #item-menu9{
     background-color: rgba(55, 56, 48, 0.65);
+}
+
+/** User */
+
+.btn-user{
+    background-color: rgb(118, 120, 108);
+    width: 100%;
+    margin: 0;
+    padding: 5px 0 5px 0;
+}
+
+a#menu-user{
+    color: #FFFFFF;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#logo-users{
+    color: #FFFFFF;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 

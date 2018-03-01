@@ -1,17 +1,6 @@
 <header>
-    {% if user_management.getRole != 'ANNONYME' %}
-        <ul>
-            <li>{{ user_management.getFirstName }}</li>
-            <li>{{ user_management.getFirstName }}</li>
-            <li><a href="{{ path('security_logout') }}">Se déconnecter</a></li>
-            <li><a href="{{ path('naturalist_validations') }}">Mes Validations</a></li>
-            <li><a href="{{ path('naturalist_articles') }}">Articles</a></li>
-            {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
-                <li><a href="{{ path('my_observations') }}">Mes Observation</a></li>
-            {% endif %}
-        </ul>
-     {% endif %}
-    {# {% if user_management.getRole == 'ROLE_USER' %} // Si besoin #}
+
+
         <div class="row menu-pc" id="header-container">
             <div class="col-2" id="header-logo">
                 <img class="logo" src="{{ asset('/img/logoNAO.png') }}">
@@ -95,6 +84,9 @@
                                 <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre7"></div>
                             </div>
                         </div>
+
+
+
                         <div class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 menu-space menu" id="item-menu8">
                             <a href="{{ path('security_login') }}">
                                 <button class="bouton-menu" id="bouton8">
@@ -103,9 +95,42 @@
                                 </button>
                             </a>
                             <div class="row">
-                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre8"></div>
+                                <div class="col-xl-12 col-lg-12 menu-barre" id="item-barre8">
+
+
+                                    {% if user_management.getRole != 'ANNONYME' %}
+                                        <div class="dropdown">
+                                            <button class="btn dropdown-toggle  btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {#{{ user_management.getFirstName }} #}Guénolé
+                                            </button>
+                                            <div class="dropdown-menu btn-user" aria-labelledby="dropdownMenuButton">
+                                                {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
+                                                    <a class="dropdown-item" id="menu-user" href="{{ path('my_observations') }}"><i class="fas fa-binoculars fa-1x" id="logo-users"></i>Mes Observation</a>
+                                                {% endif %}
+                                                <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_validations') }}"> <i class="fas fa-check-circle fa-1x" id="logo-users"></i>Mes Validations</a>
+                                                <a class="dropdown-item"  id="menu-user" href="{{ path('security_logout') }}"><i class="fas fa-user-times fa-1x" id="logo-users"></i>Se déconnecter</a>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                    {# {% if user_management.getRole == 'ROLE_USER' %} // Si besoin #}
+
+                                    <!--    <ul>
+                                            <li></li>
+                                            <li><a href="{{ path('security_logout') }}">Se déconnecter</a></li>
+                                            <li><a href="{{ path('naturalist_validations') }}">Mes Validations</a></li>
+                                            <li><a href="{{ path('naturalist_articles') }}">Articles</a></li>
+                                            {# {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %} #}
+                                                <li><a href="{{ path('my_observations') }}">Mes Observation</a></li>
+                                            {# {% endif %} #}
+                                        </ul>
+                                    {# {% endif %} #}
+                                    {# {% if user_management.getRole == 'ROLE_USER' %} // Si besoin #} -->
+                                </div>
                             </div>
                         </div>
+
+
+
                         <div class="col-xl-1 col-lg-1 menu" id="item-menu9">
                             <a href="">
                                 <button class="bouton-menu" id="bouton9">
@@ -134,6 +159,28 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+
+                        {% if user_management.getRole != 'ANNONYME' %}
+
+                        {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
+                        <li class="nav-item liens-mobile" id="liens-mobile8">
+                            <i class="fas fa-binoculars fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('my_observations') }}">Mes Observation</a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item liens-mobile" id="liens-mobile9">
+                            <i class="fas fa-check-circle fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('naturalist_validations') }}">Mes Validations</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile10">
+                            <i class="fas fa-user-times fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('security_logout') }}">Se déconnecter</a>
+                        </li>
+                            <li id="space-menu-user">
+
+                            </li>
+                        {% endif %}
+
                         <li class="nav-item liens-mobile" id="liens-mobile1">
                             <i class="fas fa-user fa-1x" id="header-icone"></i>
                             <a class="nav-link" href="{{ path('security_login') }}">CONNEXION</a>
