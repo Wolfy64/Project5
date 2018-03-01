@@ -30,6 +30,10 @@ form{
     margin-top: 2%;
 }
 
+#titre-bar-mobile{
+    visibility: hidden;
+ }
+
 /** Bar */
 
 .titre-bar-pc{
@@ -47,6 +51,7 @@ form{
     }
 
     #titre-bar-mobile{
+        visibility: visible;
         display: flex;
         justify-content: center;
     }

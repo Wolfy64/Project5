@@ -101,13 +101,14 @@
                                     {% if user_management.getRole != 'ANNONYME' %}
                                         <div class="dropdown">
                                             <button class="btn dropdown-toggle  btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {#{{ user_management.getFirstName }} #}Guénolé
+                                                {{ user_management.getFirstName }}
                                             </button>
                                             <div class="dropdown-menu btn-user" aria-labelledby="dropdownMenuButton">
                                                 {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
                                                     <a class="dropdown-item" id="menu-user" href="{{ path('my_observations') }}"><i class="fas fa-binoculars fa-1x" id="logo-users"></i>Mes Observation</a>
                                                 {% endif %}
                                                 <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_validations') }}"> <i class="fas fa-check-circle fa-1x" id="logo-users"></i>Mes Validations</a>
+                                                <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_articles') }}"><i class="fas fa-newspaper fa-1x" id="logo-users"></i>Mes Articles</a>
                                                 <a class="dropdown-item"  id="menu-user" href="{{ path('security_logout') }}"><i class="fas fa-user-times fa-1x" id="logo-users"></i>Se déconnecter</a>
                                             </div>
                                         </div>
@@ -173,6 +174,10 @@
                             <a class="nav-link" href="{{ path('naturalist_validations') }}">Mes Validations</a>
                         </li>
                         <li class="nav-item liens-mobile" id="liens-mobile10">
+                            <i class="fas fa-newspaper fa-1x" id="header-icone"></i>
+                            <a class="nav-link" href="{{ path('naturalist_articles') }}">Mes Articles</a>
+                        </li>
+                        <li class="nav-item liens-mobile" id="liens-mobile11">
                             <i class="fas fa-user-times fa-1x" id="header-icone"></i>
                             <a class="nav-link" href="{{ path('security_logout') }}">Se déconnecter</a>
                         </li>

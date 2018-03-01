@@ -120,6 +120,11 @@ a#menu-user{
     padding-right: 0;
 }
 
+a:hover#menu-user{
+    background-color: rgb(55, 56, 48);
+}
+
+
 #logo-users{
     color: #FFFFFF;
     padding-left: 5px;
