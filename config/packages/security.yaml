@@ -21,7 +21,7 @@ security:
                 csrf_token_generator: security.csrf.token_manager
             logout:
                 path: security_logout
-                target: home_page
+                target: homepage
             provider: our_db_provider
             remember_me:
                 secret:   '%kernel.secret%'

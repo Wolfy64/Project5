@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Footer;
+namespace App\Controller\NAO;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -9,9 +9,9 @@ use App\Entity\Newsletter;
 use App\Form\NewsletterType;
 use App\Service\NewsletterService;
 
-class FooterController extends AbstractController
+class NewsletterController extends AbstractController
 {
-    public function newsletter(Request $request, NewsletterService $newsLetterService) : Response
+    public function index(Request $request, NewsletterService $newsLetterService) : Response
     {
         $newsletter = new Newsletter();
 
