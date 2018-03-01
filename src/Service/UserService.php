@@ -11,8 +11,8 @@ use App\Form\UserType;
 class UserService
 {
     const FLASH_MESSAGE = [
-        1 => 'Cette email est déjà utilisé veuillez saisir une nouvelle adresse email',
-        2 => 'Vous etes inscrit, un email vous a été envoyé'
+        1 => 'Email déjà utilisé, veuillez saisir une nouvelle adresse email',
+        2 => 'Vous ètes inscrit, un email vous a été envoyé'
     ];
 
     private $em;
