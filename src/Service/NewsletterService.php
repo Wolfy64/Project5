@@ -4,52 +4,63 @@ namespace App\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\Component\Form\Form;
+use Twig\Environment;
 use App\Entity\Newsletter;
-use App\Form\NewsletterType;
 
 class NewsletterService
 {
-    private $form;
+    const FLASH_MESSAGE = [
+        1 => 'Cette email est déjà inscrit à la newsletter',
+        2 => 'Vous etes inscrit à notre newsletter'
+    ];
+
     private $em;
-    private $newsletter;
+    private $twig;
+    private $mailer;
+    private $message;
 
-    public function __construct(EntityManagerInterface $em, FormFactoryInterface $form)
+    public function __construct(EntityManagerInterface $em, Environment $twig, \Swift_Mailer $mailer)
     {
-        $this->form = $form;
         $this->em = $em;
-        $this->newsletter = new Newsletter();
+        $this->twig = $twig;
+        $this->mailer = $mailer;
     }
 
-    public function newsletterForm(Request $request) : Form
+    public function getMesasge() : string
     {
-        $form = $this->form->create(NewsletterType::class, $this->newsletter);
-        $form->handleRequest($request);
-
-        return $form;
+        return $this->message;
     }
 
-    public function isSubscribe(Form $form) : int
+    public function isSubscribe(string $email) : int
     {
-        $email = $form->getData()->getEmail();
-        return count($this->findByEmail($email));
+        $result = count($this->findByEmail($email));
+
+        if ($result){
+            $this->message = self::FLASH_MESSAGE[1];
+        }
+
+        return $result;
     }
 
     public function findByEmail(string $email) : array
     {
-        return $this->em->getRepository(Newsletter::class)->findBy([
-            'email' => $email,
-        ]);
+        return $this->em->getRepository(Newsletter::class)->findBy(['email' => $email]);
     }
 
-    public function persist() : void
+    public function persist($newsletter) : void
     {
-        // $user->setEmail();
-        // dump($this->newsletter);
-        // die;
-
-        $this->em->persist($this->newsletter);
+        $this->em->persist($newsletter);
         $this->em->flush();
+    }
+
+    public function doMail($data)
+    {
+        $message = (new \Swift_Message('Inscription à la newsletters'))
+            ->setFrom('contact@nao.dewulfdavid.com')
+            ->setTo($data->getEmail())
+            ->setBody($this->twig->render('Mail/newsletter.html.twig', ['data' => $data]), 'text/html');
+
+        $this->message = self::FLASH_MESSAGE[2];
+        $this->mailer->send($message);
     }
 }
