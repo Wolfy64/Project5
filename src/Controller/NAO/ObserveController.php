@@ -21,6 +21,7 @@ class ObserveController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $obsService->handle($observation);
+            $obsService->addAves($observation);
             $image = $form['image']->getData();
 
             if ($image) {

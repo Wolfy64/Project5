@@ -101,7 +101,7 @@
                                     {% if user_management.getRole != 'ANNONYME' %}
                                         <div class="dropdown">
                                             <button class="btn dropdown-toggle  btn-user" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {#{{ user_management.getFirstName }} #}Guénolé
+                                                {{ user_management.getFirstName }}
                                             </button>
                                             <div class="dropdown-menu btn-user" aria-labelledby="dropdownMenuButton">
                                                 {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}

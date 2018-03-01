@@ -25,10 +25,10 @@ class UserManagement
         return $role;
     }
 
-    //public function getFirstName()
-    //{
-     //   return $this->token->getToken()->getUser()->getFirstName();
-    //}
+    public function getFirstName()
+    {
+       return $this->token->getToken()->getUser()->getFirstName();
+    }
 
     public function getLastName()
     {

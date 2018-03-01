@@ -36,7 +36,7 @@ security:
         # require ROLE_ADMIN*
         - { path: ^/admin,             roles: ROLE_ADMIN }
         # require ROLE_NATURALIST*
-        - { path: ^/naturaliste,       roles: ROLE_NATURALIST }
+        - { path: ^/naturalist,        roles: ROLE_NATURALIST }
         # require ROLE_USER*
         - { path: ^/observer,          roles: ROLE_USER }
         - { path: ^/carte,             roles: ROLE_USER }

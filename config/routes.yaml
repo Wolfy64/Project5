@@ -47,43 +47,43 @@ my_observations:
     controller: App\Controller\NAO\MyObservationsController::index
 
 naturalist_validations:
-    path: /naturaliste/validations
+    path: /naturalist/validations
     controller: App\Controller\Naturalist\ValidationsController::index
 
 naturalist_obs_valid:
-    path: /naturaliste/observation/valider/{id}
+    path: /naturalist/observation/valider/{id}
     controller: App\Controller\Naturalist\ValidationsController::valid
     requirements:
         page: '\d+'
 
 naturalist_obs_remove:
-    path: /naturaliste/observation/supprimer/{id}
+    path: /naturalist/observation/supprimer/{id}
     controller: App\Controller\Naturalist\ValidationsController::remove
     requirements:
         page: '\d+'
 
 naturalist_obs_modify:
-    path: /naturaliste/observation/modifier/{id}
+    path: /naturalist/observation/modifier/{id}
     controller: App\Controller\Naturalist\ValidationsController::modify
     requirements:
         page: '\d+'
 
 naturalist_articles:
-    path: /naturaliste/articles
+    path: /naturalist/articles
     controller: App\Controller\Naturalist\ArticlesController::index
 
 naturalist_articles_new:
-    path: /naturaliste/articles/nouvel-article
+    path: /naturalist/articles/nouvel-article
     controller: App\Controller\Naturalist\ArticlesController::new
 
 naturalist_articles_remove:
-    path: /naturaliste/articles/supprimer/{id}
+    path: /naturalist/articles/supprimer/{id}
     controller: App\Controller\Naturalist\ArticlesController::remove
     requirements:
         page: '\d+'
 
 naturalist_articles_modify:
-    path: /naturaliste/articles/modifier/{id}
+    path: /naturalist/articles/modifier/{id}
     controller: App\Controller\Naturalist\ArticlesController::modify
     requirements:
         page: '\d+'

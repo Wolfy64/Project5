@@ -28,7 +28,6 @@ class MapController extends AbstractController
                 return $this->redirectToRoute('map');
             }
 
-            $session->set('observations', $observations);
             $session->set('birdInfos', $obsService->birdInfos($observations));
 
             return $this->render('NAO/map.html.twig', [
