@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/blog/be70c9ca39480be6a5a128180ef2f74c.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/MapController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/MapController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" afterPath="$PROJECT_DIR$/src/Controller/NAO/ObserveController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Service/UserManagement.php" afterPath="$PROJECT_DIR$/src/Service/UserManagement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/_header.html.twig" afterPath="$PROJECT_DIR$/templates/_header.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_header.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_header.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/_header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="115" column="102" lean-forward="false" selection-start-line="115" selection-start-column="102" selection-end-line="115" selection-end-column="102" />
+            <state relative-caret-position="272">
+              <caret line="109" column="59" lean-forward="true" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="791">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,21 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManagement.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserManagement.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Service/UserManagement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faq.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/NAO/faq.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
+            <state relative-caret-position="459">
+              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -189,11 +185,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="php bin/console doctrine:migrations:migrate" />
-      <command text="sudo apt-get install php-mysql" />
-      <command text="phpp -m" />
-      <command text="php -m" />
-      <command text="sudo apt-get install php-mysql" />
       <command text="php bin/console server:run" />
       <command text="git pull" />
       <command text="git status" />
@@ -214,6 +205,11 @@
       <command text="git commit -m &quot;fix bar users mes articles&quot;" />
       <command text="git pull" />
       <command text="git push" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;fix bar header&quot;" />
+      <command text="git pull" />
+      <command text="php bin/console server:run" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -279,8 +275,8 @@
         <option value="$PROJECT_DIR$/public/nao/css/base/header-mobile.css" />
         <option value="$PROJECT_DIR$/public/nao/css/base/header.css" />
         <option value="$PROJECT_DIR$/public/nao/css/base/base.css" />
-        <option value="$PROJECT_DIR$/templates/_header.html.twig" />
         <option value="$PROJECT_DIR$/src/Service/UserManagement.php" />
+        <option value="$PROJECT_DIR$/templates/_header.html.twig" />
       </list>
     </option>
   </component>
@@ -711,12 +707,12 @@
       <workItem from="1519478324584" duration="17482000" />
       <workItem from="1519645961200" duration="21268000" />
       <workItem from="1519725513773" duration="4096000" />
-      <workItem from="1519814339041" duration="32247000" />
+      <workItem from="1519814339041" duration="32993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420061000" />
+    <option name="totallyTimeSpent" value="420807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1058,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="106" column="10" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/NAO/faq.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2057">
@@ -1164,18 +1152,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/_header.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Service/UserManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="115" column="102" lean-forward="false" selection-start-line="115" selection-start-column="102" selection-end-line="115" selection-end-column="102" />
+        <state relative-caret-position="459">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/UserManagement.php">
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="791">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="109" column="59" lean-forward="true" selection-start-line="109" selection-start-column="59" selection-end-line="109" selection-end-column="59" />
           <folding />
         </state>
       </provider>
