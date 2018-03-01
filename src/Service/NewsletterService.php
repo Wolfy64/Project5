@@ -11,7 +11,7 @@ class NewsletterService
 {
     const FLASH_MESSAGE = [
         1 => 'Cette email est déjà inscrit à la newsletter',
-        2 => 'Vous etes inscrit à notre newsletter'
+        2 => 'Vous ètes inscrit à notre newsletter'
     ];
 
     private $em;

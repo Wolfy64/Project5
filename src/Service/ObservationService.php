@@ -26,13 +26,13 @@ class ObservationService
         'ROLE_NATURALIST'
     ];
     const FLASH_MESSAGE = [
-        1 => 'Votre observation est enregistré',
+        1 => 'Votre observation est enregistrée',
         2 => 'Votre observation est en attente de validation par un de nos naturalistes',
         3 => 'Aucun résultat pour la recherche: ',
         4 => 'Attention le nom de l\'oiseau doit correspondre à la base de donnée Aves',
-        5 => 'L\'observation à était validé',
-        6 => 'L\'observation à était supprimé',
-        7 => 'L\'observation à était modifié'
+        5 => 'L\'observation à été validée',
+        6 => 'L\'observation à été supprimée',
+        7 => 'L\'observation à été modifiée'
     ];
 
     private $em;
@@ -65,7 +65,7 @@ class ObservationService
 
         if($isNaturalist){
             $this->message = self::FLASH_MESSAGE[1];
-            $observation->setIsValid(true);
+            $this->addAves();
         }
         
         return $observation;
