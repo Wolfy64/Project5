@@ -21,7 +21,7 @@ class ContactController extends AbstractController
 
             $message = $this->message($form->getData());
             $mailer->send($message);
-            $this->addFlash('notice', 'Votre message à été envoyé');
+            $this->addFlash('alert alert-warning alert-dismissible fade show', 'Votre message à été envoyé');
 
             return $this->redirectToRoute('contact');
         }

@@ -24,7 +24,7 @@ class MapController extends AbstractController
             $observations = $obsService->findByCommonName($commonName);
 
             if (!$observations){
-                $this->addFlash('notice', $obsService->getMessage());
+                $this->addFlash('alert alert-warning alert-dismissible fade show', $obsService->getMessage());
                 return $this->redirectToRoute('map');
             }
 
