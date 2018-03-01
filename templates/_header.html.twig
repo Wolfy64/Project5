@@ -105,10 +105,10 @@
                                             </button>
                                             <div class="dropdown-menu btn-user" aria-labelledby="dropdownMenuButton">
                                                 {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
-                                                    <a class="dropdown-item" id="menu-user" href="{{ path('my_observations') }}"><i class="fas fa-binoculars fa-1x" id="logo-users"></i>Mes Observation</a>
+                                                    <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_validations') }}"> <i class="fas fa-check-circle fa-1x" id="logo-users"></i>Mes Validations</a>
                                                     <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_articles') }}"><i class="fas fa-newspaper fa-1x" id="logo-users"></i>Mes Articles</a>
                                                 {% endif %}
-                                                <a class="dropdown-item" id="menu-user" href="{{ path('naturalist_validations') }}"> <i class="fas fa-check-circle fa-1x" id="logo-users"></i>Mes Validations</a>
+                                                <a class="dropdown-item" id="menu-user" href="{{ path('my_observations') }}"><i class="fas fa-binoculars fa-1x" id="logo-users"></i>Mes Observations</a>
                                                 <a class="dropdown-item"  id="menu-user" href="{{ path('security_logout') }}"><i class="fas fa-user-times fa-1x" id="logo-users"></i>Se déconnecter</a>
                                             </div>
                                         </div>
