@@ -3,12 +3,7 @@
 namespace App\Service;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\Component\Form\Form;
 use Doctrine\ORM\EntityManagerInterface;
-use App\Form\Naturalist\ModifyObservationType;
-use App\Form\MapType;
-use App\Form\ObservationType;
 use App\Service\FileUploader;
 use App\Entity\Observation;
 use App\Entity\Aves;
@@ -42,18 +37,15 @@ class ObservationService
     ];
 
     private $em;
-    private $form;
     private $fileUploader;
-    private $observation;
+    private $token;
     private $message;
 
-    public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader, TokenStorageInterface $token)
+    public function __construct(EntityManagerInterface $em, FileUploader $fileUploader, TokenStorageInterface $token)
     {
         $this->em = $em;
-        $this->form = $form;
         $this->fileUploader = $fileUploader;
         $this->token = $token;
-        // $this->observation = new Observation();
     }
 
     public function getMessage() : string
@@ -75,7 +67,7 @@ class ObservationService
         return $observation;
     }
 
-    public function hasImage($image, $observation)
+    public function hasImage($image, Observation $observation)
     {
         $imageName = $this->fileUploader->upload($image);
         $observation->setImage($imageName);

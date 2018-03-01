@@ -3,70 +3,68 @@
 namespace App\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\Form\FormFactoryInterface;
-use Symfony\Component\Form\Form;
 use App\Service\FileUploader;
 use App\Entity\Post;
-use App\Form\PostType;
-use App\Form\Naturalist\ModifyPostType;
 
 class PostService
 {
     const NOT_FOUND = 'Cette article n\'existe pas';
+    const FLASH_MESSAGE = [
+        1 => 'Votre article est mis en ligne',
+        2 => 'L\'article à était supprimé',
+        3 => 'L\'article à était modifié'
+    ];
 
     private $em;
-    private $form;
+    private $message;
 
-    public function __construct(EntityManagerInterface $em, FormFactoryInterface $form, FileUploader $fileUploader)
+    public function __construct(EntityManagerInterface $em, FileUploader $fileUploader)
     {
         $this->em = $em;
-        $this->form = $form;
         $this->fileUploader = $fileUploader;
     }
 
-    public function postForm($request) : Form
+    public function getMessage() : string
     {
-        $post = new Post();
-
-        $form = $this->form->create(PostType::class, $post);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $file = $form['image']->getData();
-
-            $this->fileUploader->setTargetDir('img/blog');
-            $fileName = $this->fileUploader->upload($file);
-            $post->setImage($fileName);
-
-            $this->persist($post);
-        }
-
-        return $form;
+        return $this->message;
     }
 
-    public function modifyForm(Post $post, $request) : Form
+    public function doNew($image, Post $post) : void
     {
-        $form = $this->form->create(ModifyPostType::class, $post);
-        $form->handleRequest($request);
-
-        return $form;
-    }
-
-    public function find(int $id) : ? Post
-    {
-        return $this->em->getRepository(Post::class)->find($id);
-    }
-
-    public function findAll()
-    {
-        return $this->em->getRepository(Post::class)->findAll();
+        $this->fileUploader->setTargetDir('img/blog');
+        $imageName = $this->fileUploader->upload($image);
+        $post->setImage($imageName);
+        $this->persist($post);
+        $this->message = self::FLASH_MESSAGE[1];
     }
 
     public function doRemove(Post $post) : void
     {
+        $this->message = self::FLASH_MESSAGE[2];
         $this->em->remove($post);
         $this->em->flush();
+    }
+
+    public function doModify(Post $post) : void
+    {
+        $this->message = self::FLASH_MESSAGE[3];
+        $this->persist($post);
+    }
+
+    public function find(int $id) : ? Post
+    {
+        $result = $this->em->getRepository(Post::class)->find($id);
+
+        if (!$result) {
+            $this->message = self::NOT_FOUND;
+        }
+
+        return $result;
+    }
+
+    public function findAll() : array
+    {
+        return $this->em->getRepository(Post::class)->findAll();
     }
 
     public function persist(Post $post) : void
