@@ -1,4 +1,17 @@
 <header>
+    {% if user_management.getRole != 'ANNONYME' %}
+        <ul>
+            <li>{{ user_management.getFirstName }}</li>
+            <li>{{ user_management.getFirstName }}</li>
+            <li><a href="{{ path('security_logout') }}">Se déconnecter</a></li>
+            <li><a href="{{ path('naturalist_validations') }}">Mes Validations</a></li>
+            <li><a href="{{ path('naturalist_articles') }}">Articles</a></li>
+            {% if user_management.getRole == 'ROLE_ADMIN' and 'ROLE_NATURALIST' %}
+                <li><a href="{{ path('my_observations') }}">Mes Observation</a></li>
+            {% endif %}
+        </ul>
+     {% endif %}
+    {# {% if user_management.getRole == 'ROLE_USER' %} // Si besoin #}
         <div class="row menu-pc" id="header-container">
             <div class="col-2" id="header-logo">
                 <img class="logo" src="{{ asset('/img/logoNAO.png') }}">

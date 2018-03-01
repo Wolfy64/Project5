@@ -6,24 +6,30 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\UserService;
+use App\Entity\User;
+use App\Form\UserType;
 
 class SignupController extends AbstractController
 {
-    public function index(Request $request, UserService $user, \Swift_Mailer $mailer) : Response
+    public function index(Request $request, UserService $userService) : Response
     {
-        $form = $user->form($request);
+        $user = new user();
+
+        $form = $this->createForm(UserType::class, $user, ['action' => '/inscription']);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $username = $form->getData()->getUsername();
 
-            if($user->isTaken($form)){
-                $this->addFlash('notice', 'Cette email est déjà utilisé veuillez saisir une nouvelle adresse email');
+            if($userService->isTaken($username)){
+                $this->addFlash('notice', $userService->getMessage());
+
                 return $this->redirectToRoute('security_signup');
             }
-            
-            $user->persist();
-            $message = $this->message($form->getData());
-            $mailer->send($message);
-            $this->addFlash('notice', 'Vous etes inscrit, un email vous a été envoyé');
+
+            $userService->handle($user);
+            $userService->doMail($form->getData());
+            $this->addFlash('notice', $userService->getMessage());
 
             return $this->redirectToRoute('about');
         }
@@ -31,15 +37,5 @@ class SignupController extends AbstractController
         return $this->render('Security/signup.html.twig', [
             'form' => $form->createView(),
         ]);
-    }
-
-    public function message($data)
-    {
-        $message = (new \Swift_Message('Bienvenu à Nos Amis les Oiseaux !'))
-            ->setFrom('contact@nao.dewulfdavid.com')
-            ->setTo($data->getUsername())
-            ->setBody($this->renderView('Mail/signup.html.twig', ['data' => $data]), 'text/html');
-
-        return $message;
     }
 }

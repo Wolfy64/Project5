@@ -5,7 +5,10 @@ namespace App\Controller\Naturalist;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use App\Form\Naturalist\ModifyPostType;
+use App\Form\PostType;
 use App\Service\PostService;
+use App\Entity\Post;
 
 class ArticlesController extends AbstractController
 {
@@ -16,57 +19,63 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    public function new(Request $request, PostService $post) : Response
+    public function new(Request $request, PostService $postService) : Response
     {
-        $form = $post->postForm($request);
+        $post = new Post();
+
+        $form = $this->createForm(PostType::class, $post);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->addFlash('notice', 'Votre article est mis en ligne');
+
+            $image = $form['image']->getData();
+            $postService->doNew($image, $post);
+            $this->addFlash('notice', $postService->getMessage());
+
             return $this->redirectToRoute('naturalist_articles');
         }
 
-        return $this->render('Naturalist/newArticle.html.twig',[
+        return $this->render('Naturalist/new_article.html.twig',[
             'form' => $form->createView()
         ]);
     }
 
-    public function remove($id, PostService $post)
+    public function remove($id, PostService $postService)
     {
-        $postToRemove = $post->find($id);
-        $message = PostService::NOT_FOUND;
+        $postToRemove = $postService->find($id);
 
         if ($postToRemove) {
-            $post->doRemove($postToRemove);
-            $message = 'L\'article à était supprimé';
+            $postService->doRemove($postToRemove);
         }
 
-        $this->addFlash('notice', $message);
+        $this->addFlash('notice', $postService->getMessage());
 
         return $this->redirectToRoute('naturalist_articles');
     }
 
-    public function modify($id, PostService $post, Request $request)
+    public function modify($id, PostService $postService, Request $request)
     {
-        $postToModify = $post->find($id);
-        $message = PostService::NOT_FOUND;
+        $post = $postService->find($id);
 
-        if ($postToModify) {
-            $form = $post->modifyForm($postToModify, $request);
+        if ($post) {
+
+            $form = $this->createForm(ModifyPostType::class, $post);
+            $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
-                $post->persist($postToModify);
-                $this->addFlash('notice', 'L\'article à était modifié');
-
+                $postService->doModify($post);
+                $this->addFlash('notice', $postService->getMessage());
+                
                 return $this->redirectToRoute('naturalist_articles');
             }
 
-            return $this->render('Naturalist/modifyArticle.html.twig', [
-                'post' => $postToModify,
+            return $this->render('Naturalist/modify_article.html.twig', [
+                'post' => $post,
                 'form' => $form->createView()
             ]);
         }
 
-        $this->addFlash('notice', $message);
+        $this->addFlash('notice', $postService->getMessage());
 
         return $this->redirectToRoute('naturalist_articles');
     }

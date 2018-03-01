@@ -1,4 +1,4 @@
-home_page:
+homepage:
     path: /
     controller: App\Controller\NAO\HomePageController::index
 
@@ -50,20 +50,20 @@ naturalist_validations:
     path: /naturaliste/validations
     controller: App\Controller\Naturalist\ValidationsController::index
 
-naturalist_valid_obs:
-    path: /naturaliste/validations/valider/{id}
-    controller: App\Controller\Naturalist\ValidationsController::isValid
+naturalist_obs_valid:
+    path: /naturaliste/observation/valider/{id}
+    controller: App\Controller\Naturalist\ValidationsController::valid
     requirements:
         page: '\d+'
 
-naturalist_remove_obs:
-    path: /naturaliste/validations/supprimer/{id}
+naturalist_obs_remove:
+    path: /naturaliste/observation/supprimer/{id}
     controller: App\Controller\Naturalist\ValidationsController::remove
     requirements:
         page: '\d+'
 
-naturalist_modify_obs:
-    path: /naturaliste/validations/modifier/{id}
+naturalist_obs_modify:
+    path: /naturaliste/observation/modifier/{id}
     controller: App\Controller\Naturalist\ValidationsController::modify
     requirements:
         page: '\d+'

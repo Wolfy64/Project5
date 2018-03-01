@@ -5,26 +5,33 @@ namespace App\Controller\NAO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use App\Form\ObservationType;
 use App\Service\ObservationService;
+use App\Entity\Observation;
 
 class ObserveController extends AbstractController
 {
-    public function index(Request $request, ObservationService $observation) : Response
+    public function index(Request $request, ObservationService $obsService) : Response
     {
-        $form = $observation->observeForm($request);
+        $observation = new Observation();
+
+        $form = $this->createForm(ObservationType::class, $observation);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $message = 'Votre observation est en attente de validation par un de nos naturalistes';
+            $obsService->handle($observation);
+            $image = $form['image']->getData();
 
-            if($observation->isNaturalist()){
-                $message = 'Votre observation est enregistré';
+            if ($image) {
+                $obsService->hasImage($image, $observation);
             }
 
-            $this->addFlash('notice', $message);
+            $obsService->persist($observation);
+            $this->addFlash('notice', $obsService->getMessage());
+
             return $this->redirectToRoute('observe');
         }
-
 
         return $this->render('NAO/observe.html.twig', [
             'form' => $form->createView()

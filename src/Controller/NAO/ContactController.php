@@ -5,13 +5,17 @@ namespace App\Controller\NAO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use App\Service\ContactService;
+use App\Form\ContactType;
+use App\Entity\Contact;
 
 class ContactController extends AbstractController
 {
-    public function index(Request $request, ContactService $contact, \Swift_Mailer $mailer) : Response
+    public function index(Request $request, \Swift_Mailer $mailer) : Response
     {
-        $form = $contact->contactForm($request);
+        $contact = new Contact();
+
+        $form = $this->createForm(ContactType::class, $contact);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 

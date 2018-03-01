@@ -5,76 +5,68 @@ namespace App\Controller\Naturalist;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use App\Form\Naturalist\ModifyObservationType;
 use App\Service\ObservationService;
 use App\Service\AvesService;
 
 class ValidationsController extends AbstractController
 {
-    public function index(ObservationService $observation) : Response
+    public function index(ObservationService $obsService) : Response
     {
         return $this->render('Naturalist/validations.html.twig',[
-            'observations' => $observation->isPublished(false)
+            'observations' => $obsService->isPublished(false)
         ]);
     }
 
-    public function isValid($id, ObservationService $observation, AvesService $aves) : Response
+    public function valid($id, ObservationService $obsService) : Response
     {
-        $obsToValid = $observation->find($id);//
-        $message = ObservationService::NOT_FOUND;
-
-        if ($obsToValid) {
-            $message = 'Attention le nom de l\'oiseau doit correspondre à la base de donnée Aves';
-
-            $addAves = $aves->addAves($obsToValid);
-
-            if (count($addAves->getAveses())) {
-                $message = 'L\'observation à était validé';
-                $observation->doValid($obsToValid);
-            }
+        $observation = $obsService->find($id);
+        
+        if ($observation) {
+            $obsService->doValid($observation);
         }
 
-        $this->addFlash('notice', $message);
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }
 
-    public function remove($id, ObservationService $observation) : Response
+    public function remove($id, ObservationService $obsService) : Response
     {
-        $obsToRemove = $observation->find($id);
-        $message = ObservationService::NOT_FOUND;
+        $observation = $obsService->find($id);
 
-        if ($obsToRemove) {
-            $observation->doRemove($obsToRemove);
-            $message = 'L\'observation à était supprimé';
+        if ($observation) {
+            $obsService->doRemove($observation);
         }
 
-        $this->addFlash('notice', $message);
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }
 
-    public function modify($id, ObservationService $observation, Request $request) : Response
+    public function modify($id, ObservationService $obsService, Request $request) : Response
     {
-        $obsToModify = $observation->find($id);
-        $message = ObservationService::NOT_FOUND;
+        $observation = $obsService->find($id);
 
-        if ($obsToModify){
-            $form = $observation->modifyForm($obsToModify, $request);
+        if ($observation){
+
+            $form = $this->createForm(ModifyObservationType::class, $observation);
+            $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
-                $observation->persist($obsToModify);
-                $this->addFlash('notice', 'L\'observation à était modifié et validé');
+                $obsService->doValid($observation);
+                $this->addFlash('notice', $obsService->getMessage());
 
                 return $this->redirectToRoute('naturalist_validations');
             }
 
-            return $this->render('Naturalist/modifyObservation.html.twig', [
-                'observation' => $obsToModify,
-                'form' => $form->createView()
+            return $this->render('Naturalist/modify_observation.html.twig', [
+                'observation' => $observation,
+                'form'        => $form->createView()
             ]);
         }
 
-        $this->addFlash('notice', $message);
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }

@@ -21,14 +21,14 @@ security:
                 csrf_token_generator: security.csrf.token_manager
             logout:
                 path: security_logout
-                target: home_page
+                target: homepage
             provider: our_db_provider
             remember_me:
                 secret:   '%kernel.secret%'
                 lifetime: 604800 # 1 week in seconds
                 path:     /
     role_hierarchy:
-        ROLE_ADMIN: [ROLE_PRO, ROLE_NATURALIST, ROLE_USER]
+        ROLE_ADMIN: [ROLE_ADMIN, ROLE_NATURALIST, ROLE_USER]
         ROLE_NATURALIST: [ROLE_NATURALIST, ROLE_USER]
         ROLE_USER: ROLE_USER
 

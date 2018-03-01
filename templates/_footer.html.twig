@@ -31,7 +31,7 @@
         <div class="col-xl-1 col-lg-1"></div>
         <div class="col-xl-2 col-lg-2" id="newsletter-formulaire">
             <h2 class="titre-footer">Restez informé</h2>
-            {{ render(controller( 'App\\Controller\\Footer\\FooterController::newsletter')) }}
+            {{ render(controller( 'App\\Controller\\NAO\\NewsletterController::index')) }}
         </div>
     </div>
     <div class="row background-footer">
@@ -39,11 +39,6 @@
             <p id="texte-coockie">Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l'utilisation des cookies</p>
             <a class="cookie-link"><button class="cookie-button">J'ACCEPTE</button></a>
         </div>
-        <p>Liens provisoire</p>
-        <a href="{{ path('security_logout') }}">Se déconnecter</a>
-        <a href="{{ path('naturalist_validations') }}">Mes Validations</a>
-        <a href="{{ path('my_observations') }}">Mes Observation</a>
-        <a href="{{ path('naturalist_articles') }}">Articles</a>
     </div>
     <div class="row">
         <div class="col-12" id="copyright">
