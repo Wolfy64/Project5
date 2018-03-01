@@ -33,6 +33,7 @@ class ObservationService
     const FLASH_MESSAGE = [
         1 => 'Votre observation est enregistré',
         2 => 'Votre observation est en attente de validation par un de nos naturalistes',
+        3 => 'Aucun résultat pour la recherche: '
     ];
 
     private $em;
@@ -47,7 +48,7 @@ class ObservationService
         $this->form = $form;
         $this->fileUploader = $fileUploader;
         $this->token = $token;
-        $this->observation = new Observation();
+        // $this->observation = new Observation();
     }
 
     public function getMessage() : string
@@ -86,15 +87,15 @@ class ObservationService
         }
     }
 
-    public function mapForm($request) : Form
-    {
-        $observation = new Observation();
+    // public function mapForm($request) : Form
+    // {
+    //     $observation = new Observation();
 
-        $form = $this->form->create(MapType::class, $observation);
-        $form->handleRequest($request);
+    //     $form = $this->form->create(MapType::class, $observation);
+    //     $form->handleRequest($request);
 
-        return $form;
-    }
+    //     return $form;
+    // }
 
     public function modifyForm(Observation $observation, $request) : Form
     {
@@ -111,10 +112,16 @@ class ObservationService
 
     public function findByCommonName(string $commonName) : array
     {
-        return $this->em->getRepository(Observation::class)->findBy([
+        $result =  $this->em->getRepository(Observation::class)->findBy([
             'commonName' => $commonName,
             'isValid' => true,
         ]);
+
+        if (!$result){
+            $this->message = self::FLASH_MESSAGE[3] . $commonName;
+        }
+
+        return $result;
     }
 
     public function isPublished(bool $bool) : array
