@@ -25,7 +25,6 @@ class ObservationService
         'ROLE_ADMIN',
         'ROLE_NATURALIST'
     ];
-
     const FLASH_MESSAGE = [
         1 => 'Votre observation est enregistré',
         2 => 'Votre observation est en attente de validation par un de nos naturalistes',
@@ -60,9 +59,14 @@ class ObservationService
         $observation->setUser($user);
         $observation->setIsValid(false);
         $observation->setImage('no_image.png');
-
         $this->message = self::FLASH_MESSAGE[2];
-        $this->isNaturalist($user->getRoles()[0]);
+
+        $isNaturalist = $this->isNaturalist($user->getRoles()[0]);
+
+        if($isNaturalist){
+            $this->message = self::FLASH_MESSAGE[1];
+            $observation->setIsValid(true);
+        }
         
         return $observation;
     }
@@ -73,15 +77,13 @@ class ObservationService
         $observation->setImage($imageName);
     }
 
-    /**
-     * If Role = Admin or Naturalist obsersation is valid;
-     */
-    public function isNaturalist($userRoles) : void
+    public function isNaturalist($userRoles) : bool
     {
         if (in_array($userRoles, self::ROLES)) {
-            $this->observation->setIsValid(true);
-            $this->message = self::FLASH_MESSAGE[1];
+            return true;
         }
+
+        return false;
     }
 
     public function find(int $id) : ? Observation
