@@ -24,7 +24,7 @@ class NewsletterController extends AbstractController
             $isSubscribe = $newsLetterService->isSubscribe($email);
 
             if ($isSubscribe) {
-                $this->addFlash('alert alert-warning alert-dismissible fade show', $newsLetterService->getMesasge());
+                $this->addFlash('notice', $newsLetterService->getMesasge());
 
                 return $this->redirectToRoute('about');
             }

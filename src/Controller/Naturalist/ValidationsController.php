@@ -26,7 +26,7 @@ class ValidationsController extends AbstractController
             $obsService->doValid($observation);
         }
 
-        $this->addFlash('alert alert-warning alert-dismissible fade show', $obsService->getMessage());
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }
@@ -39,7 +39,7 @@ class ValidationsController extends AbstractController
             $obsService->doRemove($observation);
         }
 
-        $this->addFlash('alert alert-warning alert-dismissible fade show', $obsService->getMessage());
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }
@@ -66,7 +66,7 @@ class ValidationsController extends AbstractController
             ]);
         }
 
-        $this->addFlash('alert alert-warning alert-dismissible fade show', $obsService->getMessage());
+        $this->addFlash('notice', $obsService->getMessage());
 
         return $this->redirectToRoute('naturalist_validations');
     }

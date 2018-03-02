@@ -30,7 +30,7 @@ class ArticlesController extends AbstractController
 
             $image = $form['image']->getData();
             $postService->doNew($image, $post);
-            $this->addFlash('alert alert-warning alert-dismissible fade show', $postService->getMessage());
+            $this->addFlash('notice', $postService->getMessage());
 
             return $this->redirectToRoute('naturalist_articles');
         }
@@ -48,7 +48,7 @@ class ArticlesController extends AbstractController
             $postService->doRemove($postToRemove);
         }
 
-        $this->addFlash('alert alert-warning alert-dismissible fade show', $postService->getMessage());
+        $this->addFlash('notice', $postService->getMessage());
 
         return $this->redirectToRoute('naturalist_articles');
     }
@@ -64,7 +64,7 @@ class ArticlesController extends AbstractController
 
             if ($form->isSubmitted() && $form->isValid()) {
                 $postService->doModify($post);
-                $this->addFlash('alert alert-warning alert-dismissible fade show', $postService->getMessage());
+                $this->addFlash('notice', $postService->getMessage());
                 
                 return $this->redirectToRoute('naturalist_articles');
             }
@@ -75,7 +75,7 @@ class ArticlesController extends AbstractController
             ]);
         }
 
-        $this->addFlash('alert alert-warning alert-dismissible fade show', $postService->getMessage());
+        $this->addFlash('notice', $postService->getMessage());
 
         return $this->redirectToRoute('naturalist_articles');
     }

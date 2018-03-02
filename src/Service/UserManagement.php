@@ -13,25 +13,27 @@ class UserManagement
         $this->token = $token;
     }
 
+    public function getUser()
+    {
+        return $this->token->getToken()->getUser();
+    }
+
     public function getRole()
     {
-        $role = 'ANNONYME';
-        $user = $this->token->getToken()->getUser();
-
-        if ($user != 'anon.') {
-            $role = $user->getRoles()[0];
+        if ($this->getUser() != 'anon.'){
+            return $this->getUser()->getRoles()[0];
         }
-        
-        return $role;
+
+        return 'ANNONYME';
     }
 
     public function getFirstName()
     {
-        return $this->token->getToken()->getUser()->getFirstName();
+        return $this->getUser()->getFirstName();
     }
 
     public function getLastName()
     {
-        return $this->token->getToken()->getUser()->getLastName();
+        return $this->getUser()->getLastName();
     }
 }

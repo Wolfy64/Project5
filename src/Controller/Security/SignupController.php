@@ -22,14 +22,14 @@ class SignupController extends AbstractController
             $username = $form->getData()->getUsername();
 
             if($userService->isTaken($username)){
-                $this->addFlash('alert alert-warning alert-dismissible fade show', $userService->getMessage());
+                $this->addFlash('notice', $userService->getMessage());
 
                 return $this->redirectToRoute('security_signup');
             }
 
             $userService->handle($user);
             $userService->doMail($form->getData());
-            $this->addFlash('alert alert-warning alert-dismissible fade show', $userService->getMessage());
+            $this->addFlash('notice', $userService->getMessage());
 
             return $this->redirectToRoute('about');
         }
