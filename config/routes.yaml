@@ -103,7 +103,3 @@ security_logout:
 newsletter:
     path: /newsletter
     controller: App\Controller\NAO\NewsletterController::index
-
-not_found:
-    path: /404
-    controller: App\Controller\Security\NotFoundController::index
