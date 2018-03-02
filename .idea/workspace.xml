@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/validation/validations-mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/validation/validations.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/nao/css/base/header.css" afterPath="$PROJECT_DIR$/public/nao/css/base/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig" afterPath="$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Naturalist/validations.html.twig" afterPath="$PROJECT_DIR$/templates/Naturalist/validations.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/_header.html.twig" afterPath="$PROJECT_DIR$/templates/_header.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,8 +38,24 @@
         <entry file="file://$PROJECT_DIR$/templates/Security/login.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="40" column="79" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="40" selection-end-column="79" />
-              <folding />
+              <caret line="45" column="79" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="45" selection-end-column="79" />
+              <folding>
+                <marker date="1520015625749" expanded="true" signature="240:611" ph="{% if error ...%}" />
+                <marker date="1520015625749" expanded="true" signature="655:719" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="753:1036" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="915:961" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1059:2840" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1183:2765" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1213:1358" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1250:1339" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1391:2750" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1484:2731" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1529:1942" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="1988:2285" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="2349:2467" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="2530:2707" ph="..." />
+                <marker date="1520015625749" expanded="true" signature="2616:2680" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,21 +100,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modify_observation.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modify_observation.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="571">
+              <caret line="51" column="6" lean-forward="true" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validations.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="validations.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/nao/css/validation/validations.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="357">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,16 +179,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git add ." />
-      <command text="git commit -m &quot;fix bar users mes articles&quot;" />
-      <command text="git pull" />
-      <command text="git push" />
-      <command text="git status" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;fix bar header&quot;" />
-      <command text="git pull" />
-      <command text="php bin/console server:run" />
-      <command text="git add ." />
       <command text="git commit -m &quot;fix mes articles&quot;" />
       <command text="git status" />
       <command text="git add ." />
@@ -193,6 +194,16 @@
       <command text="git push" />
       <command text="git pull" />
       <command text="php bin/console server:run" />
+      <command text="git add ." />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git status" />
+      <command text="git commit -m &quot;ajout de style page validation + modifié&quot;" />
+      <command text="git pull" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;ajout de style page validation + modifié&quot;" />
+      <command text="git push" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -258,8 +269,8 @@
         <option value="$PROJECT_DIR$/public/nao/css/base/header.css" />
         <option value="$PROJECT_DIR$/public/nao/css/validation/validations-mobile.css" />
         <option value="$PROJECT_DIR$/templates/Naturalist/validations.html.twig" />
-        <option value="$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/validation/validations.css" />
+        <option value="$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig" />
       </list>
     </option>
   </component>
@@ -719,12 +730,12 @@
       <workItem from="1519645961200" duration="21268000" />
       <workItem from="1519725513773" duration="4096000" />
       <workItem from="1519814339041" duration="39525000" />
-      <workItem from="1519983102370" duration="19879000" />
+      <workItem from="1519983102370" duration="20500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447218000" />
+    <option name="totallyTimeSpent" value="447839000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1144,23 +1155,39 @@
     <entry file="file://$PROJECT_DIR$/templates/Security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="40" column="79" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="40" selection-end-column="79" />
+          <caret line="45" column="79" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="45" selection-end-column="79" />
+          <folding>
+            <marker date="1520015625749" expanded="true" signature="240:611" ph="{% if error ...%}" />
+            <marker date="1520015625749" expanded="true" signature="655:719" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="753:1036" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="915:961" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1059:2840" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1183:2765" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1213:1358" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1250:1339" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1391:2750" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1484:2731" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1529:1942" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="1988:2285" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="2349:2467" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="2530:2707" ph="..." />
+            <marker date="1520015625749" expanded="true" signature="2616:2680" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/nao/css/validation/validations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Naturalist/modify_observation.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/nao/css/validation/validations.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="571">
+          <caret line="51" column="6" lean-forward="true" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
           <folding />
         </state>
       </provider>
