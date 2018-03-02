@@ -19,16 +19,17 @@ class ObserveController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $obsService->handle($observation);
             $image = $form['image']->getData();
-
+            $obsService->handle($observation);
+            
             if ($image) {
                 $obsService->hasImage($image, $observation);
             }
+            
+            $obsService->isNaturalist($observation);
+            $obsService->doValidation($observation);
 
-            $obsService->persist($observation);
-            $this->addFlash('alert alert-warning alert-dismissible fade show', $obsService->getMessage());
+            $this->addFlash('notice', $obsService->getMessage());
 
             return $this->redirectToRoute('observe');
         }

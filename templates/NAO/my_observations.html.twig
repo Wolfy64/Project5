@@ -9,7 +9,7 @@
         {% endif %} 
 
         
-        <h4>Observation(s) validé(s)</h4>
+        <caption>Observation(s) validé(s)</caption>
         <table class="table">
             <tbody>
                 <tr>
@@ -18,7 +18,7 @@
                     <th>Observé le</th>
                     <th>Autres informations</th>
                 </tr>
-        {% for observation in obsValid %}
+                {% for observation in obsValid %}
                 <tr>
                     <td>
                         <img src="/img/observations/{{ observation.image }}" alt="" width="50px">
@@ -27,11 +27,11 @@
                     <td>{{ observation.date|date("m/d/Y") }}</td>
                     <td>{{ observation.content }}</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
-        {% endfor %}
 
-        <h4>Observation(s) en attente de validation</h4>
+        <caption>Observation(s) en attente de validation</caption>
         <table class="table">
             <tbody>
                 <tr>
@@ -40,7 +40,7 @@
                     <th>Observé le</th>
                     <th>Autres informations</th>
                 </tr>
-        {% for observation in obsNotValid %}
+                {% for observation in obsNotValid %}
                 <tr>
                     <td>
                         <img src="/img/observations/{{ observation.image }}" alt="" width="50px">
@@ -49,8 +49,8 @@
                     <td>{{ observation.date|date("m/d/Y") }}</td>
                     <td>{{ observation.content }}</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
-        {% endfor %}
 
 {% endblock body %}

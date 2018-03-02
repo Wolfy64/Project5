@@ -102,8 +102,4 @@ security_logout:
 
 newsletter:
     path: /newsletter
-    controller: App\Controller\Footer\FooterController::newsletter
-
-not_found:
-    path: /404
-    controller: App\Controller\Security\NotFoundController::index
+    controller: App\Controller\NAO\NewsletterController::index

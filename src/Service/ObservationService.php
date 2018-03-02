@@ -2,9 +2,9 @@
 
 namespace App\Service;
 
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Service\FileUploader;
+use App\Service\UserManagement;
 use App\Entity\Observation;
 use App\Entity\Aves;
 
@@ -37,14 +37,14 @@ class ObservationService
 
     private $em;
     private $fileUploader;
-    private $token;
+    private $userManagement;
     private $message;
 
-    public function __construct(EntityManagerInterface $em, FileUploader $fileUploader, TokenStorageInterface $token)
+    public function __construct(EntityManagerInterface $em, FileUploader $fileUploader, UserManagement $userManagement)
     {
         $this->em = $em;
         $this->fileUploader = $fileUploader;
-        $this->token = $token;
+        $this->userManagement = $userManagement;
     }
 
     public function getMessage() : string
@@ -54,36 +54,34 @@ class ObservationService
 
     public function handle(Observation $observation) : Observation
     {
-        $user = $this->token->getToken()->getUser();
+        $user = $this->userManagement->getUser();
 
         $observation->setUser($user);
         $observation->setIsValid(false);
         $observation->setImage('no_image.png');
         $this->message = self::FLASH_MESSAGE[2];
-
-        $isNaturalist = $this->isNaturalist($user->getRoles()[0]);
-
-        if($isNaturalist){
-            $this->message = self::FLASH_MESSAGE[1];
-            $this->addAves();
-        }
         
         return $observation;
     }
 
-    public function hasImage($image, Observation $observation)
+    public function hasImage($image, Observation $observation) : Observation
     {
         $imageName = $this->fileUploader->upload($image);
         $observation->setImage($imageName);
+
+        return $observation;
     }
 
-    public function isNaturalist($userRoles) : bool
+    public function isNaturalist(Observation $observation) : Observation
     {
-        if (in_array($userRoles, self::ROLES)) {
-            return true;
+        $userRole = $this->userManagement->getRole();
+
+        if (in_array($userRole, self::ROLES)) {
+            $this->message = self::FLASH_MESSAGE[1];
+            $this->addAves($observation);
         }
 
-        return false;
+        return $observation;
     }
 
     public function find(int $id) : ? Observation
@@ -114,7 +112,7 @@ class ObservationService
     public function findByUser(bool $isValid) : array
     {
         return $this->em->getRepository(Observation::class)->findBy([
-            'user' => $this->token->getToken()->getUser()->getId(),
+            'user' => $this->userManagement->getUser()->getId(),
             'isValid' => $isValid,
         ]);
     }
@@ -133,6 +131,22 @@ class ObservationService
     public function isPublished(bool $bool) : array
     {
         return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
+    }
+
+    public function doValidation(Observation $observation) : void
+    {
+        $userRole = $this->userManagement->getRole();
+        $isValid  = $observation->getIsValid();
+
+        if ($userRole == 'ROLE_USER') {
+            $this->message = self::FLASH_MESSAGE[2];
+            $this->persist($observation);
+        }
+
+        if ($isValid){
+            $this->message = self::FLASH_MESSAGE[5];
+            $this->persist($observation);
+        }
     }
 
     public function doValid(Observation $observation) : void
