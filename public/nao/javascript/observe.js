@@ -16,7 +16,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         map: map,
         //position: latlng,
-        // icon:'link' To put our own marker
+        icon:'/img/icon-geoloc.png'
     });
 
     // ##### Add info Window on map #####
