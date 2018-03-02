@@ -109,6 +109,10 @@ button.bouton-menu:active {
 
 .btn-user{
     background-color: rgb(118, 120, 108);
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    font-family: 'Roboto-Medium', sans-serif;
+    font-size: 15px;
     width: 100%;
     margin: 0;
     padding: 5px 0 5px 0;
