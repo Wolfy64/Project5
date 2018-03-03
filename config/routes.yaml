@@ -108,6 +108,6 @@ plan-du-site:
     path: /plan-du-site
     controller: App\Controller\NAO\PlanSiteController::index
 
-mentions-legales:
+legal_notices:
     path: /mentions-legales
-    controller: App\Controller\NAO\MentionsLegalesController::index
+    controller: App\Controller\NAO\LegalNoticesController::index
