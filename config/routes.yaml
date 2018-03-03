@@ -103,3 +103,7 @@ security_logout:
 newsletter:
     path: /newsletter
     controller: App\Controller\NAO\NewsletterController::index
+
+plan-du-site:
+    path: /plan-du-site
+    controller: App\Controller\NAO\PlanSiteController::index

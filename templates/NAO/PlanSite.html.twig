@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('/nao/css/PlanSite/PlanSite.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="titre-plan-site">Plan du site</h1>
+
+    <ul>
+        <li><a href="{{ path('homepage') }}">Acceuil</a></li>
+        <li><a href="{{ path('join_us') }}">Adherer</a></li>
+        <li><a href="{{ path('about') }}">A propos</a></li>
+        <li><a href="{{ path('blog') }}">Blog</a></li>
+        <li><a href="{{ path('security_login') }}">Connexion</a></li>
+        <li><a href="{{ path('contact') }}">Contact</a></li>
+        <li><a href="{{ path('faq') }}">F.A.Q's</a></li>
+        <li><a href="#">Mentions Légales</a></li>
+        <li><a href="{{ path('plan-du-site') }}">Plan du site</a></li>
+        <li><a href="#">Recherche</a></li>
+    </ul>
+
+{% endblock %}
