@@ -11,12 +11,13 @@ function initMap() {
         center: latlng
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var geocoder = new google.maps.Geocoder;
 
     // ##### Add Marker on map #####   
     var marker = new google.maps.Marker({
         map: map,
-        //position: latlng,
         icon:'/img/icon-geoloc.png'
+        // position: latlng,
     });
 
     // ##### Add info Window on map #####
@@ -47,6 +48,8 @@ function initMap() {
 
         // ##### Set Marker on map #####
         marker.setPosition(place.geometry.location);
+        var lat = marker.getPosition().lat();
+        var lng = marker.getPosition().lng();
 
         // ##### Set info Window on map #####
         infoWindow.setContent(
@@ -56,8 +59,9 @@ function initMap() {
         infoWindow.open(map, marker);
 
         // ##### Set GPS value in observation field #####
-        document.getElementById('observation_latitude').value = marker.getPosition().lat();
-        document.getElementById('observation_longitude').value = marker.getPosition().lng();
+        document.getElementById('observation_latitude').value = lat;
+        document.getElementById('observation_longitude').value = lng;
+        geocodeLatLng(geocoder, lat, lng);
 
     });
     autocomplete.bindTo('bounds', map);
@@ -115,12 +119,40 @@ function initMap() {
         // ##### Set Marker on map #####
         marker.setPosition(event.latLng);
 
+        lat = marker.getPosition().lat();
+        lng = marker.getPosition().lng();
+
         // ##### Set info Window on map #####
         infoWindow.setContent("Coordonnées GPS: " + marker.getPosition().toUrlValue(6));
         infoWindow.open(map, marker);
 
         // ##### Set GPS value in observation field #####
-        document.getElementById('observation_latitude').value = marker.getPosition().lat();
-        document.getElementById('observation_longitude').value = marker.getPosition().lng();
+        document.getElementById('observation_latitude').value = lat;
+        document.getElementById('observation_longitude').value = lng;
+        geocodeLatLng(geocoder, lat, lng);
+    });
+
+}
+
+function geocodeLatLng(geocoder, lat, lng) {
+    var latlng = { lat: parseFloat(lat), lng: parseFloat(lng) };
+
+    geocoder.geocode({ 'location': latlng }, function (results, status) {
+        if (status === 'OK') {
+            if (results[0]) {
+
+                var address = results[0].formatted_address;
+                var country = address.split(',', 3)[2];
+                var zipcode = address.split(',', 3)[1];
+                var department = parseInt(zipcode.substring(0, 3));
+
+                document.getElementById('observation_department').value = department;
+                document.getElementById('observation_country').value = country;
+            } else {
+                window.alert('Aucun résultat trouvé');
+            }
+        } else {
+            window.alert('Geocoder a échoué en raison de: ' + status);
+        }
     });
 }

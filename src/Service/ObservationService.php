@@ -64,6 +64,11 @@ class ObservationService
         return $observation;
     }
 
+    public function doIntDpt(string $department)
+    {
+        return (int)substr($department, 0, 2);
+    }
+
     public function hasImage($image, Observation $observation) : Observation
     {
         $imageName = $this->fileUploader->upload($image);
@@ -95,10 +100,11 @@ class ObservationService
         return $result;
     }
 
-    public function findByCommonName(string $commonName) : array
+    public function findBirds(string $commonName, int $department) : array
     {
         $result =  $this->em->getRepository(Observation::class)->findBy([
             'commonName' => $commonName,
+            'department' => $department,
             'isValid' => true,
         ]);
 
@@ -248,5 +254,15 @@ class ObservationService
         $birdInfos['author'] = $authors;
 
         return $birdInfos;
+    }
+
+    public function mapInfos(array $observations)
+    {
+        $mapInfos = [];
+        foreach ($observations as $observation) {
+            $mapInfos[] = $observation->getLatitude() . '/' . $observation->getLongitude();
+        }
+
+        return $mapInfos;
     }
 }
