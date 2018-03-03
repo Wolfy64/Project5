@@ -78,6 +78,11 @@ form.modification-observation{
     padding: 0 0 5px 0;
 }
 
+input.date-disable{
+    margin-bottom: 5px;
+    width: 100%;
+}
+
 #modifier-content{
     margin-top: 25px;
     margin-bottom: 25px;

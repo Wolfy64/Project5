@@ -2,23 +2,57 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/blog/blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/blog/blog-mobile.css') }}">
 {% endblock %}
 
-{% block body %} 
+{% block body %}
 
-    <h1>Blog</h1>
+    <div class="row" id="titre-bar-mobile">
+        <div class="col-12"><h1>LE BLOG</h1></div>
+    </div>
+
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>LE BLOG</h1>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
+    </div>
 
 {% if posts is empty %}
 <p> Pas d'article</p>
 {% endif %}
 
+            <div class="row" id="blog-content">
         {% for post in posts %}
-            <ul>
-                <li><img src="/img/blog/{{ post.image }}" alt="" width="300px"></li>
-                <li>{{ post.title }}</li>
-                <li>{{ post.author }}</li>
-                <li>{{ post.date|date("m/d/Y") }}</li>
-                <li>{{ post.article }}</li>
-            </ul>
-        {% endfor %}
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-12" id="photo-blog">
+                            <img class="img-blog" src="/img/blog/{{ post.image }}" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titre-blog">{{ post.title }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="details-blog">
+                                <i class="far fa-clock"></i> {{ post.date|date("m/d/Y") }}
+                                <i class="far fa-edit"></i> {{ post.author }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="article-content">
+                                {{ post.article }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    {% endfor %}
+            </div>
+
 {% endblock %}

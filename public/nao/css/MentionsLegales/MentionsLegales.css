@@ -1,0 +1,28 @@
+.mentions-content{
+    margin: 1% 3% 1% 3%;
+}
+
+h1.titre-mentions-legales{
+    color: black;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 35px;
+    text-align: left;
+}
+
+h2{
+    font-family: 'Roboto-Medium', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+
+h3{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 20px;
+}
+
+p, li{
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 15px;
+    margin-bottom: 0;
+}

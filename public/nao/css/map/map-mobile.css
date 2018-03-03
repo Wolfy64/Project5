@@ -1,0 +1,13 @@
+@media (max-width: 960px){
+    /** Mobile Menu */
+
+    #liens-mobile5{
+        background-color: #542B56;
+    }
+
+    /** Titre-mobile */
+
+    #titre-bar-mobile{
+        background-color: rgb(119, 37, 127);
+    }
+}
