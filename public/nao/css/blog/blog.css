@@ -3,3 +3,71 @@
 #item-barre5{
     background-color: rgba(110, 148, 84, 0.65);
 }
+
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(110, 148, 84);
+}
+
+.space-bar {
+    border-right: solid 20px rgb(110, 148, 84);
+}
+
+/** Body */
+
+h2.titre-blog{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+p.details-blog{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+}
+
+p.article-content{
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 13px;
+}
+
+i{
+    color: rgb(110, 148, 84);
+}
+
+.img-blog{
+    height: 200px;
+    width: 100%;
+}
+
+#blog-content{
+    margin: 50px;
+}
+
+#photo-blog{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+@media (min-width: 1500px) {
+    .img-blog{
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 650px){
+    .img-blog{
+        height: 200px;
+        width: 400px;
+    }
+}
+
+

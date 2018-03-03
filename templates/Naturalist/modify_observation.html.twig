@@ -40,22 +40,23 @@
                 <div class="form-group">
                     {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
                     <label for="disabled">Observé le</label>
-                    <input type="" id="disabled" name="disabled" value="{{ observation.date|date("m/d/Y") }}"disabled/>
+                    <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("m/d/Y") }}"disabled/>
                     {{ form_row(form.content, {'label': 'Autres informations'}) }}
                 </div>
-                <div class="form-group"></div>
-                <button type="submit" class="btn-success">VALIDER L'OBSERVATION <i class="fas fa-share-square fa-1x"></i></button>
-            </form>
-            <div class="row">
-                <div class="col-12">
+                <div class="form-group">
+                    <button type="submit" class="btn-success">VALIDER L'OBSERVATION <i class="fas fa-pencil-alt fa-1x"></i></button>
                     <a href="{{ path('naturalist_obs_remove', {'id': observation.id }) }}">
-                        <button class="btn-danger">SUPPRIMER L'OBSERVATION <i class="fas fa-pencil-alt fa-1x"></i></button>
+                        <button class="btn-danger">SUPPRIMER L'OBSERVATION <i class="fas fa-trash-alt fa-1x"></i></button>
                     </a>
                     <a href="{{ path('naturalist_validations') }}">
-                        <button class="btn-secondary">RETOUR <i class="fas fa-trash-alt fa-1x"></i></button>
+                        <button class="btn-secondary">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
                     </a>
                 </div>
-            </div>
+
+
+            </form>
+
+
         </div>
         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-1 col-xs-1"></div>
     </div>

@@ -1,0 +1,18 @@
+@media (max-width: 960px) {
+    /** Mobile Menu */
+    #liens-mobile6 {
+        background-color: #542B56;
+    }
+
+    /** Titre-mobile */
+
+    #titre-bar-mobile{
+        background-color: rgb(110, 148, 84);
+    }
+
+    /** Mobile Body */
+    #blog-content{
+        margin: 10px;
+    }
+
+}

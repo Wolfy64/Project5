@@ -136,6 +136,17 @@ a:hover#menu-user{
 }
 
 
+@media (min-width: 990px) and (max-width: 1240px){
+    h2.lien-header{
+        font-size: 8px;
+    }
+
+    .btn-user{
+        font-size: 8px;
+    }
+}
+
+
 
 
 
