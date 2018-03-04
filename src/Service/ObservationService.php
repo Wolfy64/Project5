@@ -134,9 +134,13 @@ class ObservationService
         return $result;
     }
 
-    public function isPublished(bool $bool) : array
+    public function lastPublished(bool $bool, int $limit) : array
     {
-        return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
+        return $this->em->getRepository(Observation::class)->findBy(
+            ['isValid' => $bool],
+            ['id' => 'Desc'],
+            $limit
+        );
     }
 
     public function doValidation(Observation $observation) : void

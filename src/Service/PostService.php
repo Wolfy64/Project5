@@ -33,6 +33,7 @@ class PostService
     {
         $this->fileUploader->setTargetDir('img/blog');
         $imageName = $this->fileUploader->upload($image);
+        $post->setPublished(true);
         $post->setImage($imageName);
         $this->persist($post);
         $this->message = self::FLASH_MESSAGE[1];
@@ -62,7 +63,16 @@ class PostService
         return $result;
     }
 
-    public function findAll() : array
+    public function lastPublished(bool $bool, int $limit) : array
+    {
+        return $this->em->getRepository(Post::class)->findBy(
+            ['published' => $bool],
+            ['id' => 'DESC'],
+            $limit
+        );
+    }
+
+    public function findAll()
     {
         return $this->em->getRepository(Post::class)->findAll();
     }

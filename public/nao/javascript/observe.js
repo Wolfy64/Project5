@@ -1,16 +1,18 @@
 function initMap() {
 
     // ##### Create map and center on your location #####
-    var paris = {
-        lat: 48.8566,
-        lng: 2.3522
+    var center = {
+        lat: 46.725382,
+        lng: 2.440091
     };
-    var latlng = new google.maps.LatLng(paris);
+    var latlng = new google.maps.LatLng(center);
+    // var latlng = new google.maps.LatLng(paris);
     var mapOptions = {
         zoom: 5,
         center: latlng
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    // map = new google.maps.Map(document.getElementById('map'), mapOptions);
     var geocoder = new google.maps.Geocoder;
 
     // ##### Add Marker on map #####   
@@ -131,7 +133,6 @@ function initMap() {
         document.getElementById('observation_longitude').value = lng;
         geocodeLatLng(geocoder, lat, lng);
     });
-
 }
 
 function geocodeLatLng(geocoder, lat, lng) {
@@ -156,3 +157,29 @@ function geocodeLatLng(geocoder, lat, lng) {
         }
     });
 }
+
+function addMarker() {
+    var latlngArr = mapInfos
+        .replace('[', '')
+        .replace(']', '')
+        .replace(/"/g, '')
+        .split(',')
+        ;
+
+    latlngArr.forEach(function (latlngArr) {
+        var latlng = latlngArr.split('/');
+        var marker = {
+            lat: parseFloat(latlng[0]),
+            lng: parseFloat(latlng[1])
+        };
+
+        new google.maps.Marker({
+            map: map,
+            icon: '/img/icon-geoloc.png',
+            position: marker,
+        });
+    });
+}
+
+// document.addEventListener("DOMContentLoaded", addMarker);
+document.addEventListener("DOMContentLoaded", initMap);

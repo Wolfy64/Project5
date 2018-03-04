@@ -21,4 +21,7 @@ App\Entity\Post:
         date:
             name: date
             type: date
+        published:
+            name: published
+            type: integer
         
