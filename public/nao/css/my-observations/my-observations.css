@@ -1,0 +1,48 @@
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(148, 47, 158);
+}
+
+.space-bar{
+    border-right: solid 20px rgb(148, 47, 158);
+}
+
+/** Body */
+
+table{
+    border: solid black 1px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+img#img-validation{
+    width: 100px;
+}
+
+.table-content{
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+}
+
+.bandeau-validation{
+    background-color: rgba(148, 47, 158, 0.8);
+    color: #FFFFFF;
+    font-family: 'Roboto-Medium', sans-serif;
+    font-size: 20px;
+}
+
+.boutton-validation{
+    font-size: 15px;
+}
+
+#tableau{
+    margin-top: 25px;
+}
+
+#tableau-mobile{
+    display: none;
+    visibility: hidden;
+}

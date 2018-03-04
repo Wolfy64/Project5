@@ -1,0 +1,35 @@
+@media (max-width: 960px){
+    /** Mobile Menu */
+
+    #liens-mobile9{
+        background-color: #542B56;
+    }
+
+    /** Titre-mobile */
+
+    #titre-bar-mobile{
+        background-color: rgb(148, 47, 158);
+    }
+}
+
+@media (max-width: 550px) {
+    /** Body */
+
+    #tableau-mobile{
+        display: table;
+        visibility: visible;
+        width: 100%;
+    }
+
+    #tableau{
+        display: none;
+        visibility: hidden;
+    }
+
+
+    th, td, tr{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+}
