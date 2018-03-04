@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd470390-2596-42ac-812e-78dc47a954dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/map/results-map-mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/map/results-map.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/list-observations/list-observations-mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/nao/css/list-observations/list-observations.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/map_show_list.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/map_show_list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/NAO/list_observations.html.twig" afterPath="$PROJECT_DIR$/templates/NAO/list_observations.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="map_show_list.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/NAO/map_show_list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+            <state relative-caret-position="505">
+              <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -49,18 +49,18 @@
       <file leaf-file-name="results-map.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/nao/css/map/results-map.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
+            <state relative-caret-position="483">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results-map-mobile.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results-map-mobile.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/nao/css/map/results-map-mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,38 @@
       <file leaf-file-name="blog.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/NAO/blog.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="189">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_observations.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/NAO/list_observations.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-observations.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/nao/css/list-observations/list-observations.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="651">
+              <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-observations-mobile.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/nao/css/list-observations/list-observations-mobile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -156,10 +186,6 @@
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
       <command text="git add ." />
-      <command text="git commit -m &quot;page article done&quot;" />
-      <command text="git push" />
-      <command text="git status" />
-      <command text="git add ." />
       <command text="git pull" />
       <command text="php bin/console server:un" />
       <command text="php bin/console server:run" />
@@ -180,6 +206,10 @@
       <command text="git add ." />
       <command text="git commit -m &quot;page mes observations done&quot;" />
       <command text="git pull" />
+      <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;page map-show-list done&quot;" />
+      <command text="git pull" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -196,9 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Service/UserManagement.php" />
-        <option value="$PROJECT_DIR$/templates/NAO/list_observations.html.twig" />
-        <option value="$PROJECT_DIR$/templates/NAO/contact.html.twig" />
         <option value="$PROJECT_DIR$/templates/NAO/observe.html.twig" />
         <option value="$PROJECT_DIR$/templates/Security/signup.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/NAO/MapController.php" />
@@ -247,6 +274,9 @@
         <option value="$PROJECT_DIR$/public/nao/css/map/results-map.css" />
         <option value="$PROJECT_DIR$/templates/NAO/map_show_list.html.twig" />
         <option value="$PROJECT_DIR$/public/nao/css/map/results-map-mobile.css" />
+        <option value="$PROJECT_DIR$/public/nao/css/list-observations/list-observations.css" />
+        <option value="$PROJECT_DIR$/templates/NAO/list_observations.html.twig" />
+        <option value="$PROJECT_DIR$/public/nao/css/list-observations/list-observations-mobile.css" />
       </list>
     </option>
   </component>
@@ -471,23 +501,15 @@
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="nao" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="list-observations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nao" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="map" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="nao" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="my-observations" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-5" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="nao" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="observe" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Projet-5" type="b2602c69:ProjectViewProjectNode" />
@@ -667,12 +689,12 @@
       <workItem from="1519814339041" duration="39525000" />
       <workItem from="1519983102370" duration="22804000" />
       <workItem from="1520075142136" duration="35655000" />
-      <workItem from="1520171437440" duration="15891000" />
+      <workItem from="1520171437440" duration="18310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501689000" />
+    <option name="totallyTimeSpent" value="504108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,29 +742,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/nao/css/login/login-mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/nao/css/joinUs/joinUs-mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/NAO/AboutController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1097,32 +1096,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/NAO/blog.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="189">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/NAO/map_show_list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+        <state relative-caret-position="505">
+          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/nao/css/map/results-map.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="483">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/NAO/list_observations.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/nao/css/list-observations/list-observations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/nao/css/map/results-map-mobile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/nao/css/list-observations/list-observations-mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>

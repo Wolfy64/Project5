@@ -1,0 +1,33 @@
+/** Header Barre */
+
+#item-barre4{
+    background-color: rgba(119, 37, 127, 0.65);
+}
+
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(119, 37, 127);
+}
+
+.space-bar {
+    border-right: solid 20px  rgb(119, 37, 127);
+}
+
+/** Body */
+
+img.img-list-observations{
+    width: 100%;
+}
+
+p.p-no-margin{
+    margin: 0;
+}
+
+#list-observations-block{
+    margin: 5%;
+}
+
+#list-observations-content{
+    margin-bottom: 2%;
+}
