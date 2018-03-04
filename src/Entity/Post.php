@@ -36,6 +36,11 @@ class Post
      */
     private $date;
 
+    /**
+     * @var int
+     */
+    private $published;
+
     public function __construct()
     {
         $this->date = new \DateTime();
@@ -98,5 +103,15 @@ class Post
     public function getDate() : ? \DateTime
     {
         return $this->date;
+    }
+
+    public function getPublished() : ? int
+    {
+        return $this->published;
+    }
+
+    public function setPublished(int $published) : void
+    {
+        $this->published = $published;
     }
 }

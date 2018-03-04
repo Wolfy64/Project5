@@ -11,7 +11,7 @@ class BlogController extends AbstractController
     public function index(PostService $post) : Response
     {
         return $this->render('NAO/blog.html.twig', [
-            'posts' => $post->findAll()
+            'posts' => $post->lastPublished(true, 3)
         ]);
     }
 }
