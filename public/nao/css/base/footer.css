@@ -37,14 +37,12 @@ a:target.cookie-link > #cookie{
 p#texte-coockie{
     color: #FFFFFF;
     font-family: 'Roboto-Regular1', sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     margin: 10px 10px 0 0;
 }
 
 .background-footer{
     background-color: #6e9454;
-    padding-left: 2%;
-    padding-right: 2%;
 }
 
 .footer-liens{
@@ -94,9 +92,17 @@ p#texte-coockie{
     padding-top: 5px;
 }
 
+#social-icone{
+    padding: 0;
+}
+
 #newsletter-form{
     background-color: white;
     color: black;
+}
+
+#newsletter-formulaire{
+    padding-left: 0;
 }
 
 #newsletter{
@@ -119,8 +125,14 @@ p#texte-coockie{
     border: solid white 2px;
 }
 
+#space-footer{
+    padding: 0;
+}
+
 #cookie{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 10px;
 }
+

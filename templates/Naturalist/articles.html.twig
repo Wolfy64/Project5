@@ -1,33 +1,66 @@
 {% extends "base.html.twig" %}
 
-{% block body %} 
-    <h2>Articles</h2>
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('/nao/css/articles/articles.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/articles/articles-mobile.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="row" id="titre-bar-mobile">
+        <div class="col-12"><h1>ARTICLES</h1></div>
+    </div>
+
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>ARTICLES</h1>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
+    </div>
 
     {% if posts is empty %}
         <p> Pas d'article</p>
-    {% endif %} 
+    {% endif %}
 
-    <a href="{{ path('naturalist_articles_new') }}">
-        <button class="btn-primary">Rédiger un article</button>
-    </a>
-    
-    <table class="table">
-        <tbody>
-            {% for post in posts %}
+    <div class="row" id="tableau">
+        <div class="col-1"></div>
+        <div class="col-9">
+            <a href="{{ path('naturalist_articles_new') }}">
+                <button id="rediger-boutton">Rédiger un article</button>
+            </a>
+            <table>
+                {% for post in posts %}
+                    <thead class="bandeau-article">
                     <tr>
-                        <td>
-                            <img src="/img/blog/{{ post.image }}" alt="" width="50px">
-                        </td>
-                        <td>{{ post.title }}</td>
-                        <td>{{ post.author }}</td>
-                        <td>{{ post.date|date("m/d/Y") }}</td>
-                        <td><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button>Modifier</button></a></td>
-                        <td><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button>Supprimer</button></a></td>
-                        
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                        <th class="col-xs-12 table-content" scope="col">Photo</th>
+                        <th class="col-xs-12 table-content" scope="col">Titre</th>
+                        <th class="col-xs-12 table-content" scope="col">Auteur</th>
+                        <th class="col-xs-12 table-content" scope="col">Date</th>
+                        <th class="col-xs-12 table-content" scope="col"></th>
+                        <th class="col-xs-12 table-content" scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}" alt=""></th>
+                        <td class="table-content">{{ post.title }}</td>
+                        <td class="table-content">{{ post.author }}</td>
+                        <td class="table-content">{{ post.date|date("m/d/Y") }}</td>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button class="btn-secondary boutton-article">Modifier</button></a></td>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button class="btn-danger boutton-article">Supprimer</button></a></td>
+                    </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+
+
+
+
 
 
 {% endblock %}

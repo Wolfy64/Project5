@@ -1,4 +1,9 @@
-@media (max-width: 960px) {
+@media (max-width: 768px) {
+
+    #header-container{
+       display: none;
+    }
+
     img.logo{
         display: flex;
         height: 70px;
@@ -24,11 +29,13 @@
 
     .menu-pc{
         display: none;
+        visibility: hidden;
     }
 
     #menu-mobile{
         display: inline;
         background-color: white;
+        visibility: visible;
     }
 
     .navbar{
@@ -46,6 +53,7 @@
     #logo-mobile{
         display: inline;
         padding-top: 3px;
+        visibility: visible;
     }
 
     .liens-mobile{

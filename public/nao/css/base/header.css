@@ -1,139 +1,144 @@
-img.logo{
-     display: flex;
-     height: 125px;
-     width: 125px;
- }
+@media (min-width: 769px){
+    img.logo{
+        display: flex;
+        height: 125px;
+        width: 125px;
+    }
 
-h2.lien-header{
-    color: white;
-    font-family: 'Roboto-Bold', sans-serif;
-    width: 100%;
-    font-size: 65%;
-    margin-top: 8px;
+    h2.lien-header{
+        color: white;
+        font-family: 'Roboto-Bold', sans-serif;
+        width: 100%;
+        font-size: 65%;
+        margin-top: 8px;
+    }
+
+    button.bouton-menu{
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-radius: 3px;
+        color: black;
+        cursor: pointer;
+        font-family: 'Roboto-Bold', sans-serif;
+        padding-top: 10%;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    button.bouton-menu:hover{
+        box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.18);
+        transform: scale(1.01);
+        color: white;
+        font-size: medium;
+    }
+
+    button.bouton-menu:active {
+        box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.18);
+        transform: scale(0.98);
+    }
+
+    .menu{
+        border: solid white 7px;
+        padding: 0 0 0 0;
+    }
+
+    .menu-barre{
+        border-left: solid white 20px;
+        border-right: solid white 20px;
+        border-top: solid white 5px;
+        height: 20px;
+        padding: 0 0 0 0;
+    }
+    #menu-mobile, #logo-mobile {
+        display: none;
+        visibility: hidden;
+    }
+
+    #header-container{
+        margin-top: 10px;
+        padding-bottom: 15px;
+        border-bottom: inset #999999 2px;
+    }
+
+    #header-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    #header-icone{
+        color: white;
+    }
+
+    #item-menu1{
+        background-color: rgba(215, 95, 227, 0.65);
+    }
+
+    #item-menu2{
+        background-color: rgba(187, 59, 200, 0.65);
+    }
+
+    #item-menu3{
+        background-color: rgba(148, 47, 158, 0.65);
+    }
+
+    #item-menu4{
+        background-color: rgba(119, 37, 127, 0.65);
+    }
+
+    #item-menu5{
+        background-color: rgba(110, 148, 84, 0.65);
+    }
+
+    #item-menu6{
+        background-color: rgba(88, 122, 66, 0.65);
+    }
+
+    #item-menu7{
+        background-color: rgba(69, 100, 49, 0.65);
+    }
+
+    #item-menu8{
+        background-color: rgba(118, 120, 108, 0.65);
+    }
+
+    #item-menu9{
+        background-color: rgba(55, 56, 48, 0.65);
+    }
+
+    /** User */
+
+    .btn-user{
+        background-color: rgb(118, 120, 108);
+        border: 1px solid transparent;
+        color: #FFFFFF;
+        font-family: 'Roboto-Medium', sans-serif;
+        font-size: 15px;
+        width: 100%;
+        margin: 0;
+        padding: 5px 0 5px 0;
+    }
+
+    a#menu-user{
+        color: #FFFFFF;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    a:hover#menu-user{
+        background-color: rgb(55, 56, 48);
+    }
+
+
+    #logo-users{
+        color: #FFFFFF;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
-button.bouton-menu{
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-radius: 3px;
-    color: black;
-    cursor: pointer;
-    font-family: 'Roboto-Bold', sans-serif;
-    padding-top: 10%;
-    outline: none;
-    transition: 0.2s;
-}
 
-button.bouton-menu:hover{
-    box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.18);
-    transform: scale(1.01);
-    color: white;
-    font-size: medium;
-}
-
-button.bouton-menu:active {
-    box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.18);
-    transform: scale(0.98);
-}
-
-.menu{
-    border: solid white 7px;
-    padding: 0 0 0 0;
-}
-
-.menu-barre{
-    border-left: solid white 20px;
-    border-right: solid white 20px;
-    border-top: solid white 5px;
-    height: 20px;
-    padding: 0 0 0 0;
-}
-#menu-mobile, #logo-mobile {
-    display: none;
-}
-
-#header-container{
-    margin-top: 10px;
-    padding-bottom: 15px;
-    border-bottom: inset #999999 2px;
-}
-
-#header-logo{
-    display: flex;
-    justify-content: center;
-}
-
-#header-icone{
-    color: white;
-}
-
-#item-menu1{
-    background-color: rgba(215, 95, 227, 0.65);
-}
-
-#item-menu2{
-    background-color: rgba(187, 59, 200, 0.65);
-}
-
-#item-menu3{
-    background-color: rgba(148, 47, 158, 0.65);
-}
-
-#item-menu4{
-    background-color: rgba(119, 37, 127, 0.65);
-}
-
-#item-menu5{
-    background-color: rgba(110, 148, 84, 0.65);
-}
-
-#item-menu6{
-    background-color: rgba(88, 122, 66, 0.65);
-}
-
-#item-menu7{
-    background-color: rgba(69, 100, 49, 0.65);
-}
-
-#item-menu8{
-    background-color: rgba(118, 120, 108, 0.65);
-}
-
-#item-menu9{
-    background-color: rgba(55, 56, 48, 0.65);
-}
-
-/** User */
-
-.btn-user{
-    background-color: rgb(118, 120, 108);
-    border: 1px solid transparent;
-    color: #FFFFFF;
-    font-family: 'Roboto-Medium', sans-serif;
-    font-size: 15px;
-    width: 100%;
-    margin: 0;
-    padding: 5px 0 5px 0;
-}
-
-a#menu-user{
-    color: #FFFFFF;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-a:hover#menu-user{
-    background-color: rgb(55, 56, 48);
-}
-
-
-#logo-users{
-    color: #FFFFFF;
-    padding-left: 5px;
-    padding-right: 5px;
-}
 
 
 @media (min-width: 990px) and (max-width: 1240px){
@@ -143,6 +148,78 @@ a:hover#menu-user{
 
     .btn-user{
         font-size: 8px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    #header-container{
+        display: none;
+    }
+
+    img.logo{
+        display: flex;
+        height: 70px;
+        width: 70px;
+    }
+
+    button.navbar-toggler{
+        background-color: white;
+        height: 100%;
+        width: 100%;
+    }
+
+    input::placeholder{
+        color: white;
+        opacity: 1;
+    }
+
+    nav{
+        padding-left: 0;
+        padding-right: 0;
+        background-color: white;
+    }
+
+    .menu-pc{
+        display: none;
+        visibility: hidden;
+    }
+
+    #menu-mobile{
+        display: inline;
+        background-color: white;
+        visibility: visible;
+    }
+
+    .navbar{
+        padding-top: 3px;
+    }
+
+    .nav-link{
+        color: white;
+        font-size: 12px;
+        margin-left: 5%;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    #logo-mobile{
+        display: inline;
+        padding-top: 3px;
+        visibility: visible;
+    }
+
+    .liens-mobile{
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #space-menu-user{
+        margin: 10px;
     }
 }
 
