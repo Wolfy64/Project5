@@ -3,8 +3,6 @@
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/map/map.css') }}">
     <link rel="stylesheet" href="{{ asset('/nao/css/map/map-mobile.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe.css') }}">
-    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe-mobile.css') }}">
 {% endblock %}
 
 {% block body %} 
@@ -67,21 +65,17 @@
                                 {% if observations|length > 1 %} résultats {% else %} résultat{% endif %}
                             </p>
 
+                        <div class="form-group" id="soumettre-bouton">
                             <a href="{{ path('map_show_list',{'commonName': observations.0.commonName }) }}">
-                                Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
+                                <button id="soumettre" type="submit">
+                                    Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
+                                </button>
                             </a>
-                            
+                        </div>
                         {% else %}
                             <p>Affiche une belle image</p>
                             <img src="{{ asset('/img/moineau_domestique_rufer.jpg') }}" alt="" id="belle-image">
                         {% endif %}
-                        <div class="form-group" id="soumettre-bouton">
-                            <a href="{{ path('list_observations') }}">
-                                <button id="soumettre" type="submit">
-                                    Liste des observations
-                                </button>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -100,7 +94,7 @@
                </div>
                 <div class="row">
                     <div class="col-12" id="boutton-observation">
-                        <a href="#">
+                        <a href="{{ path('list_observations') }}">
                             <button id="soumettre" type="submit">
                                 Voir les 15 dernières observations
                             </button>

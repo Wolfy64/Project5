@@ -26,9 +26,8 @@
 
 @media (max-width: 970px) {
     body {
-        background-image: url("../../../img/background-image-HP.jpg");
-        background-repeat: no-repeat;
-        background-position: top center;
+        background: top center  no-repeat url("../../../img/background-image-HP.jpg");
+
     }
 
     img{
