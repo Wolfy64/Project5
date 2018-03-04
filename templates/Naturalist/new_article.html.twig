@@ -1,19 +1,46 @@
-{% extends "base.html.twig" %} 
+{% extends "base.html.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('/nao/css/articles/articles.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/articles/articles-mobile.css') }}">
+{% endblock %}
 
 {% block body %}
 
-<h2>Nouvel article</h2>
+    <div class="row" id="titre-bar-mobile">
+        <div class="col-12"><h1>RÉDIGER UN ARTICLE</h1></div>
+    </div>
 
-{{ form_start(form) }}
-    {{ form_errors(form) }}
+    <div class="row" id="title">
+        <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+        <div class="col-xl-3 col-lg-3 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+            <h1>RÉDIGER UN ARTICLE</h1>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-0 col-xs-0"></div>
+    </div>
 
-    {{ form_row(form.image,{'label': 'Image'}) }}
-    {{ form_row(form.title,{'label': 'Titre'}) }}
-    {{ form_row(form.article,{'label': 'Article'}) }}
-    {{ form_row(form.author,{'label': 'Auteur'}) }}
-    <button id="soumettre" type="submit">
-        Soumettre l'article
-    </button>
-{{ form_end(form) }}
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <form class="new-article">
+                <div class="form-group">
+                    {{ form_row(form.image,{'label': 'Image'}) }}
+                    {{ form_row(form.title,{'label': 'Titre'}) }}
+                    {{ form_row(form.author,{'label': 'Auteur'}) }}
+                    {{ form_row(form.article,{'label': 'Article'}) }}
+                </div>
+                <div class="form-group">
+                    <button id="rediger-boutton" type="submit">
+                        SOUMMETTRE L'ARTICLE
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+
+
 
 {% endblock %}
