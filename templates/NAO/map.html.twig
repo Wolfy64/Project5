@@ -110,18 +110,20 @@
             </div>
         </div>
     </div>
-{% if mapInfos is defined and mapInfos is not empty %}
-    <script type="text/javascript">
-        var mapInfos = '{{ mapInfos | json_encode | raw }}';
-    </script>
-{% endif %}
 
+    {% if mapInfos is defined and mapInfos is not empty %}
+        <script type="text/javascript">
+            var mapInfos = '{{ mapInfos | json_encode | raw }}';
+        </script>
+    {% endif %}
 
+    {% block googleMap %}
+        <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+        <script src="{{ asset('/awesomplete/mapName.js') }}"></script>
+        <script src="{{ asset('/awesomplete/mapDpt.js') }}"></script>
+        <script src="{{ asset('/nao/javascript/map.js') }}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI&language=fr&libraries=places&callback=initMap"></script>
+    {% endblock googleMap %}
 
-    <script>
-        var input = document.getElementById("map_commonName");
-    </script>
-    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
-    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
-    <script src="{{ asset('/nao/javascript/map.js') }}"></script>
 {% endblock %}
+

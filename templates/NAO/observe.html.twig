@@ -82,13 +82,14 @@
         <div class="col-xl-2 col-lg-2 col-md-0 col-xs-0"></div>
     </div>
 
-    <script>
-        var input = document.getElementById("observation_commonName");
-    </script>
-    <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
-    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
-
-
+    {% block googleMap %}
+        <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+        <script src="{{ asset('/awesomplete/obsName.js') }}"></script>
+        <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUNzF7Ag5sywU7slf_Hcil0GmAhLqydI&language=fr&libraries=places&callback=initMap"></script>
+    {% endblock googleMap %}
 
 {% endblock %}
+
+
 
