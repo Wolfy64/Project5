@@ -21,8 +21,11 @@ class MapController extends AbstractController
         
         if ($form->isSubmitted() && $form->isValid()) {
             $commonName = $form->get('commonName')->getData();
-            $observations = $obsService->findByCommonName($commonName);
-            
+            $department = $obsService->doIntDpt($form->get('department')->getData());
+
+            $observations = $obsService->findBirds($commonName, $department);
+            $mapInfos = $obsService->mapInfos($observations);
+
             if (!$observations){
                 $this->addFlash('notice', $obsService->getMessage());
                 return $this->redirectToRoute('map');
@@ -33,6 +36,7 @@ class MapController extends AbstractController
 
             return $this->render('NAO/map.html.twig', [
                 'observations' => $observations,
+                'mapInfos'     => $mapInfos,
                 'form'         => $form->createView()
             ]);
         }

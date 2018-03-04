@@ -29,6 +29,9 @@ App\Entity\Observation:
         longitude:
             name: longitude
             type: string
+        department:
+            name: department
+            type: integer
         numbers:
             name: numbers
             type: integer
@@ -42,4 +45,3 @@ App\Entity\Observation:
         isValid:
             name: is_valid
             type: boolean
-

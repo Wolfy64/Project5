@@ -5,10 +5,10 @@ namespace App\Controller\NAO;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class MentionsLegalesController extends AbstractController
+class LegalNoticesController extends AbstractController
 {
     public function index() : Response
     {
-        return $this->render('NAO/MentionsLegales.html.twig');
+        return $this->render('NAO/legal_notices.html.twig');
     }
 }

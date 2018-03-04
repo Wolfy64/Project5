@@ -3,6 +3,8 @@
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/map/map.css') }}">
     <link rel="stylesheet" href="{{ asset('/nao/css/map/map-mobile.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe.css') }}">
+    <link rel="stylesheet" href="{{ asset('/nao/css/observe/observe-mobile.css') }}">
 {% endblock %}
 
 {% block body %} 
@@ -37,11 +39,10 @@
             <h2>Recherche un oiseau</h2>
 
             <div class="form-group">
-                <h3>Espèces</h3>
+                {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
             </div>
             <div class="form-group">
-                <h3>Département</h3>
-                {{ form_row(form.commonName,{'label': 'Nom commun de l\'oiseau'}) }}
+                {{ form_row(form.department,{'label': 'Département'}) }}
             </div>
             <div class="form-group" id="soumettre-bouton">
                 <button id="soumettre" type="submit">Lancer la recherche</button>
@@ -54,7 +55,7 @@
                 <div class="row">
                     <div class="col-12">
                         {% if observations is defined and observations is not empty %}
-
+                            
                             <h3>Votres recherche:</h3>
 
                             <ul>
@@ -69,7 +70,7 @@
                             <a href="{{ path('map_show_list',{'commonName': observations.0.commonName }) }}">
                                 Voir {% if observations|length > 1 %} les résultats {% else %} le résultat{% endif %}
                             </a>
-
+                            
                         {% else %}
                             <p>Affiche une belle image</p>
                             <img src="{{ asset('/img/moineau_domestique_rufer.jpg') }}" alt="" id="belle-image">
@@ -86,7 +87,9 @@
             </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-12 col-xs-12">
-            <div class="connexion" style="height: 85%"></div>
+            <div class="connexion" style="height: 85%">
+                <div id="map"></div>
+            </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-12 col-xs-12 align-self-end">
             <div class="connexion">
@@ -107,16 +110,18 @@
             </div>
         </div>
     </div>
+{% if mapInfos is defined and mapInfos is not empty %}
+    <script type="text/javascript">
+        var mapInfos = '{{ mapInfos | json_encode | raw }}';
+    </script>
+{% endif %}
 
 
 
-
-
-
-
-
-        <script>
-            var input = document.getElementById("map_commonName");
-        </script>
+    <script>
+        var input = document.getElementById("map_commonName");
+    </script>
     <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
+    <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
+    <script src="{{ asset('/nao/javascript/map.js') }}"></script>
 {% endblock %}

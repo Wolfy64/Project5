@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+// use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Type;
@@ -19,6 +20,7 @@ use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\LessThanOrEqual;
 use Symfony\Component\Validator\Constraints\Range;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Validator\Constraints\IdenticalTo;
 
 class ObservationType extends AbstractType
 {
@@ -52,6 +54,19 @@ class ObservationType extends AbstractType
                 'constraints' => [
                     new NotBlank(['message' => 'Vous devez sélectionner un lieu sur la carte']),
                     new Type(['type' => 'string'])
+                ]])
+            ->add('department',HiddenType::class,[
+                'constraints' => [
+                    new NotBlank(['message' => 'Vous devez sélectionner un lieu sur la carte']),
+                ]])
+            ->add('country',   HiddenType::class,[
+                'constraints' => [
+                    new NotBlank(['message' => 'Vous devez sélectionner un lieu sur la carte']),
+                    new Type(['type' => 'string']),
+                    new IdenticalTo([
+                        'value' => 'France',
+                        'message' => 'Veuillez choisir une zone en France métropolitaine'
+                        ])
                 ]])
             ->add('numbers',   ChoiceType::class,[
                 'choices' => Observation::NUMBERS_OF_BIRDS,

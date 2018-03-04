@@ -35,6 +35,8 @@
                 {{ form_errors(form) }}
                 {{ form_row(form.latitude) }}
                 {{ form_row(form.longitude) }}
+                {{ form_row(form.department) }}
+                {{ form_row(form.country) }}
                 <div class="form-group">
                     {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
                     <p>Besoin d'aide pour le nom de l'espèce ? <a href="http://www.oiseaux.net/oiseaux/france.html" target="_blank">cliquez-ici</a></p>
@@ -79,23 +81,6 @@
         </div>
         <div class="col-xl-2 col-lg-2 col-md-0 col-xs-0"></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
         var input = document.getElementById("observation_commonName");
