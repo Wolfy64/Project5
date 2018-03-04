@@ -1,0 +1,62 @@
+/** Header Barre */
+
+#item-barre4{
+    background-color: rgba(119, 37, 127, 0.65);
+}
+
+/** Titre Bar */
+
+.titre-bar-pc{
+    background-color: rgb(119, 37, 127);
+}
+
+.space-bar {
+    border-right: solid 20px  rgb(119, 37, 127);
+}
+
+/** Body */
+
+h2{
+    font-family: 'Roboto-Medium', sans-serif;
+    text-align: center;
+}
+
+p.p-no-margin{
+    font-weight: bold;
+    margin: 0;
+}
+
+img.img-results{
+    width: 100%;
+}
+
+a.retour-map{
+    display: flex;
+    justify-content: center;
+}
+
+button.boutton-retour-map{
+    background-color: rgb(119, 37, 127);
+    color: #FFFFFF;
+}
+
+button:hover.boutton-retour-map{
+    background-color: #FFFFFF;
+    color: rgb(119, 37, 127);
+}
+
+#results-content{
+    background-color: rgba(0, 0, 0, 0.05);
+    border: black solid 1px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 15px;
+    padding: 1%;
+}
+
+#photo-block{
+    padding-left: 0;
+}
+
+#results-block, .observation-result{
+    margin-top: 3%;
+}
