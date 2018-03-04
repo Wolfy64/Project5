@@ -143,6 +143,11 @@ class ObservationService
         );
     }
 
+    public function isPublished(bool $bool) : array
+    {
+        return $this->em->getRepository(Observation::class)->findBy(['isValid' => $bool]);
+    }
+
     public function doValidation(Observation $observation) : void
     {
         $userRole = $this->userManagement->getRole();
