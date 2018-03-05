@@ -105,6 +105,10 @@ p#texte-coockie{
     padding-left: 0;
 }
 
+#newsletter_email{
+    background-color: #FFFFFF;
+}
+
 #newsletter{
     padding-right: 7%;
     padding-left: 7%;

@@ -32,9 +32,10 @@
 }
 
 .card-body{
+    color: #FFFFFF;
     background-color: rgb(122, 149, 105);
     font-family: 'Roboto-Light', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .contact{
