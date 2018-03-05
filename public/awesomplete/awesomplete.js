@@ -58,7 +58,7 @@
 			"aria-live": "assertive",
 			"aria-atomic": true,
 			inside: this.container,
-			textContent: this.minChars != 0 ? ("Type " + this.minChars + " or more characters for results.") : "Begin typing for results."
+			// textContent: this.minChars != 0 ? ("Type " + this.minChars + " or more characters for results.") : "Begin typing for results."
 		});
 
 		// Bind events
@@ -306,20 +306,20 @@
 
 				if (this.ul.children.length === 0) {
 					
-					this.status.textContent = "No results found";
+					this.status.textContent = "Aucun résultat trouvé";
 					
-					this.close({ reason: "nomatches" });
+					this.close({ reason: "pas de correspondance" });
 			
 				} else {
 					this.open();
 			
-					this.status.textContent = this.ul.children.length + " results found";
+					this.status.textContent = this.ul.children.length + " résultats trouvés";
 				}
 			}
 			else {
-				this.close({ reason: "nomatches" });
+				this.close({ reason: "pas de correspondance" });
 				
-					this.status.textContent = "No results found";
+					this.status.textContent = "Pas de résultats trouvés";
 			}
 		}
 	};

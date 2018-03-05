@@ -27,7 +27,7 @@ map:
     controller: App\Controller\NAO\MapController::index
 
 map_show_list:
-    path: /carte-liste/{commonName}
+    path: /carte-liste
     controller: App\Controller\NAO\MapController::showList
 
 blog:
@@ -104,9 +104,9 @@ newsletter:
     path: /newsletter
     controller: App\Controller\NAO\NewsletterController::index
 
-plan-du-site:
+site_map:
     path: /plan-du-site
-    controller: App\Controller\NAO\PlanSiteController::index
+    controller: App\Controller\NAO\SiteMapController::index
 
 legal_notices:
     path: /mentions-legales
