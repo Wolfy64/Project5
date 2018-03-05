@@ -56,3 +56,10 @@ form{
         justify-content: center;
     }
 }
+
+/* message flash */
+.alert-warning {
+    color: #fff;
+    background-color: #77257f;
+    border-color: #77257f;
+}
