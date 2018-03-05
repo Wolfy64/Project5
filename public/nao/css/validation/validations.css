@@ -83,7 +83,24 @@ input.date-disable{
     width: 100%;
 }
 
+.bouton-validation{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
 #modifier-content{
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+@media (max-width: 769px){
+    .bouton-validation{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .action-link{
+        display: flex;
+        justify-content: center;
+    }
 }
