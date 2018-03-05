@@ -22,7 +22,8 @@
     <div class="row">
         <div class="col-1"></div>
         <div class="col-10">
-            <form class="new-article">
+                {{ form_start(form,{'attr': {'class': 'new-article'}}) }}
+                {{ form_errors(form) }}
                 <div class="form-group">
                     {{ form_row(form.image,{'label': 'Image'}) }}
                     {{ form_row(form.title,{'label': 'Titre'}) }}
@@ -34,7 +35,7 @@
                         SOUMMETTRE L'ARTICLE
                     </button>
                 </div>
-            </form>
+                {{ form_end(form) }}
         </div>
         <div class="col-1"></div>
     </div>

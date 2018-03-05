@@ -10,6 +10,6 @@ class LegalNoticesController extends AbstractController
 {
     public function index() : Response
     {
-        return $this->render('NAO/legal_notices.twig');
+        return $this->render('NAO/legal_notices.html.twig');
     }
 }

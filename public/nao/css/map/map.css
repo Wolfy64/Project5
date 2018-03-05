@@ -44,6 +44,7 @@ button:hover#soumettre{
     border: black solid 1px;
     font-family: 'Roboto-Regular', sans-serif;
     font-size: 15px;
+    height: 85%;
     margin-bottom: 30px;
     margin-top: 30px;
     padding: 5%;
@@ -67,6 +68,7 @@ button:hover#soumettre{
 }
 
 #belle-image{
+    max-height: 100%;
     max-width: 100%;
 }
 
