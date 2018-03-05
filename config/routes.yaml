@@ -111,3 +111,7 @@ plan-du-site:
 legal_notices:
     path: /mentions-legales
     controller: App\Controller\NAO\LegalNoticesController::index
+
+search:
+    path: /recherche
+    controller: App\Controller\NAO\SearchController::index
