@@ -1,9 +1,88 @@
 easy_admin:
-   site_name: 'NAO Admin'
+  #  disabled_actions: ['edit']
+   site_name: '<img src="/img/logoNAO.png" /> NAO Admin'
+   design:
+        brand_color: '#a671ab'
+        color_scheme: 'light'
+        menu:
+            - { entity: 'Aves', icon: 'qq' }
+            - { entity: 'Newsletter', icon: 'envelope' }
+            - { entity: 'Observation', icon: 'camera-retro' }
+            - { entity: 'Post', icon: 'pencil' }
+            - { entity: 'User', icon: 'user' }
    entities:
-       # List the entity class name you want to manage
-       - App\Entity\Aves
-       - App\Entity\Newsletter
-       - App\Entity\Observation
-       - App\Entity\Post
-       - App\Entity\User
+      Aves: 
+        class: App\Entity\Aves
+        list:
+          title: "Base de données Aves"
+          sort: ['commonName', 'ASC']
+          fields: 
+            - { property: 'Common Name',     label: 'Nom Commun' }
+            - { property: 'Scientific Name', label: 'Nom Scientifique' }
+            - { property: 'Author',          label: 'Auteur' }
+            - { property: 'Order',           label: 'Ordre' }
+            - { property: 'Family',          label: 'Famille' }
+            - { property: 'Habitat',         label: 'Habitat' }
+      Newsletter: 
+        class: App\Entity\Newsletter
+        list:
+          title: "Liste d'emails inscrit à la Newsletter"
+          fields: 
+            - { property: 'Email', label: 'Email', type: 'email' }
+      Observation: 
+        class: App\Entity\Observation
+        list:
+          title: "Liste des Observations"
+          fields: 
+            - { property: 'image',       label: 'Image',       type: 'image', base_path: '/img/observations/' }
+            - { property: 'commonName',  label: 'Nom Commun' }
+            - { property: 'date',        label: 'Date',        type: datetime}
+            - { property: 'numbers',     label: 'Nombre' }
+            - { property: 'department',  label: 'Departement', type: 'integer' }
+            - { property: 'latitude',    label: 'Latitude' }
+            - { property: 'longitude',   label: 'Longitude' }
+        form:
+            # - { property: 'image',       label: 'Image',       type: 'image', base_path: '/img/observations/' }
+            - { property: 'commonName',  label: 'Nom Commun' }
+            # - { property: 'date',        label: 'Date',        type: datetime}
+            # - { property: 'numbers',     label: 'Nombre' }
+            # - { property: 'department',  label: 'Departement', type: 'integer' }
+            # - { property: 'latitude',    label: 'Latitude' }
+            # - { property: 'longitude',   label: 'Longitude' }
+      Post: 
+        class: App\Entity\Post
+        label: Article
+        list:
+          title: "Liste des Articles"
+          fields: 
+            - { property: 'image',     label: 'Image',  type: 'image', base_path: '/img/blog/' }
+            - { property: 'title',     label: 'Titre' }
+            - { property: 'date',      label: 'Date',   type: 'datetime' }
+            - { property: 'author',    label: 'Auteur' }
+            - { property: 'published', label: 'Publié', type: 'toggle' }
+          form:
+            - { property: 'image',     label: 'Image',  type: 'image', base_path: '/img/blog/' }
+            - { property: 'title',     label: 'Titre' }
+            - { property: 'date',      label: 'Date',   type: 'datetime' }
+            - { property: 'author',    label: 'Auteur' }
+            - { property: 'published', label: 'Publié', type: 'toggle' }
+      User: 
+        class: App\Entity\User
+        help: 'Liste des roles disponible: ROLE_ADMIN - ROLE_NATURALIST - ROLE_USER'
+        label: Utilisateur
+        list:
+          title: "Liste des Utilisateurs"
+          sort: ['firstName', 'ASC']
+          fields: 
+            - { property: 'firstName', label: 'Prénom' }
+            - { property: 'lastname',  label: 'Nom' }
+            - { property: 'userName',  label: 'Identifiant',  type: 'email' }
+            - { property: 'roles',     label: 'Role',         type: 'array'}
+            - { property: 'isActive',  label: 'Actif',        type: 'toggle' }
+        form:
+          fields: 
+            - { property: 'userName',  label: 'Identifiant', type: 'email' }
+            - { property: 'firstName', label: 'Prénom' }
+            - { property: 'lastname',  label: 'Nom',         type: 'text' }
+            - { property: 'roles',     label: 'Role'}
+            - { property: 'isActive',  label: 'Actif' }

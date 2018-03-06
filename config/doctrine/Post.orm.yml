@@ -23,5 +23,5 @@ App\Entity\Post:
             type: date
         published:
             name: published
-            type: integer
+            type: boolean
         

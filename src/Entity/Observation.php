@@ -343,4 +343,9 @@ class Observation
     {
         $this->user = $user;
     }
+
+    public function __toString()
+    {
+        return $this->getUser();
+    }
 }

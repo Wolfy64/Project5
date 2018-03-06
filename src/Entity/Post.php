@@ -37,7 +37,7 @@ class Post
     private $date;
 
     /**
-     * @var int
+     * @var bool
      */
     private $published;
 
@@ -105,12 +105,12 @@ class Post
         return $this->date;
     }
 
-    public function getPublished() : ? int
+    public function getPublished() : ? bool
     {
         return $this->published;
     }
 
-    public function setPublished(int $published) : void
+    public function setPublished(bool $published) : void
     {
         $this->published = $published;
     }
