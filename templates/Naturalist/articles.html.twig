@@ -46,7 +46,7 @@
                         <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}" alt=""></th>
                         <td class="table-content">{{ post.title }}</td>
                         <td class="table-content">{{ post.author }}</td>
-                        <td class="table-content">{{ post.date|date("m/d/Y") }}</td>
+                        <td class="table-content">{{ post.date|date("d/m/Y") }}</td>
                         <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button class="btn-secondary boutton-article">Modifier</button></a></td>
                         <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button class="btn-danger boutton-article">Supprimer</button></a></td>
                     </tr>
@@ -86,7 +86,7 @@
                     <th class="table-content bandeau-article" scope="col">Date</th>
                 </tr>
                 <tr>
-                    <td class="table-content">{{ post.date|date("m/d/Y") }}</td>
+                    <td class="table-content">{{ post.date|date("d/m/Y") }}</td>
                 </tr>
                 </thead>
 
