@@ -40,7 +40,7 @@
                 {{ form_errors(form) }}
                     {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
                     <label for="disabled">Observé le</label>
-                    <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("m/d/Y") }}"disabled/>
+                    <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("d/m/Y") }}"disabled/>
                     {{ form_row(form.content, {'label': 'Autres informations'}) }}
                     <button type="submit" class="btn-success bouton-validation">
                         VALIDER L'OBSERVATION<i class="fas fa-pencil-alt fa-1x"></i>

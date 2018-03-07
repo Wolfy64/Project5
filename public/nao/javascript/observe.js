@@ -16,10 +16,15 @@ function initMap() {
     var geocoder = new google.maps.Geocoder;
 
     // ##### Add Marker on map #####   
+    var icon = {
+        url: '/img/icon-geoloc.png',
+        scaledSize: new google.maps.Size(50, 60),
+    };
+
     var marker = new google.maps.Marker({
         map: map,
-        icon:'/img/icon-geoloc.png'
-        // position: latlng,
+        draggable: true,
+        icon: icon
     });
 
     // ##### Add info Window on map #####
@@ -84,10 +89,14 @@ function initMap() {
                 };
                 map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+                var icon = {
+                    url: '/img/icon-geoloc.png',
+                    scaledSize: new google.maps.Size(50, 60),
+                };
+
                 var marker = new google.maps.Marker({
                     map: map,
-                    //position: latlng,
-                    // icon:'link' To put our own marker
+                    icon: icon
                 });
 
                 // ##### Set Marker on map #####
@@ -181,5 +190,4 @@ function addMarker() {
     });
 }
 
-// document.addEventListener("DOMContentLoaded", addMarker);
 document.addEventListener("DOMContentLoaded", initMap);

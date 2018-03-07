@@ -19,5 +19,11 @@
     #blog-content{
         margin: 10px;
     }
-
 }
+
+@media (min-width: 426px) and (max-width: 769px) {
+        h2.titre-blog, p.details-blog, p.article-content{
+            text-align: center;
+        }
+}
+

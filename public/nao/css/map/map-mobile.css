@@ -10,4 +10,10 @@
     #titre-bar-mobile{
         background-color: rgb(119, 37, 127);
     }
+
+    /** Body */
+
+    #map{
+        height: 250px;
+    }
 }
