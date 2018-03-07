@@ -1,7 +1,10 @@
 easy_admin:
   #  disabled_actions: ['edit']
-   site_name: '<img src="/img/logoNAO.png" /> NAO Admin'
-   design:
+    site_name: '<img src="/img/logoNAO.png" /> NAO Admin'
+    formats:
+        date:     'd/M/Y'
+        datetime: 'd/M/Y'    
+    design:
         brand_color: '#a671ab'
         color_scheme: 'light'
         menu:
@@ -10,19 +13,27 @@ easy_admin:
             - { entity: 'Observation', icon: 'camera-retro' }
             - { entity: 'Post', icon: 'pencil' }
             - { entity: 'User', icon: 'user' }
-   entities:
+    entities:
       Aves: 
         class: App\Entity\Aves
         list:
           title: "Base de données Aves"
           sort: ['commonName', 'ASC']
           fields: 
-            - { property: 'Common Name',     label: 'Nom Commun' }
-            - { property: 'Scientific Name', label: 'Nom Scientifique' }
-            - { property: 'Author',          label: 'Auteur' }
-            - { property: 'Order',           label: 'Ordre' }
-            - { property: 'Family',          label: 'Famille' }
-            - { property: 'Habitat',         label: 'Habitat' }
+            - { property: 'commonName',     label: 'Nom Commun' }
+            - { property: 'scientificName', label: 'Nom Scientifique' }
+            - { property: 'author',         label: 'Auteur' }
+            - { property: 'order',          label: 'Ordre' }
+            - { property: 'family',         label: 'Famille' }
+            - { property: 'habitat',        label: 'Habitat' }
+        form:
+          fields:
+            - { property: 'commonName',     label: 'Nom Commun' }
+            - { property: 'scientificName', label: 'Nom Scientifique' }
+            - { property: 'author',         label: 'Auteur' }
+            - { property: 'order',          label: 'Ordre' }
+            - { property: 'family',         label: 'Famille' }
+            - { property: 'habitat',        label: 'Habitat' }
       Newsletter: 
         class: App\Entity\Newsletter
         list:
@@ -34,21 +45,22 @@ easy_admin:
         list:
           title: "Liste des Observations"
           fields: 
-            - { property: 'image',       label: 'Image',       type: 'image', base_path: '/img/observations/' }
             - { property: 'commonName',  label: 'Nom Commun' }
+            - { property: 'image',       label: 'Image',       type: 'image', base_path: '/img/observations/' }
             - { property: 'date',        label: 'Date',        type: datetime}
             - { property: 'numbers',     label: 'Nombre' }
             - { property: 'department',  label: 'Departement', type: 'integer' }
             - { property: 'latitude',    label: 'Latitude' }
             - { property: 'longitude',   label: 'Longitude' }
         form:
-            # - { property: 'image',       label: 'Image',       type: 'image', base_path: '/img/observations/' }
+          fields:
             - { property: 'commonName',  label: 'Nom Commun' }
-            # - { property: 'date',        label: 'Date',        type: datetime}
-            # - { property: 'numbers',     label: 'Nombre' }
-            # - { property: 'department',  label: 'Departement', type: 'integer' }
-            # - { property: 'latitude',    label: 'Latitude' }
-            # - { property: 'longitude',   label: 'Longitude' }
+            - { property: 'numbers',     label: 'Nombre' }
+            - { property: 'image',       label: 'Image'}
+            - { property: 'department',  label: 'Departement'}
+            - { property: 'latitude',    label: 'Latitude' }
+            - { property: 'longitude',   label: 'Longitude' }
+            - { property: 'date',        label: 'Date'}
       Post: 
         class: App\Entity\Post
         label: Article
@@ -60,12 +72,14 @@ easy_admin:
             - { property: 'date',      label: 'Date',   type: 'datetime' }
             - { property: 'author',    label: 'Auteur' }
             - { property: 'published', label: 'Publié', type: 'toggle' }
-          form:
-            - { property: 'image',     label: 'Image',  type: 'image', base_path: '/img/blog/' }
+        form:
+          fields:
             - { property: 'title',     label: 'Titre' }
-            - { property: 'date',      label: 'Date',   type: 'datetime' }
+            - { property: 'article',   label: 'Article' }
             - { property: 'author',    label: 'Auteur' }
-            - { property: 'published', label: 'Publié', type: 'toggle' }
+            - { property: 'date',      label: 'Date'}
+            - { property: 'image',     label: 'Image' }
+            - { property: 'published', label: 'Publié' }
       User: 
         class: App\Entity\User
         help: 'Liste des roles disponible: ROLE_ADMIN - ROLE_NATURALIST - ROLE_USER'
@@ -81,8 +95,8 @@ easy_admin:
             - { property: 'isActive',  label: 'Actif',        type: 'toggle' }
         form:
           fields: 
-            - { property: 'userName',  label: 'Identifiant', type: 'email' }
-            - { property: 'firstName', label: 'Prénom' }
-            - { property: 'lastname',  label: 'Nom',         type: 'text' }
-            - { property: 'roles',     label: 'Role'}
-            - { property: 'isActive',  label: 'Actif' }
+              - { property: 'userName',  label: 'Identifiant', type: 'email' }
+              - { property: 'firstName', label: 'Prénom' }
+              - { property: 'lastname',  label: 'Nom',         type: 'text' }
+              - { property: 'roles',     label: 'Role'}
+              - { property: 'isActive',  label: 'Actif' }

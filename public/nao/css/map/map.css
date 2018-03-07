@@ -67,6 +67,11 @@ button:hover#soumettre{
     padding: 0 10px 10px 10px;
 }
 
+#img-observations img {
+    height: 100%;
+    width: 100%;
+}
+
 #belle-image{
     max-height: 100%;
     max-width: 100%;

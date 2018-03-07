@@ -14,13 +14,6 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     var geocoder = new google.maps.Geocoder;
-
-    // ##### Add Marker on map #####   
-    var marker = new google.maps.Marker({
-        map: map,
-        icon:'/img/icon-geoloc.png'
-        // position: latlng,
-    });
 }
 
 function geocodeLatLng(geocoder, lat, lng) {
@@ -49,24 +42,30 @@ function geocodeLatLng(geocoder, lat, lng) {
 if (typeof mapInfos !== 'undefined') {
 
     function addMarker() {
+
         var latlngArr = mapInfos
             .replace('[', '')
             .replace(']', '')
             .replace(/"/g, '')
             .split(',')
-            ;
-
-        latlngArr.forEach(function (latlngArr) {
+        ;
+        
+        latlngArr.forEach(function (latlngArr, icon) {
             var latlng = latlngArr.split('/');
             var marker = {
                 lat: parseFloat(latlng[0]),
                 lng: parseFloat(latlng[1])
             };
+            var icon = {
+                url: '/img/icon-geoloc.png',
+                scaledSize: new google.maps.Size(50, 60),
+            };
 
             new google.maps.Marker({
                 map: map,
-                icon: '/img/icon-geoloc.png',
+                icon: icon,
                 position: marker,
+                animation: google.maps.Animation.DROP,
             });
 
             map.panTo(marker);
