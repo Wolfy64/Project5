@@ -67,7 +67,7 @@ class UserService
 
     public function doMail($data) : void
     {
-        $message = (new \Swift_Message('Bienvenu à Nos Amis les Oiseaux !'))
+        $message = (new \Swift_Message('Bienvenue dans l\'association Nos Amis les Oiseaux !'))
             ->setFrom('contact@nao.dewulfdavid.com')
             ->setTo($data->getUsername())
             ->setBody($this->twig->render('Mail/signup.html.twig', ['data' => $data]), 'text/html')

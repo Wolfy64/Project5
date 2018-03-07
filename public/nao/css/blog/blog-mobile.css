@@ -11,6 +11,11 @@
     }
 
     /** Mobile Body */
+    p.article-content{
+        word-wrap: break-word;
+        margin-bottom: 30px;
+    }
+
     #blog-content{
         margin: 10px;
     }

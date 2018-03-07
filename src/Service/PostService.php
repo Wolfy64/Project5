@@ -11,8 +11,8 @@ class PostService
     const NOT_FOUND = 'Cette article n\'existe pas';
     const FLASH_MESSAGE = [
         1 => 'Votre article est mis en ligne',
-        2 => 'L\'article à était supprimé',
-        3 => 'L\'article à était modifié'
+        2 => 'L\'article a été supprimé',
+        3 => 'L\'article a été modifié'
     ];
 
     private $em;

@@ -7,11 +7,11 @@
 /** Titre Bar */
 
 .titre-bar-pc{
-    background-color: rgb(55, 56, 48);
+    background-color: rgba(55, 56, 48, 0.65);
 }
 
 .space-bar {
-    border-right: solid 20px rgb(55, 56, 48);
+    border-right: solid 20px rgba(55, 56, 48, 0.65);
 }
 
 /** Body */
@@ -24,4 +24,16 @@
 #search-content{
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+#boutton-recherche{
+
+    background-color: rgba(55, 56, 48, 0.65);
+}
+
+@media (max-width: 425px) {
+    #form-recherche{
+        display: flex;
+        justify-content: center;
+    }
 }

@@ -29,7 +29,7 @@ class ObservationService
         1 => 'Votre observation est enregistrée',
         2 => 'Votre observation est en attente de validation par un de nos naturalistes',
         3 => 'Aucun résultat pour la recherche: ',
-        4 => 'Attention le nom de l\'oiseau doit correspondre à la base de donnée Aves',
+        4 => 'Attention le nom de l\'oiseau doit correspondre à la base de données Aves',
         5 => 'L\'observation à été validée',
         6 => 'L\'observation à été supprimée',
         7 => 'L\'observation à été modifiée'

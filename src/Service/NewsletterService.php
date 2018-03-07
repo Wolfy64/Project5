@@ -10,7 +10,7 @@ use App\Entity\Newsletter;
 class NewsletterService
 {
     const FLASH_MESSAGE = [
-        1 => 'Cette email est déjà inscrit à la newsletter',
+        1 => 'Cette adresse email est déjà inscrite à la newsletter',
         2 => 'Vous ètes inscrit à notre newsletter'
     ];
 

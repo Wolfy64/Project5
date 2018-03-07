@@ -4,6 +4,14 @@
        display: none;
     }
 
+    #header-icone{
+        color: white;
+    }
+
+    #menu-icone-mobile{
+        color: rgb(88, 122, 66);
+    }
+
     img.logo{
         display: flex;
         height: 70px;
@@ -36,6 +44,7 @@
         display: inline;
         background-color: white;
         visibility: visible;
+        padding-top: 5px;
     }
 
     .navbar{
@@ -67,4 +76,6 @@
     #space-menu-user{
         margin: 10px;
     }
+
+   
 }
