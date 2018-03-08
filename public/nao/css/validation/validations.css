@@ -93,10 +93,13 @@ button#bouton-validation{
     margin-bottom: 25px;
 }
 
+#button-retour{
+    margin-top: 15px;
+}
+
 @media (max-width: 769px){
-    #bouton-validation{
-        font-size: 12px;
-        margin-bottom: 10px;
+    .bouton-validation{
+        font-size: 15px;
     }
 
     .action-link, .valider-obs{

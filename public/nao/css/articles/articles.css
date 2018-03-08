@@ -87,8 +87,8 @@ label, p.titre-photo-modification{
     width: 100%;
 }
 
-form.modification-article{
-    padding: 0 0 5px 0;
+form{
+    padding: 0;
 }
 
 input{
@@ -102,6 +102,14 @@ input{
 
 #button-retour{
     margin-top: 15px;
+}
+
+@media (max-width: 769px){
+
+    .action-link, .valider-art{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
