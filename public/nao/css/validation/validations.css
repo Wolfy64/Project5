@@ -74,8 +74,8 @@ label, p.titre-photo-modification{
     width: 100%;
 }
 
-form.modification-observation{
-    padding: 0 0 5px 0;
+form{
+    padding: 0;
 }
 
 input.date-disable{
@@ -83,7 +83,7 @@ input.date-disable{
     width: 100%;
 }
 
-.bouton-validation{
+button#bouton-validation{
     font-size: 15px;
     margin-bottom: 5px;
 }
@@ -94,12 +94,12 @@ input.date-disable{
 }
 
 @media (max-width: 769px){
-    .bouton-validation{
+    #bouton-validation{
         font-size: 12px;
         margin-bottom: 10px;
     }
 
-    .action-link{
+    .action-link, .valider-obs{
         display: flex;
         justify-content: center;
     }
