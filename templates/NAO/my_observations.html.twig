@@ -63,43 +63,36 @@
             <caption>
                 {% if obsValid|length > 1 %} Observations validés {% else %} Observation validé{% endif %}
             </caption>
+            {% for observation in obsValid %}
             <table>
                 <thead class="thead">
                 <tr>
                     <th class="table-content bandeau-validation" scope="col">Photo</th>
                 </tr>
-                {% for observation in obsValid %}
                     <tr>
                         <th class="table-content" scope="row"><img id="img-validation" src="/img/observations/{{ observation.image }}" alt="photo-observation"></th>
-
                     </tr>
-                {% endfor %}
                 <tr>
                     <th class="table-content bandeau-validation" scope="col">Nom Commun</th>
                 </tr>
-                {% for observation in obsValid %}
                     <tr>
                         <td class="table-content">{{ observation.commonName }}</td>
                     </tr>
-                {% endfor %}
                 <tr>
                     <th class="table-content bandeau-validation" scope="col">Observé le</th>
                 </tr>
-                {% for observation in obsValid %}
                     <tr>
                         <td class="table-content">{{ observation.date|date("d/m/Y") }}</td>
                     </tr>
-                {% endfor %}
                 <tr>
                     <th class="table-content bandeau-validation" scope="col">Autres Informations</th>
                 </tr>
-                {% for observation in obsValid %}
                     <tr>
                         <td class="table-content">{{ observation.content }}</td>
                     </tr>
-                {% endfor %}
                 </thead>
             </table>
+            {% endfor %}
         </div>
         <div class="col-xs-1"></div>
     </div>
@@ -145,43 +138,36 @@
                     <caption>
                         {% if obsNotValid|length > 1 %} Observations non validés {% else %} Observation non validé{% endif %}
                     </caption>
+                    {% for observation in obsNotValid %}
                     <table>
                         <thead class="thead">
                         <tr>
                             <th class="table-content bandeau-validation" scope="col">Photo</th>
                         </tr>
-                        {% for observation in obsNotValid %}
-                            <tr>
-                                <th class="table-content" scope="row"><img id="img-validation" src="/img/observations/{{ observation.image }}" alt="photo-observation"></th>
-
-                            </tr>
-                        {% endfor %}
+                        <tr>
+                            <th class="table-content" scope="row"><img id="img-validation" src="/img/observations/{{ observation.image }}" alt="photo-observation"></th>
+                        </tr>
                         <tr>
                             <th class="table-content bandeau-validation" scope="col">Nom Commun</th>
                         </tr>
-                        {% for observation in obsNotValid %}
-                            <tr>
-                                <td class="table-content">{{ observation.commonName }}</td>
-                            </tr>
-                        {% endfor %}
+                        <tr>
+                            <td class="table-content">{{ observation.commonName }}</td>
+                        </tr>
                         <tr>
                             <th class="table-content bandeau-validation" scope="col">Observé le</th>
                         </tr>
-                        {% for observation in obsNotValid %}
-                            <tr>
-                                <td class="table-content">{{ observation.date|date("d/m/Y") }}</td>
-                            </tr>
-                        {% endfor %}
+                        <tr>
+                            <td class="table-content">{{ observation.date|date("d/m/Y") }}</td>
+                        </tr>
                         <tr>
                             <th class="table-content bandeau-validation" scope="col">Autres Informations</th>
                         </tr>
-                        {% for observation in obsNotValid %}
-                            <tr>
-                                <td class="table-content">{{ observation.content }}</td>
-                            </tr>
-                        {% endfor %}
+                        <tr>
+                            <td class="table-content">{{ observation.content }}</td>
+                        </tr>
                         </thead>
                     </table>
+                    {% endfor %}
                 </div>
                 <div class="col-xs-1"></div>
             </div>

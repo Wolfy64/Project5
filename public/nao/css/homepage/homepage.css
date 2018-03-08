@@ -10,7 +10,7 @@ img{
 
 h1{
     color: white;
-    font-size: 40px;
+    font-size: 38px;
     font-family: 'Roboto-Medium', sans-serif;
 }
 
@@ -27,7 +27,7 @@ h1, h3{
 }
 
 .content-block{
-    margin-left: 60%;
+    margin-left: 50%;
 }
 
 #button{
