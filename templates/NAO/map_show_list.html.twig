@@ -48,7 +48,7 @@
 
 
     <div class="observation-result">
-    <h2>Il y à {{ observations|length }} {% if observations|length > 1 %} observations {% else %} observation{% endif %}</h2>
+    <h2>Il y a {{ observations|length }} {% if observations|length > 1 %} observations {% else %} observation{% endif %}</h2>
     <div class="row">
     {% for observation in observations %}
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
