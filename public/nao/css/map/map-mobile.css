@@ -16,4 +16,24 @@
     #map{
         height: 250px;
     }
+
+    #map-content{
+        display: flex;
+    }
+
+    #map-content > #block-15-obs{
+        order: 1;
+    }
+
+    #map-content > #block-form{
+        order: 2;
+    }
+
+    #map-content > #block-results{
+        order: 3;
+    }
+
+    #map-content > #block-map{
+        order: 4;
+    }
 }
