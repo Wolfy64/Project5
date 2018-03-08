@@ -42,9 +42,11 @@
                     <label for="disabled">Observé le</label>
                     <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("d/m/Y") }}"disabled/>
                     {{ form_row(form.content, {'label': 'Autres informations'}) }}
+                <div class="valider-obs">
                     <button type="submit" class="btn-success bouton-validation">
                         VALIDER L'OBSERVATION<i class="fas fa-pencil-alt fa-1x"></i>
                     </button>
+                </div>
                 {{ form_end(form) }}
             </div>
             <div>
@@ -53,7 +55,7 @@
                 </a>
 
                 <a class="action-link" href="{{ path('naturalist_validations') }}">
-                    <button class="btn-secondary bouton-validation">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
+                    <button class="btn-secondary bouton-validation" id="button-retour">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
                 </a>
             </div>
         </div>

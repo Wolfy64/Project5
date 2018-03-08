@@ -42,15 +42,17 @@
                         {{ form_row(form.title, {'label': 'Titre'}) }}
                         {{ form_row(form.author, {'label': 'Auteur'}) }}
                         {{ form_row(form.article, {'label': 'Article'}) }}
-                        <button type="submit" class="btn-success">MODIFIER L'ARTICLE
+                    <div class="valider-art">
+                        <button type="submit" class="btn-success" >MODIFIER L'ARTICLE
                             <i class="fas fa-pencil-alt fa-1x"></i>
                         </button>
+                    </div>
                     {{ form_end(form) }}
                 </div>
-                    <a href="{{ path('naturalist_articles_remove', {'id': post.id }) }}">
+                    <a class="action-link" href="{{ path('naturalist_articles_remove', {'id': post.id }) }}">
                         <button class="btn-danger">SUPPRIMER L'ARTICLE <i class="fas fa-trash-alt fa-1x"></i></button>
                     </a>
-                    <a href="{{ path('naturalist_articles') }}">
+                    <a class="action-link" href="{{ path('naturalist_articles') }}">
                         <button class="btn-secondary" id="button-retour">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
                     </a>
                 </div>
