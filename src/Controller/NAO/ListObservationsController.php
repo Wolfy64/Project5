@@ -9,7 +9,7 @@ use App\Service\ObservationService;
 
 class ListObservationsController extends AbstractController
 {
-    public function index(Request $request, ObservationService $observation) : Response
+    public function index(ObservationService $observation) : Response
     {
         return $this->render('NAO/list_observations.html.twig', [
             'observations' => $observation->lastPublished(true, 15)

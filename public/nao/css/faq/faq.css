@@ -50,3 +50,7 @@
     margin-top: 55px;
     margin-bottom: 50px;
 }
+
+.btn:hover {
+    text-decoration: none;
+}

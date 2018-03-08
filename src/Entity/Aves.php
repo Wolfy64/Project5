@@ -64,7 +64,7 @@ class Aves
 
     public function setOrder(string $order) : void
     {
-        $this->order;
+        $this->order = $order;
     }
 
     public function getFamily() : ? string
@@ -74,7 +74,7 @@ class Aves
 
     public function setFamily(string $family) : void
     {
-        $this->family;
+        $this->family = $family;
     }
 
     public function getScientificName() : ? string
@@ -84,7 +84,7 @@ class Aves
 
     public function setScientificName(string $scientificName) : void
     {
-        $this->scientificName;
+        $this->scientificName = $scientificName;
     }
 
     public function getAuthor() : ? string
@@ -94,7 +94,7 @@ class Aves
 
     public function setAuthor(string $author) : void
     {
-        $this->author;
+        $this->author = $author;
     }
 
     public function getCommonName() : ? string
@@ -104,7 +104,7 @@ class Aves
 
     public function setCommonName(string $commonName) : void
     {
-        $this->commonName;
+        $this->commonName = $commonName;
     }
 
     public function getHabitat() : ? int
@@ -114,7 +114,7 @@ class Aves
 
     public function setHabitat(int $habitat) : void
     {
-        $this->habitat;
+        $this->habitat = $habitat;
     }
 
     public function getObservations() : ArrayCollection
