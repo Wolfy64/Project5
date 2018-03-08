@@ -10,10 +10,30 @@
     #titre-bar-mobile{
         background-color: rgb(119, 37, 127);
     }
+
+    /** Body */
+
+    h2, h3{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 767px) {
     #photo-block{
         padding: 0;
+    }
+
+    #bouton-retour-mobile{
+        display: flex;
+        visibility: visible;
+    }
+
+    #bouton-retour-pc{
+        display: none;
+        visibility: hidden;
     }
 }

@@ -18,12 +18,17 @@
 
 h2{
     font-family: 'Roboto-Medium', sans-serif;
-    text-align: center;
+    font-size: 20px;
+    padding-bottom: 3%;
+}
+
+h3{
+    color:  rgb(119, 37, 127);
+    font-family: 'Roboto-Bold', sans-serif;
 }
 
 p.p-no-margin{
-    font-weight: bold;
-    margin: 0;
+    margin: 5px;
 }
 
 img.img-results{
@@ -38,6 +43,7 @@ a.retour-map{
 button.boutton-retour-map{
     background-color: rgb(119, 37, 127);
     color: #FFFFFF;
+    margin-top: 1%;
 }
 
 button:hover.boutton-retour-map{
@@ -57,6 +63,16 @@ button:hover.boutton-retour-map{
     padding-left: 0;
 }
 
-#results-block, .observation-result{
+#results-block, .observation-result, #for-results{
     margin-top: 3%;
 }
+
+#results-block{
+    margin-bottom: 3%;
+}
+
+#bouton-retour-mobile{
+    display: none;
+    visibility: hidden;
+}
+

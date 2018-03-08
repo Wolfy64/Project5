@@ -26,9 +26,16 @@
     margin-bottom: 5%;
 }
 
-#boutton-recherche{
-
+button#boutton-recherche{
     background-color: rgba(55, 56, 48, 0.65);
+    color: #FFFFFF;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+button:hover#boutton-recherche{
+    color: rgba(55, 56, 48, 0.65);
+    background-color: #FFFFFF;
 }
 
 @media (max-width: 425px) {
