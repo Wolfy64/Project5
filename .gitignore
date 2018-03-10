@@ -3,6 +3,8 @@
 .env
 .DS_Store
 /public/bundles/
+/public/img/blog/
+/public/img/observations/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
