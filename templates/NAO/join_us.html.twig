@@ -8,52 +8,54 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>ADHERER A L'ASSOCIATION</h1></div>
+        <div class="col-12">
+            <h1>ADHERER A L'ASSOCIATION</h1>
+        </div>
     </div>
 
-        <div class="row" id="joinUs-content">
-            <div class="col-xl-8 col-lg-8 col-md-12 col-xs-12" id="order-joinUs">
-                <div class="row" id="title">
-                    <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
-                    <div class="col-xl-5 col-lg-5 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
-                        <h1>ADHERER A L'ASSOCIATION</h1>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-0 col-xs-0"></div>
+    <div class="row" id="joinUs-content">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-xs-12" id="order-joinUs">
+            <div class="row" id="title">
+                <div class="col-xl-1 col-lg-1 col-md-0 col-xs-0 space-bar"></div>
+                <div class="col-xl-5 col-lg-5 col-md-12 col-xs-12 titre-bar-pc" id="titre-bar">
+                    <h1>ADHERER A L'ASSOCIATION</h1>
                 </div>
-                <div class="row">
-                    <div class="col-12" id="adherer-text">
-                        <p>
-                            Vous souhaitez soutenir l'association, participer et faire valoir votre droit à un environnement
-                            plus sain ?
-                        <p>
-                            Rien de plus simple, il suffit de télécharger le bulletin ci-dessous et de le renvoyer
-                            à l'association.
-                        </p>
-                        <p>
-                            En ADHÉRANT vous contribuez DIRECTEMENT et CONCRÈTEMENT à la préservation de l'environnement.
-                        </p>
-                        <p>
-                            Votre adhésion nous permet d'accentuer et de conserver notre totale indépendance.
-                        </p>
-                        <p>
-                            Nous en avons besoin !
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12" id="pdf-button">
-                        <a href="{{ path('join_us_show_file') }}" target="_blank">
-                            <button type="button" class="pdf-form-button" >
-                                <i class="fas fa-arrow-alt-circle-down fa-1x"></i>
-                                Télécharger le formulaire d'adhésion
-                            </button>
-                        </a>
-                    </div>
+                <div class="col-xl-6 col-lg-6 col-md-0 col-xs-0"></div>
+            </div>
+            <div class="row">
+                <div class="col-12" id="adherer-text">
+                    <p>
+                        Vous souhaitez soutenir l'association, participer et faire valoir votre droit à un environnement
+                        plus sain ?
+                    <p>
+                        Rien de plus simple, il suffit de télécharger le bulletin ci-dessous et de le renvoyer
+                        à l'association.
+                    </p>
+                    <p>
+                        En ADHÉRANT vous contribuez DIRECTEMENT et CONCRÈTEMENT à la préservation de l'environnement.
+                    </p>
+                    <p>
+                        Votre adhésion nous permet d'accentuer et de conserver notre totale indépendance.
+                    </p>
+                    <p>
+                        Nous en avons besoin !
+                    </p>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12" id="img-adherer">
-                <img src="{{ asset('/img/img-adhesion.jpg') }}" alt="image-adhésion">
+            <div class="row">
+                <div class="col-12" id="pdf-button">
+                    <a href="{{ path('join_us_show_file') }}" target="_blank">
+                        <button type="button" class="pdf-form-button">
+                            <i class="fas fa-arrow-alt-circle-down fa-1x"></i>
+                            Télécharger le formulaire d'adhésion
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 col-xs-12" id="img-adherer">
+            <img src="{{ asset('/img/img-adhesion.jpg') }}" alt="image-adhésion">
+        </div>
+    </div>
 
 {% endblock %}

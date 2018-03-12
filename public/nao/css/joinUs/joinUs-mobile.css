@@ -11,16 +11,18 @@
         background-color: rgb(187, 59, 200);
     }
 
-    /** Mobile Body */
+    /** Img / Video */
 
     img{
         width: 100%;
     }
 
+    /** ID */
+
     #joinUs-content{
         display: flex;
-        margin-top: 1%;
         margin-bottom: 2%;
+        margin-top: 1%;
     }
     #joinUs-content > #img-adherer{
         order: 1;

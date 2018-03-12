@@ -14,15 +14,19 @@
     border-right: solid 20px  rgb(119, 37, 127);
 }
 
-/** Body */
+/** Title / Text */
+
+p.p-no-margin{
+    margin: 0;
+}
+
+/** Img / Video */
 
 img.img-list-observations{
     width: 100%;
 }
 
-p.p-no-margin{
-    margin: 0;
-}
+/** ID */
 
 #list-observations-block{
     margin: 5%;

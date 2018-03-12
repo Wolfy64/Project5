@@ -1,43 +1,79 @@
 @media (min-width: 769px){
-    img.logo{
-        display: flex;
-        height: 125px;
-        width: 125px;
-    }
+
+    /** Title / Text */
 
     h2.lien-header{
         color: white;
         font-family: 'Roboto-Bold', sans-serif;
-        width: 100%;
         font-size: 65%;
         margin-top: 8px;
+        width: 100%;
+    }
+
+    /** Icons */
+
+    i#header-icone{
+        color: white;
+    }
+
+    /** Link / Button */
+
+    a#menu-user{
+        color: #FFFFFF;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    a:hover#menu-user{
+        background-color: rgb(55, 56, 48);
     }
 
     button.bouton-menu{
-        height: 100%;
-        width: 100%;
         background-color: transparent;
         border: none;
         border-radius: 3px;
         color: black;
         cursor: pointer;
         font-family: 'Roboto-Bold', sans-serif;
-        padding-top: 10%;
+        height: 100%;
         outline: none;
+        padding-top: 10%;
         transition: 0.2s;
+        width: 100%;
     }
 
     button.bouton-menu:hover{
         box-shadow: 3px 3px 12px 4px rgba(0, 0, 0, 0.18);
-        transform: scale(1.01);
         color: white;
         font-size: medium;
+        transform: scale(1.01);
     }
 
     button.bouton-menu:active {
         box-shadow: 6px 6px 18px 2px rgba(0, 0, 0, 0.18);
         transform: scale(0.98);
     }
+
+    button.btn-user{
+        background-color: rgb(118, 120, 108);
+        border: 1px solid transparent;
+        color: #FFFFFF;
+        font-family: 'Roboto-Medium', sans-serif;
+        font-size: 15px;
+        margin: 0;
+        padding: 5px 0 5px 0;
+        width: 100%;
+    }
+
+    /** Img / Video */
+
+    img.logo{
+        display: flex;
+        height: 125px;
+        width: 125px;
+    }
+
+    /** Classes */
 
     .menu{
         border: solid white 7px;
@@ -51,24 +87,27 @@
         height: 20px;
         padding: 0 0 0 0;
     }
+
+    .dropdown-menu{
+        background-color: rgb(118, 120, 108);
+    }
+
+    /** ID */
+
     #menu-mobile, #logo-mobile {
         display: none;
         visibility: hidden;
     }
 
     #header-container{
-        margin-top: 10px;
-        padding-bottom: 15px;
         border-bottom: inset #999999 2px;
+        padding-bottom: 15px;
+        margin-top: 10px;
     }
 
     #header-logo{
         display: flex;
         justify-content: center;
-    }
-
-    #header-icone{
-        color: white;
     }
 
     #item-menu1{
@@ -107,30 +146,6 @@
         background-color: rgba(55, 56, 48, 0.65);
     }
 
-    /** User */
-
-    .btn-user{
-        background-color: rgb(118, 120, 108);
-        border: 1px solid transparent;
-        color: #FFFFFF;
-        font-family: 'Roboto-Medium', sans-serif;
-        font-size: 15px;
-        width: 100%;
-        margin: 0;
-        padding: 5px 0 5px 0;
-    }
-
-    a#menu-user{
-        color: #FFFFFF;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    a:hover#menu-user{
-        background-color: rgb(55, 56, 48);
-    }
-
-
     #logo-users{
         color: #FFFFFF;
         padding-left: 5px;
@@ -142,11 +157,20 @@
 
 
 @media (min-width: 990px) and (max-width: 1240px){
+
+    /** Title / Text */
+
     h2.lien-header{
         font-size: 8px;
     }
 
-    .btn-user{
+    /** Link / Button */
+
+    a.dropdown-item{
+        font-size: 12px;
+    }
+
+    button.btn-user{
         font-size: 8px;
     }
 }
@@ -154,15 +178,35 @@
 
 @media (max-width: 768px) {
 
-    #header-container{
-        display: none;
+    /** Nav */
+
+    nav{
+        background-color: white;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    img.logo{
-        display: flex;
-        height: 70px;
-        width: 70px;
+    a.nav-link{
+        color: white;
+        font-family: 'Roboto-Regular', sans-serif;
+        font-size: 12px;
+        margin-left: 5%;
+        padding-bottom: 1px;
+        padding-top: 1px;
     }
+
+    .navbar{
+        padding-top: 3px;
+    }
+
+    /** Form */
+
+    input::placeholder{
+        color: white;
+        opacity: 1;
+    }
+
+    /** Link / Button */
 
     button.navbar-toggler{
         background-color: white;
@@ -170,20 +214,12 @@
         width: 100%;
     }
 
-    input::placeholder{
-        color: white;
-        opacity: 1;
-    }
+    /** Img / Video */
 
-    nav{
-        padding-left: 0;
-        padding-right: 0;
-        background-color: white;
-    }
-
-    .menu-pc{
-        display: none;
-        visibility: hidden;
+    img.logo{
+        display: flex;
+        height: 70px;
+        width: 70px;
     }
 
     #menu-mobile{
@@ -192,30 +228,31 @@
         visibility: visible;
     }
 
-    .navbar{
-        padding-top: 3px;
+    /** Classes */
+
+    .menu-pc{
+        display: none;
+        visibility: hidden;
     }
 
-    .nav-link{
-        color: white;
-        font-size: 12px;
-        margin-left: 5%;
-        padding-top: 1px;
-        padding-bottom: 1px;
+    .liens-mobile{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    /** ID */
+
+    #header-container{
+        display: none;
     }
 
     #logo-mobile{
         display: inline;
         padding-top: 3px;
         visibility: visible;
-    }
-
-    .liens-mobile{
-        display: flex;
-        flex-direction: row;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
     }
 
     #space-menu-user{

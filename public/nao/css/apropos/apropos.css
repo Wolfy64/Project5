@@ -14,28 +14,34 @@
     border-right: solid 20px rgb(215, 95, 227);
 }
 
-/** Body */
+/** Title / Text */
 
-img.img-apropos{
-    margin-right: 15px;
-    margin-left: 15px;
+p.chasseur{
+    font-weight: bold;
 }
 
+/** Img / Video  */
+
+img.img-apropos{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/** Classes */
+
 .body-apropos{
-    margin-top: 25px;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .apropos-texte{
-    padding-top: 15px;
-    padding-right: 100px;
-    padding-left: 0;
     margin-left: 50px;
+    padding-left: 0;
+    padding-right: 100px;
+    padding-top: 15px;
 }
 
-.chasseur{
-    font-weight: bold;
-}
+/** ID */
 
 #image-apropos{
     height: 100%;

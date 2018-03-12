@@ -11,7 +11,7 @@
         background-color: rgb(119, 37, 127);
     }
 
-    /** Body */
+    /** Title / Text */
 
     h2, h3{
         font-size: 15px;
@@ -23,17 +23,22 @@
 }
 
 @media (max-width: 767px) {
-    #photo-block{
-        padding: 0;
-    }
 
-    #bouton-retour-mobile{
+    /** Link / Button */
+
+    a#bouton-retour-mobile{
         display: flex;
         visibility: visible;
     }
 
-    #bouton-retour-pc{
+    a#bouton-retour-pc{
         display: none;
         visibility: hidden;
+    }
+
+    /** ID */
+
+    #photo-block{
+        padding: 0;
     }
 }

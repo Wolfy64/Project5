@@ -8,7 +8,9 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>LE BLOG</h1></div>
+        <div class="col-12">
+            <h1>LE BLOG</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -19,40 +21,40 @@
         <div class="col-xl-9 col-lg-9 col-md-0 col-xs-0"></div>
     </div>
 
-{% if posts is empty %}
-<p> Pas d'article</p>
-{% endif %}
+    {% if posts is empty %}
+        <p> Pas d'article</p>
+    {% endif %}
 
-            <div class="row" id="blog-content">
+    <div class="row" id="blog-content">
         {% for post in posts %}
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-12" id="photo-blog">
-                            <img class="img-blog" src="/img/blog/{{ post.image }}" alt="image-article">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="titre-blog">{{ post.title }}</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="details-blog">
-                                <i class="far fa-clock"></i> {{ post.date|date("d/m/Y") }}
-                                <i class="far fa-edit"></i> {{ post.author }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p class="article-content">
-                                {{ post.article }}
-                            </p>
-                        </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-12" id="photo-blog">
+                        <img class="img-blog" src="/img/blog/{{ post.image }}" alt="image-article">
                     </div>
                 </div>
-    {% endfor %}
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="titre-blog">{{ post.title }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="details-blog">
+                            <i class="far fa-clock"></i> {{ post.date|date("d/m/Y") }}
+                            <i class="far fa-edit"></i> {{ post.author }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="article-content">
+                            {{ post.article }}
+                        </p>
+                    </div>
+                </div>
             </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

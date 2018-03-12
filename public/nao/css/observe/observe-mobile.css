@@ -12,11 +12,13 @@
         background-color: rgb(148, 47, 158);
     }
 
-    /** Mobile Body */
+    /** Form */
 
     form.connexion{
         margin: 0;
     }
+
+    /** ID */
 
     #form-map{
         padding: 10px;

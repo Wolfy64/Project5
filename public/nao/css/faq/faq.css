@@ -14,15 +14,21 @@
     border-right: solid 20px rgb(88, 122, 66);
 }
 
-/** Body */
+/** Link / Button */
 
-.btn{
+button.btn{
     display: flex;
     justify-content: space-between;
-    width: 100%;
     font-family: 'Roboto-Bold', sans-serif;
     font-size: 25px;
+    width: 100%;
 }
+
+button#rotation{
+    text-decoration: none;
+}
+
+/** Classes */
 
 .card{
     margin-bottom: 5px;
@@ -32,8 +38,8 @@
 }
 
 .card-body{
-    color: #FFFFFF;
     background-color: rgb(122, 149, 105);
+    color: #FFFFFF;
     font-family: 'Roboto-Light', sans-serif;
     font-size: 20px;
 }
@@ -42,13 +48,11 @@
     text-align: center;
 }
 
-#rotation{
-    text-decoration: none;
-}
+/** ID */
 
 #faq-content{
-    margin-top: 55px;
     margin-bottom: 50px;
+    margin-top: 55px;
 }
 
 .btn:hover {

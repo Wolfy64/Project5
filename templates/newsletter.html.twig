@@ -1,28 +1,19 @@
 {{ form_start(form, {
-    'action': path('newsletter'), 
+    'action': path('newsletter'),
     'attr': {
         'class': 'newsletter-form'
-        }}) 
-}}
+    }}) }}
 <div class="form-group" id="newsletter">
     {{ form_errors(form) }}
     {{ form_widget(form.email,
-        {'attr': {
-            'class': 'form-control',
-            'placeholder': 'Entrez votre email',
-            'aria-describedby':'emailHelp'
-        }})
-    }}
+    {'attr': {
+        'class': 'form-control',
+        'placeholder': 'Entrez votre email',
+        'aria-describedby':'emailHelp'
+    }}) }}
 </div>
-    <div class="col-12" id="envoyer">
-        <button type="submit" class="bouton-menu" id="newsletter-button">S'inscrire à la newsletter</button>
-    </div>
-{{ form_end(form) }}
-
-{# <form class="newsletter-form">
-    <div class="form-group" id="newsletter">
-        <input type="email" class="form-control" id="newsletter-form" aria-describedby="emailHelp" placeholder="Entrez votre email">
-    </div>
+<div class="col-12" id="envoyer">
     <button type="submit" class="bouton-menu" id="newsletter-button">S'inscrire à la newsletter</button>
-</form> #}
+</div>
+{{ form_end(form) }}
 

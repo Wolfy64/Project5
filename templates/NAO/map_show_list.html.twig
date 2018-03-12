@@ -8,7 +8,9 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>RÉSULTAT DE LA RECHERCHE</h1></div>
+        <div class="col-12">
+            <h1>RÉSULTAT DE LA RECHERCHE</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -22,54 +24,55 @@
     <div class="row" id="results-block">
 
 
-
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div id="photo-block">
-                    <img class="img-results" src="/img/observations/{{ observations[0].image }}" alt="photo-observation">
-                </div>
-                <div id="results-content">
-                    <h2>FICHE DÉTAILLÉE</h2>
-                    <p class="p-no-margin">Règne: Animalia</p>
-                    <p class="p-no-margin">Embranchement: Chordata</p>
-                    <p class="p-no-margin">Clade: Ornithurae</p>
-                    <p class="p-no-margin">Classe: Aves</p>
-                    <p class="p-no-margin">Ordre: {{ birdInfos.order }}</p>
-                    <p class="p-no-margin">Habitat: {{ birdInfos.habitat }}</p>
-                    <p class="p-no-margin">Nom scientifique: {{ birdInfos.scientificNames|join(', ') }}</p>
-                    <p class="p-no-margin">Nom commun: {{ birdInfos.commonName }}</p>
-                    <p class="p-no-margin">Auteur: {{ birdInfos.author|join(', ') }}</p>
-                </div>
-                <a class="retour-map" id="bouton-retour-pc" href="{{ path('map') }}">
-                    <button class="boutton-retour-map">Retour à la page recherche d'oiseau</button>
-                </a>
+            <div id="photo-block">
+                <img class="img-results" src="/img/observations/{{ observations[0].image }}" alt="photo-observation">
             </div>
+            <div id="results-content">
+                <h2>FICHE DÉTAILLÉE</h2>
+                <p class="p-no-margin">Règne: Animalia</p>
+                <p class="p-no-margin">Embranchement: Chordata</p>
+                <p class="p-no-margin">Clade: Ornithurae</p>
+                <p class="p-no-margin">Classe: Aves</p>
+                <p class="p-no-margin">Ordre: {{ birdInfos.order }}</p>
+                <p class="p-no-margin">Habitat: {{ birdInfos.habitat }}</p>
+                <p class="p-no-margin">Nom scientifique: {{ birdInfos.scientificNames|join(', ') }}</p>
+                <p class="p-no-margin">Nom commun: {{ birdInfos.commonName }}</p>
+                <p class="p-no-margin">Auteur: {{ birdInfos.author|join(', ') }}</p>
+            </div>
+            <a class="retour-map" id="bouton-retour-pc" href="{{ path('map') }}">
+                <button class="boutton-retour-map">Retour à la page recherche d'oiseau</button>
+            </a>
+        </div>
 
         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12"></div>
 
-    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 observation-result">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 observation-result">
 
 
-    <h3>Il y a {{ observations|length }} {% if observations|length > 1 %} résultats {% else %} résultats{% endif %}</h3>
+            <h3>Il y a {{ observations|length }} {% if observations|length > 1 %} résultats {% else %} résultats{% endif %}</h3>
 
 
             <div class="row">
-    {% for observation in observations %}
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12" id="for-results">
-                    <img class="img-results" src="/img/observations/{{ observation.image }}" alt="photo-observation">
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12" id="for-results">
-                    <p class="p-no-margin">Observé le:  {{ observation.date|date("d/m/Y") }}</p>
-                    <p class="p-no-margin">Coordonnées GPS:</p>
-                    <p class="p-no-margin">Latitude:  {{ observation.latitude}}</p>
-                    <p class="p-no-margin">Longitude:  {{ observation.longitude }}</p>
-                    <p class="p-no-margin">Observateur:   {{ observation.user.firstName }} {{ observation.user.lastName }}</p>
-                    <p class="p-no-margin">Autres informations: {{ observation.content }}</p>
-                </div>
-    {% endfor %}
+                {% for observation in observations %}
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12" id="for-results">
+                        <img class="img-results" src="/img/observations/{{ observation.image }}"
+                             alt="photo-observation">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12" id="for-results">
+                        <p class="p-no-margin">Observé le: {{ observation.date|date("d/m/Y") }}</p>
+                        <p class="p-no-margin">Coordonnées GPS:</p>
+                        <p class="p-no-margin">Latitude: {{ observation.latitude }}</p>
+                        <p class="p-no-margin">Longitude: {{ observation.longitude }}</p>
+                        <p class="p-no-margin">
+                            Observateur: {{ observation.user.firstName }} {{ observation.user.lastName }}</p>
+                        <p class="p-no-margin">Autres informations: {{ observation.content }}</p>
+                    </div>
+                {% endfor %}
             </div>
-                <a class="retour-map" id="bouton-retour-mobile" href="{{ path('map') }}">
-                    <button class="boutton-retour-map">Retour à la page recherche d'oiseau</button>
-                </a>
+            <a class="retour-map" id="bouton-retour-mobile" href="{{ path('map') }}">
+                <button class="boutton-retour-map">Retour à la page recherche d'oiseau</button>
+            </a>
         </div>
     </div>
 

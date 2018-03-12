@@ -1,19 +1,34 @@
-img.musee{
-    height: 100px;
-    width: 200px;
-}
+/** Title / Text */
 
 h2.titre-footer{
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 18px;
     display: flex;
     color: white;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 18px;
     justify-content: center;
     margin-top: 8px;
 }
 
+p#texte-coockie{
+    color: #FFFFFF;
+    font-family: 'Roboto-Regular1', sans-serif;
+    font-size: 12px;
+    margin: 10px 10px 0 0;
+}
+
+/** Link / Button */
+
 a:hover{
     color: #542B56;
+}
+
+a:target.cookie-link > #cookie{
+    display: none;
+}
+
+a.footer-liens{
+    color: white;
+    margin-top: 8px;
 }
 
 button.cookie-button{
@@ -24,36 +39,32 @@ button.cookie-button{
 }
 
 button:hover.cookie-button{
-    color: #ddffc5;
     background-color: #4d4d4f;
+    color: #ddffc5;
     font-family: 'Roboto-Medium', sans-serif;
     font-size: 18px;
 }
 
-a:target.cookie-link > #cookie{
-    display: none;
+/** Img / VIdeo */
+
+img.musee{
+    height: 100px;
+    width: 200px;
 }
 
-p#texte-coockie{
-    color: #FFFFFF;
-    font-family: 'Roboto-Regular1', sans-serif;
-    font-size: 12px;
-    margin: 10px 10px 0 0;
-}
+
+/** Classes */
 
 .background-footer{
     background-color: #6e9454;
 }
 
-.footer-liens{
-    color: white;
-    margin-top: 8px;
+.youtube{
+    align-items: center;
+    display: flex;
 }
 
-.youtube{
-    display: flex;
-    align-items: center;
-}
+/** ID */
 
 #copyright{
     font-family: 'Roboto-Medium', sans-serif;
@@ -61,15 +72,15 @@ p#texte-coockie{
 }
 
 #menu1{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #menu2{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #menu1, #menu2{
@@ -96,11 +107,6 @@ p#texte-coockie{
     padding: 0;
 }
 
-#newsletter-form{
-    background-color: white;
-    color: black;
-}
-
 #newsletter-formulaire{
     padding-left: 0;
 }
@@ -110,23 +116,23 @@ p#texte-coockie{
 }
 
 #newsletter{
-    padding-right: 7%;
     padding-left: 7%;
+    padding-right: 7%;
     padding-top: 5px;
 }
 #newsletter-button{
-    color: #ddffc5;
     background-color: #4d4d4f;
     border: solid white 2px;
+    color: #ddffc5;
     font-family: 'Roboto-Regular', sans-serif;
     padding: 0 0 0 0;
 }
 
 #newsletter-button:hover{
-    font-size: 18px;
-    color: #FFFFFF;
     background-color: #542B56;
     border: solid white 2px;
+    color: #FFFFFF;
+    font-size: 18px;
 }
 
 #space-footer{

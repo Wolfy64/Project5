@@ -14,7 +14,7 @@
     border-right: solid 20px rgb(187, 59, 200);
 }
 
-/** Body */
+/** Link / Button */
 
 button.pdf-form-button{
     background-color: rgb(187, 59, 200);
@@ -28,13 +28,15 @@ button.pdf-form-button:hover{
     color: rgb(187, 59, 200);
 }
 
+/** ID */
+
 #joinUs-content{
     margin: 2%;
 }
 
 #adherer-text{
-    margin-top: 15px;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 #pdf-button{

@@ -14,13 +14,13 @@
     border-right: solid 20px rgb(110, 148, 84);
 }
 
-/** Body */
+/** Title / Text */
 
 h2.titre-blog{
     font-family: 'Roboto-Bold', sans-serif;
     font-size: 20px;
-    text-align: left;
     margin-bottom: 0;
+    text-align: left;
 }
 
 p.details-blog{
@@ -33,14 +33,20 @@ p.article-content{
     font-size: 13px;
 }
 
+/** Icons */
+
 i{
     color: rgb(110, 148, 84);
 }
+
+/** Img / Video */
 
 .img-blog{
     height: 200px;
     width: 100%;
 }
+
+/** ID */
 
 #blog-content{
     margin: 50px;
@@ -53,6 +59,9 @@ i{
 
 
 @media (min-width: 1500px) {
+
+    /** Img / Video */
+
     .img-blog{
         height: 250px;
         width: 100%;
@@ -60,6 +69,9 @@ i{
 }
 
 @media (max-width: 950px) and (min-width: 650px){
+
+    /** Img / Video */
+
     .img-blog{
         height: 200px;
         width: 400px;

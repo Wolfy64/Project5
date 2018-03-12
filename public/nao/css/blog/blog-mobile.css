@@ -10,11 +10,15 @@
         background-color: rgb(110, 148, 84);
     }
 
-    /** Mobile Body */
+    /** Title / Text*/
+
+
     p.article-content{
-        word-wrap: break-word;
         margin-bottom: 30px;
+        word-wrap: break-word;
     }
+
+    /** ID */
 
     #blog-content{
         margin: 10px;
@@ -22,6 +26,9 @@
 }
 
 @media (min-width: 426px) and (max-width: 769px) {
+
+        /** Title / Text */
+
         h2.titre-blog, p.details-blog, p.article-content{
             text-align: center;
         }

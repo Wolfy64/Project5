@@ -8,7 +8,9 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>MODIFIER UNE OBSERVATION</h1></div>
+        <div class="col-12">
+            <h1>MODIFIER UNE OBSERVATION</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -30,7 +32,8 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <img class="photo-observation" src="/img/observations/{{ observation.image }}" alt="photo-observation">
+                    <img class="photo-observation" src="/img/observations/{{ observation.image }}"
+                         alt="photo-observation">
                 </div>
             </div>
         </div>
@@ -38,10 +41,11 @@
             <div class="form-group">
                 {{ form_start(form) }}
                 {{ form_errors(form) }}
-                    {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
-                    <label for="disabled">Observé le</label>
-                    <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("d/m/Y") }}"disabled/>
-                    {{ form_row(form.content, {'label': 'Autres informations'}) }}
+                {{ form_row(form.commonName, {'label': 'Nom commun de l\'oiseau'}) }}
+                <label for="disabled">Observé le</label>
+                <input class="date-disable" id="disabled" name="disabled" value="{{ observation.date|date("d/m/Y") }}"
+                       disabled/>
+                {{ form_row(form.content, {'label': 'Autres informations'}) }}
                 <div class="valider-obs">
                     <button type="submit" class="btn-success bouton-validation">
                         VALIDER L'OBSERVATION<i class="fas fa-pencil-alt fa-1x"></i>
@@ -51,19 +55,25 @@
             </div>
             <div>
                 <a class="action-link" href="{{ path('naturalist_obs_remove', {'id': observation.id }) }}">
-                    <button class="btn-danger bouton-validation">SUPPRIMER L'OBSERVATION <i class="fas fa-trash-alt fa-1x"></i></button>
+                    <button class="btn-danger bouton-validation">SUPPRIMER L'OBSERVATION <i
+                                class="fas fa-trash-alt fa-1x"></i></button>
                 </a>
 
                 <a class="action-link" href="{{ path('naturalist_validations') }}">
-                    <button class="btn-secondary bouton-validation" id="button-retour">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
+                    <button class="btn-secondary bouton-validation" id="button-retour">RETOUR <i
+                                class="fas fa-share-square fa-1x"></i></button>
                 </a>
             </div>
         </div>
         <div class="col-xl-2 col-lg-1 col-md-2 col-sm-1 col-xs-1"></div>
     </div>
+{% endblock %}
+
+{% block js %}
 
     <script src="{{ asset('/awesomplete/awesomplete.js') }}"></script>
     <script src="{{ asset('/awesomplete/modifyObsName.js') }}"></script>
     <script src="{{ asset('/nao/javascript/observe.js') }}"></script>
+
 {% endblock %}
 
