@@ -14,26 +14,15 @@
     border-right: solid 20px rgba(55, 56, 48, 0.65);
 }
 
-/** Link / Butoon */
-
-button#boutton-recherche{
-    background-color: rgba(55, 56, 48, 0.65);
-    color: #FFFFFF;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-button:hover#boutton-recherche{
-    color: rgba(55, 56, 48, 0.65);
-    background-color: #FFFFFF;
-}
-
 /** Classes */
 
 .form-search{
     display: flex;
     justify-content: center;
 }
+
+
+/** ID */
 
 #search-content{
     margin-bottom: 5%;

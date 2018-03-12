@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>
-            {% block title %}Bienvenue sur le site de l'association NAO "Nos Amis les Oiseaux"{% endblock %}
-        </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+        {% block title %}Bienvenue sur le site de l'association NAO "Nos Amis les Oiseaux"{% endblock %}
+    </title>
 
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
-            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
-            <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
-            <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
-            <link rel="stylesheet" href="{{ asset('/fontawesome/web-fonts-with-css/css/fontawesome-all.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/font.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/base.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
-        {% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-reboot.css') }}">
+        <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('/bootstrap/css/bootstrap-grid.css') }}">
+        <link rel="stylesheet" href="{{ asset('/bootstrap/css/mdb.css') }}">
+        <link rel="stylesheet" href="{{ asset('/fontawesome/web-fonts-with-css/css/fontawesome-all.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/font.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/header-mobile.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('/nao/css/base/footer-mobile.css') }}">
+    {% endblock %}
 
-        {% block css %} {% endblock %}
+    {% block css %} {% endblock %}
 
 
-        
-    </head>
+</head>
 
-    <body>
-        <div class="container-fluid">
+<body>
+<div class="container-fluid">
 
-            {% include "_header.html.twig" %}
-            
-            {% block messageFlash %} 
-                {% for message in app.flashes('notice') %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                {% endfor %} 
-            {% endblock messageFlash %}
+    {% include "_header.html.twig" %}
 
-            {% block body %}{% endblock %}
+    {% block messageFlash %}
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endblock messageFlash %}
 
-            {% include "_footer.html.twig" %}
+    {% block body %}{% endblock %}
 
-            {% block javascripts %} 
-                <script src="{{ asset('/bootstrap/js/jquery-3.2.1.min.js') }}"></script>
-                <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
-                <script src="{{ asset('/nao/javascript/cookies.js') }}"></script>
-                {# <script src="{{ asset('/bootstrap/js/mdb.js') }}"></script>  #}
-                {# <script src="{{ asset('/bootstrap/js/popper.min.js') }}"></script> #}
-                {# <script src="{{ asset('/bootstrap/js/bootstrap.js') }}"></script> #}
-                {# <script src="{{ asset('/nao/javascript/faq.js') }}"></script> #}
-            {% endblock %}
+    {% include "_footer.html.twig" %}
 
-        </div>
-    </body>
+    {% block javascripts %}
+        <script src="{{ asset('/bootstrap/js/jquery-3.2.1.min.js') }}"></script>
+        <script src="{{ asset('/bootstrap/js/bootstrap.bundle.js') }}"></script>
+        <script src="{{ asset('/nao/javascript/cookies.js') }}"></script>
+    {% endblock %}
+
+    {% block js %} {% endblock %}
+
+</div>
+</body>
 </html>

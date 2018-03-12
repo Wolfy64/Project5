@@ -19,10 +19,12 @@
 
     {% if observations is empty %}
         <p> Pas d'observation à valider</p>
-     {% endif %}
+    {% endif %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>VALIDATION</h1></div>
+        <div class="col-12">
+            <h1>VALIDATION</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -50,7 +52,9 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <th class="table-content" scope="row"><img id="img-validation" src="/img/observations/{{ observation.image }}" alt=""></th>
+                        <th class="table-content" scope="row"><img id="img-validation"
+                                                                   src="/img/observations/{{ observation.image }}"
+                                                                   alt=""></th>
                         <td class="table-content">{{ observation.commonName }}</td>
                         <td class="table-content">{{ observation.date|date("d/m/Y") }}</td>
                         <td class="table-content">{{ observation.content }}</td>
@@ -58,18 +62,21 @@
                     <tr>
                         <td>
                             <a href="{{ path('naturalist_obs_valid', {'id': observation.id }) }}">
-                                <button class="btn-success boutton-validation">VALIDER <i class="fas fa-share-square fa-1x"></i></button>
+                                <button class="btn-success boutton-validation">VALIDER <i
+                                            class="fas fa-share-square fa-1x"></i></button>
                             </a>
                         </td>
                         <td>
                             <a href="{{ path('naturalist_obs_modify', {'id': observation.id }) }}">
-                                <button class="btn-secondary boutton-validation">MODIFIER <i class="fas fa-pencil-alt fa-1x"></i></button>
+                                <button class="btn-secondary boutton-validation">MODIFIER <i
+                                            class="fas fa-pencil-alt fa-1x"></i></button>
                             </a>
                         </td>
                         <td></td>
                         <td>
                             <a href="{{ path('naturalist_obs_remove', {'id': observation.id }) }}">
-                                <button class="btn-danger boutton-validation">SUPPRIMER <i class="fas fa-trash-alt fa-1x"></i></button>
+                                <button class="btn-danger boutton-validation">SUPPRIMER <i
+                                            class="fas fa-trash-alt fa-1x"></i></button>
                             </a>
                         </td>
                     </tr>
@@ -83,7 +90,7 @@
 
 
         <div class="row" id="tableau-mobile">
-                {{ observation.isValid }}
+            {{ observation.isValid }}
             <div class="col-xs-1"></div>
             <div class="col-xs-10">
                 <table>
@@ -92,7 +99,9 @@
                         <th class="table-content bandeau-validation" scope="col">Photo</th>
                     </tr>
                     <tr>
-                        <th class="table-content" scope="row"><img id="img-validation" src="/img/observations/{{ observation.image }}" alt=""></th>
+                        <th class="table-content" scope="row"><img id="img-validation"
+                                                                   src="/img/observations/{{ observation.image }}"
+                                                                   alt=""></th>
                     </tr>
                     <tr>
                         <th class="table-content bandeau-validation" scope="col">Nom Commun</th>
@@ -118,21 +127,24 @@
                     <tr>
                         <td>
                             <a href="{{ path('naturalist_obs_valid', {'id': observation.id }) }}">
-                                <button class="btn-success boutton-validation">VALIDER <i class="fas fa-share-square fa-1x"></i></button>
+                                <button class="btn-success boutton-validation">VALIDER <i
+                                            class="fas fa-share-square fa-1x"></i></button>
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <a href="{{ path('naturalist_obs_modify', {'id': observation.id }) }}">
-                                <button class="btn-secondary boutton-validation">MODIFIER <i class="fas fa-pencil-alt fa-1x"></i></button>
+                                <button class="btn-secondary boutton-validation">MODIFIER <i
+                                            class="fas fa-pencil-alt fa-1x"></i></button>
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <a href="{{ path('naturalist_obs_remove', {'id': observation.id }) }}">
-                                <button class="btn-danger boutton-validation">SUPPRIMER <i class="fas fa-trash-alt fa-1x"></i></button>
+                                <button class="btn-danger boutton-validation">SUPPRIMER <i
+                                            class="fas fa-trash-alt fa-1x"></i></button>
                             </a>
                         </td>
                     </tr>

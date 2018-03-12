@@ -8,7 +8,9 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>ARTICLES</h1></div>
+        <div class="col-12">
+            <h1>ARTICLES</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -43,19 +45,24 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}" alt="photo-article"></th>
+                        <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}"
+                                                                   alt="photo-article"></th>
                         <td class="table-content">{{ post.title }}</td>
                         <td class="table-content">{{ post.author }}</td>
                         <td class="table-content">{{ post.date|date("d/m/Y") }}</td>
-                        <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button class="btn-secondary boutton-article">Modifier</button></a></td>
-                        <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button class="btn-danger boutton-article">Supprimer</button></a></td>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}">
+                                <button class="btn-secondary boutton-article">Modifier</button>
+                            </a></td>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}">
+                                <button class="btn-danger boutton-article">Supprimer</button>
+                            </a></td>
                     </tr>
                     </tbody>
                 {% endfor %}
-                </table>
-            </div>
-            <div class="col-2"></div>
+            </table>
         </div>
+        <div class="col-2"></div>
+    </div>
 
 
     <div class="row" id="tableau-mobile">
@@ -63,41 +70,46 @@
         <div class="col-xs-10">
             <table>
                 {% for post in posts %}
-                <thead class="thead">
-                <tr>
-                    <th class="table-content bandeau-article" scope="col">Photo</th>
-                </tr>
-                <tr>
-                    <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}" alt="photo-article"></th>
-                </tr>
-                <tr>
-                    <th class="table-content bandeau-article" scope="col">Titre</th>
-                </tr>
-                <tr>
-                    <td class="table-content">{{ post.title }}</td>
-                </tr>
-                <tr>
-                    <th class="table-content bandeau-article" scope="col">Auteur</th>
-                </tr>
-                <tr>
-                    <td class="table-content">{{ post.author }}</td>
-                </tr>
-                <tr>
-                    <th class="table-content bandeau-article" scope="col">Date</th>
-                </tr>
-                <tr>
-                    <td class="table-content">{{ post.date|date("d/m/Y") }}</td>
-                </tr>
-                </thead>
+                    <thead class="thead">
+                    <tr>
+                        <th class="table-content bandeau-article" scope="col">Photo</th>
+                    </tr>
+                    <tr>
+                        <th class="table-content" scope="row"><img id="img-article" src="/img/blog/{{ post.image }}"
+                                                                   alt="photo-article"></th>
+                    </tr>
+                    <tr>
+                        <th class="table-content bandeau-article" scope="col">Titre</th>
+                    </tr>
+                    <tr>
+                        <td class="table-content">{{ post.title }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-content bandeau-article" scope="col">Auteur</th>
+                    </tr>
+                    <tr>
+                        <td class="table-content">{{ post.author }}</td>
+                    </tr>
+                    <tr>
+                        <th class="table-content bandeau-article" scope="col">Date</th>
+                    </tr>
+                    <tr>
+                        <td class="table-content">{{ post.date|date("d/m/Y") }}</td>
+                    </tr>
+                    </thead>
 
-                <tbody>
-                <tr>
-                    <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}"><button class="btn-secondary boutton-article">Modifier</button></a></td>
-                </tr>
-                <tr>
-                    <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}"><button class="btn-danger boutton-article">Supprimer</button></a></td>
-                </tr>
-                </tbody>
+                    <tbody>
+                    <tr>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_modify', {'id': post.id}) }}">
+                                <button class="btn-secondary boutton-article">Modifier</button>
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td class="table-content"><a href="{{ path('naturalist_articles_remove', {'id': post.id}) }}">
+                                <button class="btn-danger boutton-article">Supprimer</button>
+                            </a></td>
+                    </tr>
+                    </tbody>
                 {% endfor %}
             </table>
         </div>

@@ -8,7 +8,9 @@
 {% block body %}
 
     <div class="row" id="titre-bar-mobile">
-        <div class="col-12"><h1>MODIFIER UN ARTICLE</h1></div>
+        <div class="col-12">
+            <h1>MODIFIER UN ARTICLE</h1>
+        </div>
     </div>
 
     <div class="row" id="title">
@@ -36,26 +38,26 @@
             </div>
         </div>
         <div class="col-xl-5 col-lg-6 col-md-5 col-sm-5 col-xs-5">
-                <div class="form-group">
-                    {{ form_start(form) }}
-                    {{ form_errors(form) }}
-                        {{ form_row(form.title, {'label': 'Titre'}) }}
-                        {{ form_row(form.author, {'label': 'Auteur'}) }}
-                        {{ form_row(form.article, {'label': 'Article'}) }}
-                    <div class="valider-art">
-                        <button type="submit" class="btn-success" >MODIFIER L'ARTICLE
-                            <i class="fas fa-pencil-alt fa-1x"></i>
-                        </button>
-                    </div>
-                    {{ form_end(form) }}
+            <div class="form-group">
+                {{ form_start(form) }}
+                {{ form_errors(form) }}
+                {{ form_row(form.title, {'label': 'Titre'}) }}
+                {{ form_row(form.author, {'label': 'Auteur'}) }}
+                {{ form_row(form.article, {'label': 'Article'}) }}
+                <div class="valider-art">
+                    <button type="submit" class="btn-success">MODIFIER L'ARTICLE
+                        <i class="fas fa-pencil-alt fa-1x"></i>
+                    </button>
                 </div>
-                    <a class="action-link" href="{{ path('naturalist_articles_remove', {'id': post.id }) }}">
-                        <button class="btn-danger">SUPPRIMER L'ARTICLE <i class="fas fa-trash-alt fa-1x"></i></button>
-                    </a>
-                    <a class="action-link" href="{{ path('naturalist_articles') }}">
-                        <button class="btn-secondary" id="button-retour">RETOUR <i class="fas fa-share-square fa-1x"></i></button>
-                    </a>
-                </div>
+                {{ form_end(form) }}
+            </div>
+            <a class="action-link" href="{{ path('naturalist_articles_remove', {'id': post.id }) }}">
+                <button class="btn-danger">SUPPRIMER L'ARTICLE <i class="fas fa-trash-alt fa-1x"></i></button>
+            </a>
+            <a class="action-link" href="{{ path('naturalist_articles') }}">
+                <button class="btn-secondary" id="button-retour">RETOUR <i class="fas fa-share-square fa-1x"></i>
+                </button>
+            </a>
         </div>
         <div class="col-xl-2 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
     </div>
