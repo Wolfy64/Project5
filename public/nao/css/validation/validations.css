@@ -14,22 +14,20 @@
     border-right: solid 20px rgb(118, 120, 108);
 }
 
-/** Body */
-
-table{
-    border: solid black 1px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-}
+/** Icons */
 
 i{
     color: black;
 }
 
-img#img-validation{
-    width: 100px;
+/** Tables */
+
+table{
+    border: solid black 1px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .table-content{
@@ -44,9 +42,19 @@ img#img-validation{
     font-size: 20px;
 }
 
-.boutton-validation{
+/** Link / Button */
+
+button.boutton-validation{
     font-size: 15px;
 }
+
+/** Img / Video */
+
+img#img-validation{
+    width: 100px;
+}
+
+/** ID */
 
 #tableau{
     margin-top: 25px;
@@ -58,12 +66,16 @@ img#img-validation{
 }
 
 
+
+
+
 /** Mofification Observation */
 
-img.photo-observation{
-    height: 100%;
-    width: 100%;
-}
+
+
+
+
+/** Title / Texte */
 
 label, p.titre-photo-modification{
     background-color: rgb(118, 120, 108);
@@ -74,6 +86,8 @@ label, p.titre-photo-modification{
     width: 100%;
 }
 
+/** Main Balise */
+
 form{
     padding: 0;
 }
@@ -83,26 +97,48 @@ input.date-disable{
     width: 100%;
 }
 
+@media (min-width: 1023px) {
+    .form-group{
+        margin-bottom: 0;
+    }
+}
+
+
+/** Link / Button */
+
 button#bouton-validation{
     font-size: 15px;
     margin-bottom: 5px;
 }
 
-#modifier-content{
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-#button-retour{
+button#button-retour{
     margin-top: 15px;
 }
 
+/** Img / Video */
+
+img.photo-observation{
+    height: 100%;
+    width: 100%;
+}
+
+/** ID */
+
+#modifier-content{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
 @media (max-width: 769px){
-    .bouton-validation{
+
+    /** Link / Button */
+
+    button.bouton-validation{
         font-size: 15px;
     }
 
-    .action-link, .valider-obs{
+    a.action-link, .valider-obs{
         display: flex;
         justify-content: center;
     }

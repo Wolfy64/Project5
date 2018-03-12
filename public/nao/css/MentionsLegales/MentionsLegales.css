@@ -1,6 +1,4 @@
-.mentions-content{
-    margin: 1% 3% 1% 3%;
-}
+/** Titles / Text */
 
 h1.titre-mentions-legales{
     color: black;
@@ -25,4 +23,10 @@ p, li{
     font-family: 'Roboto-Light', sans-serif;
     font-size: 15px;
     margin-bottom: 0;
+}
+
+/** Classes */
+
+.mentions-content{
+    margin: 1% 3% 1% 3%;
 }

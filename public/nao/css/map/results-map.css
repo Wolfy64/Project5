@@ -14,7 +14,7 @@
     border-right: solid 20px  rgb(119, 37, 127);
 }
 
-/** Body */
+/** Title / Text */
 
 h2{
     font-family: 'Roboto-Medium', sans-serif;
@@ -31,13 +31,16 @@ p.p-no-margin{
     margin: 5px;
 }
 
-img.img-results{
-    width: 100%;
-}
+/** Link / Button */
 
 a.retour-map{
     display: flex;
     justify-content: center;
+}
+
+a#bouton-retour-mobile{
+    display: none;
+    visibility: hidden;
 }
 
 button.boutton-retour-map{
@@ -50,6 +53,14 @@ button:hover.boutton-retour-map{
     background-color: #FFFFFF;
     color: rgb(119, 37, 127);
 }
+
+/** Img / Video */
+
+img.img-results{
+    width: 100%;
+}
+
+/** ID */
 
 #results-content{
     background-color: rgba(0, 0, 0, 0.05);
@@ -71,8 +82,5 @@ button:hover.boutton-retour-map{
     margin-bottom: 3%;
 }
 
-#bouton-retour-mobile{
-    display: none;
-    visibility: hidden;
-}
+
 

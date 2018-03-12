@@ -11,19 +11,23 @@
         background-color: rgb(88, 122, 66);
     }
 
-    /** Mobile Body */
+    /** Link / Button */
 
-    .btn{
+    button.btn{
         font-size: 16px;
         text-align: left;
     }
+
+    /** Classes */
 
     .card-body{
         font-size: 12px;
     }
 
+    /** ID */
+
     #faq-content{
-        margin-top: 10px;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
 }

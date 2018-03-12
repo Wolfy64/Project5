@@ -1,22 +1,44 @@
 @media (max-width: 768px) {
 
-    #header-container{
-       display: none;
+    /** Nav */
+
+    nav{
+        background-color: white;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    #header-icone{
+    .navbar{
+        padding-top: 3px;
+    }
+
+    a.nav-link{
+        color: white;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-size: 12px;
+        margin-left: 5%;
+        padding-bottom: 1px;
+        padding-top: 1px;
+    }
+
+    /** Icons */
+
+    i#header-icone{
         color: white;
     }
 
-    #menu-icone-mobile{
+    i#menu-icone-mobile{
         color: rgb(88, 122, 66);
     }
 
-    img.logo{
-        display: flex;
-        height: 70px;
-        width: 70px;
+    /** Form */
+
+    input::placeholder{
+        color: white;
+        opacity: 1;
     }
+
+    /** Link / Button */
 
     button.navbar-toggler{
         background-color: white;
@@ -24,39 +46,40 @@
         width: 100%;
     }
 
-    input::placeholder{
-        color: white;
-        opacity: 1;
+    /** Img / Video */
+
+    img.logo{
+        display: flex;
+        height: 70px;
+        width: 70px;
     }
 
-    nav{
-        padding-left: 0;
-        padding-right: 0;
-        background-color: white;
-    }
+    /** Classes */
 
     .menu-pc{
         display: none;
         visibility: hidden;
     }
 
-    #menu-mobile{
-        display: inline;
-        background-color: white;
-        visibility: visible;
+    .liens-mobile{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 5px;
+        padding-left: 10px;
         padding-top: 5px;
     }
 
-    .navbar{
-        padding-top: 3px;
+    /** ID */
+
+    #header-container{
+        display: none;
     }
 
-    .nav-link{
-        color: white;
-        font-size: 12px;
-        margin-left: 5%;
-        padding-top: 1px;
-        padding-bottom: 1px;
+    #menu-mobile{
+        display: inline;
+        background-color: white;
+        padding-top: 5px;
+        visibility: visible;
     }
 
     #logo-mobile{
@@ -65,17 +88,11 @@
         visibility: visible;
     }
 
-    .liens-mobile{
-        display: flex;
-        flex-direction: row;
-        padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
     #space-menu-user{
         margin: 10px;
     }
+
+
 
    
 }

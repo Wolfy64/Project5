@@ -14,17 +14,7 @@
     border-right: solid 20px rgba(55, 56, 48, 0.65);
 }
 
-/** Body */
-
-.form-search{
-    display: flex;
-    justify-content: center;
-}
-
-#search-content{
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
+/** Link / Butoon */
 
 button#boutton-recherche{
     background-color: rgba(55, 56, 48, 0.65);
@@ -38,8 +28,23 @@ button:hover#boutton-recherche{
     background-color: #FFFFFF;
 }
 
+/** Classes */
+
+.form-search{
+    display: flex;
+    justify-content: center;
+}
+
+#search-content{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
 @media (max-width: 425px) {
-    #form-recherche{
+
+    /** Form */
+
+    form#form-recherche{
         display: flex;
         justify-content: center;
     }

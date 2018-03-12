@@ -1,14 +1,20 @@
 @media (max-width: 600px) {
 
+    /** Img / Video */
+
     img{
         height: 90px;
         width: 90px;
     }
 
+    /** Classes */
+
     .content-block{
         margin-left: 0;
         margin-top: 25%;
     }
+
+    /** ID */
 
     #space{
         display: none;

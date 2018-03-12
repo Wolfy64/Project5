@@ -13,23 +13,25 @@
 }
 
 @media (max-width: 550px) {
-    /** Body */
 
-    #tableau-mobile{
-        display: table;
-        visibility: visible;
-        width: 100%;
+    /** Tables */
+
+    th, td, tr{
+        padding-bottom: 5px;
+        padding-top: 5px;
+        text-align: center;
     }
+
+    /** ID*/
 
     #tableau{
         display: none;
         visibility: hidden;
     }
-    
 
-    th, td, tr{
-        padding-top: 5px;
-        padding-bottom: 5px;
-        text-align: center;
+    #tableau-mobile{
+        display: table;
+        visibility: visible;
+        width: 100%;
     }
 }

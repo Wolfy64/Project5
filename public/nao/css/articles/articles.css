@@ -14,37 +14,30 @@
     border-right: solid 20px rgb(110, 148, 84);
 }
 
+
+
 /** Liste Articles */
 
-table{
-    border: solid rgb(110, 148, 84) 1px;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-}
+
+
+/** Icons */
 
 i{
     color: black;
 }
 
-th.table-content{
-    padding: 10px;
-}
+/** Tables */
 
-img.photo-article{
+table{
+    border: solid rgb(110, 148, 84) 1px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
     width: 100%;
 }
 
-button#rediger-boutton{
-    color: #FFFFFF;
-    background-color: rgb(110, 148, 84);
-    margin-left: 15px;
-}
-
-button:hover#rediger-boutton{
-    color: rgb(110, 148, 84);
-    background-color: #FFFFFF;
+th.table-content{
+    padding: 10px;
 }
 
 .table-content{
@@ -59,9 +52,30 @@ button:hover#rediger-boutton{
     font-size: 20px;
 }
 
-.boutton-article{
+/** Link / Button */
+
+button#rediger-boutton{
+    color: #FFFFFF;
+    background-color: rgb(110, 148, 84);
+    margin-left: 15px;
+}
+
+button:hover#rediger-boutton{
+    background-color: #FFFFFF;
+    color: rgb(110, 148, 84);
+}
+
+button.boutton-article{
     font-size: 15px;
 }
+
+/** Img / Video */
+
+img.photo-article{
+    width: 100%;
+}
+
+/** ID */
 
 #tableau{
     margin-top: 25px;
@@ -72,11 +86,13 @@ button:hover#rediger-boutton{
     visibility: hidden;
 }
 
+
+
 /** Modifier Article */
 
-img#img-article{
-    width: 100px;
-}
+
+
+/** Title / Text */
 
 label, p.titre-photo-modification{
     background-color: rgb(118, 120, 108);
@@ -87,6 +103,8 @@ label, p.titre-photo-modification{
     width: 100%;
 }
 
+/** Form */
+
 form{
     padding: 0;
 }
@@ -95,25 +113,47 @@ input{
     margin-bottom: 15px;
 }
 
+@media (min-width: 1023px) {
+    .form-group{
+        margin-bottom: 0;
+    }
+}
+
+/** Link / Button */
+
+button#button-retour{
+    margin-top: 15px;
+}
+
+/** Img / Video */
+
+img#img-article{
+    width: 100px;
+}
+
+/** ID */
+
 #modifier-content{
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-#button-retour{
-    margin-top: 15px;
-}
 
 @media (max-width: 769px){
 
-    .action-link, .valider-art{
+    a.action-link, .valider-art{
         display: flex;
         justify-content: center;
     }
 }
 
 
+
 /** Rédiger Article */
+
+
+
+/** Form */
 
 form.new-article{
     margin-top: 1%;

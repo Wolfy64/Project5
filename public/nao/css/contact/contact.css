@@ -14,7 +14,7 @@
     border-right: solid 20px rgb(70, 100, 50);
 }
 
-/** Body */
+/** Title / Text */
 
 p.asso{
     font-family: 'Roboto-Bold', sans-serif;
@@ -25,34 +25,41 @@ p.coordonnees{
     margin-bottom: 0;
 }
 
+/** Icons */
 
+i#contact-icone{
+    color: rgb(70, 100, 50);
+    margin-top: 3px;
+}
 
-.bouton{
+/** Link / Button */
+
+button.bouton{
     background-color: rgb(70, 100, 50);
     color: #FFFFFF;
     max-height: 70px;
     max-width: 150px;
 }
 
-.bouton:hover{
+button.bouton:hover{
     background-color: #FFFFFF;
     border: solid black 1px;
     color: #999999;
 }
+
+/** Classes */
+
 .contact{
     margin-top: 1%;
 }
 
-#contact-icone{
-    color: rgb(70, 100, 50);
-    margin-top: 3px;
-}
 
+/** ID */
 
 #contact-content{
+    margin-bottom: 5%;
     margin-left: 5%;
     margin-top: 1%;
-    margin-bottom: 5%;
 }
 
 #formulaire-contact{

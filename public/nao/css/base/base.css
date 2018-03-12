@@ -1,10 +1,12 @@
 /** PC */
 
+/** Title / Text */
+
 h1{
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 23px;
     color: white;
     margin: 0;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 23px;
     text-align: center;
 }
 
@@ -13,17 +15,25 @@ p {
     font-size: 13px;
 }
 
-img{
-    border-radius: 3px;
+/** Form */
+
+form{
+    padding: 1%;
 }
+
+/** Link / Button */
 
 button:hover{
     box-shadow: 1px 1px 4px black;
 }
 
-form{
-    padding: 1%;
+/** Img / Video */
+
+img{
+    border-radius: 3px;
 }
+
+/** ID */
 
 
 #title{
@@ -46,18 +56,24 @@ form{
 
 @media (max-width: 960px){
 
+    /** Classes */
+
     .titre-bar-pc{
         display: none;
     }
 
+    /** ID */
+
     #titre-bar-mobile{
-        visibility: visible;
         display: flex;
         justify-content: center;
+        visibility: visible;
     }
 }
 
 /* message flash */
+
+
 .alert-warning {
     color: #fff;
     background-color: #77257f;

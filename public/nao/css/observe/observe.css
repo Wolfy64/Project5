@@ -14,7 +14,18 @@
     border-right: solid 20px rgb(148, 47, 158);
 }
 
-/** Body */
+/** Main Balise */
+
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/** Form */
 
 form.connexion{
     background-color: rgba(0, 0, 0, 0.05);
@@ -26,11 +37,14 @@ form.connexion{
     padding: 5%;
 }
 
+/** Link / Button */
+
 button#soumettre{
     background-color: rgb(148, 47, 158);
     color: #FFFFFF;
     padding: 5px;
 }
+
 button:hover#soumettre{
     background-color: white;
     border: solid 1px rgb(148, 47, 158);
@@ -45,6 +59,8 @@ button#findMe, button:hover#findMe{
     color: gray;
     padding-left: 0;
 }
+
+/** ID */
 
 #soumettre-bouton{
     display: flex;
@@ -69,17 +85,6 @@ button#findMe, button:hover#findMe{
 #obervation_numbers{
     margin-left: 10px;
 }
-
-
-/* Always set the map height explicitly to define the size of the div
-        * element that contains the map. */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 
 #map {
     height: 100%;

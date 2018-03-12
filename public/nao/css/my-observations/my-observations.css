@@ -8,7 +8,7 @@
     border-right: solid 20px rgb(148, 47, 158);
 }
 
-/** Body */
+/** Tables */
 
 table{
     border: solid black 1px;
@@ -16,10 +16,6 @@ table{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 15px;
-}
-
-img#img-validation{
-    width: 100px;
 }
 
 .table-content{
@@ -34,9 +30,19 @@ img#img-validation{
     font-size: 20px;
 }
 
-.boutton-validation{
+/** Link / Button */
+
+button.boutton-validation{
     font-size: 15px;
 }
+
+/** Img / Video */
+
+img#img-validation{
+    width: 100px;
+}
+
+/** ID */
 
 #tableau{
     margin-top: 25px;

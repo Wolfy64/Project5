@@ -1,12 +1,11 @@
+/** Main Balise */
+
 body {
     background-image: url("../../../img/background-image-HP.jpg");
     background-repeat: no-repeat;
 }
 
-img{
-    height: 165px;
-    width: 165px;
-}
+/** Title / Text */
 
 h1{
     color: white;
@@ -16,19 +15,30 @@ h1{
 
 h3{
     color: white;
-    font-size: 18px;
     font-family: 'Roboto-Light', sans-serif;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
 h1, h3{
-    text-shadow: 5px 5px 5px black;
     text-align: center;
+    text-shadow: 5px 5px 5px black;
 }
+
+/** Img / Video */
+
+img{
+    height: 165px;
+    width: 165px;
+}
+
+/** Classes */
 
 .content-block{
     margin-left: 50%;
 }
+
+/** ID */
 
 #button{
     display: flex;
@@ -37,7 +47,6 @@ h1, h3{
     justify-content: center;
     margin-top: 20px;
 }
-
 
 #space{
     height: 350px;

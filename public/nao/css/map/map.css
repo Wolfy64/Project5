@@ -14,7 +14,7 @@
     border-right: solid 20px  rgb(119, 37, 127);
 }
 
-/** Body */
+/** Titles / Text */
 
 h2{
     font-family: 'Roboto-Bold', sans-serif;
@@ -27,6 +27,8 @@ h3{
     font-size: 12px;
 }
 
+/** Link / Button */
+
 button#soumettre{
     background-color: rgb(148, 47, 158);
     color: #FFFFFF;
@@ -38,6 +40,20 @@ button:hover#soumettre{
     color: rgb(148, 47, 158);
     padding: 5px;
 }
+
+/** Img / Video */
+
+#img-observations img {
+    height: 75px;
+    width: 75px;
+}
+
+#belle-image{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/** Classes */
 
 .connexion{
     background-color: rgba(0, 0, 0, 0.05);
@@ -57,10 +73,11 @@ button:hover#soumettre{
     margin-top: 30px;
 }
 
+/** ID */
+
 #title{
     margin-top: 0;
 }
-
 
 #soumettre-bouton{
     display: flex;
@@ -72,16 +89,6 @@ button:hover#soumettre{
     justify-content: center;
     max-width: 100%;
     padding: 0 10px 10px 10px;
-}
-
-#img-observations img {
-    height: 75px;
-    width: 75px;
-}
-
-#belle-image{
-    max-height: 100%;
-    max-width: 100%;
 }
 
 #boutton-observation{

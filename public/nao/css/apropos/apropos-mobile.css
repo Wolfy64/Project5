@@ -12,15 +12,17 @@
         background-color: rgb(215, 95, 227);
     }
 
-    /** Mobile Body */
+    /** Img / Video */
 
     img.img-apropos{
-        padding: 0;
         margin: 0;
+        padding: 0;
     }
 
+    /** Classes */
+
     .apropos-texte{
-        padding: 15px 5px 5px 5px;
         margin-left: 0;
+        padding: 15px 5px 5px 5px;
     }
 }
