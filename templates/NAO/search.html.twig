@@ -1,5 +1,6 @@
 {% extends "base.html.twig" %}
 
+
 {% block css %}
     <link rel="stylesheet" href="{{ asset('/nao/css/search/search.css') }}">
 {% endblock %}
@@ -24,10 +25,24 @@
         <div class="col-xl-4 col-lg-6 form-search">
             <div class="row">
                 <div class="col-12">
-                    <form class="form-inline" id="form-recherche">
+                    {# <form class="form-inline" id="form-recherche">
                         <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
                         <button  id="boutton-recherche" type="submit">RECHERCHER</button>
-                    </form>
+                    </form> #}
+                    <div class="search">
+                        <script>
+                            (function () {
+                                var cx = '018294977269014631908:8wxkea_er1u';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                            })();
+                        </script>
+                        <gcse:search></gcse:search>
+                    </div>
                 </div>
             </div>
 

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class LoginController extends AbstractController
 {
-    public function index(AuthenticationUtils $authUtils, UserPasswordEncoderInterface $passwordEncoder) : Response
+    public function index(AuthenticationUtils $authUtils) : Response
     {
         return $this->render('Security/login.html.twig', [
             'last_username' => $authUtils->getLastUsername(),
