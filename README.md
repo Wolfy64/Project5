@@ -23,7 +23,7 @@ You are responsible with your team to answer the client's brief and deliver the 
 
 You will work in teams of 3 to 5 people by distributing tasks (project manager, marketer, graphic designer, developer, etc.).
 
-Skills to validate
+### Skills to validate
 - Build a production schedule
 - Create a website, from conception to delivery
 - Define a budget and its timetable
