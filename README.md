@@ -1,3 +1,7 @@
+
+# Projet-5
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/630120166f944cd79ef648ecdf83d3df)](https://app.codacy.com/app/Wolfy64/Projet-5?utm_source=github.com&utm_medium=referral&utm_content=Wolfy64/Projet-5&utm_campaign=badger)
+=======
 # Team project management with development
 
 ## Customer Brief
@@ -33,3 +37,4 @@ You will work in teams of 3 to 5 people by distributing tasks (project manager, 
 - Write the technical specifications
 - Write a functional specification
 - Write a quote and submit a service contract
+
