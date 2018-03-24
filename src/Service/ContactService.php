@@ -29,7 +29,7 @@ class ContactService
     public function doMail($data)
     {
         $message = (new \Swift_Message('Nous avons bien reçu votre demande: "' . $data->getObject() . '"'))
-            ->setFrom('contact@nao.dewulfdavid.com')
+            ->setFrom('nao@project5.dewulfdavid.com')
             ->setTo($data->getEmail())
             ->setBody($this->twig->render('Mail/contact.html.twig', ['data' => $data]), 'text/html')
         ;
